@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
+import { Recaptcha } from "@/components/ui/recaptcha";
 
 type FormErrors = {
   name?: string;
@@ -47,6 +48,15 @@ export function ContactSection() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [touched, setTouched] = useState<Record<string, boolean>>({});
   const [submitted, setSubmitted] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+
+  const onCaptchaVerify = useCallback((token: string) => {
+    setCaptchaToken(token);
+  }, []);
+
+  const onCaptchaExpire = useCallback(() => {
+    setCaptchaToken(null);
+  }, []);
 
   const handleChange = (name: string, value: string) => {
     setFormState((prev) => ({ ...prev, [name]: value }));
@@ -248,6 +258,9 @@ export function ContactSection() {
                   {errors.message && touched.message && (
                     <p className="text-red-500 text-xs mt-1 animate-[fade-in-up_0.3s_ease-out]">{errors.message}</p>
                   )}
+                </div>
+                <div className="flex justify-center">
+                  <Recaptcha onVerify={onCaptchaVerify} onExpire={onCaptchaExpire} />
                 </div>
                 <button
                   type="submit"

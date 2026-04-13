@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -26,6 +26,60 @@ const navItems = [
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const mobileNavRef = useRef<HTMLDivElement>(null);
+
+  // Close mobile menu on route change / resize to desktop
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= 1024) {
+        setMobileOpen(false);
+      }
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (
+        mobileNavRef.current &&
+        !mobileNavRef.current.contains(target) &&
+        !target.closest('[aria-label="Toggle menu"]')
+      ) {
+        setMobileOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [mobileOpen]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
+  const closeMobile = useCallback(() => {
+    setMobileOpen(false);
+    setMobileServicesOpen(false);
+  }, []);
+
+  const toggleMobile = useCallback(() => {
+    setMobileOpen((prev) => !prev);
+    if (mobileOpen) {
+      setMobileServicesOpen(false);
+    }
+  }, [mobileOpen]);
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-border">
@@ -136,59 +190,150 @@ export function Header() {
               Get a Quote
             </Link>
             <button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2.5 text-foreground hover:text-primary hover:bg-primary/10 rounded-lg transition-all duration-300 hover:scale-110 active:scale-95"
+              type="button"
+              onClick={toggleMobile}
+              className="lg:hidden relative z-50 p-2.5 text-foreground hover:text-primary hover:bg-primary/10 rounded-lg transition-all duration-300"
               aria-label="Toggle menu"
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-navigation"
             >
-              {mobileOpen ? (
-                <svg className="w-6 h-6 transition-transform duration-300 rotate-0 hover:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              ) : (
-                <svg className="w-6 h-6 transition-transform duration-300 hover:scale-125" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              )}
+              <span className="sr-only">{mobileOpen ? "Close menu" : "Open menu"}</span>
+              <div className="relative w-6 h-6">
+                {/* Hamburger lines that animate to X */}
+                <span
+                  className={`absolute left-0 block w-6 h-0.5 bg-current transition-all duration-300 ease-in-out ${
+                    mobileOpen ? "top-[11px] rotate-45" : "top-1"
+                  }`}
+                />
+                <span
+                  className={`absolute left-0 top-[11px] block w-6 h-0.5 bg-current transition-all duration-300 ease-in-out ${
+                    mobileOpen ? "opacity-0 scale-x-0" : "opacity-100 scale-x-100"
+                  }`}
+                />
+                <span
+                  className={`absolute left-0 block w-6 h-0.5 bg-current transition-all duration-300 ease-in-out ${
+                    mobileOpen ? "top-[11px] -rotate-45" : "top-[19px]"
+                  }`}
+                />
+              </div>
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Nav */}
-      {mobileOpen && (
-        <div className="lg:hidden bg-white border-t border-border animate-fade-in">
-          <nav className="max-w-7xl mx-auto px-4 py-4 space-y-1">
-            {navItems.map((item) => (
-              <div key={item.label}>
+      {/* Mobile Nav Overlay */}
+      <div
+        className={`fixed inset-0 bg-black/50 z-40 lg:hidden transition-opacity duration-300 ${
+          mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={closeMobile}
+        aria-hidden="true"
+      />
+
+      {/* Mobile Nav Panel - always in DOM, toggled via CSS */}
+      <div
+        ref={mobileNavRef}
+        id="mobile-navigation"
+        role="navigation"
+        aria-label="Mobile navigation"
+        className={`fixed top-0 right-0 z-40 h-full w-[300px] max-w-[85vw] bg-white shadow-2xl lg:hidden transition-transform duration-300 ease-in-out ${
+          mobileOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {/* Mobile Nav Header */}
+        <div className="flex items-center justify-between px-5 py-4 border-b border-border">
+          <Link href="/" onClick={closeMobile} className="flex items-center gap-2">
+            <Image src="/logo.svg" alt="Slatech Solutions" width={32} height={32} />
+            <span className="text-sm font-bold text-secondary">SLATECH</span>
+          </Link>
+          <button
+            type="button"
+            onClick={closeMobile}
+            className="p-2 text-foreground hover:text-primary hover:bg-primary/10 rounded-lg transition-colors"
+            aria-label="Close menu"
+          >
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile Nav Links */}
+        <nav className="px-4 py-4 space-y-1 overflow-y-auto" style={{ maxHeight: "calc(100vh - 140px)" }}>
+          {navItems.map((item) => (
+            <div key={item.label}>
+              {item.children ? (
+                <>
+                  <button
+                    type="button"
+                    onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                    className="flex items-center justify-between w-full px-4 py-3 text-sm font-medium text-foreground hover:text-primary hover:bg-accent rounded-lg transition-colors"
+                  >
+                    <span>{item.label}</span>
+                    <svg
+                      className={`w-4 h-4 transition-transform duration-200 ${
+                        mobileServicesOpen ? "rotate-180" : ""
+                      }`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                      mobileServicesOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                    }`}
+                  >
+                    <div className="pl-4 py-1 space-y-0.5">
+                      <Link
+                        href={item.href}
+                        onClick={closeMobile}
+                        className="block px-4 py-2.5 text-sm font-medium text-primary hover:bg-accent rounded-lg transition-colors"
+                      >
+                        All Services
+                      </Link>
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.label}
+                          href={child.href}
+                          onClick={closeMobile}
+                          className="block px-4 py-2.5 text-sm text-muted-foreground hover:text-primary hover:bg-accent rounded-lg transition-colors"
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              ) : (
                 <Link
                   href={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="block px-4 py-2.5 text-sm font-medium text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors"
+                  onClick={closeMobile}
+                  className="block px-4 py-3 text-sm font-medium text-foreground hover:text-primary hover:bg-accent rounded-lg transition-colors"
                 >
                   {item.label}
                 </Link>
-                {item.children?.map((child) => (
-                  <Link
-                    key={child.label}
-                    href={child.href}
-                    onClick={() => setMobileOpen(false)}
-                    className="block pl-8 pr-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-accent rounded-md transition-colors"
-                  >
-                    {child.label}
-                  </Link>
-                ))}
-              </div>
-            ))}
-            <Link
-              href="/contact"
-              onClick={() => setMobileOpen(false)}
-              className="block w-full text-center px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-dark transition-colors mt-3"
-            >
-              Get a Quote
-            </Link>
-          </nav>
+              )}
+            </div>
+          ))}
+        </nav>
+
+        {/* Mobile Nav Footer CTA */}
+        <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-border bg-white">
+          <Link
+            href="/contact"
+            onClick={closeMobile}
+            className="flex items-center justify-center w-full px-5 py-3 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-dark transition-colors shadow-sm"
+          >
+            Get a Quote
+            <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
         </div>
-      )}
+      </div>
     </header>
   );
 }

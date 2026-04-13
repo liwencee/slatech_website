@@ -9,7 +9,11 @@
       "mcp__Claude_Preview__preview_start",
       "Bash(netstat -ano)",
       "Bash(taskkill //PID 2768 //F)",
-      "Bash(npx next:*)"
+      "Bash(npx next:*)",
+      "Bash(findstr :3000)",
+      "Bash(timeout 10)",
+      "Bash(ping -n 8 127.0.0.1)",
+      "Bash(ping -n 12 127.0.0.1)"
     ]
   }
 }

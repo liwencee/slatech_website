@@ -29,22 +29,19 @@ export default function ContactPage() {
       {/* Contact Form Section */}
       <ContactSection />
 
-      {/* Map placeholder */}
-      <section className="h-80 bg-gray-200 relative">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center">
-            <svg className="w-12 h-12 text-muted-foreground mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            <p className="text-muted-foreground font-medium">
-              183 Ijesha Road, Surulere, Lagos
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Google Maps embed will be placed here
-            </p>
-          </div>
-        </div>
+      {/* Google Map */}
+      <section className="h-96 relative">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3!2d3.3467!3d6.6018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b922e19c3eab7%3A0x0!2sOlaide+Tomori+Street%2C+Ikeja%2C+Lagos!5e0!3m2!1sen!2sng!4v1712934000000"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Slatech Solutions Office - No 2b Olaide Tomori Str, off Simbiat Abiola Way, Ikeja, Lagos"
+          className="absolute inset-0 w-full h-full"
+        />
       </section>
     </>
   );
