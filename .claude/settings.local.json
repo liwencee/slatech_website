@@ -22,7 +22,23 @@
       "Bash(python scripts/office/unpack.py \"C:\\\\Users\\\\DELL\\\\Downloads\\\\Slatech_Chatbot_Script \\(1\\).docx\" unpacked/)",
       "Bash(pip install:*)",
       "Bash(pandoc \"C:\\\\Users\\\\DELL\\\\Downloads\\\\Slatech_Chatbot_Script \\(1\\).docx\" -o output.md)",
-      "Bash(python -c ':*)"
+      "Bash(python -c ':*)",
+      "WebSearch",
+      "WebFetch(domain:www.awwwards.com)",
+      "WebFetch(domain:www.pixelperfecthtml.com)",
+      "WebFetch(domain:huemor.rocks)",
+      "WebFetch(domain:muffingroup.com)",
+      "WebFetch(domain:blog.hubspot.com)",
+      "WebFetch(domain:www.founderjar.com)",
+      "WebFetch(domain:prismic.io)",
+      "WebFetch(domain:www.hausadvisors.com)",
+      "WebFetch(domain:www.newfangled.com)",
+      "WebFetch(domain:clay.global)",
+      "WebFetch(domain:www.dora.run)",
+      "WebFetch(domain:www.framer.com)",
+      "WebFetch(domain:www.wix.com)",
+      "WebFetch(domain:kota.co.uk)",
+      "WebFetch(domain:superherocheesecake.com)"
     ]
   }
 }
