@@ -30,9 +30,10 @@ export async function middleware(request: NextRequest) {
 
   // 4. Content Security Policy
   const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
+  const isDev = process.env.NODE_ENV === "development";
   const csp = [
     `default-src 'self'`,
-    `script-src 'self' 'nonce-${nonce}' https://www.google.com https://www.gstatic.com`,
+    `script-src 'self' 'nonce-${nonce}' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://www.google.com https://www.gstatic.com`,
     `style-src 'self' 'unsafe-inline'`,
     `img-src 'self' data: blob: https://*.supabase.co https://www.google.com https://www.gstatic.com`,
     `font-src 'self'`,

@@ -8,17 +8,19 @@ import { BlogSection } from "@/components/sections/blog-preview";
 import { CTASection } from "@/components/sections/cta";
 import { ContactSection } from "@/components/sections/contact-preview";
 import { TestimonialsSection } from "@/components/sections/testimonials";
+import { BrandTrustBar } from "@/components/sections/brand-trust";
 
 export default function HomePage() {
   return (
     <>
       <HeroSection />
+      <StatsSection />
       <AboutSection />
       <ServicesSection />
-      <StatsSection />
+      <BrandTrustBar />
       <PortfolioSection />
-      <WhyChooseUsSection />
       <TestimonialsSection />
+      <WhyChooseUsSection />
       <BlogSection />
       <CTASection />
       <ContactSection />

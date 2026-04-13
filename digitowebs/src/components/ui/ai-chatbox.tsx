@@ -114,14 +114,14 @@ export function AIChatbox() {
   ];
 
   return (
-    <>
+    <div id="ai-chatbox">
       {/* Chat Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 ${
-          isOpen ? "bg-secondary rotate-0" : "bg-primary animate-bounce"
+        className={`fixed bottom-6 right-6 z-[9999] w-14 h-14 rounded-full shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 ${
+          isOpen ? "bg-secondary rotate-0" : "bg-primary"
         }`}
-        style={{ animationDuration: isOpen ? "0s" : "2s" }}
+        style={isOpen ? undefined : { animation: "bounce 2s infinite" }}
         aria-label={isOpen ? "Close chat" : "Open chat"}
       >
         {isOpen ? (
@@ -137,7 +137,7 @@ export function AIChatbox() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 z-50 w-[360px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-border overflow-hidden animate-[fade-in-up_0.3s_ease-out]">
+        <div className="fixed bottom-24 right-6 z-[9999] w-[360px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-border overflow-hidden animate-fade-in">
           {/* Header */}
           <div className="bg-secondary text-white p-4 flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
@@ -232,6 +232,6 @@ export function AIChatbox() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
