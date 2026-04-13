@@ -32,11 +32,12 @@ export async function middleware(request: NextRequest) {
   const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
   const csp = [
     `default-src 'self'`,
-    `script-src 'self' 'nonce-${nonce}'`,
+    `script-src 'self' 'nonce-${nonce}' https://www.google.com https://www.gstatic.com`,
     `style-src 'self' 'unsafe-inline'`,
-    `img-src 'self' data: blob: https://*.supabase.co`,
+    `img-src 'self' data: blob: https://*.supabase.co https://www.google.com https://www.gstatic.com`,
     `font-src 'self'`,
     `connect-src 'self' https://*.supabase.co`,
+    `frame-src https://www.google.com https://maps.google.com`,
     `frame-ancestors 'none'`,
     `base-uri 'self'`,
     `form-action 'self'`,
