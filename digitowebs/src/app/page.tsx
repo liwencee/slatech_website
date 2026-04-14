@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Slatech Solutions | #1 Web Design Company in Lagos, Ikeja Nigeria",
     description:
-      "Professional web design, e-commerce, SEO & digital services in Lagos, Ikeja and across Nigeria. 10+ years. 500+ clients. Free quote.",
+      "Professional web design, e-commerce, SEO & digital services in Lagos, Ikeja and across Nigeria. 5+ years. 500+ clients. Free quote.",
     url: "https://slatech.com.ng",
     type: "website",
   },
