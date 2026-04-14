@@ -12,7 +12,7 @@ export function HeroSection() {
   );
 
   return (
-    <section className="relative bg-secondary overflow-hidden min-h-[90vh] flex items-center">
+    <section className="relative bg-secondary overflow-hidden min-h-[92vh] flex items-center">
       {/* Animated gradient background */}
       <div className="absolute inset-0 hero-gradient-bg" />
 
@@ -26,187 +26,247 @@ export function HeroSection() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-primary/5 blur-[80px] hero-blob-3" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 w-full">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
+
+          {/* ── Left Content ── */}
           <div className="text-white">
-            <span className="inline-block px-4 py-1.5 bg-primary/20 text-primary text-sm font-medium rounded-full mb-6 border border-primary/30 animate-[fade-in-up_0.6s_ease-out]">
-              Turning Ideas into Powerful Digital Brands
+            {/* Badge */}
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/20 text-primary text-sm font-medium rounded-full mb-6 border border-primary/30 animate-[fade-in-up_0.6s_ease-out]">
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              #1 Web Design Company in Lagos, Nigeria
             </span>
+
+            {/* Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-[fade-in-up_0.6s_ease-out_0.2s_both]">
-              The Best{" "}
+              Premium{" "}
               <span className="text-primary">{typedText}</span>
               <span className="animate-pulse text-primary">|</span>
-              {" "}Company
+              <br />
+              <span className="text-white/90">Services in</span>{" "}
+              <span className="text-primary">Lagos</span>
             </h1>
+
             <p className="text-lg text-gray-300 leading-relaxed mb-8 max-w-lg animate-[fade-in-up_0.6s_ease-out_0.4s_both]">
-              We help small and large businesses create stunning websites that
-              are beautiful, fast, secure, and mobile-friendly. Let us bring
-              your vision to life.
+              Slatech Solutions is Lagos&apos; most trusted web design agency in Ikeja, Nigeria.
+              We build fast, beautiful, SEO-optimised websites that rank on Google
+              and convert visitors into paying customers.
             </p>
+
+            {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 animate-[fade-in-up_0.6s_ease-out_0.6s_both]">
               <Link
-                href="/services"
+                href="/contact"
                 className="inline-flex items-center px-7 py-3.5 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:scale-105 active:scale-95"
               >
-                Explore Our Services
+                Get a Free Quote
                 <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
               <Link
-                href="/contact"
+                href="/services"
                 className="inline-flex items-center px-7 py-3.5 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all hover:scale-105 active:scale-95"
               >
-                Talk To Us
+                Our Services
               </Link>
             </div>
 
-            {/* Trust indicators with icons */}
-            <div className="flex items-center gap-6 mt-10 pt-8 border-t border-white/10 animate-[fade-in-up_0.6s_ease-out_0.8s_both]">
-              <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
-                  <svg className="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            {/* Google Stars Rating */}
+            <div className="flex items-center gap-3 mt-8 animate-[fade-in-up_0.6s_ease-out_0.7s_both]">
+              <div className="flex items-center gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                   </svg>
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-primary">10+</p>
-                  <p className="text-xs text-gray-400">Years Experience</p>
-                </div>
+                ))}
               </div>
-              <div className="w-px h-12 bg-white/20" />
-              <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
-                  <svg className="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-primary">2k+</p>
-                  <p className="text-xs text-gray-400">Projects Delivered</p>
-                </div>
+              <span className="text-white/70 text-sm">
+                <span className="text-white font-semibold">5.0</span> Google Rating ·{" "}
+                <span className="text-white font-semibold">168</span> Reviews
+              </span>
+            </div>
+
+            {/* Stats */}
+            <div className="flex items-center gap-6 mt-8 pt-8 border-t border-white/10 animate-[fade-in-up_0.6s_ease-out_0.8s_both]">
+              <div className="text-center">
+                <p className="text-2xl font-bold text-primary">10+</p>
+                <p className="text-xs text-gray-400">Years in Lagos</p>
               </div>
-              <div className="w-px h-12 bg-white/20" />
-              <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
-                  <svg className="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-primary">500+</p>
-                  <p className="text-xs text-gray-400">Happy Clients</p>
-                </div>
+              <div className="w-px h-10 bg-white/20" />
+              <div className="text-center">
+                <p className="text-2xl font-bold text-primary">2k+</p>
+                <p className="text-xs text-gray-400">Projects Done</p>
+              </div>
+              <div className="w-px h-10 bg-white/20" />
+              <div className="text-center">
+                <p className="text-2xl font-bold text-primary">500+</p>
+                <p className="text-xs text-gray-400">Happy Clients</p>
+              </div>
+              <div className="w-px h-10 bg-white/20" />
+              <div className="text-center">
+                <p className="text-2xl font-bold text-primary">100%</p>
+                <p className="text-xs text-gray-400">Satisfaction</p>
               </div>
             </div>
           </div>
 
-          {/* Right Visual - Browser/Laptop Mockup */}
+          {/* ── Right Visual ── */}
           <div className="hidden lg:block relative animate-[fade-in-up_0.8s_ease-out_0.4s_both]">
             <div className="relative w-full max-w-lg mx-auto">
-              {/* Laptop body */}
+
+              {/* Main Browser Mockup */}
               <div className="relative">
-                {/* Screen bezel */}
-                <div className="bg-gray-800 rounded-t-2xl p-2 shadow-2xl">
+                <div className="bg-gray-800 rounded-2xl p-2 shadow-2xl shadow-black/50">
                   {/* Browser chrome */}
-                  <div className="bg-gray-700 rounded-t-lg">
-                    {/* Title bar with traffic lights */}
+                  <div className="bg-gray-700 rounded-t-xl">
                     <div className="flex items-center gap-2 px-4 py-2.5">
                       <div className="flex gap-1.5">
                         <div className="w-3 h-3 rounded-full bg-red-400" />
                         <div className="w-3 h-3 rounded-full bg-yellow-400" />
                         <div className="w-3 h-3 rounded-full bg-green-400" />
                       </div>
-                      {/* URL bar */}
-                      <div className="flex-1 ml-3 h-6 bg-gray-600 rounded-md flex items-center px-3">
-                        <svg className="w-3 h-3 text-gray-400 mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
+                      <div className="flex-1 ml-3 h-6 bg-gray-600 rounded-md flex items-center gap-2 px-3">
+                        <svg className="w-3 h-3 text-green-400 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
                         </svg>
-                        <span className="text-[10px] text-gray-400 truncate">slatechsolutions.com</span>
+                        <span className="text-[10px] text-green-400 truncate font-medium">slatech.com.ng</span>
+                        <svg className="w-3 h-3 text-gray-400 ml-auto shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
                       </div>
                     </div>
                   </div>
 
-                  {/* Website content mockup */}
-                  <div className="bg-white rounded-b-lg overflow-hidden">
-                    {/* Nav bar mockup */}
-                    <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100">
-                      <div className="w-20 h-4 bg-secondary/80 rounded" />
-                      <div className="flex gap-3">
-                        <div className="w-10 h-2 bg-gray-200 rounded" />
-                        <div className="w-10 h-2 bg-gray-200 rounded" />
-                        <div className="w-10 h-2 bg-gray-200 rounded" />
-                        <div className="w-14 h-5 bg-primary rounded-md" />
+                  {/* Website preview */}
+                  <div className="bg-white rounded-b-xl overflow-hidden">
+                    {/* Nav */}
+                    <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100 bg-white">
+                      <div className="flex items-center gap-2">
+                        <div className="w-6 h-6 bg-primary rounded-md" />
+                        <div className="w-16 h-2.5 bg-secondary/70 rounded" />
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-8 h-1.5 bg-gray-200 rounded" />
+                        <div className="w-8 h-1.5 bg-gray-200 rounded" />
+                        <div className="w-8 h-1.5 bg-gray-200 rounded" />
+                        <div className="w-16 h-5 bg-primary rounded-md" />
                       </div>
                     </div>
 
-                    {/* Hero area mockup */}
-                    <div className="p-4">
-                      <div className="bg-gradient-to-br from-secondary to-secondary-dark rounded-xl p-5 mb-3">
-                        <div className="w-24 h-2 bg-primary/40 rounded mb-3" />
-                        <div className="w-40 h-3 bg-white/30 rounded mb-2" />
-                        <div className="w-32 h-3 bg-white/20 rounded mb-4" />
-                        <div className="flex gap-2">
-                          <div className="w-16 h-5 bg-primary rounded-md" />
-                          <div className="w-16 h-5 bg-white/20 rounded-md" />
-                        </div>
+                    {/* Hero section in mockup */}
+                    <div className="bg-secondary p-4">
+                      <div className="w-32 h-2 bg-primary/40 rounded-full mb-2" />
+                      <div className="w-48 h-3 bg-white/30 rounded mb-1.5" />
+                      <div className="w-36 h-3 bg-white/20 rounded mb-3" />
+                      <div className="w-40 h-2 bg-white/10 rounded mb-4" />
+                      <div className="flex gap-2 mb-3">
+                        <div className="w-20 h-6 bg-primary rounded-lg" />
+                        <div className="w-18 h-6 bg-white/20 rounded-lg border border-white/20" />
                       </div>
+                      <div className="flex gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <div key={i} className="w-3 h-3 bg-yellow-400/70 rounded-sm" />
+                        ))}
+                        <div className="ml-2 w-16 h-2 bg-white/20 rounded self-center" />
+                      </div>
+                    </div>
 
-                      {/* Cards row */}
-                      <div className="grid grid-cols-3 gap-2">
-                        <div className="bg-gray-50 rounded-lg p-2.5">
-                          <div className="w-6 h-6 bg-primary/15 rounded-md mb-2 flex items-center justify-center">
-                            <div className="w-3 h-3 bg-primary/40 rounded-sm" />
+                    {/* Services strip */}
+                    <div className="grid grid-cols-3 gap-2 p-3 bg-gray-50">
+                      {["Web Design", "SEO", "E-Commerce"].map((label) => (
+                        <div key={label} className="bg-white rounded-lg p-2 shadow-sm border border-gray-100">
+                          <div className="w-5 h-5 bg-primary/15 rounded mb-1.5 flex items-center justify-center">
+                            <div className="w-2.5 h-2.5 bg-primary/50 rounded-sm" />
                           </div>
-                          <div className="w-full h-1.5 bg-gray-200 rounded mb-1.5" />
-                          <div className="w-3/4 h-1.5 bg-gray-100 rounded" />
+                          <div className="w-full h-1.5 bg-gray-200 rounded mb-1" />
+                          <div className="w-2/3 h-1 bg-gray-100 rounded" />
                         </div>
-                        <div className="bg-gray-50 rounded-lg p-2.5">
-                          <div className="w-6 h-6 bg-secondary/15 rounded-md mb-2 flex items-center justify-center">
-                            <div className="w-3 h-3 bg-secondary/40 rounded-sm" />
-                          </div>
-                          <div className="w-full h-1.5 bg-gray-200 rounded mb-1.5" />
-                          <div className="w-3/4 h-1.5 bg-gray-100 rounded" />
-                        </div>
-                        <div className="bg-gray-50 rounded-lg p-2.5">
-                          <div className="w-6 h-6 bg-primary/15 rounded-md mb-2 flex items-center justify-center">
-                            <div className="w-3 h-3 bg-primary/40 rounded-sm" />
-                          </div>
-                          <div className="w-full h-1.5 bg-gray-200 rounded mb-1.5" />
-                          <div className="w-3/4 h-1.5 bg-gray-100 rounded" />
-                        </div>
-                      </div>
+                      ))}
                     </div>
                   </div>
                 </div>
 
-                {/* Laptop base / keyboard */}
-                <div className="relative">
-                  <div className="bg-gray-700 h-4 rounded-b-xl mx-2" />
-                  <div className="bg-gray-600 h-1.5 rounded-b-lg mx-16" />
+                {/* Laptop base */}
+                <div className="bg-gray-700 h-3 rounded-b-xl mx-2 mt-0" />
+                <div className="bg-gray-600 h-1.5 rounded-b-lg mx-16" />
+              </div>
+
+              {/* ── Floating Achievement Badges ── */}
+
+              {/* Google Rating Badge */}
+              <div className="absolute -top-5 -left-8 bg-white rounded-2xl shadow-xl p-3.5 flex items-center gap-3 hero-float-1 border border-gray-100">
+                <div className="w-9 h-9 rounded-xl bg-[#4285F4]/10 flex items-center justify-center shrink-0">
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                  </svg>
+                </div>
+                <div>
+                  <div className="flex items-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-3 h-3 text-yellow-400 fill-yellow-400" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-xs font-bold text-gray-800 mt-0.5">5.0 Google Rating</p>
+                  <p className="text-[10px] text-gray-500">168 reviews</p>
                 </div>
               </div>
 
-              {/* Floating elements around the mockup */}
-              <div className="absolute -top-4 -right-4 w-14 h-14 bg-primary/20 border border-primary/30 rounded-2xl flex items-center justify-center hero-float-1">
-                <svg className="w-7 h-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+              {/* Projects Done Badge */}
+              <div className="absolute -right-8 top-12 bg-primary rounded-2xl shadow-xl p-3.5 text-white hero-float-2">
+                <div className="flex items-center gap-2">
+                  <svg className="w-5 h-5 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                  <div>
+                    <p className="text-lg font-bold leading-none">500+</p>
+                    <p className="text-[10px] text-white/70 mt-0.5">Projects in Nigeria</p>
+                  </div>
+                </div>
               </div>
-              <div className="absolute -bottom-2 -left-4 w-12 h-12 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center hero-float-2">
-                <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
+
+              {/* SSL Badge */}
+              <div className="absolute -bottom-4 -right-6 bg-white rounded-2xl shadow-xl p-3 flex items-center gap-2.5 hero-float-3 border border-gray-100">
+                <div className="w-8 h-8 rounded-xl bg-green-50 flex items-center justify-center shrink-0">
+                  <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-gray-800">SSL Secured</p>
+                  <p className="text-[10px] text-gray-500">Free with every site</p>
+                </div>
               </div>
-              <div className="absolute top-1/3 -left-8 w-10 h-10 bg-green-400/20 border border-green-400/30 rounded-lg flex items-center justify-center hero-float-3">
-                <svg className="w-5 h-5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
+
+              {/* Lagos Location Badge */}
+              <div className="absolute -left-6 bottom-16 bg-white rounded-xl shadow-lg p-2.5 flex items-center gap-2 hero-float-1 border border-gray-100">
+                <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                  <svg className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-[11px] font-bold text-gray-800">Ikeja, Lagos</p>
+                  <p className="text-[9px] text-gray-500">Nigeria 🇳🇬</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-white/40 animate-bounce">
+        <span className="text-xs font-medium tracking-widest uppercase">Scroll</span>
+        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
       </div>
     </section>
   );
