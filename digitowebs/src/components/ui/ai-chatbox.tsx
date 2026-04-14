@@ -176,7 +176,7 @@ export function AIChatbox() {
     ];
 
     botSay(
-      "Hey there! \ud83d\udc4b Welcome to Slatech Solutions!\n\nWe help businesses grow with stunning websites, bold branding, smart SEO, social media management, and eye-catching graphic design.\n\nWhat brings you here today?",
+      "Welcome to Slatech Solutions!\n\nWe help businesses grow with stunning websites, bold branding, smart SEO, social media management, and eye-catching graphic design.\n\nWhat brings you here today?",
       greetingReplies,
       400
     );
@@ -605,7 +605,7 @@ export function AIChatbox() {
             &times;
           </button>
           <p className="text-sm text-foreground">
-            \ud83d\udc4b Hey! Need help with your project? Chat with us!
+            Need help with your project? Chat with us!
           </p>
         </div>
       )}
