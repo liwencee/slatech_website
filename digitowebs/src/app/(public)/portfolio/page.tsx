@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -7,18 +8,18 @@ export const metadata: Metadata = {
 };
 
 const projects = [
-  { title: "Travel Agency", category: "Travel", color: "bg-blue-500" },
-  { title: "Oil and Gas", category: "Oil & Gas", color: "bg-green-500" },
-  { title: "Elite Real Estate", category: "Real Estate", color: "bg-purple-500" },
-  { title: "MediCare Health", category: "Healthcare", color: "bg-red-400" },
-  { title: "EduLearn Academy", category: "Education", color: "bg-yellow-500" },
-  { title: "ShopNow Store", category: "E-Commerce", color: "bg-pink-500" },
-  { title: "BuildRight Construction", category: "Construction", color: "bg-orange-500" },
-  { title: "GreenLife NGO", category: "Non-Profit", color: "bg-teal-500" },
-  { title: "InteriorPro Designs", category: "Interior Design", color: "bg-indigo-500" },
-  { title: "TechLaunch App", category: "Technology", color: "bg-cyan-500" },
-  { title: "FoodExpress Delivery", category: "Food & Beverage", color: "bg-amber-500" },
-  { title: "LegalEdge Law Firm", category: "Legal", color: "bg-slate-500" },
+  { title: "Travel Agency",           category: "Travel",         image: "/igniting hopes.png" },
+  { title: "Oil and Gas",             category: "Oil & Gas",      image: "/images/Snipaste_2026-04-14_17-43-34.png" },
+  { title: "Elite Real Estate",       category: "Real Estate",    image: "/images/Snipaste_2026-04-14_17-45-47.png" },
+  { title: "MediCare Health",         category: "Healthcare",     image: "/images/Snipaste_2026-04-14_17-47-32.png" },
+  { title: "EduLearn Academy",        category: "Education",      image: "/images/Snipaste_2026-04-14_17-48-20.png" },
+  { title: "ShopNow Store",           category: "E-Commerce",     image: "/images/Snipaste_2026-04-14_17-48-34.png" },
+  { title: "BuildRight Construction", category: "Construction",   image: "/images/Snipaste_2026-04-14_17-58-49.png" },
+  { title: "GreenLife NGO",           category: "Non-Profit",     image: "/images/Snipaste_2026-04-14_18-00-14.png" },
+  { title: "InteriorPro Designs",     category: "Interior Design",image: "/igniting hopes.png" },
+  { title: "TechLaunch App",          category: "Technology",     image: "/images/Snipaste_2026-04-14_17-43-34.png" },
+  { title: "FoodExpress Delivery",    category: "Food & Beverage",image: "/images/Snipaste_2026-04-14_17-45-47.png" },
+  { title: "LegalEdge Law Firm",      category: "Legal",          image: "/images/Snipaste_2026-04-14_17-47-32.png" },
 ];
 
 const categories = ["All", ...new Set(projects.map((p) => p.category))];
@@ -64,7 +65,14 @@ export default function PortfolioPage() {
                 key={project.title}
                 className="group relative rounded-2xl overflow-hidden shadow-sm border border-border hover:shadow-lg transition-all duration-300"
               >
-                <div className={`aspect-[4/3] ${project.color} relative`}>
+                <div className="aspect-[4/3] relative overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} — ${project.category} website by Slatech Solutions`}
+                    fill
+                    className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4">
                     <span className="inline-block px-2.5 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-medium rounded-full mb-2">

@@ -1,19 +1,20 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 
 const projects = [
-  { title: "TravelMax Agency", category: "Travel", gradient: "from-blue-500 to-cyan-400" },
-  { title: "AutoBook Car Rentals", category: "Automotive", gradient: "from-green-500 to-emerald-400" },
-  { title: "Elite Real Estate", category: "Real Estate", gradient: "from-purple-500 to-violet-400" },
-  { title: "MediCare Health", category: "Healthcare", gradient: "from-red-400 to-rose-300" },
-  { title: "EduLearn Academy", category: "Education", gradient: "from-yellow-500 to-amber-400" },
-  { title: "ShopNow Store", category: "E-Commerce", gradient: "from-pink-500 to-fuchsia-400" },
-  { title: "FoodieHub Delivery", category: "Food", gradient: "from-orange-500 to-yellow-400" },
-  { title: "FitPro Gym", category: "Fitness", gradient: "from-teal-500 to-cyan-400" },
-  { title: "LegalEase Firm", category: "Legal", gradient: "from-indigo-500 to-blue-400" },
+  { title: "TravelMax Agency",    category: "Travel",      image: "/igniting hopes.png" },
+  { title: "AutoBook Car Rentals",category: "Automotive",  image: "/images/Snipaste_2026-04-14_17-43-34.png" },
+  { title: "Elite Real Estate",   category: "Real Estate", image: "/images/Snipaste_2026-04-14_17-45-47.png" },
+  { title: "MediCare Health",     category: "Healthcare",  image: "/images/Snipaste_2026-04-14_17-47-32.png" },
+  { title: "EduLearn Academy",    category: "Education",   image: "/images/Snipaste_2026-04-14_17-48-20.png" },
+  { title: "ShopNow Store",       category: "E-Commerce",  image: "/images/Snipaste_2026-04-14_17-48-34.png" },
+  { title: "FoodieHub Delivery",  category: "Food",        image: "/images/Snipaste_2026-04-14_17-58-49.png" },
+  { title: "FitPro Gym",          category: "Fitness",     image: "/images/Snipaste_2026-04-14_18-00-14.png" },
+  { title: "LegalEase Firm",      category: "Legal",       image: "/igniting hopes.png" },
 ];
 
 const categories = ["All", ...Array.from(new Set(projects.map((p) => p.category)))];
@@ -165,23 +166,17 @@ export function PortfolioSection() {
                     className="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-2.5"
                   >
                     <div className="group relative rounded-2xl overflow-hidden shadow-sm border border-border hover:shadow-xl hover:border-primary/30 transition-all duration-500 hover:-translate-y-2">
-                      {/* Gradient image placeholder */}
-                      <div className={`aspect-[16/10] bg-gradient-to-br ${project.gradient} relative`}>
-                        {/* Gradient overlay for depth */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-                        {/* Decorative pattern on card */}
-                        <div className="absolute inset-0 opacity-20">
-                          <div className="absolute top-4 right-4 w-20 h-20 border-2 border-white/30 rounded-xl rotate-12" />
-                          <div className="absolute bottom-8 right-8 w-12 h-12 border-2 border-white/20 rounded-lg -rotate-6" />
-                        </div>
-                        {/* Icon */}
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="w-14 h-14 bg-white/15 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20">
-                            <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                            </svg>
-                          </div>
-                        </div>
+                      {/* Project screenshot */}
+                      <div className="aspect-[16/10] relative overflow-hidden">
+                        <Image
+                          src={project.image}
+                          alt={`${project.title} — ${project.category} website by Slatech Solutions`}
+                          fill
+                          className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                        {/* Gradient overlay for text readability */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                         <div className="absolute bottom-4 left-4 right-4">
                           <span className="inline-block px-2.5 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-medium rounded-full mb-2">
                             {project.category}
