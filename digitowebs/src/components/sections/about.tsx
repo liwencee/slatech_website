@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 
@@ -48,19 +49,17 @@ export function AboutSection() {
           {/* Left - Visual */}
           <AnimateOnScroll animation="slide-left">
             <div className="relative">
-              <div className="relative w-full aspect-[4/3] bg-accent rounded-2xl overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-primary/5" />
-                <div className="absolute inset-8 border-2 border-dashed border-secondary/20 rounded-xl flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                      <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                      </svg>
-                    </div>
-                    <p className="text-sm text-muted-foreground font-medium">5+ Years of Excellence</p>
-                    <img src="digitowebs/src/app/api/media/upload/team.png" alt="About Us" className="mt-4 rounded-lg shadow-md" />
-                  </div>
-                </div>
+              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/team.png"
+                  alt="Slatech Solutions Team — Web Design Agency in Lagos Nigeria"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+                {/* Dark overlay at bottom for badge readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               </div>
               {/* Floating badge */}
               <div className="absolute -bottom-4 -right-4 bg-primary text-white px-5 py-3 rounded-xl shadow-lg animate-bounce" style={{ animationDuration: "3s" }}>

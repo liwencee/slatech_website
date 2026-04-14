@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { StatsSection } from "@/components/sections/stats";
 
@@ -9,10 +10,30 @@ export const metadata: Metadata = {
 };
 
 const team = [
-  { name: "Lead Designer", role: "UI/UX Design", color: "bg-primary" },
-  { name: "Senior Developer", role: "Full-Stack Development", color: "bg-secondary" },
-  { name: "SEO Specialist", role: "Digital Marketing", color: "bg-green-500" },
-  { name: "Project Manager", role: "Client Relations", color: "bg-purple-500" },
+  {
+    name: "Olalekan Adewale",
+    role: "Founder & CEO",
+    photo: "/images/headshot_1.webp",
+    color: "bg-primary",
+  },
+  {
+    name: "Lead Designer",
+    role: "UI/UX Design",
+    photo: "/images/headshot_2.webp",
+    color: "bg-secondary",
+  },
+  {
+    name: "Senior Developer",
+    role: "Full-Stack Development",
+    photo: "/images/headshot_3.webp",
+    color: "bg-green-500",
+  },
+  {
+    name: "SEO Specialist",
+    role: "Digital Marketing",
+    photo: "/images/headshot_4.webp",
+    color: "bg-purple-500",
+  },
 ];
 
 export default function AboutPage() {
@@ -61,15 +82,18 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="relative aspect-[4/3] bg-accent rounded-2xl overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/10" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <p className="text-6xl font-bold text-primary">10+</p>
-                  <p className="text-muted-foreground font-medium mt-2">
-                    Years Building the Web
-                  </p>
-                </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/lekan.jpg"
+                alt="Olalekan — Founder of Slatech Solutions, Lagos Nigeria"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 via-transparent to-transparent" />
+              <div className="absolute bottom-5 left-5">
+                <p className="text-white font-bold text-lg leading-tight">Olalekan Adewale</p>
+                <p className="text-primary text-sm font-medium">Founder & CEO, Slatech Solutions</p>
               </div>
             </div>
           </div>
@@ -94,19 +118,24 @@ export default function AboutPage() {
             {team.map((member) => (
               <div
                 key={member.role}
-                className="bg-white rounded-2xl p-6 text-center border border-border hover:shadow-md transition-shadow"
+                className="bg-white rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group"
               >
-                <div
-                  className={`w-20 h-20 rounded-full ${member.color} mx-auto mb-4 flex items-center justify-center`}
-                >
-                  <svg className="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
+                {/* Photo */}
+                <div className="relative w-full aspect-square overflow-hidden">
+                  <div className={`absolute inset-0 ${member.color} opacity-20`} />
+                  <Image
+                    src={member.photo}
+                    alt={`${member.name} — ${member.role} at Slatech Solutions`}
+                    fill
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
                 </div>
-                <h3 className="font-bold text-foreground">{member.name}</h3>
-                <p className="text-sm text-muted-foreground mt-1">
-                  {member.role}
-                </p>
+                {/* Info */}
+                <div className="p-4 text-center">
+                  <h3 className="font-bold text-foreground text-sm">{member.name}</h3>
+                  <p className="text-xs text-primary font-medium mt-1">{member.role}</p>
+                </div>
               </div>
             ))}
           </div>
