@@ -107,8 +107,8 @@ const LOCAL_BUSINESS_SCHEMA = {
   email: "info@slatech.com.ng",
   foundingDate: "2014",
   priceRange: "₦₦",
-  image: "https://slatech.com.ng/logo.svg",
-  logo: "https://slatech.com.ng/logo.svg",
+  image: "https://slatech.com.ng/logomark.png",
+  logo: "https://slatech.com.ng/side_SLATECH_SOLUTIONS_LOGO.png",
   address: {
     "@type": "PostalAddress",
     streetAddress: "No 2b Olaide Tomori Street, off Simbiat Abiola Way",
