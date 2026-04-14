@@ -16,18 +16,18 @@ const team = [
     photo: "/images/lekan.jpg",
     color: "bg-primary",
   },
-  // {
-  //   name: "Lead Designer",
-  //   role: "UI/UX Design",
-  //   photo: "/images/nigerian.png",
-  //   color: "bg-secondary",
-  // },
-  // {
-  //   name: "Head of People & Culture",
-  //   role: "People and Culture",
-  //   photo: "/images/oyin.png",
-  //   color: "bg-green-500",
-  // },
+  {
+    name: "Lead Designer",
+    role: "UI/UX Design",
+    photo: "/images/guy_snap",
+    color: "bg-secondary",
+  },
+  {
+    name: "Head of ",
+    role: "People and Culture",
+    photo: "/images/oyin_snap.png",
+    color: "bg-green-500",
+  },
   {
     name: "SEO Specialist",
     role: "Digital Marketing",
