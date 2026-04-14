@@ -19,13 +19,13 @@ const team = [
   {
     name: "Lead Designer",
     role: "UI/UX Design",
-    photo: "/images/nigerian.jpg",
+    photo: "/images/nigerian.png",
     color: "bg-secondary",
   },
   {
-    name: "Head of ",
+    name: "Head of People & Culture",
     role: "People and Culture",
-    photo: "/images/oyin.jpg",
+    photo: "/images/oyin.png",
     color: "bg-green-500",
   },
   {
