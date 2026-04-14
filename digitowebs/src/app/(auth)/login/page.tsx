@@ -42,7 +42,7 @@ export default function LoginPage() {
         {/* Logo */}
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center gap-2">
-            <Image src="/logo.svg" alt="Slatech Solutions" width={48} height={48} />
+            <Image src="/side_SLATECH_SOLUTIONS_LOGO.png" alt="Slatech Solutions" width={180} height={50} className="object-contain" />
           </Link>
           <h1 className="text-2xl font-bold text-foreground mt-4">
             Welcome Back

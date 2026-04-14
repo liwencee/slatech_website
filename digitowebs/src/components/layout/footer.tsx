@@ -209,11 +209,11 @@ export function Footer() {
           <div className="flex items-center gap-4">
             <div className="bg-white/15 rounded-xl p-2 backdrop-blur-sm">
               <Image
-                src="/logo.svg"
+                src="/logomark.png"
                 alt="Slatech Solutions"
                 width={48}
                 height={48}
-                className="drop-shadow-lg"
+                className="drop-shadow-lg object-contain"
               />
             </div>
             <div>
@@ -254,22 +254,14 @@ export function Footer() {
                 col1.isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              <Link href="/" className="flex items-center gap-3 mb-5 group">
+              <Link href="/" className="flex items-center mb-5 group">
                 <Image
-                  src="/logo.svg"
+                  src="/side_SLATECH_SOLUTIONS_LOGO.png"
                   alt="Slatech Solutions"
-                  width={44}
+                  width={160}
                   height={44}
-                  className="group-hover:scale-110 transition-transform duration-300"
+                  className="group-hover:scale-105 transition-transform duration-300 object-contain brightness-0 invert"
                 />
-                <div className="flex flex-col leading-tight">
-                  <span className="text-xl font-extrabold text-white tracking-tight">
-                    SLATECH
-                  </span>
-                  <span className="text-[10px] font-bold text-primary tracking-[0.25em] uppercase">
-                    Solutions
-                  </span>
-                </div>
               </Link>
 
               <p className="text-gray-300 text-sm leading-relaxed mb-6">

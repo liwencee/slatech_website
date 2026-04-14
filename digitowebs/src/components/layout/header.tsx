@@ -113,23 +113,14 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group">
+          <Link href="/" className="flex items-center group">
             <Image
-              src="/logo.svg"
+              src="/side_SLATECH_SOLUTIONS_LOGO.png"
               alt="Slatech Solutions"
-              width={40}
-              height={40}
-              className="group-hover:scale-110 transition-transform duration-300"
+              width={160}
+              height={44}
+              className="group-hover:scale-105 transition-transform duration-300 object-contain"
             />
-            <div className="flex flex-col leading-tight">
-              <span className="text-lg font-bold tracking-tight">
-                <span className="text-secondary">SLA</span>
-                <span className="text-secondary">TECH</span>
-              </span>
-              <span className="text-[10px] font-bold text-primary tracking-widest uppercase">
-                Solutions
-              </span>
-            </div>
           </Link>
 
           {/* Desktop Nav */}
@@ -242,9 +233,8 @@ export function Header() {
       >
         {/* Mobile Nav Header */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-border">
-          <Link href="/" onClick={closeMobile} className="flex items-center gap-2">
-            <Image src="/logo.svg" alt="Slatech Solutions" width={32} height={32} />
-            <span className="text-sm font-bold text-secondary">SLATECH</span>
+          <Link href="/" onClick={closeMobile} className="flex items-center">
+            <Image src="/side_SLATECH_SOLUTIONS_LOGO.png" alt="Slatech Solutions" width={130} height={36} className="object-contain" />
           </Link>
           <button
             type="button"

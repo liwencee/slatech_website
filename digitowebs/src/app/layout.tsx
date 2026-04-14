@@ -22,6 +22,11 @@ export const metadata: Metadata = {
     default: "Slatech Solutions | #1 Web Design Company in Lagos, Nigeria",
     template: "%s | Slatech Solutions",
   },
+  icons: {
+    icon: "/logomark.png",
+    shortcut: "/logomark.png",
+    apple: "/logomark.png",
+  },
   description:
     "Slatech Solutions is the leading web design company in Lagos, Ikeja, Nigeria. We build fast, beautiful, SEO-optimized websites, e-commerce stores, and provide digital marketing services for businesses across Lagos and Nigeria.",
   keywords: [
@@ -88,7 +93,7 @@ export const metadata: Metadata = {
     title: "Slatech Solutions | #1 Web Design Company in Lagos Nigeria",
     description:
       "Professional web design, SEO, e-commerce & digital marketing in Lagos, Ikeja, Nigeria. Get a free quote today!",
-    images: ["/logo.svg"],
+    images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
   alternates: {
     canonical: "https://slatech.com.ng",
