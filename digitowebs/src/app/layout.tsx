@@ -76,7 +76,7 @@ export const metadata: Metadata = {
       "We build stunning, fast, SEO-optimized websites for businesses in Lagos, Ikeja and across Nigeria. 10+ years experience. 500+ happy clients. Free consultation.",
     images: [
       {
-        url: "/logo.svg",
+        url: "/SLATECH  SOLUTIONS LOGO.png",
         width: 1200,
         height: 630,
         alt: "Slatech Solutions - Web Design Company in Lagos Ikeja Nigeria",

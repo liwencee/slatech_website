@@ -7,8 +7,8 @@ export const metadata: Metadata = {
 };
 
 const projects = [
-  { title: "TravelMax Agency", category: "Travel", color: "bg-blue-500" },
-  { title: "AutoBook Car Rentals", category: "Automotive", color: "bg-green-500" },
+  { title: "Travel Agency", category: "Travel", color: "bg-blue-500" },
+  { title: "Oil and Gas", category: "Oil & Gas", color: "bg-green-500" },
   { title: "Elite Real Estate", category: "Real Estate", color: "bg-purple-500" },
   { title: "MediCare Health", category: "Healthcare", color: "bg-red-400" },
   { title: "EduLearn Academy", category: "Education", color: "bg-yellow-500" },

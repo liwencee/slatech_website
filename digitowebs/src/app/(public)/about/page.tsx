@@ -6,7 +6,7 @@ import { StatsSection } from "@/components/sections/stats";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Slatech Solutions — 10+ years of experience building stunning, fast, and secure websites for businesses of all sizes.",
+    "Learn about Slatech Solutions — 5+ years of experience building stunning, fast, and secure websites for businesses of all sizes.",
 };
 
 const team = [
@@ -50,7 +50,7 @@ export default function AboutPage() {
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             Slatech Solutions is a leading web design agency dedicated to transforming
-            ideas into powerful digital experiences since 2015.
+            ideas into powerful digital experiences since 2020.
           </p>
         </div>
       </section>
@@ -92,7 +92,7 @@ export default function AboutPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 via-transparent to-transparent" />
               <div className="absolute bottom-5 left-5">
-                <p className="text-white font-bold text-lg leading-tight">Olalekan Adewale</p>
+                <p className="text-white font-bold text-lg leading-tight">Olalekan Akindiya</p>
                 <p className="text-primary text-sm font-medium">Founder & CEO, Slatech Solutions</p>
               </div>
             </div>
