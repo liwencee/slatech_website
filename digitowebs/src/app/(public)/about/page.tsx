@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const team = [
   {
-    name: "DevOPs Engineer",
+    name: "DevOps Engineer",
     role: "Development & Operations",
     photo: "/images/lekan.jpg",
     color: "bg-primary",
@@ -19,22 +19,21 @@ const team = [
   {
     name: "Human Resources Manager",
     role: "People & Culture",
-    photo: "/images/oyin_snap.png",
-    color: "bg-primary",
+    photo: "/oyin_snap.png",
+    color: "bg-secondary",
   },
   {
     name: "SEO Specialist",
     role: "Search Engine Optimization",
-    photo: "/images/guy_snap.png",
-    color: "bg-primary",
+    photo: "/guy_snap.png",
+    color: "bg-green-500",
   },
   {
     name: "Frontend Developer",
     role: "Development & Operations",
-    photo: "/images/headshot.png",
-    color: "bg-primary",
+    photo: "/headshot_4.webp",
+    color: "bg-purple-500",
   },
-  
 ];
 
 export default function AboutPage() {
@@ -118,7 +117,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {team.map((member) => (
               <div
-                key={member.role}
+                key={member.name}
                 className="bg-white rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group"
               >
                 {/* Photo */}
