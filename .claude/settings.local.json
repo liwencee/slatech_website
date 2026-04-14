@@ -38,7 +38,10 @@
       "WebFetch(domain:www.framer.com)",
       "WebFetch(domain:www.wix.com)",
       "WebFetch(domain:kota.co.uk)",
-      "WebFetch(domain:superherocheesecake.com)"
+      "WebFetch(domain:superherocheesecake.com)",
+      "Bash(favicon)",
+      "Bash(slatech\")",
+      "Bash(npx tsc:*)"
     ]
   }
 }

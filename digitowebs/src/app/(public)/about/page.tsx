@@ -11,21 +11,21 @@ export const metadata: Metadata = {
 
 const team = [
   {
-    name: "Olalekan Adewale",
-    role: "Founder & CEO",
-    photo: "/images/headshot_1.webp",
+    name: "DevOPs Engineer",
+    role: "Development & Operations",
+    photo: "/images/lekan.jpg",
     color: "bg-primary",
   },
   {
     name: "Lead Designer",
     role: "UI/UX Design",
-    photo: "/images/headshot_2.webp",
+    photo: "/images/nigerian.jpg",
     color: "bg-secondary",
   },
   {
-    name: "Senior Developer",
-    role: "Full-Stack Development",
-    photo: "/images/headshot_3.webp",
+    name: "Head of ",
+    role: "People and Culture",
+    photo: "/images/oyin.jpg",
     color: "bg-green-500",
   },
   {
