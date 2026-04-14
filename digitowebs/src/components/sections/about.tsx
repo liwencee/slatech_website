@@ -46,49 +46,64 @@ export function AboutSection() {
     <section id="about" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left - Visual */}
+
+          {/* ── Left — Team Photo ── */}
           <AnimateOnScroll animation="slide-left">
             <div className="relative">
-              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+              {/* Main image */}
+              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/team.png"
-                  alt="Slatech Solutions Team — Web Design Agency in Lagos Nigeria"
+                  alt="Slatech Solutions Team — Web Design Agency in Ikeja, Lagos Nigeria"
                   fill
-                  className="object-cover"
+                  className="object-cover object-center"
                   sizes="(max-width: 768px) 100vw, 50vw"
                   priority
                 />
-                {/* Dark overlay at bottom for badge readability */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                {/* Gradient overlay at bottom */}
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary/50 via-transparent to-transparent" />
+                {/* Caption on image */}
+                <div className="absolute bottom-4 left-4">
+                  <p className="text-white font-semibold text-sm">Our Team in Lagos</p>
+                  <p className="text-primary text-xs font-medium">Ikeja, Lagos · Nigeria</p>
+                </div>
               </div>
-              {/* Floating badge */}
-              <div className="absolute -bottom-4 -right-4 bg-primary text-white px-5 py-3 rounded-xl shadow-lg animate-bounce" style={{ animationDuration: "3s" }}>
-                <p className="text-2xl font-bold">5+</p>
-                <p className="text-xs">Years Experience</p>
+              {/* Floating Years Badge */}
+              <div
+                className="absolute -bottom-5 -right-5 bg-primary text-white px-5 py-3 rounded-xl shadow-xl"
+                style={{ animation: "bounce 3s ease-in-out infinite" }}
+              >
+                <p className="text-2xl font-bold leading-none">5+</p>
+                <p className="text-xs mt-0.5">Years Experience</p>
               </div>
             </div>
           </AnimateOnScroll>
 
-          {/* Right - Content */}
+          {/* ── Right — Content ── */}
           <AnimateOnScroll animation="slide-right">
             <div>
               <span className="inline-block text-primary text-sm font-semibold uppercase tracking-wider mb-3">
                 About Us
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6 leading-tight">
-                We Build Digital Experiences That <span className="text-primary">Inspire</span>
+                We Build Digital Experiences That{" "}
+                <span className="text-primary">Inspire</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Slatech Solutions is a leading web design agency dedicated to transforming
-                ideas into powerful digital experiences. We combine creativity with
-                cutting-edge technology to deliver websites that not only look
-                stunning but also perform exceptionally.
+                Slatech Solutions is a leading web design agency in Lagos, Nigeria,
+                dedicated to transforming ideas into powerful digital experiences.
+                We combine creativity with cutting-edge technology to deliver websites
+                that not only look stunning but also rank on Google and convert
+                visitors into paying customers.
               </p>
 
               {/* Feature grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8">
-                {features.map((feature, i) => (
-                  <div key={feature.title} className="flex gap-3 group cursor-default p-3 rounded-xl hover:bg-primary/5 transition-all duration-300">
+                {features.map((feature) => (
+                  <div
+                    key={feature.title}
+                    className="flex gap-3 group cursor-default p-3 rounded-xl hover:bg-primary/5 transition-all duration-300"
+                  >
                     <div className="w-11 h-11 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                       {feature.icon}
                     </div>
