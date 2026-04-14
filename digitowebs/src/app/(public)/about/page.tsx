@@ -5,7 +5,7 @@ import { StatsSection } from "@/components/sections/stats";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Slatech Solutions — 5+ years of experience building stunning, fast, and secure websites for businesses of all sizes.",
+    "Learn about Slatech Solutions — 10+ years of experience building stunning, fast, and secure websites for businesses of all sizes.",
 };
 
 const team = [
@@ -29,7 +29,7 @@ export default function AboutPage() {
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             Slatech Solutions is a leading web design agency dedicated to transforming
-            ideas into powerful digital experiences since 2020.
+            ideas into powerful digital experiences since 2015.
           </p>
         </div>
       </section>
@@ -44,7 +44,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Founded in 2020, Slatech Solutions started with a simple mission: to
+                  Founded in 2015, Slatech Solutions started with a simple mission: to
                   help businesses establish a powerful online presence through
                   exceptional web design and development.
                 </p>
@@ -65,8 +65,7 @@ export default function AboutPage() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/10" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
-                  <p className="text-6xl font-bold text-primary">5+</p>
-                  <img src="digitowebs/src/app/api/media/upload/lekan.jpg" alt="About Us" className="mt-4 rounded-lg shadow-md" />
+                  <p className="text-6xl font-bold text-primary">10+</p>
                   <p className="text-muted-foreground font-medium mt-2">
                     Years Building the Web
                   </p>
@@ -98,13 +97,11 @@ export default function AboutPage() {
                 className="bg-white rounded-2xl p-6 text-center border border-border hover:shadow-md transition-shadow"
               >
                 <div
-                  className={`w-20 h-20 rounded-full ${member.color} mx-auto mb-4 flex items-center justify-center overflow-hidden`}
+                  className={`w-20 h-20 rounded-full ${member.color} mx-auto mb-4 flex items-center justify-center`}
                 >
-                  <img
-                    src={`digitowebs/src/app/api/media/upload/headshots_1webp${member.name.toLowerCase().replace(/\s/g, "")}.jpg`}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                  />
+                  <svg className="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
                 </div>
                 <h3 className="font-bold text-foreground">{member.name}</h3>
                 <p className="text-sm text-muted-foreground mt-1">
