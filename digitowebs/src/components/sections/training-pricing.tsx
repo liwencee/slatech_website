@@ -1,7 +1,27 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Script from "next/script";
 
+/* ── Paystack types (no package needed) ─────────────────────────── */
+declare global {
+  interface Window {
+    PaystackPop: {
+      setup: (opts: {
+        key: string;
+        email: string;
+        amount: number;
+        currency: string;
+        ref: string;
+        metadata?: object;
+        callback: (res: { reference: string }) => void;
+        onClose: () => void;
+      }) => { openIframe: () => void };
+    };
+  }
+}
+
+/* ── Course data ─────────────────────────────────────────────────── */
 const courses = [
   {
     id: "basic",
@@ -52,12 +72,28 @@ const courses = [
   },
 ];
 
-export function TrainingPricing() {
-  const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState<(typeof courses)[0] | null>(null);
+type Course = (typeof courses)[0];
 
-  const openModal = (course: (typeof courses)[0]) => {
+export function TrainingPricing() {
+  const [open, setOpen]         = useState(false);
+  const [selected, setSelected] = useState<Course | null>(null);
+  const [email, setEmail]       = useState("");
+  const [emailErr, setEmailErr] = useState("");
+  const [paying, setPaying]     = useState(false);
+  const [scriptReady, setScriptReady] = useState(false);
+
+  /* close modal on Escape key */
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => e.key === "Escape" && closeModal();
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, []);
+
+  const openModal = (course: Course) => {
     setSelected(course);
+    setEmail("");
+    setEmailErr("");
+    setPaying(false);
     setOpen(true);
   };
 
@@ -66,9 +102,61 @@ export function TrainingPricing() {
     setSelected(null);
   };
 
+  /* ── Paystack inline popup ──────────────────────────────────────── */
+  const handlePay = () => {
+    if (!selected) return;
+
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setEmailErr("Please enter a valid email address.");
+      return;
+    }
+    setEmailErr("");
+
+    const publicKey = process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY;
+
+    /* If Paystack script loaded and key is available → use popup */
+    if (scriptReady && publicKey && typeof window.PaystackPop !== "undefined") {
+      setPaying(true);
+      const ref = `SLT-${selected.id.toUpperCase()}-${Date.now()}`;
+
+      const handler = window.PaystackPop.setup({
+        key: publicKey,
+        email,
+        amount: selected.amount * 100, // Paystack expects kobo
+        currency: "NGN",
+        ref,
+        metadata: {
+          custom_fields: [
+            { display_name: "Course", variable_name: "course", value: selected.name },
+          ],
+        },
+        callback: (response) => {
+          setPaying(false);
+          closeModal();
+          window.location.href = `/training/success?ref=${response.reference}&course=${encodeURIComponent(selected.name)}`;
+        },
+        onClose: () => {
+          setPaying(false);
+        },
+      });
+
+      handler.openIframe();
+    } else {
+      /* Fallback: redirect to Paystack Shop link */
+      window.open(selected.payLink, "_blank");
+    }
+  };
+
   return (
     <>
-      {/* Pricing Cards */}
+      {/* Load Paystack SDK once */}
+      <Script
+        src="https://js.paystack.co/v1/inline.js"
+        strategy="lazyOnload"
+        onLoad={() => setScriptReady(true)}
+      />
+
+      {/* ── Pricing Cards ─────────────────────────────────────────── */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
         {courses.map((course) => (
           <div
@@ -111,20 +199,20 @@ export function TrainingPricing() {
                   : "bg-secondary text-white hover:bg-secondary/90"
               }`}
             >
-              View Features & Enrol
+              View Features &amp; Enrol
             </button>
           </div>
         ))}
       </div>
 
-      {/* Modal */}
+      {/* ── Modal ─────────────────────────────────────────────────── */}
       {open && selected && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
           onClick={(e) => e.target === e.currentTarget && closeModal()}
         >
-          <div className="bg-white w-full max-w-lg rounded-2xl shadow-2xl p-8 relative animate-in fade-in zoom-in-95 duration-200">
-            {/* Close */}
+          <div className="bg-white w-full max-w-lg rounded-2xl shadow-2xl p-8 relative">
+            {/* Close button */}
             <button
               onClick={closeModal}
               className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 text-gray-500 hover:text-gray-800 transition-colors text-xl font-bold"
@@ -139,8 +227,8 @@ export function TrainingPricing() {
               <p className="text-3xl font-extrabold text-primary mt-1">{selected.price}</p>
             </div>
 
-            {/* Features */}
-            <ul className="space-y-3 mb-6">
+            {/* Features list */}
+            <ul className="space-y-3 mb-5">
               {selected.features.map((f) => (
                 <li key={f} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <span className="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0 text-xs font-bold mt-0.5">
@@ -152,25 +240,46 @@ export function TrainingPricing() {
             </ul>
 
             {/* Schedule */}
-            <div className="bg-accent rounded-xl p-4 mb-6 text-center">
-              <p className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Class Schedule</p>
+            <div className="bg-accent rounded-xl p-4 mb-5 text-center">
+              <p className="text-xs font-bold text-primary uppercase tracking-widest mb-1">
+                Class Schedule
+              </p>
               <p className="text-sm font-semibold text-foreground">Tuesday &amp; Thursday</p>
               <p className="text-sm text-muted-foreground">11:00 AM – 2:00 PM</p>
               <p className="text-sm text-muted-foreground">April 16 – June 11, 2026</p>
             </div>
 
+            {/* Email field */}
+            <div className="mb-4">
+              <label htmlFor="pay-email" className="block text-xs font-semibold text-foreground mb-1.5">
+                Your Email Address <span className="text-primary">*</span>
+              </label>
+              <input
+                id="pay-email"
+                type="email"
+                value={email}
+                onChange={(e) => { setEmail(e.target.value); setEmailErr(""); }}
+                placeholder="you@example.com"
+                className={`w-full px-4 py-2.5 rounded-lg border text-sm outline-none focus:ring-2 focus:ring-primary/30 transition-all ${
+                  emailErr ? "border-red-400 bg-red-50" : "border-border focus:border-primary"
+                }`}
+              />
+              {emailErr && (
+                <p className="text-xs text-red-500 mt-1">{emailErr}</p>
+              )}
+            </div>
+
             {/* Pay Now */}
-            <a
-              href={selected.payLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full py-3.5 bg-primary text-white font-bold text-center rounded-xl hover:bg-primary/90 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/25"
+            <button
+              onClick={handlePay}
+              disabled={paying}
+              className="w-full py-3.5 bg-primary text-white font-bold text-center rounded-xl hover:bg-primary/90 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/25 disabled:opacity-60 disabled:scale-100 disabled:cursor-wait"
             >
-              Pay Now — {selected.price}
-            </a>
+              {paying ? "Opening payment…" : `Pay Now — ${selected.price}`}
+            </button>
 
             <p className="text-center text-xs text-muted-foreground mt-3">
-              Secure payment via Paystack
+              Secure payment via Paystack · Your details are protected
             </p>
           </div>
         </div>
