@@ -35,7 +35,6 @@ const courses = [
       "Daily reviews & feedback",
       "Lifetime Photoshop & Illustrator licence",
     ],
-    payLink: "https://paystack.shop/pay/slatech-basic",
     featured: false,
   },
   {
@@ -51,7 +50,6 @@ const courses = [
       "Google Business Profile optimisation",
       "Freelance opportunities & referrals",
     ],
-    payLink: "https://paystack.shop/pay/slatech-advance",
     featured: false,
   },
   {
@@ -67,12 +65,13 @@ const courses = [
       "Cloudflare security setup",
       "Lifetime mentorship & support",
     ],
-    payLink: "https://paystack.shop/pay/slatech-master",
     featured: true,
   },
 ];
 
 type Course = (typeof courses)[0];
+
+const WHATSAPP = "https://wa.me/2348076172456";
 
 export function TrainingPricing() {
   const [open, setOpen]         = useState(false);
@@ -142,8 +141,11 @@ export function TrainingPricing() {
 
       handler.openIframe();
     } else {
-      /* Fallback: redirect to Paystack Shop link */
-      window.open(selected.payLink, "_blank");
+      /* Fallback: Paystack SDK not ready — send to WhatsApp to complete payment */
+      const msg = encodeURIComponent(
+        `Hi, I want to register for the *${selected.name}* (${selected.price}). Please assist with payment.`
+      );
+      window.open(`${WHATSAPP}?text=${msg}`, "_blank");
     }
   };
 
@@ -279,7 +281,15 @@ export function TrainingPricing() {
             </button>
 
             <p className="text-center text-xs text-muted-foreground mt-3">
-              Secure payment via Paystack · Your details are protected
+              Secure payment via Paystack · Can&apos;t pay online?{" "}
+              <a
+                href={`${WHATSAPP}?text=${encodeURIComponent(`Hi, I want to register for ${selected?.name}. Please assist with payment.`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary underline"
+              >
+                Contact us on WhatsApp
+              </a>
             </p>
           </div>
         </div>
