@@ -41,7 +41,14 @@
       "WebFetch(domain:superherocheesecake.com)",
       "Bash(favicon)",
       "Bash(slatech\")",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(wmic datafile:*)",
+      "Bash(dir \"C:\\\\Users\\\\DELL\\\\code Claude\\\\digitowebs\\\\public\\\\images\" /b /a-d)",
+      "Bash(findstr headshot:*)",
+      "Bash(dir \"C:\\\\Users\\\\DELL\\\\code Claude\\\\digitowebs\\\\public\\\\images\")",
+      "Bash(dir \"C:\\\\Users\\\\DELL\\\\code Claude\\\\digitowebs\\\\public\")",
+      "Bash(findstr -i headshot)",
+      "Bash(dir \"C:\\\\Users\\\\DELL\\\\code Claude\\\\digitowebs\\\\public\" /b)"
     ]
   }
 }
