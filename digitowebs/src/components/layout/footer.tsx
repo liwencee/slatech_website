@@ -64,6 +64,14 @@ function XTwitterIcon({ className = "w-5 h-5" }: { className?: string }) {
   );
 }
 
+function FacebookIcon({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+    </svg>
+  );
+}
+
 function MapPinIcon({ className = "w-5 h-5" }: { className?: string }) {
   return (
     <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -272,7 +280,7 @@ export function Footer() {
               </p>
 
               {/* Social Icons */}
-              <div className="flex gap-3">
+              <div className="flex gap-3 flex-wrap">
                 <SocialButton
                   href="https://wa.me/2348076172456"
                   label="WhatsApp"
@@ -280,16 +288,22 @@ export function Footer() {
                   <WhatsAppIcon className="w-[18px] h-[18px]" />
                 </SocialButton>
                 <SocialButton
+                  href="https://www.facebook.com/share/1AtxLz2njU/?mibextid=wwXIfr"
+                  label="Facebook"
+                >
+                  <FacebookIcon className="w-[18px] h-[18px]" />
+                </SocialButton>
+                <SocialButton
+                  href="https://www.instagram.com/_slatech?igsh=MTJta3IwZDVvanY4cg%3D%3D&utm_source=qr"
+                  label="Instagram"
+                >
+                  <InstagramIcon className="w-[18px] h-[18px]" />
+                </SocialButton>
+                <SocialButton
                   href="https://linkedin.com"
                   label="LinkedIn"
                 >
                   <LinkedInIcon className="w-[18px] h-[18px]" />
-                </SocialButton>
-                <SocialButton
-                  href="https://instagram.com"
-                  label="Instagram"
-                >
-                  <InstagramIcon className="w-[18px] h-[18px]" />
                 </SocialButton>
                 <SocialButton
                   href="https://x.com"
@@ -467,7 +481,7 @@ export function Footer() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-400">
-            &copy; 2015&ndash;2026 Slatech Solutions. All rights reserved.
+            &copy; 2020&ndash;2026 Slatech Solutions. All rights reserved.
           </p>
 
           <div className="flex items-center gap-1 sm:gap-2 flex-wrap justify-center">
