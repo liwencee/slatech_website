@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -21,7 +22,8 @@ const services = [
       "SEO-Optimized Structure",
       "Cross-Browser Compatible",
     ],
-    color: "bg-primary",
+    image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80",
+    imageAlt: "Web design workspace with laptop and design tools",
   },
   {
     id: "ecommerce",
@@ -36,7 +38,8 @@ const services = [
       "Abandoned Cart Recovery",
       "Analytics Dashboard",
     ],
-    color: "bg-secondary",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80",
+    imageAlt: "E-commerce shopping experience on laptop and mobile",
   },
   {
     id: "seo",
@@ -51,7 +54,8 @@ const services = [
       "Content Strategy",
       "Monthly Analytics Reports",
     ],
-    color: "bg-green-600",
+    image: "https://images.unsplash.com/photo-1562577309-2592ab84b1bc?w=800&q=80",
+    imageAlt: "SEO analytics dashboard showing website rankings and traffic",
   },
   {
     id: "hosting",
@@ -66,7 +70,8 @@ const services = [
       "24/7 Technical Support",
       "Scalable Resources",
     ],
-    color: "bg-purple-600",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+    imageAlt: "Data center server racks for reliable website hosting",
   },
   {
     id: "management",
@@ -81,7 +86,8 @@ const services = [
       "Uptime Monitoring",
       "Monthly Reports",
     ],
-    color: "bg-orange-500",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    imageAlt: "Website management dashboard showing performance metrics and uptime",
   },
   {
     id: "managed",
@@ -96,7 +102,8 @@ const services = [
       "SEO & Analytics",
       "Priority Support",
     ],
-    color: "bg-pink-600",
+    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80",
+    imageAlt: "Professional team managing a fully managed website service",
   },
 ];
 
@@ -159,15 +166,23 @@ export default function ServicesPage() {
                   </Link>
                 </div>
                 <div
-                  className={`aspect-[4/3] ${service.color} rounded-2xl relative overflow-hidden ${
+                  className={`aspect-[4/3] rounded-2xl relative overflow-hidden shadow-xl ${
                     index % 2 === 1 ? "lg:order-1" : ""
                   }`}
                 >
-                  <div className="absolute inset-0 bg-black/10" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <p className="text-white/30 text-6xl font-bold">
+                  <Image
+                    src={service.image}
+                    alt={service.imageAlt}
+                    fill
+                    className="object-cover object-center transition-transform duration-700 hover:scale-105"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                  {/* subtle overlay + number badge */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 right-4 w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg">
+                    <span className="text-white font-bold text-sm">
                       {String(index + 1).padStart(2, "0")}
-                    </p>
+                    </span>
                   </div>
                 </div>
               </div>

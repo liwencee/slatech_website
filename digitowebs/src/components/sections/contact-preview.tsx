@@ -71,8 +71,10 @@ export function ContactSection() {
     setErrors((p) => ({ ...p, [field]: e[field] }));
   };
 
+  const [apiError, setApiError] = useState("");
+
   const handleSubmit = useCallback(
-    (e: React.FormEvent) => {
+    async (e: React.FormEvent) => {
       e.preventDefault();
       const allTouched = (Object.keys(initial) as (keyof FormState)[]).reduce(
         (a, k) => ({ ...a, [k]: true }),
@@ -82,15 +84,32 @@ export function ContactSection() {
       const errs = validate(form);
       setErrors(errs);
       if (Object.keys(errs).length) return;
+
       setLoading(true);
-      setTimeout(() => {
+      setApiError("");
+
+      try {
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(form),
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          setApiError(data.error || "Something went wrong. Please try again.");
+          setLoading(false);
+          return;
+        }
         setLoading(false);
         setSubmitted(true);
         setForm(initial);
         setTouched({});
         setErrors({});
-        setTimeout(() => setSubmitted(false), 6000);
-      }, 1200);
+        setTimeout(() => setSubmitted(false), 8000);
+      } catch {
+        setApiError("Network error. Please check your connection and try again.");
+        setLoading(false);
+      }
     },
     [form]
   );
@@ -274,7 +293,7 @@ export function ContactSection() {
                       <input
                         id="lastName" type="text" autoComplete="family-name"
                         value={form.lastName} onChange={(e) => change("lastName", e.target.value)}
-                        onBlur={() => blur("lastName")} placeholder="e.g. Okafor"
+                        onBlur={() => blur("lastName")} placeholder="e.g. Olalekan"
                         className={fc("lastName")}
                       />
                       {errors.lastName && touched.lastName && (
@@ -355,6 +374,13 @@ export function ContactSection() {
                       <p className="text-red-500 text-xs mt-1">{errors.message}</p>
                     )}
                   </div>
+
+                  {/* API error */}
+                  {apiError && (
+                    <div className="p-3 rounded-xl bg-red-50 border border-red-200 text-red-600 text-sm text-center">
+                      {apiError}
+                    </div>
+                  )}
 
                   {/* Submit */}
                   <button
