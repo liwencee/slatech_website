@@ -655,9 +655,9 @@ export function AIChatbox() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-4 sm:right-6 z-[9999] w-[370px] max-w-[calc(100vw-1.5rem)] bg-white rounded-2xl shadow-2xl border border-border overflow-hidden animate-fade-in">
+        <div className="fixed bottom-[88px] left-3 right-3 sm:left-auto sm:right-6 sm:w-[370px] z-[9999] bg-white rounded-2xl shadow-2xl border border-border overflow-hidden animate-fade-in">
           {/* Header */}
-          <div className="bg-secondary text-white p-4 flex items-center justify-between">
+          <div className="bg-secondary text-white px-3 py-3 sm:px-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
                 <svg
@@ -698,7 +698,7 @@ export function AIChatbox() {
           </div>
 
           {/* Messages Area */}
-          <div className="h-[340px] overflow-y-auto p-4 space-y-3 bg-accent/30">
+          <div className="h-[260px] sm:h-[320px] overflow-y-auto p-3 sm:p-4 space-y-3 bg-accent/30">
             {messages.map((msg, i) => (
               <div
                 key={i}
@@ -744,7 +744,7 @@ export function AIChatbox() {
 
           {/* Service Picker (Branch A3) */}
           {showServicePicker && (
-            <div className="px-4 py-3 border-t border-border bg-white space-y-2">
+            <div className="px-3 py-2 sm:px-4 sm:py-3 border-t border-border bg-white space-y-2">
               <p className="text-xs text-muted-foreground font-medium">
                 Select services:
               </p>
@@ -805,12 +805,12 @@ export function AIChatbox() {
 
           {/* Quick Reply Buttons */}
           {quickReplies.length > 0 && !showServicePicker && (
-            <div className="px-4 py-3 border-t border-border bg-white space-y-1.5">
+            <div className="px-3 py-2 sm:px-4 sm:py-3 border-t border-border bg-white space-y-1">
               {quickReplies.map((reply, i) => (
                 <button
                   key={i}
                   onClick={reply.action}
-                  className="w-full text-left px-4 py-2.5 text-sm bg-accent/50 text-foreground rounded-xl hover:bg-primary/10 hover:text-primary border border-transparent hover:border-primary/20 transition-all duration-200"
+                  className="w-full text-left px-3 py-2 sm:px-4 sm:py-2.5 text-xs sm:text-sm bg-accent/50 text-foreground rounded-xl hover:bg-primary/10 hover:text-primary border border-transparent hover:border-primary/20 transition-all duration-200"
                 >
                   {reply.label}
                 </button>
@@ -820,7 +820,7 @@ export function AIChatbox() {
 
           {/* Text Input */}
           {!showServicePicker && (
-            <div className="p-3 border-t border-border bg-white flex items-center gap-2">
+            <div className="px-2 py-2 sm:p-3 border-t border-border bg-white flex items-center gap-2">
               <input
                 ref={inputRef}
                 type="text"
@@ -836,12 +836,12 @@ export function AIChatbox() {
                     ? "Tell us about your business..."
                     : "Type a message..."
                 }
-                className="flex-1 px-4 py-2.5 text-sm border border-border rounded-full focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
+                className="flex-1 px-3 py-2 sm:px-4 sm:py-2.5 text-sm border border-border rounded-full focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
               />
               <button
                 onClick={handleUserInput}
                 disabled={!input.trim()}
-                className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary-dark transition-all disabled:opacity-40 hover:scale-105 active:scale-95 shrink-0"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary-dark transition-all disabled:opacity-40 hover:scale-105 active:scale-95 shrink-0"
                 aria-label="Send message"
               >
                 <svg
