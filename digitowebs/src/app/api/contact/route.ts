@@ -72,7 +72,7 @@ export async function POST(req: NextRequest) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Slatech Website <onboarding@resend.dev>",  // change to contact@slatech.com.ng after domain verification
+        from: "Slatech Website <contact@mail.slatech.com.ng>",
         to: ["info@slatech.com.ng"],
         reply_to: email,
         subject: `New Enquiry: ${service} — ${firstName} ${lastName}`,

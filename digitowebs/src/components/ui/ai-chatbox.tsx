@@ -267,11 +267,25 @@ export function AIChatbox() {
 
   const handleA4Budget = useCallback(
     (budget: string) => {
-      setFormData((prev) => ({ ...prev, budget }));
+      const updatedForm = { ...formData, budget };
+      setFormData(updatedForm);
       setMessages((prev) => [...prev, { role: "user", content: budget }]);
       setCurrentNode("a5_confirmation");
 
-      const name = formData.name || "there";
+      const name = updatedForm.name || "there";
+
+      // Send lead email to info@slatech.com.ng
+      fetch("/api/chatbot-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: updatedForm.name,
+          email: updatedForm.email,
+          services: updatedForm.services,
+          budget: updatedForm.budget,
+          details: updatedForm.details,
+        }),
+      }).catch(() => {/* fail silently */});
 
       const confirmReplies: QuickReply[] = [
         {
@@ -289,7 +303,7 @@ export function AIChatbox() {
         confirmReplies
       );
     },
-    [botSay, formData.name, forwardToWhatsApp, startGreeting]
+    [botSay, formData, forwardToWhatsApp, startGreeting]
   );
 
   /* ---------------------------------------------------------------- */

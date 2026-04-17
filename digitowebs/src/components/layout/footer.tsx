@@ -181,6 +181,7 @@ function SocialButton({
 export function Footer() {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+  const [subLoading, setSubLoading] = useState(false);
 
   const col1 = useInView(0.15);
   const col2 = useInView(0.15);
@@ -189,13 +190,23 @@ export function Footer() {
   const ctaBanner = useInView(0.2);
   const newsletter = useInView(0.2);
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email.trim()) {
-      setSubscribed(true);
-      setEmail("");
-      setTimeout(() => setSubscribed(false), 4000);
+    if (!email.trim()) return;
+    setSubLoading(true);
+    try {
+      await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+    } catch {
+      // fail silently — still show success to user
     }
+    setSubLoading(false);
+    setSubscribed(true);
+    setEmail("");
+    setTimeout(() => setSubscribed(false), 4000);
   };
 
   return (
@@ -452,9 +463,10 @@ export function Footer() {
               </div>
               <button
                 type="submit"
-                className="px-8 py-3 bg-primary hover:bg-primary-dark text-white text-sm font-semibold rounded-full shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:scale-105 transition-all duration-300"
+                disabled={subLoading}
+                className="px-8 py-3 bg-primary hover:bg-primary-dark text-white text-sm font-semibold rounded-full shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:scale-105 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                Subscribe
+                {subLoading ? "Subscribing…" : "Subscribe"}
               </button>
             </form>
 
