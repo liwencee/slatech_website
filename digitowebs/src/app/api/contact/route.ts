@@ -1,11 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
+import { transporter } from "@/lib/mailer";
 
 export async function POST(req: NextRequest) {
   try {
     const { firstName, lastName, email, phone, service, message } =
       await req.json();
 
-    /* ── Basic server-side validation ──────────────────────────── */
+    /* ── Validation ─────────────────────────────────────────────── */
     if (!firstName || !lastName || !email || !service || !message) {
       return NextResponse.json(
         { error: "Missing required fields." },
@@ -13,16 +14,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const apiKey = process.env.RESEND_API_KEY;
-    if (!apiKey) {
-      console.error("RESEND_API_KEY is not set");
-      return NextResponse.json(
-        { error: "Email service is not configured." },
-        { status: 500 }
-      );
-    }
-
-    /* ── Build the email HTML ───────────────────────────────────── */
+    /* ── Build HTML ─────────────────────────────────────────────── */
     const html = `
       <div style="font-family:sans-serif;max-width:600px;margin:0 auto;color:#1a1a1a;">
         <div style="background:#115279;padding:24px 32px;border-radius:12px 12px 0 0;">
@@ -64,36 +56,20 @@ export async function POST(req: NextRequest) {
       </div>
     `;
 
-    /* ── Send via Resend REST API ────────────────────────────────── */
-    const res = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: "Slatech Website <contact@mail.slatech.com.ng>",
-        to: ["info@slatech.com.ng"],
-        reply_to: email,
-        subject: `New Enquiry: ${service} — ${firstName} ${lastName}`,
-        html,
-      }),
+    /* ── Send via Hostinger SMTP ─────────────────────────────────── */
+    await transporter.sendMail({
+      from:    `"Slatech Solutions" <info@slatech.com.ng>`,
+      to:      "info@slatech.com.ng",
+      replyTo: email,
+      subject: `New Enquiry: ${service} — ${firstName} ${lastName}`,
+      html,
     });
-
-    if (!res.ok) {
-      const errData = await res.json().catch(() => ({}));
-      console.error("Resend error:", errData);
-      return NextResponse.json(
-        { error: "Failed to send email. Please try again." },
-        { status: 500 }
-      );
-    }
 
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error("Contact API error:", err);
     return NextResponse.json(
-      { error: "Unexpected error. Please try again." },
+      { error: "Failed to send email. Please try again." },
       { status: 500 }
     );
   }

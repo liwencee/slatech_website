@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { transporter } from "@/lib/mailer";
 
 export async function POST(req: NextRequest) {
   try {
@@ -6,11 +7,6 @@ export async function POST(req: NextRequest) {
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: "Valid email is required." }, { status: 400 });
-    }
-
-    const apiKey = process.env.RESEND_API_KEY;
-    if (!apiKey) {
-      return NextResponse.json({ error: "Email service not configured." }, { status: 500 });
     }
 
     const html = `
@@ -29,30 +25,17 @@ export async function POST(req: NextRequest) {
       </div>
     `;
 
-    const res = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: "Slatech Website <contact@mail.slatech.com.ng>",
-        to: ["info@slatech.com.ng"],
-        reply_to: email,
-        subject: `New Newsletter Subscriber: ${email}`,
-        html,
-      }),
+    await transporter.sendMail({
+      from:    `"Slatech Solutions" <info@slatech.com.ng>`,
+      to:      "info@slatech.com.ng",
+      replyTo: email,
+      subject: `New Newsletter Subscriber: ${email}`,
+      html,
     });
-
-    if (!res.ok) {
-      const errData = await res.json().catch(() => ({}));
-      console.error("Resend newsletter error:", errData);
-      return NextResponse.json({ error: "Failed to send notification." }, { status: 500 });
-    }
 
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error("Newsletter API error:", err);
-    return NextResponse.json({ error: "Unexpected error." }, { status: 500 });
+    return NextResponse.json({ error: "Failed to send notification." }, { status: 500 });
   }
 }
