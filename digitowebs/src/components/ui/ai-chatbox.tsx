@@ -85,6 +85,9 @@ export function AIChatbox() {
   const [hasGreeted, setHasGreeted] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
 
+  const formDataRef = useRef(formData);
+  useEffect(() => { formDataRef.current = formData; }, [formData]);
+
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const reengageTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -267,7 +270,7 @@ export function AIChatbox() {
 
   const handleA4Budget = useCallback(
     (budget: string) => {
-      const updatedForm = { ...formData, budget };
+      const updatedForm = { ...formDataRef.current, budget };
       setFormData(updatedForm);
       setMessages((prev) => [...prev, { role: "user", content: budget }]);
       setCurrentNode("a5_confirmation");
@@ -282,10 +285,15 @@ export function AIChatbox() {
           name: updatedForm.name,
           email: updatedForm.email,
           services: updatedForm.services,
-          budget: updatedForm.budget,
+          budget,
           details: updatedForm.details,
         }),
-      }).catch(() => {/* fail silently */});
+      })
+        .then((r) => r.json().then((d) => {
+          if (!r.ok) console.error("Chatbot lead send failed:", d);
+          else console.log("Chatbot lead sent:", d);
+        }))
+        .catch((err) => console.error("Chatbot lead fetch error:", err));
 
       const confirmReplies: QuickReply[] = [
         {
@@ -303,7 +311,7 @@ export function AIChatbox() {
         confirmReplies
       );
     },
-    [botSay, formData, forwardToWhatsApp, startGreeting]
+    [botSay, forwardToWhatsApp, startGreeting]
   );
 
   /* ---------------------------------------------------------------- */
