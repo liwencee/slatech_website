@@ -1,5 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
-import { transporter } from "@/lib/mailer";
+import nodemailer from "nodemailer";
+
+// GET — health check: visit /api/newsletter in browser to confirm route is live
+export async function GET() {
+  return NextResponse.json({ status: "newsletter route is live" });
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -8,6 +13,16 @@ export async function POST(req: NextRequest) {
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: "Valid email is required." }, { status: 400 });
     }
+
+    const transporter = nodemailer.createTransport({
+      host:   process.env.SMTP_HOST  || "smtp.hostinger.com",
+      port:   Number(process.env.SMTP_PORT) || 465,
+      secure: true,
+      auth: {
+        user: process.env.SMTP_USER || "info@slatech.com.ng",
+        pass: process.env.SMTP_PASS || "",
+      },
+    });
 
     const html = `
       <div style="font-family:sans-serif;max-width:500px;margin:0 auto;color:#1a1a1a;">
@@ -19,7 +34,7 @@ export async function POST(req: NextRequest) {
           <p style="font-size:14px;margin:0 0 8px;">A new visitor just subscribed to your newsletter:</p>
           <p style="font-size:16px;font-weight:700;color:#e91761;margin:0;">${email}</p>
           <div style="margin-top:20px;padding-top:16px;border-top:1px solid #e5e7eb;font-size:12px;color:#999;">
-            Subscribed via slatech.com.ng newsletter · ${new Date().toLocaleString("en-NG", { timeZone: "Africa/Lagos" })}
+            Subscribed via slatech.com.ng · ${new Date().toLocaleString("en-NG", { timeZone: "Africa/Lagos" })}
           </div>
         </div>
       </div>
@@ -36,6 +51,10 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error("Newsletter API error:", err);
-    return NextResponse.json({ error: "Failed to send notification." }, { status: 500 });
+    const message = err instanceof Error ? err.message : "Unknown error";
+    return NextResponse.json(
+      { error: "Failed to send. " + message },
+      { status: 500 }
+    );
   }
 }
