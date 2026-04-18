@@ -182,6 +182,7 @@ export function Footer() {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
   const [subLoading, setSubLoading] = useState(false);
+  const [subError, setSubError] = useState("");
 
   const col1 = useInView(0.15);
   const col2 = useInView(0.15);
@@ -194,19 +195,28 @@ export function Footer() {
     e.preventDefault();
     if (!email.trim()) return;
     setSubLoading(true);
+    setSubError("");
     try {
-      await fetch("/api/newsletter", {
+      const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
       });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setSubError(data.error || "Something went wrong. Please try again.");
+        setSubLoading(false);
+        return;
+      }
     } catch {
-      // fail silently — still show success to user
+      setSubError("Network error. Please try again.");
+      setSubLoading(false);
+      return;
     }
     setSubLoading(false);
     setSubscribed(true);
     setEmail("");
-    setTimeout(() => setSubscribed(false), 4000);
+    setTimeout(() => setSubscribed(false), 5000);
   };
 
   return (
@@ -480,6 +490,13 @@ export function Footer() {
             >
               Thank you for subscribing! We will be in touch soon.
             </div>
+
+            {/* Error Message */}
+            {subError && (
+              <div className="mt-4 text-sm text-red-400 text-center">
+                {subError}
+              </div>
+            )}
           </div>
         </div>
       </div>

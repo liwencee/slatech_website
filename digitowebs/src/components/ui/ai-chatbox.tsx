@@ -229,13 +229,31 @@ export function AIChatbox() {
       botSay(
         "Perfect! Now the fun part \u2014 which services are you interested in? (Pick as many as you like!)"
       );
+
+      // Fire lead email immediately — we now have name + email
+      const currentName = formDataRef.current.name;
+      fetch("/api/chatbot-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: currentName,
+          email,
+          services: [],
+          budget: "Not yet provided",
+          details: "Lead captured at email step — still in conversation",
+        }),
+      }).catch((err) => console.error("Early lead capture error:", err));
     },
     [botSay]
   );
 
   const handleA3ServicesSubmit = useCallback(() => {
     if (selectedServices.length === 0) return;
-    setFormData((prev) => ({ ...prev, services: selectedServices }));
+    setFormData((prev) => {
+      const next = { ...prev, services: selectedServices };
+      formDataRef.current = next;
+      return next;
+    });
     setShowServicePicker(false);
     setMessages((prev) => [
       ...prev,
@@ -249,7 +267,11 @@ export function AIChatbox() {
 
   const handleA4Details = useCallback(
     (details: string) => {
-      setFormData((prev) => ({ ...prev, details }));
+      setFormData((prev) => {
+        const next = { ...prev, details };
+        formDataRef.current = next;
+        return next;
+      });
       setCurrentNode("a4_budget");
 
       const budgetReplies: QuickReply[] = [
@@ -270,30 +292,32 @@ export function AIChatbox() {
 
   const handleA4Budget = useCallback(
     (budget: string) => {
-      const updatedForm = { ...formDataRef.current, budget };
+      const snap = formDataRef.current;
+      const updatedForm = { ...snap, budget };
+      formDataRef.current = updatedForm;
       setFormData(updatedForm);
       setMessages((prev) => [...prev, { role: "user", content: budget }]);
       setCurrentNode("a5_confirmation");
 
       const name = updatedForm.name || "there";
 
-      // Send lead email to info@slatech.com.ng
+      // Send complete lead email with all details
       fetch("/api/chatbot-lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: updatedForm.name,
-          email: updatedForm.email,
+          name:     updatedForm.name,
+          email:    updatedForm.email,
           services: updatedForm.services,
           budget,
-          details: updatedForm.details,
+          details:  updatedForm.details,
         }),
       })
         .then((r) => r.json().then((d) => {
-          if (!r.ok) console.error("Chatbot lead send failed:", d);
-          else console.log("Chatbot lead sent:", d);
+          if (!r.ok) console.error("Chatbot final lead failed:", d);
+          else console.log("Chatbot final lead sent:", d);
         }))
-        .catch((err) => console.error("Chatbot lead fetch error:", err));
+        .catch((err) => console.error("Chatbot final lead error:", err));
 
       const confirmReplies: QuickReply[] = [
         {
