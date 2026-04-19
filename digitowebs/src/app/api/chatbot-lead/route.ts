@@ -9,13 +9,14 @@ export async function POST(req: NextRequest) {
   try {
     const { name, email, services, budget, details } = await req.json();
 
+    // Use the same credentials as the working contact form
     const transporter = nodemailer.createTransport({
       host:   process.env.SMTP_HOST || "smtp.hostinger.com",
       port:   Number(process.env.SMTP_PORT) || 465,
       secure: true,
       auth: {
-        user: process.env.SMTP_CONTACT_USER || "contact@slatech.com.ng",
-        pass: process.env.SMTP_CONTACT_PASS || "",
+        user: process.env.SMTP_USER || "info@slatech.com.ng",
+        pass: process.env.SMTP_PASS || "",
       },
     });
 
@@ -26,7 +27,7 @@ export async function POST(req: NextRequest) {
     const html = `
       <div style="font-family:sans-serif;max-width:600px;margin:0 auto;color:#1a1a1a;">
         <div style="background:#115279;padding:24px 32px;border-radius:12px 12px 0 0;">
-          <h1 style="color:#fff;margin:0;font-size:20px;">New Chatbot Lead</h1>
+          <h1 style="color:#fff;margin:0;font-size:20px;">🤖 New Chatbot Lead</h1>
           <p style="color:#e91761;margin:4px 0 0;font-size:13px;">Slatech Solutions — AI Chatbot</p>
         </div>
         <div style="background:#f9f9f9;padding:32px;border-radius:0 0 12px 12px;border:1px solid #e5e7eb;">
@@ -63,10 +64,10 @@ export async function POST(req: NextRequest) {
     `;
 
     await transporter.sendMail({
-      from:    `"Slatech AI Chat" <contact@slatech.com.ng>`,
+      from:    `"Slatech Chatbot" <info@slatech.com.ng>`,
       to:      "info@slatech.com.ng",
       ...(email ? { replyTo: email } : {}),
-      subject: `New Chatbot Lead: ${name || "Unknown"} — ${serviceList}`,
+      subject: `🤖 Chatbot Lead: ${name || "Unknown"} — ${serviceList}`,
       html,
     });
 

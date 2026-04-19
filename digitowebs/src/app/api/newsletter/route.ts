@@ -18,8 +18,8 @@ export async function POST(req: NextRequest) {
       port:   Number(process.env.SMTP_PORT) || 465,
       secure: true,
       auth: {
-        user: process.env.SMTP_CONTACT_USER || "contact@slatech.com.ng",
-        pass: process.env.SMTP_CONTACT_PASS || "",
+        user: process.env.SMTP_USER || "info@slatech.com.ng",
+        pass: process.env.SMTP_PASS || "",
       },
     });
 
@@ -33,17 +33,17 @@ export async function POST(req: NextRequest) {
           <p style="font-size:14px;margin:0 0 8px;">A new visitor just subscribed to your newsletter:</p>
           <p style="font-size:16px;font-weight:700;color:#e91761;margin:0;">${email}</p>
           <div style="margin-top:20px;padding-top:16px;border-top:1px solid #e5e7eb;font-size:12px;color:#999;">
-            Subscribed via slatech.com.ng · ${new Date().toLocaleString("en-NG", { timeZone: "Africa/Lagos" })}
+            Subscribed via slatech.com.ng &middot; ${new Date().toLocaleString("en-NG", { timeZone: "Africa/Lagos" })}
           </div>
         </div>
       </div>
     `;
 
     await transporter.sendMail({
-      from:    `"Slatech Newsletter" <contact@slatech.com.ng>`,
+      from:    `"Slatech Newsletter" <info@slatech.com.ng>`,
       to:      "info@slatech.com.ng",
       replyTo: email,
-      subject: `New Newsletter Subscriber: ${email}`,
+      subject: `📬 Newsletter Subscriber: ${email}`,
       html,
     });
 
