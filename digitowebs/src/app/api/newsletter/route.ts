@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { transporter } from "@/lib/mailer";
 
 export async function GET() {
   return NextResponse.json({ status: "newsletter route is live" });
@@ -12,16 +12,6 @@ export async function POST(req: NextRequest) {
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: "Valid email is required." }, { status: 400 });
     }
-
-    const transporter = nodemailer.createTransport({
-      host:   process.env.SMTP_HOST || "smtp.hostinger.com",
-      port:   Number(process.env.SMTP_PORT) || 465,
-      secure: true,
-      auth: {
-        user: process.env.SMTP_USER || "info@slatech.com.ng",
-        pass: process.env.SMTP_PASS || "",
-      },
-    });
 
     const html = `
       <div style="font-family:sans-serif;max-width:500px;margin:0 auto;color:#1a1a1a;">
