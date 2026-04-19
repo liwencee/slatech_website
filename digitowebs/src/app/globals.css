@@ -38,55 +38,89 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  /* iOS Safari smooth scroll for whole page */
+  -webkit-overflow-scrolling: touch;
 }
 
-/* Smooth scroll */
+/* Smooth scroll — with Safari fallback */
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
+/* iOS Safari: fix 100vh viewport height bug */
+/* Use dvh (dynamic viewport height) where supported, fall back to 100vh */
+.min-h-screen {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* Fix for Safari iOS address-bar viewport shift */
+.h-screen {
+  height: 100vh;
+  height: 100dvh;
+}
+
+/* Custom scrollbar (Chrome / Edge / Safari) */
 ::-webkit-scrollbar {
   width: 8px;
 }
-
 ::-webkit-scrollbar-track {
   background: var(--muted);
 }
-
 ::-webkit-scrollbar-thumb {
   background: var(--secondary);
   border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
 }
 
-/* Animation utilities */
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--muted);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Backdrop-filter — Safari requires -webkit- prefix                  */
+/* ------------------------------------------------------------------ */
+.backdrop-blur-sm,
+[class*="backdrop-blur"] {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Animation utilities — with webkit prefixes for older Safari         */
+/* ------------------------------------------------------------------ */
+
 @keyframes fade-in-up {
   from {
     opacity: 0;
+    -webkit-transform: translateY(30px);
     transform: translateY(30px);
   }
   to {
     opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
 
 @keyframes fade-in {
   from { opacity: 0; }
-  to { opacity: 1; }
+  to   { opacity: 1; }
 }
 
 @keyframes slide-in-left {
   from {
     opacity: 0;
+    -webkit-transform: translateX(-30px);
     transform: translateX(-30px);
   }
   to {
     opacity: 1;
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
 }
@@ -94,48 +128,61 @@ html {
 @keyframes slide-in-right {
   from {
     opacity: 0;
+    -webkit-transform: translateX(30px);
     transform: translateX(30px);
   }
   to {
     opacity: 1;
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
 }
 
 .animate-fade-in-up {
+  -webkit-animation: fade-in-up 0.6s ease-out forwards;
   animation: fade-in-up 0.6s ease-out forwards;
 }
 
 .animate-fade-in {
+  -webkit-animation: fade-in 0.5s ease-out forwards;
   animation: fade-in 0.5s ease-out forwards;
 }
 
 .animate-slide-in-left {
+  -webkit-animation: slide-in-left 0.6s ease-out forwards;
   animation: slide-in-left 0.6s ease-out forwards;
 }
 
 .animate-slide-in-right {
+  -webkit-animation: slide-in-right 0.6s ease-out forwards;
   animation: slide-in-right 0.6s ease-out forwards;
 }
 
 /* Stagger delays */
-.delay-100 { animation-delay: 100ms; }
-.delay-200 { animation-delay: 200ms; }
-.delay-300 { animation-delay: 300ms; }
-.delay-400 { animation-delay: 400ms; }
-.delay-500 { animation-delay: 500ms; }
+.delay-100 { -webkit-animation-delay: 100ms; animation-delay: 100ms; }
+.delay-200 { -webkit-animation-delay: 200ms; animation-delay: 200ms; }
+.delay-300 { -webkit-animation-delay: 300ms; animation-delay: 300ms; }
+.delay-400 { -webkit-animation-delay: 400ms; animation-delay: 400ms; }
+.delay-500 { -webkit-animation-delay: 500ms; animation-delay: 500ms; }
 
-/* Hero animated gradient background */
+/* ------------------------------------------------------------------ */
+/*  Hero animated gradient background                                  */
+/* ------------------------------------------------------------------ */
+
 @keyframes hero-gradient {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
+  0%, 100% { background-position: 0% 50%;   }
+  50%       { background-position: 100% 50%; }
 }
 
 .hero-gradient-bg {
+  background: -webkit-linear-gradient(
+    135deg,
+    var(--secondary) 0%,
+    var(--secondary-dark) 25%,
+    var(--secondary) 50%,
+    #0e4565 75%,
+    var(--secondary-dark) 100%
+  );
   background: linear-gradient(
     135deg,
     var(--secondary) 0%,
@@ -145,6 +192,7 @@ html {
     var(--secondary-dark) 100%
   );
   background-size: 400% 400%;
+  -webkit-animation: hero-gradient 12s ease infinite;
   animation: hero-gradient 12s ease infinite;
 }
 
@@ -154,44 +202,74 @@ html {
   background-size: 24px 24px;
 }
 
-/* Hero floating blobs */
+/* ------------------------------------------------------------------ */
+/*  Hero floating blobs                                                */
+/* ------------------------------------------------------------------ */
+
 @keyframes hero-blob-drift-1 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(30px, -20px) scale(1.05); }
-  66% { transform: translate(-15px, 15px) scale(0.95); }
+  0%, 100% { -webkit-transform: translate(0, 0) scale(1);          transform: translate(0, 0) scale(1); }
+  33%       { -webkit-transform: translate(30px, -20px) scale(1.05); transform: translate(30px, -20px) scale(1.05); }
+  66%       { -webkit-transform: translate(-15px, 15px) scale(0.95); transform: translate(-15px, 15px) scale(0.95); }
 }
 
 @keyframes hero-blob-drift-2 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(-25px, 20px) scale(0.95); }
-  66% { transform: translate(20px, -10px) scale(1.05); }
+  0%, 100% { -webkit-transform: translate(0, 0) scale(1);           transform: translate(0, 0) scale(1); }
+  33%       { -webkit-transform: translate(-25px, 20px) scale(0.95); transform: translate(-25px, 20px) scale(0.95); }
+  66%       { -webkit-transform: translate(20px, -10px) scale(1.05); transform: translate(20px, -10px) scale(1.05); }
 }
 
 @keyframes hero-blob-drift-3 {
-  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
-  50% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
+  0%, 100% { -webkit-transform: translate(-50%, -50%) scale(1);    transform: translate(-50%, -50%) scale(1);    opacity: 0.5; }
+  50%       { -webkit-transform: translate(-50%, -50%) scale(1.15); transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
 }
 
-.hero-blob-1 { animation: hero-blob-drift-1 8s ease-in-out infinite; }
-.hero-blob-2 { animation: hero-blob-drift-2 10s ease-in-out infinite; }
-.hero-blob-3 { animation: hero-blob-drift-3 6s ease-in-out infinite; }
+.hero-blob-1 { -webkit-animation: hero-blob-drift-1 8s ease-in-out infinite;  animation: hero-blob-drift-1 8s ease-in-out infinite; }
+.hero-blob-2 { -webkit-animation: hero-blob-drift-2 10s ease-in-out infinite; animation: hero-blob-drift-2 10s ease-in-out infinite; }
+.hero-blob-3 { -webkit-animation: hero-blob-drift-3 6s ease-in-out infinite;  animation: hero-blob-drift-3 6s ease-in-out infinite; }
 
-/* Hero floating elements */
+/* ------------------------------------------------------------------ */
+/*  Hero floating elements                                             */
+/* ------------------------------------------------------------------ */
+
 @keyframes float-1 {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-12px) rotate(5deg); }
+  0%, 100% { -webkit-transform: translateY(0) rotate(0deg);   transform: translateY(0) rotate(0deg); }
+  50%       { -webkit-transform: translateY(-12px) rotate(5deg); transform: translateY(-12px) rotate(5deg); }
 }
 
 @keyframes float-2 {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-8px) rotate(-5deg); }
+  0%, 100% { -webkit-transform: translateY(0) rotate(0deg);    transform: translateY(0) rotate(0deg); }
+  50%       { -webkit-transform: translateY(-8px) rotate(-5deg); transform: translateY(-8px) rotate(-5deg); }
 }
 
 @keyframes float-3 {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%, 100% { -webkit-transform: translateY(0);     transform: translateY(0); }
+  50%       { -webkit-transform: translateY(-10px); transform: translateY(-10px); }
 }
 
-.hero-float-1 { animation: float-1 4s ease-in-out infinite; }
-.hero-float-2 { animation: float-2 5s ease-in-out infinite 0.5s; }
-.hero-float-3 { animation: float-3 3.5s ease-in-out infinite 1s; }
+.hero-float-1 { -webkit-animation: float-1 4s ease-in-out infinite;          animation: float-1 4s ease-in-out infinite; }
+.hero-float-2 { -webkit-animation: float-2 5s ease-in-out infinite 0.5s;     animation: float-2 5s ease-in-out infinite 0.5s; }
+.hero-float-3 { -webkit-animation: float-3 3.5s ease-in-out infinite 1s;     animation: float-3 3.5s ease-in-out infinite 1s; }
+
+/* ------------------------------------------------------------------ */
+/*  Image rendering fix — prevents blurry images on Safari             */
+/* ------------------------------------------------------------------ */
+img {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Input / select appearance reset for Safari & Firefox               */
+/* ------------------------------------------------------------------ */
+input,
+select,
+textarea,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select {
+  background-image: none; /* reset Safari arrow */
+}

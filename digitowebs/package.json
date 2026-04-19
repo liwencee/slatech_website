@@ -23,6 +23,15 @@
     "react-dom": "19.2.4",
     "zod": "^3.23.0"
   },
+  "browserslist": [
+    "> 0.5%",
+    "last 3 versions",
+    "not dead",
+    "Safari >= 12",
+    "iOS >= 12",
+    "Firefox >= 78",
+    "not IE 11"
+  ],
   "devDependencies": {
     "@playwright/test": "^1.45.0",
     "@tailwindcss/postcss": "^4",
@@ -34,6 +43,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^4.3.0",
+    "autoprefixer": "^10.5.0",
     "eslint": "^9",
     "eslint-config-next": "16.2.3",
     "jsdom": "^24.0.0",
