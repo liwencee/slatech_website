@@ -5,6 +5,8 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { AIChatbox } from "@/components/ui/ai-chatbox";
+import { CookieConsent } from "@/components/ui/cookie-consent";
+import { AnalyticsTracker } from "@/components/ui/analytics-tracker";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -195,6 +197,8 @@ export default function RootLayout({
         <Footer />
         <ScrollToTop />
         <AIChatbox />
+        <CookieConsent />
+        <AnalyticsTracker />
       </body>
     </html>
   );

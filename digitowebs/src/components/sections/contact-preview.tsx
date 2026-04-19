@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
+import { useAnalytics } from "@/hooks/use-analytics";
 
 const SERVICES = [
   "Website Design",
@@ -56,6 +57,7 @@ export function ContactSection() {
   const [touched, setTouched] = useState<Partial<Record<keyof FormState, boolean>>>({});
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const { trackEvent } = useAnalytics();
 
   const change = (field: keyof FormState, value: string) => {
     setForm((p) => ({ ...p, [field]: value }));
@@ -105,6 +107,7 @@ export function ContactSection() {
         setForm(initial);
         setTouched({});
         setErrors({});
+        trackEvent("contact_form_submit", { service: form.service });
         setTimeout(() => setSubmitted(false), 8000);
       } catch {
         setApiError("Network error. Please check your connection and try again.");

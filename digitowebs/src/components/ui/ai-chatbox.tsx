@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
+import { useAnalytics } from "@/hooks/use-analytics";
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -87,6 +88,7 @@ export function AIChatbox() {
 
   const formDataRef = useRef(formData);
   useEffect(() => { formDataRef.current = formData; }, [formData]);
+  const { trackEvent } = useAnalytics();
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -230,6 +232,9 @@ export function AIChatbox() {
         "Perfect! Now the fun part \u2014 which services are you interested in? (Pick as many as you like!)"
       );
 
+      // Track early lead capture event
+      trackEvent("chatbot_lead_early", { name: formDataRef.current.name });
+
       // Fire lead email immediately — we now have name + email
       const currentName = formDataRef.current.name;
       fetch("/api/chatbot-lead", {
@@ -300,6 +305,12 @@ export function AIChatbox() {
       setCurrentNode("a5_confirmation");
 
       const name = updatedForm.name || "there";
+
+      // Track full lead captured
+      trackEvent("chatbot_lead_complete", {
+        services: updatedForm.services,
+        budget,
+      });
 
       // Send complete lead email with all details
       fetch("/api/chatbot-lead", {
@@ -659,6 +670,7 @@ export function AIChatbox() {
       {/* Chat Button */}
       <button
         onClick={() => {
+          if (!isOpen) trackEvent("chatbot_open");
           setIsOpen(!isOpen);
           setShowNotification(false);
         }}

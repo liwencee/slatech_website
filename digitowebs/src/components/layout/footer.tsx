@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useAnalytics } from "@/hooks/use-analytics";
 
 const services = [
   { label: "Website Design", href: "/services" },
@@ -183,6 +184,7 @@ export function Footer() {
   const [subscribed, setSubscribed] = useState(false);
   const [subLoading, setSubLoading] = useState(false);
   const [subError, setSubError] = useState("");
+  const { trackEvent } = useAnalytics();
 
   const col1 = useInView(0.15);
   const col2 = useInView(0.15);
@@ -216,6 +218,7 @@ export function Footer() {
     setSubLoading(false);
     setSubscribed(true);
     setEmail("");
+    trackEvent("newsletter_subscribe");
     setTimeout(() => setSubscribed(false), 5000);
   };
 
