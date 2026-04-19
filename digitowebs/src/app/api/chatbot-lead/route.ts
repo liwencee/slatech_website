@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-// GET — health check: visit /api/chatbot-lead in browser to confirm route is live
 export async function GET() {
   return NextResponse.json({ status: "chatbot-lead route is live" });
 }
@@ -11,12 +10,12 @@ export async function POST(req: NextRequest) {
     const { name, email, services, budget, details } = await req.json();
 
     const transporter = nodemailer.createTransport({
-      host:   process.env.SMTP_HOST  || "smtp.hostinger.com",
+      host:   process.env.SMTP_HOST || "smtp.hostinger.com",
       port:   Number(process.env.SMTP_PORT) || 465,
       secure: true,
       auth: {
-        user: process.env.SMTP_USER || "info@slatech.com.ng",
-        pass: process.env.SMTP_PASS || "",
+        user: process.env.SMTP_CONTACT_USER || "contact@slatech.com.ng",
+        pass: process.env.SMTP_CONTACT_PASS || "",
       },
     });
 
@@ -64,7 +63,7 @@ export async function POST(req: NextRequest) {
     `;
 
     await transporter.sendMail({
-      from:    `"Slatech Chatbot" <info@slatech.com.ng>`,
+      from:    `"Slatech AI Chat" <contact@slatech.com.ng>`,
       to:      "info@slatech.com.ng",
       ...(email ? { replyTo: email } : {}),
       subject: `New Chatbot Lead: ${name || "Unknown"} — ${serviceList}`,
@@ -73,11 +72,8 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ success: true });
   } catch (err) {
-    console.error("Chatbot lead API error:", err);
+    console.error("Chatbot lead error:", err);
     const message = err instanceof Error ? err.message : "Unknown error";
-    return NextResponse.json(
-      { error: "Failed to send. " + message },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }
