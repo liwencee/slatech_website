@@ -13,7 +13,16 @@ const securityHeaders = {
 
 export async function middleware(request: NextRequest) {
   // 1. Supabase session refresh + auth protection
-  const response = await updateSession(request);
+  //    Wrap in try/catch so Supabase failures NEVER break public pages or
+  //    API routes (contact form, chatbot, newsletter). updateSession now
+  //    handles its own errors, but this is belt-and-suspenders.
+  let response: NextResponse;
+  try {
+    response = await updateSession(request);
+  } catch (err) {
+    console.error("Middleware error (falling through):", err);
+    response = NextResponse.next({ request });
+  }
 
   // 2. Apply security headers
   for (const [key, value] of Object.entries(securityHeaders)) {
