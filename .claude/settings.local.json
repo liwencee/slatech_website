@@ -48,7 +48,8 @@
       "Bash(dir \"C:\\\\Users\\\\DELL\\\\code Claude\\\\digitowebs\\\\public\\\\images\")",
       "Bash(dir \"C:\\\\Users\\\\DELL\\\\code Claude\\\\digitowebs\\\\public\")",
       "Bash(findstr -i headshot)",
-      "Bash(dir \"C:\\\\Users\\\\DELL\\\\code Claude\\\\digitowebs\\\\public\" /b)"
+      "Bash(dir \"C:\\\\Users\\\\DELL\\\\code Claude\\\\digitowebs\\\\public\" /b)",
+      "Bash(echo \"Exit: $?\")"
     ]
   }
 }
