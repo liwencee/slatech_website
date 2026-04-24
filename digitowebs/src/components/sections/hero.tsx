@@ -12,7 +12,7 @@ export function HeroSection() {
   );
 
   return (
-    <section className="relative bg-secondary overflow-hidden min-h-[92vh] flex items-center">
+    <section className="relative bg-secondary overflow-hidden min-h-screen sm:min-h-[92vh] flex items-center">
       {/* Animated gradient background */}
       <div className="absolute inset-0 hero-gradient-bg" />
 
@@ -26,19 +26,19 @@ export function HeroSection() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-primary/5 blur-[80px] hero-blob-3" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 lg:py-28 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
           {/* ── Left Content ── */}
           <div className="text-white">
             {/* Badge */}
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/20 text-primary text-sm font-medium rounded-full mb-6 border border-primary/30 animate-[fade-in-up_0.6s_ease-out]">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/20 text-primary text-sm font-medium rounded-full mb-5 sm:mb-6 border border-primary/30 sm:animate-[fade-in-up_0.6s_ease-out]">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               #1 Web Design Company in Lagos, Nigeria
             </span>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-[fade-in-up_0.6s_ease-out_0.2s_both]">
+            <h1 className="text-[1.75rem] sm:text-5xl lg:text-6xl font-bold leading-tight mb-5 sm:mb-6 sm:animate-[fade-in-up_0.6s_ease-out_0.2s_both]">
               Premium{" "}
               <span className="text-primary">{typedText}</span>
               <span className="animate-pulse text-primary">|</span>
@@ -47,33 +47,33 @@ export function HeroSection() {
               <span className="text-primary">Lagos</span>
             </h1>
 
-            <p className="text-lg text-gray-300 leading-relaxed mb-8 max-w-lg animate-[fade-in-up_0.6s_ease-out_0.4s_both]">
+            <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-7 sm:mb-8 sm:animate-[fade-in-up_0.6s_ease-out_0.4s_both]">
               Slatech Solutions is Lagos&apos; most trusted web design agency in Ikeja, Nigeria.
               We build fast, beautiful, SEO-optimised websites that rank on Google
               and convert visitors into paying customers.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4 animate-[fade-in-up_0.6s_ease-out_0.6s_both]">
+            <div className="flex flex-wrap gap-3 sm:gap-4 sm:animate-[fade-in-up_0.6s_ease-out_0.6s_both]">
               <Link
                 href="/contact"
-                className="inline-flex items-center px-7 py-3.5 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:scale-105 active:scale-95"
+                className="inline-flex items-center px-6 sm:px-7 py-3 sm:py-3.5 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:scale-105 active:scale-95 text-sm sm:text-base"
               >
                 Get a Free Quote
-                <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="ml-2 w-4 sm:w-5 h-4 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center px-7 py-3.5 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all hover:scale-105 active:scale-95"
+                className="inline-flex items-center px-6 sm:px-7 py-3 sm:py-3.5 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all hover:scale-105 active:scale-95 text-sm sm:text-base"
               >
                 Our Services
               </Link>
             </div>
 
             {/* Google Stars Rating */}
-            <div className="flex items-center gap-3 mt-8 animate-[fade-in-up_0.6s_ease-out_0.7s_both]">
+            <div className="flex items-center gap-3 mt-6 sm:mt-8 sm:animate-[fade-in-up_0.6s_ease-out_0.7s_both]">
               <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" viewBox="0 0 24 24">
@@ -87,24 +87,24 @@ export function HeroSection() {
               </span>
             </div>
 
-            {/* Stats */}
-            <div className="flex items-center gap-6 mt-8 pt-8 border-t border-white/10 animate-[fade-in-up_0.6s_ease-out_0.8s_both]">
-              <div className="text-center">
+            {/* Stats — 2-col grid on mobile, flex row on sm+ */}
+            <div className="grid grid-cols-2 gap-x-4 gap-y-4 mt-6 pt-6 border-t border-white/10 sm:flex sm:items-center sm:gap-6 sm:mt-8 sm:pt-8 sm:animate-[fade-in-up_0.6s_ease-out_0.8s_both]">
+              <div className="text-center sm:text-left">
                 <p className="text-2xl font-bold text-primary">10+</p>
                 <p className="text-xs text-gray-400">Years in Lagos</p>
               </div>
-              <div className="w-px h-10 bg-white/20" />
-              <div className="text-center">
+              <div className="hidden sm:block w-px h-10 bg-white/20" />
+              <div className="text-center sm:text-left">
                 <p className="text-2xl font-bold text-primary">2k+</p>
                 <p className="text-xs text-gray-400">Projects Done</p>
               </div>
-              <div className="w-px h-10 bg-white/20" />
-              <div className="text-center">
+              <div className="hidden sm:block w-px h-10 bg-white/20" />
+              <div className="text-center sm:text-left">
                 <p className="text-2xl font-bold text-primary">500+</p>
                 <p className="text-xs text-gray-400">Happy Clients</p>
               </div>
-              <div className="w-px h-10 bg-white/20" />
-              <div className="text-center">
+              <div className="hidden sm:block w-px h-10 bg-white/20" />
+              <div className="text-center sm:text-left">
                 <p className="text-2xl font-bold text-primary">100%</p>
                 <p className="text-xs text-gray-400">Satisfaction</p>
               </div>
@@ -262,7 +262,7 @@ export function HeroSection() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-white/40 animate-bounce">
+      <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-white/40 animate-bounce">
         <span className="text-xs font-medium tracking-widest uppercase">Scroll</span>
         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />

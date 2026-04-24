@@ -273,3 +273,24 @@ button {
 select {
   background-image: none; /* reset Safari arrow */
 }
+
+/* ------------------------------------------------------------------ */
+/*  Reduced-motion: ensure all elements are visible / skip delays      */
+/* ------------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/*  Touch-action fix — improves scroll responsiveness on mobile        */
+/* ------------------------------------------------------------------ */
+html {
+  touch-action: manipulation;
+}
