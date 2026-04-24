@@ -7,8 +7,70 @@ export const metadata: Metadata = {
     "Latest insights, tips, and trends from Slatech Solutions — web design, SEO, e-commerce, and more.",
 };
 
-// Static blog posts for now — will be replaced with Supabase queries
+// Static blog posts — newest first
 const posts = [
+  /* ---- NEW POSTS ---- */
+  {
+    slug: "what-is-seo-and-why-your-business-needs-it",
+    title: "What Is SEO and Why Does Your Nigerian Business Absolutely Need It in 2026?",
+    excerpt:
+      "Still wondering if SEO is worth it? A plain-English breakdown of what SEO actually is — and why it's the highest-ROI investment your Lagos business can make right now.",
+    category: "SEO",
+    date: "Apr 22, 2026",
+    readTime: "8 min read",
+    color: "bg-emerald-600",
+  },
+  {
+    slug: "complete-guide-growing-business-online-nigeria",
+    title: "The Complete Guide to Growing Your Business Online in Nigeria (2026 Edition)",
+    excerpt:
+      "From getting found on Google to converting visitors into loyal paying customers — a step-by-step playbook for Nigerian entrepreneurs who want to build a serious online presence.",
+    category: "Business",
+    date: "Apr 19, 2026",
+    readTime: "10 min read",
+    color: "bg-cyan-600",
+  },
+  {
+    slug: "10-reasons-nigerian-business-needs-website-2026",
+    title: "10 Reasons Every Nigerian Business Needs a Website in 2026 (Even If You're Winning on Social Media)",
+    excerpt:
+      "Your Instagram is doing well — so why do you need a website? Here are 10 compelling reasons why Nigeria's fastest-growing businesses never rely on social media alone.",
+    category: "Business",
+    date: "Apr 16, 2026",
+    readTime: "7 min read",
+    color: "bg-indigo-600",
+  },
+  {
+    slug: "digital-marketing-strategies-nigerian-businesses",
+    title: "5 Digital Marketing Strategies That Actually Drive Results for Nigerian Businesses",
+    excerpt:
+      "Cut through the noise. These are the five digital marketing moves that consistently generate leads, sales, and growth for businesses across Lagos and Nigeria.",
+    category: "Digital Marketing",
+    date: "Apr 13, 2026",
+    readTime: "8 min read",
+    color: "bg-orange-600",
+  },
+  {
+    slug: "how-to-choose-web-designer-lagos",
+    title: "How to Choose the Right Web Designer in Lagos: 8 Questions to Ask Before You Pay",
+    excerpt:
+      "Lagos is full of web designers. How do you choose the right one? Ask these 8 questions and you'll never make the wrong choice or waste your money.",
+    category: "Web Design",
+    date: "Apr 10, 2026",
+    readTime: "6 min read",
+    color: "bg-rose-600",
+  },
+  {
+    slug: "social-media-vs-website-nigerian-business",
+    title: "Social Media vs Website: What Does Your Nigerian Business Actually Need?",
+    excerpt:
+      "Instagram or website? WhatsApp Business or contact form? Many Nigerian entrepreneurs invest in the wrong channel. Here's how to decide — and in what order.",
+    category: "Business",
+    date: "Apr 7, 2026",
+    readTime: "7 min read",
+    color: "bg-violet-600",
+  },
+  /* ---- EXISTING POSTS ---- */
   {
     slug: "why-nigerian-businesses-need-professional-website",
     title: "7 Reasons Your Nigerian Business Needs a Professional Website in 2026",
