@@ -65,7 +65,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Founded in 2015, Slatech Solutions started with a simple mission: to
+                  Founded in 2020, Slatech Solutions started with a simple mission: to
                   help businesses establish a powerful online presence through
                   exceptional web design and development.
                 </p>

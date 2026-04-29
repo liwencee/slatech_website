@@ -11,7 +11,7 @@ const services = [
   { label: "SEO", href: "/services" },
   { label: "Website Hosting", href: "/services" },
   { label: "Website Management", href: "/services" },
-  { label: "Fully Managed Service", href: "/services" },
+  { label: "Logo and Branding", href: "/services" },
 ];
 
 const quickLinks = [
