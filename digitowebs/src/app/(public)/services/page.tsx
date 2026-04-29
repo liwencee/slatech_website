@@ -90,7 +90,7 @@ const services = [
     imageAlt: "Website management dashboard showing performance metrics and uptime",
   },
   {
-    id: "managed",
+    id: "branding",
     title: "Fully Managed Branding Service",
     description:
       "End-to-end branding and graphic design — we handle everything from brand identity creation to visual assets, consistency, and design management so you can focus on growing your business.",

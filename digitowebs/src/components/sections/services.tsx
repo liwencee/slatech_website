@@ -67,7 +67,7 @@ const services = [
     title: "Graphic Design and Branding",
     description:
       "All-in-one branding and graphic design — we craft your brand identity, design stunning visuals, and ensure consistency across all platforms to help your business stand out..",
-    href: "/services#managed",
+    href: "/services#branding",
   },
 ];
 
