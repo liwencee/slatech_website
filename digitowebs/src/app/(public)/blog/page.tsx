@@ -5,6 +5,32 @@ export const metadata: Metadata = {
   title: "Blog",
   description:
     "Latest insights, tips, and trends from Slatech Solutions — web design, SEO, e-commerce, and more.",
+  keywords: [
+    "web design",
+    "e-commerce",
+    "branding",
+    "digital marketing",
+    "SEO",
+    "social media marketing",
+    "business strategy",
+    "website development",
+    "small business website",
+    "online presence",
+    "Lagos web design",
+    "Nigerian businesses",
+    "WhatsApp Business",
+    "Instagram business page",
+    "Facebook business page",
+    "LinkedIn marketing",
+    "Twitter business account",
+    "restaurant website",
+    "church website",
+    "marketing strategies",
+    "website security",
+    "web hosting",
+    "online store Nigeria",
+    "Google ranking Nigeria",
+  ],
 };
 
 // Static blog posts — newest first

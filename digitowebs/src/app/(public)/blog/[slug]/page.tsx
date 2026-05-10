@@ -312,6 +312,40 @@ export async function generateStaticParams() {
   return Object.keys(posts).map((slug) => ({ slug }));
 }
 
+const categoryKeywords: Record<string, string[]> = {
+  SEO: [
+    "SEO", "search engine optimisation", "Google ranking", "keyword research",
+    "on-page SEO", "website SEO", "local SEO Nigeria", "Lagos SEO",
+  ],
+  Business: [
+    "business website", "small business", "online presence", "Nigerian business",
+    "Lagos entrepreneur", "branding", "business strategy", "digital growth",
+    "restaurant website", "church website",
+  ],
+  "Digital Marketing": [
+    "digital marketing", "social media marketing", "marketing strategies",
+    "Facebook business page", "Instagram business page", "Twitter business account",
+    "LinkedIn marketing", "WhatsApp Business", "social media ads",
+    "online advertising", "content marketing",
+  ],
+  "Web Design": [
+    "web design", "website development", "Lagos web designer", "UI/UX design",
+    "responsive website", "professional website", "website redesign",
+  ],
+  "E-Commerce": [
+    "e-commerce", "online store", "sell online Nigeria", "Paystack",
+    "Flutterwave", "shopping website", "online shop Lagos",
+  ],
+  Security: [
+    "website security", "SSL certificate", "cyber security", "website protection",
+    "secure website", "firewall",
+  ],
+  Hosting: [
+    "web hosting", "hosting provider", "domain name", "website hosting Nigeria",
+    "cloud hosting", "shared hosting",
+  ],
+};
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = posts[slug];
@@ -319,6 +353,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: post.title,
     description: post.excerpt,
+    keywords: categoryKeywords[post.category] ?? [],
   };
 }
 
