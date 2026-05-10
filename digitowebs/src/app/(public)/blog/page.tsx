@@ -37,6 +37,16 @@ export const metadata: Metadata = {
 const posts = [
   /* ---- NEW POSTS ---- */
   {
+    slug: "how-to-build-a-brand-for-your-small-business-nigeria",
+    title: "5 Tips to Build a Strong Brand for Your Small Business in Nigeria",
+    excerpt:
+      "Your brand is more than a logo — it's the total impression customers have of your business. Here are 5 proven tips to build a memorable brand that stands out in Nigeria's competitive market.",
+    category: "Branding",
+    date: "May 10, 2026",
+    readTime: "6 min read",
+    color: "bg-amber-600",
+  },
+  {
     slug: "what-is-seo-and-why-your-business-needs-it",
     title: "What Is SEO and Why Does Your Nigerian Business Absolutely Need It in 2026?",
     excerpt:

@@ -12,6 +12,34 @@ const posts: Record<string, {
   content: string[];
 }> = {
   /* ------------------------------------------------------------------ */
+  /*  NEW POST                                                            */
+  /* ------------------------------------------------------------------ */
+  "how-to-build-a-brand-for-your-small-business-nigeria": {
+    title: "5 Tips to Build a Strong Brand for Your Small Business in Nigeria",
+    excerpt:
+      "Your brand is more than a logo — it's the total impression customers have of your business. Here are 5 proven tips to build a memorable brand that stands out in Nigeria's competitive market.",
+    category: "Branding",
+    date: "May 10, 2026",
+    readTime: "6 min read",
+    color: "bg-amber-600",
+    content: [
+      "In Nigeria's crowded marketplace — whether you're selling on Instagram in Lagos, running a boutique in Abuja, or offering professional services in Port Harcourt — what separates thriving businesses from forgotten ones is often a single word: brand. Your brand is the total impression people have of your business every time they interact with you, online or offline. Here are five actionable tips to build a brand that customers trust, remember, and choose over your competitors.",
+
+      "1. Define Your Brand Identity Before You Design Anything. Too many Nigerian entrepreneurs rush to design a logo before answering the most important questions: Who exactly are you? Who do you serve? What problem do you solve better than anyone else? What values drive your business? Your answers to these questions form your brand identity — the foundation everything else is built on. Write a one-sentence brand statement: '[Your business name] helps [target customer] achieve [specific outcome] through [your unique approach].' Pin it somewhere visible. Every design choice, social media post, and customer interaction should reflect it.",
+
+      "2. Be Consistent Across Every Platform. Inconsistency is the number one brand killer for Nigerian small businesses. Your logo, colours, tone of voice, and messaging must look and feel the same whether a customer finds you on your website, your Instagram business page, your Facebook business page, your Twitter business account, your LinkedIn profile, or your WhatsApp Business catalogue. Create a simple brand style guide — even a one-page document listing your primary colour codes, your logo variations, and two or three words that describe your brand voice (e.g. 'friendly, professional, trustworthy'). Share it with anyone who creates content for your business. Consistency builds recognition, and recognition builds trust.",
+
+      "3. Know Your Audience Better Than They Know Themselves. The strongest brands in Nigeria don't try to appeal to everyone — they speak directly to a clearly defined group. Research your ideal customer: their age, location, income level, daily habits, biggest frustrations, and what motivates them to spend money. Are they Lagos professionals aged 25–40 who value speed and quality? Are they small business owners in Enugu who need affordable, reliable solutions? When you understand your audience deeply, your messaging becomes sharper, your content resonates, and your marketing budget works harder. Use Instagram polls, WhatsApp Business feedback, and direct conversations with existing customers to gather this intelligence continuously.",
+
+      "4. Build a Professional Online Presence — Starting With a Website. Social media accounts are rented space; your website is land you own. A professional website anchors your brand and gives customers a permanent, credible place to learn about you, contact you, and buy from you — 24 hours a day, seven days a week. Make sure your website design matches your brand colours and fonts exactly. Include a clear 'About' page that tells your brand story, testimonials that build social proof, and a strong call-to-action on every page. Then connect your social channels consistently: the same profile photo, the same bio language, the same branded visuals. When everything links back to a polished website, your brand feels established and trustworthy even if your business is brand new.",
+
+      "5. Show Up Consistently and Tell Your Story. Nigerian consumers buy from people and businesses they feel connected to. Use your social media platforms — Instagram, Facebook, LinkedIn, Twitter, and WhatsApp Business broadcasts — to share your journey, your behind-the-scenes process, customer success stories, and the 'why' behind your business. You don't need expensive equipment or a professional photographer to start. A well-lit phone photo with a caption that speaks directly to your customer's pain point can outperform a polished advert. Aim to post at least three to four times per week and engage genuinely with comments and messages. Brands that show up consistently earn the top-of-mind awareness that drives repeat purchases and referrals.",
+
+      "Building a strong brand takes time, but every consistent action compounds. Define who you are, show up the same way everywhere, understand your customers, anchor everything to a professional website, and tell your story with authenticity. Nigerian businesses that do these five things don't just attract customers — they build communities of loyal advocates who market for them. Ready to give your brand the professional online home it deserves? Contact Slatech Solutions today and let's build something memorable together.",
+    ],
+  },
+
+  /* ------------------------------------------------------------------ */
   /*  EXISTING POSTS                                                      */
   /* ------------------------------------------------------------------ */
   "why-nigerian-businesses-need-professional-website": {
@@ -343,6 +371,12 @@ const categoryKeywords: Record<string, string[]> = {
   Hosting: [
     "web hosting", "hosting provider", "domain name", "website hosting Nigeria",
     "cloud hosting", "shared hosting",
+  ],
+  Branding: [
+    "branding", "brand identity", "small business branding", "logo design",
+    "brand strategy", "brand awareness", "Nigerian business branding",
+    "social media branding", "WhatsApp Business", "Instagram business page",
+    "Facebook business page", "LinkedIn marketing", "Twitter business account",
   ],
 };
 
