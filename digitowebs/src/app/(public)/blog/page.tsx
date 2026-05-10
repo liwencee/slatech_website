@@ -37,6 +37,26 @@ export const metadata: Metadata = {
 const posts = [
   /* ---- NEW POSTS ---- */
   {
+    slug: "how-to-set-up-whatsapp-business-nigeria",
+    title: "How to Set Up WhatsApp Business for Your Nigerian Company (Step-by-Step)",
+    excerpt:
+      "WhatsApp has over 90 million users in Nigeria. Learn how to set up a professional WhatsApp Business account, create a catalogue, and use it to generate more sales.",
+    category: "Digital Marketing",
+    date: "May 10, 2026",
+    readTime: "5 min read",
+    color: "bg-green-600",
+  },
+  {
+    slug: "why-your-restaurant-needs-a-website-nigeria",
+    title: "5 Serious Reasons Your Nigerian Restaurant Needs a Website in 2026",
+    excerpt:
+      "If customers can't find your restaurant online, they're eating somewhere else. Discover why a professional website is the most powerful tool your food business can have in Nigeria.",
+    category: "Business",
+    date: "May 10, 2026",
+    readTime: "5 min read",
+    color: "bg-orange-500",
+  },
+  {
     slug: "how-to-build-a-brand-for-your-small-business-nigeria",
     title: "5 Tips to Build a Strong Brand for Your Small Business in Nigeria",
     excerpt:

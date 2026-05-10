@@ -12,8 +12,58 @@ const posts: Record<string, {
   content: string[];
 }> = {
   /* ------------------------------------------------------------------ */
-  /*  NEW POST                                                            */
+  /*  NEW POSTS                                                           */
   /* ------------------------------------------------------------------ */
+  "how-to-set-up-whatsapp-business-nigeria": {
+    title: "How to Set Up WhatsApp Business for Your Nigerian Company (Step-by-Step)",
+    excerpt:
+      "WhatsApp has over 90 million users in Nigeria. Learn how to set up a professional WhatsApp Business account, create a catalogue, and use it to generate more sales.",
+    category: "Digital Marketing",
+    date: "May 10, 2026",
+    readTime: "5 min read",
+    color: "bg-green-600",
+    content: [
+      "Nigeria has one of the highest WhatsApp adoption rates in the world — over 90 million active users. Your customers are already on it every single day. But there is a big difference between chatting on a personal account and running a professional WhatsApp Business profile that builds trust, showcases your products, and converts enquiries into sales. Here is a step-by-step guide to setting it up correctly.",
+
+      "Step 1: Download WhatsApp Business. WhatsApp Business is a free app available on Android and iOS. Search for 'WhatsApp Business' in the Google Play Store or Apple App Store and install it. Use a dedicated phone number for your business — not the same number as your personal WhatsApp — so you keep your professional and personal conversations separate.",
+
+      "Step 2: Complete Your Business Profile. Once installed, set up your profile thoroughly. Add your business name exactly as it appears on your signage and website. Upload a clear, professional logo as your profile photo. Fill in your business category, address, website URL, and business hours. Write a short, compelling business description — two or three sentences explaining what you do and who you serve. A complete profile immediately signals legitimacy and professionalism to potential customers.",
+
+      "Step 3: Set Up Quick Replies and Automated Messages. WhatsApp Business lets you automate three key messages. First, a Greeting Message that sends automatically when a new customer messages you for the first time — use this to welcome them and set response time expectations. Second, an Away Message for when you are offline — let customers know when they can expect a reply. Third, Quick Replies — keyboard shortcuts for your most frequently typed responses, such as pricing, your address, or payment details. These save enormous time and ensure no customer enquiry goes unanswered.",
+
+      "Step 4: Create a Product Catalogue. This is one of WhatsApp Business's most powerful features and yet most Nigerian businesses completely ignore it. Go to Settings > Business Tools > Catalogue and add your products or services with photos, descriptions, and prices. Customers can browse your catalogue directly inside WhatsApp without leaving the app. For restaurants, this means a digital menu. For boutiques, a lookbook. For service businesses, a clear list of packages and pricing. A catalogue removes the back-and-forth of customers asking 'how much?' and dramatically shortens your sales cycle.",
+
+      "Step 5: Use WhatsApp Broadcast Lists to Market Consistently. Build a broadcast list of customers who have saved your number and send them regular updates — new products, promotions, helpful tips, or behind-the-scenes content. Unlike a WhatsApp group, broadcast messages are received as private messages, which feels far more personal. Aim for one to two broadcasts per week. Pair this with a link to your website so interested customers can learn more, place orders, or book appointments without having to go back and forth in chat.",
+
+      "Setting up WhatsApp Business properly takes less than an hour, but the return on investment can be enormous. It makes your business more accessible, more professional, and easier to buy from. Combined with a professional website that customers can link to from your profile, WhatsApp Business becomes one of the most powerful sales tools available to Nigerian entrepreneurs. Need help building the website that powers your entire digital presence? Contact Slatech Solutions today.",
+    ],
+  },
+
+  "why-your-restaurant-needs-a-website-nigeria": {
+    title: "5 Serious Reasons Your Nigerian Restaurant Needs a Website in 2026",
+    excerpt:
+      "If customers can't find your restaurant online, they're eating somewhere else. Discover why a professional website is the most powerful tool your food business can have in Nigeria.",
+    category: "Business",
+    date: "May 10, 2026",
+    readTime: "5 min read",
+    color: "bg-orange-500",
+    content: [
+      "The Nigerian food industry is booming — from quick-service spots in Lagos to fine-dining restaurants in Abuja, food businesses are multiplying fast. But with more competition comes a harder truth: if a hungry customer searches for a restaurant online and cannot find you, they will find someone else. A professional website is no longer a luxury for Nigerian restaurants — it is a survival tool. Here are five serious reasons why.",
+
+      "1. Customers Search for Food Online Before They Leave the House. Think about the last time you tried a new restaurant. Chances are you Googled it first, checked the menu, looked at photos, and read reviews. Your potential customers do exactly the same thing. If your restaurant does not appear in search results — or appears with no website, no menu, and no photos — many of those customers will choose a competitor who made it easy to say yes before they even stepped out the door. A website with a clear menu, mouth-watering food photos, your location, and your opening hours answers every question a hungry customer has.",
+
+      "2. A Website Lets You Take Online Orders and Reservations 24/7. Handling orders over WhatsApp and phone calls works up to a point — but it does not scale. A professional restaurant website with an integrated online ordering or reservation system lets customers place orders and book tables at midnight on a Sunday without you lifting a finger. In Lagos especially, where traffic and logistics mean people plan meals hours or even days in advance, online ordering is a significant revenue driver that many local restaurants are leaving untapped.",
+
+      "3. It Makes You Look More Credible Than Competitors Who Only Have Instagram. Instagram is great for food photography and discovery — but it is rented space with an algorithm you cannot control. A professional website, on the other hand, is your territory. It signals that your restaurant is established, serious, and here to stay. It also gives you a branded email address, the ability to collect customer data, and a platform for Google reviews to appear prominently in search results. When customers are deciding between your restaurant and another, a polished website frequently tips the decision in your favour.",
+
+      "4. Google My Business + Website = Massive Local Visibility. When you link a professional website to your Google My Business profile, your restaurant becomes significantly more visible in local search results. Searches like 'restaurants near me in Lagos', 'best suya in Abuja', or 'Sunday brunch Victoria Island' surface businesses with complete online profiles far more often than those without. Your website also enables Google to index your menu items directly — meaning someone could find you by searching for a specific dish you serve. This level of local SEO visibility is essentially free advertising that works around the clock.",
+
+      "5. It Gives You Direct Control Over Your Brand Story. On third-party platforms — Instagram, food delivery apps, or listing sites — someone else controls the design, the algorithm, and the fees. On your own website, you decide exactly how your restaurant is presented. You can tell the story behind the food, showcase your chefs, highlight your sourcing, publish your full menu with accurate pricing, and run promotions without paying a commission. You can build an email list of loyal regulars and market to them directly. Your brand story — the soul of your restaurant — deserves a home you own.",
+
+      "Whether you run a bukas, a casual café, a catering company, or a fine-dining establishment, a professional website is one of the highest-return investments your food business can make in 2026. Slatech Solutions specialises in building fast, beautiful, and functional websites for Nigerian businesses — including restaurants. Get in touch today and let's put your food business on the map.",
+    ],
+  },
+
   "how-to-build-a-brand-for-your-small-business-nigeria": {
     title: "5 Tips to Build a Strong Brand for Your Small Business in Nigeria",
     excerpt:
