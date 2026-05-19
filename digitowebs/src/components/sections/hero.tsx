@@ -32,8 +32,8 @@ export function HeroSection() {
           {/* ── Left Content ── */}
           <div className="text-white">
             {/* Badge */}
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/20 text-primary text-sm font-medium rounded-full mb-5 sm:mb-6 border border-primary/30 sm:animate-[fade-in-up_0.6s_ease-out]">
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 text-white text-sm font-medium rounded-full mb-5 sm:mb-6 border border-white/30 sm:animate-[fade-in-up_0.6s_ease-out]">
+              <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
               #1 Web Design Company in Lagos, Nigeria
             </span>
 
