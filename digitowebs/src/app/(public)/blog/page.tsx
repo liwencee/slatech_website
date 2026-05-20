@@ -2,35 +2,51 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Web Design & SEO Blog for Nigerian Businesses",
   description:
-    "Latest insights, tips, and trends from Slatech Solutions — web design, SEO, e-commerce, and more.",
+    "Expert tips on web design, SEO, e-commerce, digital marketing, and branding for Nigerian businesses. Updated weekly by Slatech Solutions — Lagos' #1 web design agency.",
   keywords: [
-    "web design",
-    "e-commerce",
-    "branding",
-    "digital marketing",
-    "SEO",
-    "social media marketing",
-    "business strategy",
-    "website development",
-    "small business website",
-    "online presence",
-    "Lagos web design",
-    "Nigerian businesses",
-    "WhatsApp Business",
-    "Instagram business page",
-    "Facebook business page",
-    "LinkedIn marketing",
-    "Twitter business account",
-    "restaurant website",
-    "church website",
-    "marketing strategies",
-    "website security",
-    "web hosting",
-    "online store Nigeria",
+    "web design Nigeria",
+    "SEO tips Nigeria",
+    "e-commerce Nigeria",
+    "digital marketing Lagos",
+    "branding small business Nigeria",
+    "social media marketing Nigeria",
+    "business website Lagos",
+    "WhatsApp Business Nigeria",
+    "Instagram business page Nigeria",
+    "Facebook business page Nigeria",
+    "LinkedIn marketing Nigeria",
+    "restaurant website Nigeria",
     "Google ranking Nigeria",
+    "website hosting Nigeria",
+    "online store Lagos",
   ],
+  alternates: {
+    canonical: "https://slatech.com.ng/blog",
+  },
+  openGraph: {
+    title: "Web Design & SEO Blog | Slatech Solutions",
+    description:
+      "Expert tips on web design, SEO, e-commerce, and digital marketing for Nigerian businesses. From Lagos' #1 web design agency.",
+    url: "https://slatech.com.ng/blog",
+    type: "website",
+    siteName: "Slatech Solutions",
+    images: [
+      {
+        url: "/images/og-blog.png",
+        width: 1200,
+        height: 630,
+        alt: "Slatech Solutions Blog — Web Design & SEO Tips for Nigerian Businesses",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Web Design & SEO Blog | Slatech Solutions",
+    description:
+      "Expert tips on web design, SEO, e-commerce & digital marketing for Nigerian businesses.",
+  },
 };
 
 // Static blog posts — newest first
