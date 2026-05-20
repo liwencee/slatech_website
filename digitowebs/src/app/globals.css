@@ -294,3 +294,19 @@ select {
 html {
   touch-action: manipulation;
 }
+
+/* ------------------------------------------------------------------ */
+/*  Marquee animation — brand trust logo ticker (right to left)       */
+/* ------------------------------------------------------------------ */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
