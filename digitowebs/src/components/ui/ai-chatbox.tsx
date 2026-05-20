@@ -342,7 +342,7 @@ export function AIChatbox() {
       ];
 
       botSay(
-        `You\u2019re all set, ${name}! \ud83c\udf89\n\nThanks for reaching out to Slatech Solutions. One of our team members will review your details and be in touch within 24 hours with a custom quote.\n\nKeep an eye on your inbox \u2014 big things are coming for your brand! \ud83d\udcaa\n\nWant to continue the conversation on WhatsApp for faster response?`,
+        `Thank you for contacting Slatech Solutions, ${name}! \ud83d\ude4f\n\nOur technical staff will reach out to you soon. You can also get us on 08076172456.\n\nWant to continue the conversation on WhatsApp for a faster response?`,
         confirmReplies
       );
     },
@@ -520,7 +520,7 @@ export function AIChatbox() {
         setFormData((prev) => ({ ...prev, message: trimmed }));
         setCurrentNode("offline_done");
         botSay(
-          "Got it! \ud83d\ude4c We\u2019ll get back to you first thing. Big things are coming for your brand! \ud83d\udcaa",
+          "Thank you for contacting Slatech Solutions! \ud83d\ude4f Our technical staff will reach out to you soon. You can also get us on 08076172456.",
           [
             {
               label: "\ud83d\udcf2 Continue on WhatsApp",
