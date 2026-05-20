@@ -60,3 +60,6 @@ export const config = {
     "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico)$).*)",
   ],
 };
+
+// Hard cap: middleware must respond within 10s — prevents 504 if upstream hangs
+export const maxDuration = 10;

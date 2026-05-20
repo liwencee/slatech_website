@@ -36,10 +36,15 @@ export async function updateSession(request: NextRequest) {
       },
     });
 
-    // Refresh the session — this is critical for keeping the JWT valid
-    const {
-      data: { user },
-    } = await supabase.auth.getUser();
+    // Refresh the session with a 3-second timeout.
+    // Without a timeout, a slow/unreachable Supabase will hang every request
+    // and cause a 504 Gateway Timeout across the entire site.
+    const { data: { user } } = await Promise.race([
+      supabase.auth.getUser(),
+      new Promise<{ data: { user: null } }>((resolve) =>
+        setTimeout(() => resolve({ data: { user: null } }), 3000)
+      ),
+    ]);
 
     // Protect /admin routes
     if (request.nextUrl.pathname.startsWith("/admin")) {
