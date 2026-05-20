@@ -13,7 +13,7 @@ const partners = [
   { name: "Paystack",              logo: "/images/clients/paystack.png",       dark: false },
   { name: "Care Home",             logo: "/images/clients/care-home.png",     dark: false },
   { name: "MyTech BuddyHub",       logo: "/images/clients/mytech-buddyhub.png", dark: false },
-  { name: "Envato",                logo: "/images/clients/envato.png",        dark: true  },
+  { name: "Envato",                logo: "/images/clients/envato.png",        dark: false },
 ];
 
 export function BrandTrustBar() {
