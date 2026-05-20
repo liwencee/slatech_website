@@ -2,21 +2,18 @@
 
 import Image from "next/image";
 
-// ── Replace names/logos with your real clients ──────────────────────
-// Upload logo files to: digitowebs/public/images/clients/
-// Supported formats: PNG (transparent bg recommended), SVG, WebP
+// Real client logos — files live in: digitowebs/public/images/clients/
 const partners = [
-  { name: "TechVault",  logo: "/images/clients/techvault.png"  },
-  { name: "NovaPay",    logo: "/images/clients/novapay.png"    },
-  { name: "CloudSync",  logo: "/images/clients/cloudsync.png"  },
-  { name: "DataPrime",  logo: "/images/clients/dataprime.png"  },
-  { name: "FinEdge",    logo: "/images/clients/finedge.png"    },
-  { name: "SwiftLogic", logo: "/images/clients/swiftlogic.png" },
+  { name: "Cybera",                logo: "/images/clients/cybera.png"        },
+  { name: "BUA Foods",             logo: "/images/clients/bua-foods.png"     },
+  { name: "Slimboss Technologies", logo: "/images/clients/slimboss.png"      },
+  { name: "SLA Computers",         logo: "/images/clients/sla-computers.png" },
+  { name: "Kuda",                  logo: "/images/clients/kuda.png"          },
 ];
 
 export function BrandTrustBar() {
-  // Duplicate array so the loop appears seamless
-  const track = [...partners, ...partners];
+  // Triple the list so there are always logos filling the viewport
+  const track = [...partners, ...partners, ...partners];
 
   return (
     <section className="py-16 bg-secondary overflow-hidden">
@@ -27,28 +24,28 @@ export function BrandTrustBar() {
         Businesses Across Nigeria and Beyond
       </p>
 
-      {/* Marquee track — edge-fade mask */}
+      {/* Marquee — edge-fade on both sides */}
       <div
         className="relative overflow-hidden"
         style={{
           maskImage:
-            "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
+            "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
           WebkitMaskImage:
-            "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
+            "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
         }}
       >
-        <div className="flex gap-8 items-center animate-marquee w-max">
+        <div className="flex gap-6 items-center animate-marquee w-max">
           {track.map((partner, i) => (
             <div
               key={i}
-              className="flex-shrink-0 flex items-center justify-center w-44 h-20 px-6 py-3 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-300 group cursor-default"
+              className="flex-shrink-0 flex items-center justify-center w-44 h-24 px-5 py-4 rounded-2xl bg-white shadow-md hover:shadow-xl transition-shadow duration-300"
             >
               <Image
                 src={partner.logo}
                 alt={partner.name}
                 width={140}
-                height={50}
-                className="object-contain max-h-12 w-auto opacity-60 group-hover:opacity-100 transition-opacity duration-300"
+                height={56}
+                className="object-contain max-h-14 w-auto"
               />
             </div>
           ))}
