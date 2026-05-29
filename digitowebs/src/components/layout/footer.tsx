@@ -390,7 +390,7 @@ export function Footer() {
                     <MapPinIcon className="w-5 h-5" />
                   </div>
                   <span className="leading-relaxed">
-                    No 2b Olaide Tomori Str, off Simbiat Abiola Way, Ikeja, Lagos
+                    1, Saula Sanni Street, Dalemo Alakuko, Lagos
                   </span>
                 </div>
 

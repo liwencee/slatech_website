@@ -161,7 +161,7 @@ export default function TrainingPage() {
             {[
               {
                 q: "Where are classes held?",
-                a: "Classes are held at our office — No 2b Olaide Tomori Street, off Simbiat Abiola Way, Ikeja, Lagos. Online attendance may also be available.",
+                a: "Classes are held at our office — 1, Saula Sanni Street, Dalemo Alakuko, Lagos. Online attendance may also be available.",
               },
               {
                 q: "Do I need any prior experience?",

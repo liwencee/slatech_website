@@ -175,9 +175,9 @@ export function ContactSection() {
                   <div>
                     <p className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-1">Our Office</p>
                     <address className="text-sm leading-relaxed not-italic">
-                      No 2b Olaide Tomori Str,<br />
-                      off Simbiat Abiola Way,<br />
-                      <strong>Ikeja, Lagos, Nigeria</strong>
+                      1, Saula Sanni Street,<br />
+                      Dalemo Alakuko,<br />
+                      <strong>Lagos, Nigeria</strong>
                     </address>
                   </div>
                 </div>

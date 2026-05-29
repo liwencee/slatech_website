@@ -32,14 +32,14 @@ export default function ContactPage() {
       {/* Google Map */}
       <section className="h-96 relative">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3!2d3.3467!3d6.6018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b922e19c3eab7%3A0x0!2sOlaide+Tomori+Street%2C+Ikeja%2C+Lagos!5e0!3m2!1sen!2sng!4v1712934000000"
+          src="https://maps.google.com/maps?q=1+Saula+Sanni+Street+Dalemo+Alakuko+Lagos+Nigeria&output=embed"
           width="100%"
           height="100%"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Slatech Solutions Office - No 2b Olaide Tomori Str, off Simbiat Abiola Way, Ikeja, Lagos"
+          title="Slatech Solutions Office - 1, Saula Sanni Street, Dalemo Alakuko, Lagos"
           className="absolute inset-0 w-full h-full"
         />
       </section>

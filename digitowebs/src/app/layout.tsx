@@ -122,8 +122,8 @@ const LOCAL_BUSINESS_SCHEMA = {
   logo: "https://slatech.com.ng/side_SLATECH_SOLUTIONS_LOGO.png",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "No 2b Olaide Tomori Street, off Simbiat Abiola Way",
-    addressLocality: "Ikeja",
+    streetAddress: "1, Saula Sanni Street, Dalemo Alakuko",
+    addressLocality: "Lagos",
     addressRegion: "Lagos",
     addressCountry: "NG",
     postalCode: "100271",

@@ -567,7 +567,7 @@ export function AIChatbox() {
         goToServicesMenu();
       } else if (lower.match(/contact|reach|phone|email|address|office|location/)) {
         botSay(
-          "You can reach us at:\n\n\ud83d\udcde 08076172456\n\ud83d\udce7 info@slatech.com.ng\n\ud83d\udccd No 2b Olaide Tomori Str, off Simbiat Abiola Way, Ikeja, Lagos\n\nOr chat with us directly on WhatsApp!",
+          "You can reach us at:\n\n\ud83d\udcde 08076172456\n\ud83d\udce7 info@slatech.com.ng\n\ud83d\udccd 1, Saula Sanni Street, Dalemo Alakuko, Lagos\n\nOr chat with us directly on WhatsApp!",
           [
             {
               label: "\ud83d\udcf2 Chat on WhatsApp",
