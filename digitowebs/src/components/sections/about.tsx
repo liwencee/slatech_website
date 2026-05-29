@@ -54,7 +54,7 @@ export function AboutSection() {
               <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/team.png"
-                  alt="Slatech Solutions Team — Web Design Agency in Ikeja, Lagos Nigeria"
+                  alt="Slatech Solutions Team — Web Design Agency in Alakuko, Lagos Nigeria"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -65,7 +65,7 @@ export function AboutSection() {
                 {/* Caption on image */}
                 <div className="absolute bottom-4 left-4">
                   <p className="text-white font-semibold text-sm">Our Team in Lagos</p>
-                  <p className="text-primary text-xs font-medium">Ikeja, Lagos · Nigeria</p>
+                  <p className="text-primary text-xs font-medium">Alakuko, Lagos · Nigeria</p>
                 </div>
               </div>
               {/* Floating Years Badge */}

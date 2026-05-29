@@ -158,7 +158,7 @@ export function ContactSection() {
               <div>
                 <h3 className="text-xl font-bold mb-2">Contact Information</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  Based in Ikeja, Lagos. Serving businesses across Nigeria.
+                  Based in Alakuko, Lagos. Serving businesses across Nigeria.
                   Reach out — we are always ready to help.
                 </p>
               </div>

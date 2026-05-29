@@ -114,7 +114,7 @@ export default function TrainingPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 via-transparent to-transparent" />
               <div className="absolute bottom-5 left-5">
                 <p className="text-white font-bold text-lg leading-tight">Live Classes</p>
-                <p className="text-primary text-sm font-medium">Ikeja, Lagos · Nigeria</p>
+                <p className="text-primary text-sm font-medium">Alakuko, Lagos · Nigeria</p>
               </div>
             </div>
           </div>

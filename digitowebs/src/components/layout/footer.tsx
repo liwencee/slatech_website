@@ -425,7 +425,7 @@ export function Footer() {
               <div className="mt-5 rounded-xl overflow-hidden border border-white/10 shadow-lg">
                 <iframe
                   title="Slatech Solutions Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.2643752837396!2d3.3456!3d6.6018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sIkeja%2C+Lagos!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng"
+                  src="https://maps.google.com/maps?q=1+Saula+Sanni+Street+Dalemo+Alakuko+Lagos+Nigeria&output=embed"
                   width="100%"
                   height="130"
                   style={{ border: 0 }}

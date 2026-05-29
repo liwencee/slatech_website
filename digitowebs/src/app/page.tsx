@@ -12,29 +12,29 @@ import { TestimonialsSection } from "@/components/sections/testimonials";
 import { BrandTrustBar } from "@/components/sections/brand-trust";
 
 export const metadata: Metadata = {
-  title: "Slatech Solutions | #1 Web Design Company in Lagos, Ikeja Nigeria",
+  title: "Slatech Solutions | #1 Web Design Company in Lagos, Nigeria",
   description:
-    "Slatech Solutions — the best web design company in Lagos, Ikeja, Nigeria. We build beautiful, fast, mobile-friendly websites that rank on Google and convert visitors into paying customers. Free consultation available.",
+    "Slatech Solutions — the best web design company in Lagos, Nigeria. We build beautiful, fast, mobile-friendly websites that rank on Google and convert visitors into paying customers. Free consultation available.",
   keywords: [
     "web design company Lagos Nigeria",
-    "web design company Ikeja",
+    "web design company Alakuko Lagos",
     "website design Lagos",
     "best web design company Nigeria",
     "affordable web design Lagos",
-    "web developer Ikeja Lagos",
+    "web developer Alakuko Lagos",
     "SEO company Nigeria", "WordPress website design Nigeria", "web design services near me Lagos",
     "ecommerce website design Nigeria", "website development company Nigeria", "professional web designers Lagos",
-    "website design company Ikeja Lagos",
-    "Slatech Solutions", "graphic design company Lagos, logo design Nigeria", 
-    "branding company Lagos Nigeria, brand identity design Lagos", 
-    "EO company Nigeria, SEO services Lagos" , 
-    "website design Lagos, web developer Ikeja Lagos", 
-    "web design company Lagos Nigeria, branding and web design agency Nigeria" ,
+    "website design company Alakuko Lagos",
+    "Slatech Solutions", "graphic design company Lagos, logo design Nigeria",
+    "branding company Lagos Nigeria, brand identity design Lagos",
+    "SEO company Nigeria, SEO services Lagos",
+    "website design Lagos, web developer Alakuko Lagos",
+    "web design company Lagos Nigeria, branding and web design agency Nigeria",
   ],
   openGraph: {
-    title: "Slatech Solutions | #1 Web Design Company in Lagos, Ikeja Nigeria",
+    title: "Slatech Solutions | #1 Web Design Company in Lagos, Nigeria",
     description:
-      "Professional web design, e-commerce, SEO & digital services in Lagos, Ikeja and across Nigeria. 5+ years. 500+ clients. Free quote.",
+      "Professional web design, e-commerce, SEO & digital services in Lagos, Alakuko and across Nigeria. 5+ years. 500+ clients. Free quote.",
     url: "https://slatech.com.ng",
     type: "website",
   },

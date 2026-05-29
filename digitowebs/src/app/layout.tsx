@@ -30,17 +30,17 @@ export const metadata: Metadata = {
     apple: "/logomark.png",
   },
   description:
-    "Slatech Solutions is the leading web design company in Lagos, Ikeja, Nigeria. We build fast, beautiful, SEO-optimized websites, e-commerce stores, and provide digital marketing services for businesses across Lagos and Nigeria.",
+    "Slatech Solutions is the leading web design company in Lagos, Nigeria. We build fast, beautiful, SEO-optimized websites, e-commerce stores, and provide digital marketing services for businesses across Lagos and Nigeria.",
   keywords: [
     "web design company in Lagos",
     "logo design company in Lagos",
     "branding design company in Lagos",
     "graphics design company in Lagos",
-    "graphics design company in ikeja",
+    "graphics design company in Alakuko",
     "web design company Lagos Nigeria",
     "website design Lagos",
-    "website design Ikeja",
-    "web design Ikeja Lagos",
+    "website design Alakuko Lagos",
+    "web design Alakuko Lagos",
     "best logo design company Nigeria",
     "affordable web design Lagos",
     "professional logo design Nigeria",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     "web developer Lagos",
     "SEO services Nigeria",
     "SEO company Lagos",
-    "SEO agency Ikeja",
+    "SEO agency Alakuko Lagos",
     "ecommerce website Nigeria",
     "ecommerce website design Lagos",
     "online store Nigeria",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     "social media management Nigeria",
     "Slatech Solutions",
     "fully managed website Nigeria",
-    "web design company Ikeja",
+    "web design company Alakuko",
     "web agency Nigeria",
   ],
   authors: [{ name: "Slatech Solutions", url: "https://slatech.com.ng" }],
@@ -84,13 +84,13 @@ export const metadata: Metadata = {
     siteName: "Slatech Solutions",
     title: "Slatech Solutions | #1 Web Design Company in Lagos, Nigeria",
     description:
-      "We build stunning, fast, SEO-optimized websites for businesses in Lagos, Ikeja and across Nigeria. 10+ years experience. 500+ happy clients. Free consultation.",
+      "We build stunning, fast, SEO-optimized websites for businesses in Lagos, Alakuko and across Nigeria. 10+ years experience. 500+ happy clients. Free consultation.",
     images: [
       {
         url: "/SLATECH  SOLUTIONS LOGO.png",
         width: 1200,
         height: 630,
-        alt: "Slatech Solutions - Web Design Company in Lagos Ikeja Nigeria",
+        alt: "Slatech Solutions - Web Design Company in Lagos Nigeria",
       },
     ],
   },
@@ -98,7 +98,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Slatech Solutions | #1 Web Design Company in Lagos Nigeria",
     description:
-      "Professional web design, SEO, e-commerce & digital marketing in Lagos, Ikeja, Nigeria. Get a free quote today!",
+      "Professional web design, SEO, e-commerce & digital marketing in Lagos, Alakuko, Nigeria. Get a free quote today!",
     images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
   alternates: {
@@ -112,7 +112,7 @@ const LOCAL_BUSINESS_SCHEMA = {
   "@type": "ProfessionalService",
   name: "Slatech Solutions",
   description:
-    "Slatech Solutions is a leading web design and digital agency in Lagos, Ikeja, Nigeria, specialising in website design, e-commerce development, SEO, website hosting, branding, and fully managed website services.",
+    "Slatech Solutions is a leading web design and digital agency in Dalemo Alakuko, Lagos, Nigeria, specialising in website design, e-commerce development, SEO, website hosting, branding, and fully managed website services.",
   url: "https://slatech.com.ng",
   telephone: "+2348076172456",
   email: "info@slatech.com.ng",
@@ -149,7 +149,7 @@ const LOCAL_BUSINESS_SCHEMA = {
   ],
   areaServed: [
     { "@type": "City", name: "Lagos" },
-    { "@type": "City", name: "Ikeja" },
+    { "@type": "City", name: "Alakuko" },
     { "@type": "City", name: "Abuja" },
     { "@type": "State", name: "Lagos State" },
     { "@type": "Country", name: "Nigeria" },

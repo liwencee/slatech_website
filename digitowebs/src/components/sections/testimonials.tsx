@@ -136,7 +136,7 @@ export function TestimonialsSection() {
             </h2>
             <p className="text-muted-foreground leading-relaxed">
               Don&apos;t just take our word for it — hear from businesses in Lagos,
-              Ikeja, and across Nigeria that we&apos;ve helped succeed online.
+              Alakuko, and across Nigeria that we&apos;ve helped succeed online.
             </p>
 
             {/* Google rating summary */}
