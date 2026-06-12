@@ -4,8 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
-import { LiveChat } from "@/components/ui/live-chat";
-import { WhatsAppButton } from "@/components/ui/whatsapp-button";
+import { AIChatbox } from "@/components/ui/ai-chatbox";
 import { CookieConsent } from "@/components/ui/cookie-consent";
 import { AnalyticsTracker } from "@/components/ui/analytics-tracker";
 
@@ -201,8 +200,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <ScrollToTop />
-        <LiveChat />
-        <WhatsAppButton />
+        <AIChatbox />
         <CookieConsent />
         <AnalyticsTracker />
       </body>

@@ -12,6 +12,44 @@ export type Json =
 export interface Database {
   public: {
     Tables: {
+      chatbot_leads: {
+        Row: {
+          id: string;
+          name: string | null;
+          email: string | null;
+          services: string | null;
+          budget: string | null;
+          details: string | null;
+          source: string;
+          follow_up_sent: boolean;
+          follow_up_sent_at: string | null;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          name?: string | null;
+          email?: string | null;
+          services?: string | null;
+          budget?: string | null;
+          details?: string | null;
+          source?: string;
+          follow_up_sent?: boolean;
+          follow_up_sent_at?: string | null;
+          created_at?: string;
+        };
+        Update: {
+          id?: string;
+          name?: string | null;
+          email?: string | null;
+          services?: string | null;
+          budget?: string | null;
+          details?: string | null;
+          source?: string;
+          follow_up_sent?: boolean;
+          follow_up_sent_at?: string | null;
+          created_at?: string;
+        };
+      };
       profiles: {
         Row: {
           id: string;
