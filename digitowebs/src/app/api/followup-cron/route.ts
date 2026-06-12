@@ -2,6 +2,11 @@ import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { transporter } from "@/lib/mailer";
 
+// Requires NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY,
+// SUPABASE_SERVICE_ROLE_KEY, and CRON_SECRET to be set in the
+// hosting environment at build time (NEXT_PUBLIC_* vars are inlined
+// during `next build`, so a rebuild is required after changing them).
+
 /**
  * Automated 2-day client follow-up.
  *
