@@ -84,6 +84,13 @@ export async function POST(req: NextRequest) {
           { status: 200 }
         );
       }
+      // Low/no credit balance on the Anthropic account
+      if (response.status === 400 && errBody.includes("credit balance is too low")) {
+        return NextResponse.json(
+          { reply: "Our AI assistant is taking a short break for a top-up! 😊 In the meantime, our team is on WhatsApp (+2348076172456) and ready to help right away." },
+          { status: 200 }
+        );
+      }
       throw new Error(`Anthropic API ${response.status}: ${errBody}`);
     }
 
