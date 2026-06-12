@@ -8,7 +8,7 @@ import nodemailer from "nodemailer";
  *   SMTP_USER  = info@slatech.com.ng
  *   SMTP_PASS  = <your email password>
  *
- * All three email routes (contact, chatbot-lead, newsletter) use this one transporter.
+ * The email routes (contact, newsletter) use this one transporter.
  * Everything sends FROM and TO info@slatech.com.ng.
  */
 export const transporter = nodemailer.createTransport({
