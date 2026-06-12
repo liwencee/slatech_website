@@ -75,9 +75,16 @@ export async function POST(req: NextRequest) {
     });
 
     if (!response.ok) {
-      const err = await response.text();
-      console.error("Anthropic API error:", err);
-      throw new Error(`Anthropic API responded with ${response.status}`);
+      const errBody = await response.text();
+      console.error(`Anthropic API error ${response.status}:`, errBody);
+      // Surface auth errors clearly in dev
+      if (response.status === 401) {
+        return NextResponse.json(
+          { reply: "⚠️ API key error (401). Please check your ANTHROPIC_API_KEY in .env.local." },
+          { status: 200 }
+        );
+      }
+      throw new Error(`Anthropic API ${response.status}: ${errBody}`);
     }
 
     const data = await response.json() as {
@@ -92,8 +99,9 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ reply });
   } catch (err) {
     console.error("AI chat error:", err);
+    const detail = err instanceof Error ? err.message : String(err);
     return NextResponse.json(
-      { reply: "Something went wrong on my end! Our team is on WhatsApp (+2348076172456) and ready to help right away." },
+      { reply: `Something went wrong (${detail}). Our team is on WhatsApp (+2348076172456) and ready to help!` },
       { status: 200 }
     );
   }
