@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
+import { createClient } from "@supabase/supabase-js";
 import { transporter } from "@/lib/mailer";
-import { createAdminClient } from "@/lib/supabase/admin";
 
 export async function GET() {
   return NextResponse.json({ status: "chatbot-lead route is live" });
@@ -65,7 +65,11 @@ export async function POST(req: NextRequest) {
     // can email them later. Best-effort: never block the response on it.
     if (email) {
       try {
-        const supabase = createAdminClient();
+        const supabase = createClient(
+          process.env.NEXT_PUBLIC_SUPABASE_URL!,
+          process.env.SUPABASE_SERVICE_ROLE_KEY!,
+          { auth: { persistSession: false } }
+        );
         await supabase.from("chatbot_leads").insert({
           name:     name || null,
           email,
