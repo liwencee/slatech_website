@@ -93,7 +93,7 @@ export async function POST(req: NextRequest) {
 
           <!-- Footer -->
           <div style="padding-top:20px;border-top:1px solid #e5e7eb;font-size:12px;color:#9ca3af;line-height:1.8;">
-            <p style="margin:0;">📍 1, Saula Sanni Street, Dalemo Alakuko, Lagos</p>
+            <p style="margin:0;">📍 2b, Olaide Tomori, Ikeja, Lagos, Nigeria</p>
             <p style="margin:0;">📞 08076172456 &nbsp;·&nbsp; 📧 info@slatech.com.ng</p>
             <p style="margin:4px 0 0;font-size:11px;color:#d1d5db;">${timestamp}</p>
           </div>

@@ -36,11 +36,11 @@ export const metadata: Metadata = {
     "logo design company in Lagos",
     "branding design company in Lagos",
     "graphics design company in Lagos",
-    "graphics design company in Alakuko",
+    "graphics design company in Ikeja",
     "web design company Lagos Nigeria",
     "website design Lagos",
-    "website design Alakuko Lagos",
-    "web design Alakuko Lagos",
+    "website design Ikeja Lagos",
+    "web design Ikeja Lagos",
     "best logo design company Nigeria",
     "affordable web design Lagos",
     "professional logo design Nigeria",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     "web developer Lagos",
     "SEO services Nigeria",
     "SEO company Lagos",
-    "SEO agency Alakuko Lagos",
+    "SEO agency Ikeja Lagos",
     "ecommerce website Nigeria",
     "ecommerce website design Lagos",
     "online store Nigeria",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     "social media management Nigeria",
     "Slatech Solutions",
     "fully managed website Nigeria",
-    "web design company Alakuko",
+    "web design company Ikeja",
     "web agency Nigeria",
   ],
   authors: [{ name: "Slatech Solutions", url: "https://slatech.com.ng" }],
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
     siteName: "Slatech Solutions",
     title: "Slatech Solutions | #1 Web Design Company in Lagos, Nigeria",
     description:
-      "We build stunning, fast, SEO-optimized websites for businesses in Lagos, Alakuko and across Nigeria. 10+ years experience. 500+ happy clients. Free consultation.",
+      "We build stunning, fast, SEO-optimized websites for businesses in Lagos, Ikeja and across Nigeria. 10+ years experience. 500+ happy clients. Free consultation.",
     images: [
       {
         url: "/SLATECH  SOLUTIONS LOGO.png",
@@ -98,7 +98,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Slatech Solutions | #1 Web Design Company in Lagos Nigeria",
     description:
-      "Professional web design, SEO, e-commerce & digital marketing in Lagos, Alakuko, Nigeria. Get a free quote today!",
+      "Professional web design, SEO, e-commerce & digital marketing in Lagos, Ikeja, Nigeria. Get a free quote today!",
     images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
   alternates: {

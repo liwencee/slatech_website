@@ -48,7 +48,7 @@ export function HeroSection() {
             </h1>
 
             <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-7 sm:mb-8 sm:animate-[fade-in-up_0.6s_ease-out_0.4s_both]">
-              Slatech Solutions is Lagos&apos; most trusted web design agency in Alakuko, Lagos, Nigeria.
+              Slatech Solutions is Lagos&apos; most trusted web design agency in Ikeja, Lagos, Nigeria.
               We build fast, beautiful, SEO-optimised websites that rank on Google
               and convert visitors into paying customers.
             </p>
@@ -252,7 +252,7 @@ export function HeroSection() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-[11px] font-bold text-gray-800">Alakuko, Lagos</p>
+                  <p className="text-[11px] font-bold text-gray-800">Ikeja, Lagos</p>
                   <p className="text-[9px] text-gray-500">Nigeria 🇳🇬</p>
                 </div>
               </div>

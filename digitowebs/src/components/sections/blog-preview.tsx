@@ -68,7 +68,7 @@ export function BlogSection() {
             </h2>
             <p className="text-muted-foreground leading-relaxed">
               Expert insights on website design, SEO, and e-commerce for businesses in Lagos,
-              Alakuko, and across Nigeria.
+              Ikeja, and across Nigeria.
             </p>
           </div>
         </AnimateOnScroll>

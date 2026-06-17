@@ -114,7 +114,7 @@ export default function TrainingPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 via-transparent to-transparent" />
               <div className="absolute bottom-5 left-5">
                 <p className="text-white font-bold text-lg leading-tight">Live Classes</p>
-                <p className="text-primary text-sm font-medium">Alakuko, Lagos · Nigeria</p>
+                <p className="text-primary text-sm font-medium">Ikeja, Lagos · Nigeria</p>
               </div>
             </div>
           </div>
@@ -161,7 +161,7 @@ export default function TrainingPage() {
             {[
               {
                 q: "Where are classes held?",
-                a: "Classes are held at our office — 1, Saula Sanni Street, Dalemo Alakuko, Lagos. Online attendance may also be available.",
+                a: "Classes are held at our office — 2b, Olaide Tomori, Ikeja, Lagos. Online attendance may also be available.",
               },
               {
                 q: "Do I need any prior experience?",

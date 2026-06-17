@@ -4,7 +4,7 @@ const SYSTEM_PROMPT = `You are Slatech AI, the helpful virtual assistant for Sla
 
 ABOUT SLATECH SOLUTIONS:
 - 10+ years experience | 2,000+ projects completed | 5.0/5 rating (168 reviews)
-- Location: 1, Saula Sanni Street, Dalemo Alakuko, Lagos, Nigeria
+- Location: 2b, Olaide Tomori, Ikeja, Lagos, Nigeria
 - Phone / WhatsApp: +2348076172456
 - Email: info@slatech.com.ng
 
