@@ -94,12 +94,6 @@ export function Header() {
               </svg>
               <span>08076172456</span>
             </a>
-            <a href="mailto:info@slatech.com.ng" className="flex items-center gap-1.5 hover:text-primary transition-colors">
-              <svg className="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              <span className="hidden sm:inline">info@slatech.com.ng</span>
-            </a>
           </div>
           <div className="flex items-center gap-3">
             <div className="hidden md:flex items-center gap-1.5 text-gray-300">
@@ -107,7 +101,7 @@ export function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
-              <span>1, Saula Sanni Street, Dalemo Alakuko, Lagos</span>
+              <span>2b, Olaide Tomori, Ikeja, Lagos</span>
             </div>
             {/* Social Icons */}
             <div className="flex items-center gap-2 border-l border-white/20 pl-3 ml-1">

@@ -112,26 +112,25 @@ const LOCAL_BUSINESS_SCHEMA = {
   "@type": "ProfessionalService",
   name: "Slatech Solutions",
   description:
-    "Slatech Solutions is a leading web design and digital agency in Dalemo Alakuko, Lagos, Nigeria, specialising in website design, e-commerce development, SEO, website hosting, branding, and fully managed website services.",
+    "Slatech Solutions is a leading web design and digital agency in Ikeja, Lagos, Nigeria, specialising in website design, e-commerce development, SEO, website hosting, branding, and fully managed website services.",
   url: "https://slatech.com.ng",
   telephone: "+2348076172456",
-  email: "info@slatech.com.ng",
   foundingDate: "2014",
   priceRange: "₦₦",
   image: "https://slatech.com.ng/logomark.png",
   logo: "https://slatech.com.ng/side_SLATECH_SOLUTIONS_LOGO.png",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "1, Saula Sanni Street, Dalemo Alakuko",
-    addressLocality: "Lagos",
+    streetAddress: "2b, Olaide Tomori",
+    addressLocality: "Ikeja, Lagos",
     addressRegion: "Lagos",
     addressCountry: "NG",
     postalCode: "100271",
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 6.6018,
-    longitude: 3.3467,
+    latitude: 6.5944,
+    longitude: 3.3403,
   },
   openingHoursSpecification: [
     {
@@ -149,7 +148,7 @@ const LOCAL_BUSINESS_SCHEMA = {
   ],
   areaServed: [
     { "@type": "City", name: "Lagos" },
-    { "@type": "City", name: "Alakuko" },
+    { "@type": "City", name: "Ikeja" },
     { "@type": "City", name: "Abuja" },
     { "@type": "State", name: "Lagos State" },
     { "@type": "Country", name: "Nigeria" },

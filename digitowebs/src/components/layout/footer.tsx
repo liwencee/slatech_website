@@ -390,7 +390,7 @@ export function Footer() {
                     <MapPinIcon className="w-5 h-5" />
                   </div>
                   <span className="leading-relaxed">
-                    1, Saula Sanni Street, Dalemo Alakuko, Lagos
+                    2b, Olaide Tomori, Ikeja, Lagos, Nigeria
                   </span>
                 </div>
 
@@ -407,25 +407,13 @@ export function Footer() {
                   </a>
                 </div>
 
-                {/* Email */}
-                <div className="flex items-center gap-3 group/contact">
-                  <div className="shrink-0 text-primary transition-transform duration-300 group-hover/contact:scale-110">
-                    <EmailIcon className="w-5 h-5" />
-                  </div>
-                  <a
-                    href="mailto:info@slatech.com.ng"
-                    className="hover:text-primary transition-colors duration-300"
-                  >
-                    info@slatech.com.ng
-                  </a>
-                </div>
               </div>
 
               {/* Google Maps Embed */}
               <div className="mt-5 rounded-xl overflow-hidden border border-white/10 shadow-lg">
                 <iframe
                   title="Slatech Solutions Location"
-                  src="https://maps.google.com/maps?q=1+Saula+Sanni+Street+Dalemo+Alakuko+Lagos+Nigeria&output=embed"
+                  src="https://maps.google.com/maps?q=2b+Olaide+Tomori+Ikeja+Lagos+Nigeria&output=embed"
                   width="100%"
                   height="130"
                   style={{ border: 0 }}
