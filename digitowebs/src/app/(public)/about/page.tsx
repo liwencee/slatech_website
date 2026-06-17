@@ -25,13 +25,13 @@ const team = [
   {
     name: "SEO Specialist",
     role: "Search Engine Optimization",
-    photo: "https://images.unsplash.com/photo-1582610116397-edb72c1f0ff4?w=400&h=400&fit=crop&q=80",
+    photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&q=80",
     color: "bg-green-500",
   },
   {
     name: "Frontend Developer",
     role: "Development & Operations",
-    photo: "https://images.unsplash.com/photo-1556157382-97eda2f9e2bf?w=400&h=400&fit=crop&q=80",
+    photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&q=80",
     color: "bg-purple-500",
   },
 ];
