@@ -57,12 +57,15 @@ export function HeroSection() {
             <div className="flex flex-wrap gap-3 sm:gap-4 sm:animate-[fade-in-up_0.6s_ease-out_0.6s_both]">
               <Link
                 href="/contact"
-                className="inline-flex items-center px-6 sm:px-7 py-3 sm:py-3.5 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:scale-105 active:scale-95 text-sm sm:text-base"
+                className="group/cta relative overflow-hidden inline-flex items-center px-6 sm:px-7 py-3 sm:py-3.5 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:scale-105 active:scale-95 text-sm sm:text-base"
               >
-                Get a Free Quote
-                <svg className="ml-2 w-4 sm:w-5 h-4 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+                <span className="absolute inset-0 -translate-x-full group-hover/cta:translate-x-full transition-transform duration-700 ease-out bg-gradient-to-r from-transparent via-white/25 to-transparent" aria-hidden="true" />
+                <span className="relative inline-flex items-center">
+                  Get a Free Quote
+                  <svg className="ml-2 w-4 sm:w-5 h-4 sm:h-5 transition-transform group-hover/cta:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
               </Link>
               <Link
                 href="/services"

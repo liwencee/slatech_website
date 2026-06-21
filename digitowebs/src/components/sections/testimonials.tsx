@@ -159,7 +159,7 @@ export function TestimonialsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
             <AnimateOnScroll key={t.name} animation="fade-up" delay={i * 100}>
-              <article className="bg-white rounded-2xl p-6 shadow-sm border border-border hover:shadow-lg hover:border-primary/20 transition-all duration-400 flex flex-col gap-4 h-full">
+              <article className="group bg-white rounded-2xl p-6 shadow-sm border border-border hover:shadow-xl hover:border-primary/20 transition-all duration-400 hover:-translate-y-1.5 flex flex-col gap-4 h-full">
                 {/* Stars */}
                 <Stars count={t.rating} />
 

@@ -13,8 +13,8 @@ const stats = [
 function StatItem({ value, suffix, label, start }: { value: number; suffix: string; label: string; start: boolean }) {
   const count = useCounter(value, 2500, start);
   return (
-    <div className="text-center">
-      <p className="text-4xl sm:text-5xl font-bold text-primary mb-2">
+    <div className="group text-center rounded-2xl py-4 transition-all duration-300 hover:bg-white/5 hover:-translate-y-1">
+      <p className="text-4xl sm:text-5xl font-bold text-primary mb-2 transition-transform duration-300 group-hover:scale-110">
         {count.toLocaleString()}{suffix}
       </p>
       <p className="text-sm text-gray-300 font-medium">{label}</p>
