@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 
-type Step = "greeting" | "name" | "email" | "service" | "message" | "sending" | "done";
+type Step = "greeting" | "name" | "email" | "service" | "budget" | "message" | "sending" | "done";
 
 const SERVICES = [
   "Website Design",
@@ -14,12 +14,22 @@ const SERVICES = [
   "Other",
 ];
 
+const BUDGETS = [
+  "Under ₦100k",
+  "₦100k – ₦300k",
+  "₦300k – ₦500k",
+  "₦500k – ₦1M",
+  "Above ₦1M",
+  "Not sure yet",
+];
+
 export function LeadChatbox() {
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState<Step>("greeting");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [service, setService] = useState("");
+  const [budget, setBudget] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -39,7 +49,7 @@ export function LeadChatbox() {
           name: name || null,
           email: email || null,
           services: service ? [service] : [],
-          budget: null,
+          budget: budget || null,
           details: message || null,
         }),
       });
@@ -56,6 +66,7 @@ export function LeadChatbox() {
     setName("");
     setEmail("");
     setService("");
+    setBudget("");
     setMessage("");
     setError("");
   }
@@ -168,7 +179,7 @@ export function LeadChatbox() {
             )}
 
             {/* Service */}
-            {["service", "message", "sending", "done"].includes(step) && (
+            {["service", "budget", "message", "sending", "done"].includes(step) && (
               <>
                 <BotMsg text="What service are you interested in?" />
                 {step === "service" ? (
@@ -176,7 +187,7 @@ export function LeadChatbox() {
                     {SERVICES.map((s) => (
                       <button
                         key={s}
-                        onClick={() => { setService(s); setStep("message"); }}
+                        onClick={() => { setService(s); setStep("budget"); }}
                         className="px-3 py-1.5 bg-white border border-border text-xs font-medium rounded-full hover:border-primary hover:text-primary transition-colors"
                       >
                         {s}
@@ -185,6 +196,28 @@ export function LeadChatbox() {
                   </div>
                 ) : (
                   <UserMsg text={service} />
+                )}
+              </>
+            )}
+
+            {/* Budget */}
+            {["budget", "message", "sending", "done"].includes(step) && (
+              <>
+                <BotMsg text="What's your estimated project budget?" />
+                {step === "budget" ? (
+                  <div className="flex flex-wrap gap-2">
+                    {BUDGETS.map((b) => (
+                      <button
+                        key={b}
+                        onClick={() => { setBudget(b); setStep("message"); }}
+                        className="px-3 py-1.5 bg-white border border-border text-xs font-medium rounded-full hover:border-primary hover:text-primary transition-colors"
+                      >
+                        {b}
+                      </button>
+                    ))}
+                  </div>
+                ) : (
+                  <UserMsg text={budget} />
                 )}
               </>
             )}
