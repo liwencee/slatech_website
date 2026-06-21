@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { LeadChatbox } from "@/components/ui/lead-chatbox";
-import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 import { CookieConsent } from "@/components/ui/cookie-consent";
 import { AnalyticsTracker } from "@/components/ui/analytics-tracker";
 
@@ -201,7 +200,6 @@ export default function RootLayout({
         <Footer />
         <ScrollToTop />
         <LeadChatbox />
-        <WhatsAppButton />
         <CookieConsent />
         <AnalyticsTracker />
       </body>
