@@ -3,6 +3,18 @@ const nextConfig = {
   // Disable X-Powered-By header
   poweredByHeader: false,
 
+  // Redirect www → non-www (removes duplicate-content / canonical split)
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.slatech.com.ng" }],
+        destination: "https://slatech.com.ng/:path*",
+        permanent: true,
+      },
+    ];
+  },
+
   // Security headers
   async headers() {
     return [
