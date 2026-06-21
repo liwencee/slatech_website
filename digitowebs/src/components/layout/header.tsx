@@ -158,12 +158,18 @@ export function Header() {
               >
                 <Link
                   href={item.href}
-                  className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors rounded-md hover:bg-accent"
+                  className={`group/nav relative px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors rounded-md after:absolute after:bottom-1 after:left-4 after:h-0.5 after:rounded-full after:bg-primary after:transition-all after:duration-300 ${
+                    openDropdown === item.label
+                      ? "text-primary after:w-[calc(100%-2rem)]"
+                      : "after:w-0 hover:after:w-[calc(100%-2rem)]"
+                  }`}
                 >
                   {item.label}
                   {item.children && (
                     <svg
-                      className="inline-block ml-1 w-3 h-3"
+                      className={`inline-block ml-1 w-3 h-3 transition-transform duration-300 ${
+                        openDropdown === item.label ? "rotate-180" : ""
+                      }`}
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -178,14 +184,15 @@ export function Header() {
                   )}
                 </Link>
                 {item.children && openDropdown === item.label && (
-                  <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-border py-2 animate-fade-in">
+                  <div className="absolute top-full left-0 mt-2 w-60 bg-white rounded-xl shadow-2xl shadow-black/10 border border-border/60 py-2 animate-fade-in overflow-hidden before:absolute before:top-0 before:left-0 before:right-0 before:h-1 before:bg-gradient-to-r before:from-primary before:to-secondary">
                     {item.children.map((child) => (
                       <Link
                         key={child.label}
                         href={child.href}
-                        className="block px-4 py-2 text-sm text-foreground hover:text-primary hover:bg-accent transition-colors"
+                        className="group/item flex items-center gap-2 px-4 py-2.5 text-sm text-foreground hover:text-primary hover:bg-accent transition-all"
                       >
-                        {child.label}
+                        <span className="h-1.5 w-1.5 rounded-full bg-primary/30 group-hover/item:bg-primary group-hover/item:scale-125 transition-all" />
+                        <span className="group-hover/item:translate-x-0.5 transition-transform">{child.label}</span>
                       </Link>
                     ))}
                   </div>
@@ -249,19 +256,20 @@ export function Header() {
         id="mobile-navigation"
         role="navigation"
         aria-label="Mobile navigation"
-        className={`fixed top-0 right-0 z-[110] h-full w-[300px] max-w-[85vw] bg-white shadow-2xl lg:hidden transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 z-[110] h-full w-[320px] max-w-[85vw] bg-white shadow-2xl lg:hidden transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         {/* Mobile Nav Header */}
-        <div className="flex items-center justify-between px-5 py-4 border-b border-border">
-          <Link href="/" onClick={closeMobile} className="flex items-center">
+        <div className="flex items-center justify-between px-5 py-4 bg-gradient-to-br from-secondary to-secondary/90 relative overflow-hidden">
+          <div className="absolute -top-8 -right-8 w-28 h-28 rounded-full bg-primary/20 blur-2xl" aria-hidden="true" />
+          <Link href="/" onClick={closeMobile} className="flex items-center relative z-10 bg-white rounded-lg px-2 py-1">
             <Image src="/side_SLATECH_SOLUTIONS_LOGO.png" alt="Slatech Solutions" width={130} height={36} className="object-contain" />
           </Link>
           <button
             type="button"
             onClick={closeMobile}
-            className="p-2 text-foreground hover:text-primary hover:bg-primary/10 rounded-lg transition-colors"
+            className="relative z-10 p-2 text-white hover:text-primary hover:bg-white/10 rounded-lg transition-colors"
             aria-label="Close menu"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -323,9 +331,12 @@ export function Header() {
                 <Link
                   href={item.href}
                   onClick={closeMobile}
-                  className="block px-4 py-3 text-sm font-medium text-foreground hover:text-primary hover:bg-accent rounded-lg transition-colors"
+                  className="group/m flex items-center justify-between px-4 py-3 text-sm font-medium text-foreground hover:text-primary hover:bg-accent rounded-lg border-l-2 border-transparent hover:border-primary transition-all"
                 >
-                  {item.label}
+                  <span className="group-hover/m:translate-x-1 transition-transform">{item.label}</span>
+                  <svg className="w-4 h-4 opacity-0 -translate-x-2 group-hover/m:opacity-100 group-hover/m:translate-x-0 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </Link>
               )}
             </div>

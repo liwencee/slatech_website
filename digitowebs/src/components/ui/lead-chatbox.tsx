@@ -134,9 +134,21 @@ export function LeadChatbox() {
             <BotMsg text="Leave your details below and our team will get back to you shortly." />
 
             {step === "greeting" && (
-              <div className="flex justify-center pt-2">
-                <button onClick={() => setStep("name")} className="px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-xl hover:bg-primary/90 transition-colors shadow-sm">
-                  Get Started
+              <div className="flex flex-col gap-2 pt-2">
+                <button
+                  onClick={() => setStep("name")}
+                  className="group flex items-center justify-center gap-2 px-5 py-3 bg-primary text-white text-sm font-bold rounded-xl hover:bg-primary/90 transition-all hover:scale-[1.02] active:scale-95 shadow-md shadow-primary/20"
+                >
+                  Get a Free Quote
+                  <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </button>
+                <button
+                  onClick={() => setOpen(false)}
+                  className="px-5 py-2.5 bg-white border border-border text-gray-600 text-sm font-semibold rounded-xl hover:border-primary hover:text-primary transition-colors"
+                >
+                  Continue Browsing
                 </button>
               </div>
             )}
