@@ -2,9 +2,34 @@ import type { Metadata } from "next";
 import { ContactSection } from "@/components/sections/contact-preview";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Contact Slatech Solutions — Get a Free Web Design Quote",
   description:
-    "Get in touch with Slatech Solutions for a free consultation. We'd love to hear about your project.",
+    "Reach Slatech Solutions in Ikeja, Lagos. Call 08076172456, chat on WhatsApp or fill our form for a free web design, SEO or branding consultation.",
+  openGraph: {
+    title: "Contact Slatech Solutions — Get a Free Web Design Quote",
+    description:
+      "Reach Slatech Solutions in Ikeja, Lagos. Call 08076172456, chat on WhatsApp or fill our form for a free web design, SEO or branding consultation.",
+    url: "https://slatech.com.ng/contact",
+    type: "website",
+    images: [
+      {
+        url: "/SLATECH  SOLUTIONS LOGO.png",
+        width: 1200,
+        height: 630,
+        alt: "Slatech Solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Slatech Solutions — Get a Free Web Design Quote",
+    description:
+      "Reach Slatech Solutions in Ikeja, Lagos. Call 08076172456, chat on WhatsApp or fill our form for a free web design, SEO or branding consultation.",
+    images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
+  },
+  alternates: {
+    canonical: "https://slatech.com.ng/contact",
+  },
 };
 
 export default function ContactPage() {

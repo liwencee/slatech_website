@@ -4,7 +4,8 @@ import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
-import { AIChatbox } from "@/components/ui/ai-chatbox";
+import { LiveChat } from "@/components/ui/live-chat";
+import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 import { CookieConsent } from "@/components/ui/cookie-consent";
 import { AnalyticsTracker } from "@/components/ui/analytics-tracker";
 
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
     apple: "/logomark.png",
   },
   description:
-    "Slatech Solutions is the leading web design company in Lagos, Nigeria. We build fast, beautiful, SEO-optimized websites, e-commerce stores, and provide digital marketing services for businesses across Lagos and Nigeria.",
+    "Professional web design, SEO, e-commerce and digital marketing for businesses in Lagos, Nigeria. 500+ clients. 5.0 Google rating. Free consultation.",
   keywords: [
     "web design company in Lagos",
     "logo design company in Lagos",
@@ -84,7 +85,7 @@ export const metadata: Metadata = {
     siteName: "Slatech Solutions",
     title: "Slatech Solutions | #1 Web Design Company in Lagos, Nigeria",
     description:
-      "We build stunning, fast, SEO-optimized websites for businesses in Lagos, Ikeja and across Nigeria. 10+ years experience. 500+ happy clients. Free consultation.",
+      "Professional web design, SEO, e-commerce and digital marketing for businesses in Lagos, Nigeria. 500+ clients. 5.0 Google rating. Free consultation.",
     images: [
       {
         url: "/SLATECH  SOLUTIONS LOGO.png",
@@ -98,7 +99,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Slatech Solutions | #1 Web Design Company in Lagos Nigeria",
     description:
-      "Professional web design, SEO, e-commerce & digital marketing in Lagos, Ikeja, Nigeria. Get a free quote today!",
+      "Professional web design, SEO, e-commerce and digital marketing for businesses in Lagos, Nigeria. 500+ clients. 5.0 Google rating. Free consultation.",
     images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
   alternates: {
@@ -199,7 +200,8 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <ScrollToTop />
-        <AIChatbox />
+        <LiveChat />
+        <WhatsAppButton />
         <CookieConsent />
         <AnalyticsTracker />
       </body>

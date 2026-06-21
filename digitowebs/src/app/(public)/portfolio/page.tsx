@@ -2,9 +2,34 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Our Portfolio — Web Design Projects by Slatech Solutions",
   description:
-    "Explore our portfolio of web design projects across industries — travel, healthcare, e-commerce, education, and more.",
+    "Browse real websites, brands and digital projects we have built for 500+ Nigerian businesses. See our Lagos web design portfolio and get inspired.",
+  openGraph: {
+    title: "Our Portfolio — Web Design Projects by Slatech Solutions",
+    description:
+      "Browse real websites, brands and digital projects we have built for 500+ Nigerian businesses. See our Lagos web design portfolio and get inspired.",
+    url: "https://slatech.com.ng/portfolio",
+    type: "website",
+    images: [
+      {
+        url: "/SLATECH  SOLUTIONS LOGO.png",
+        width: 1200,
+        height: 630,
+        alt: "Slatech Solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Portfolio — Web Design Projects by Slatech Solutions",
+    description:
+      "Browse real websites, brands and digital projects we have built for 500+ Nigerian businesses. See our Lagos web design portfolio and get inspired.",
+    images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
+  },
+  alternates: {
+    canonical: "https://slatech.com.ng/portfolio",
+  },
 };
 
 const projects = [
@@ -78,12 +103,12 @@ export default function PortfolioPage() {
                     <span className="inline-block px-2.5 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-medium rounded-full mb-2">
                       {project.category}
                     </span>
-                    <h3 className="text-white font-bold">{project.title}</h3>
+                    <h2 className="text-white font-bold">{project.title}</h2>
                   </div>
                 </div>
                 <div className="absolute inset-0 bg-primary/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="text-center text-white p-4">
-                    <h3 className="font-bold text-lg mb-2">{project.title}</h3>
+                    <h2 className="font-bold text-lg mb-2">{project.title}</h2>
                     <p className="text-sm text-white/80 mb-3">{project.category}</p>
                     <span className="inline-flex items-center px-4 py-2 border-2 border-white text-sm font-medium rounded-lg">
                       View Project

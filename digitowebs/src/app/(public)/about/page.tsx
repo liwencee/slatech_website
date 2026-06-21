@@ -4,9 +4,34 @@ import Link from "next/link";
 import { StatsSection } from "@/components/sections/stats";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Slatech Solutions — Web Design Agency in Lagos",
   description:
-    "Learn about Slatech Solutions — 5+ years of experience building stunning, fast, and secure websites for businesses of all sizes.",
+    "Meet the team behind Lagos' top-rated web design agency. 10+ years experience, 500+ clients served. Learn why Nigerian businesses trust Slatech Solutions.",
+  openGraph: {
+    title: "About Slatech Solutions — Web Design Agency in Lagos",
+    description:
+      "Meet the team behind Lagos' top-rated web design agency. 10+ years experience, 500+ clients served. Learn why Nigerian businesses trust Slatech Solutions.",
+    url: "https://slatech.com.ng/about",
+    type: "website",
+    images: [
+      {
+        url: "/SLATECH  SOLUTIONS LOGO.png",
+        width: 1200,
+        height: 630,
+        alt: "Slatech Solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Slatech Solutions — Web Design Agency in Lagos",
+    description:
+      "Meet the team behind Lagos' top-rated web design agency. 10+ years experience, 500+ clients served. Learn why Nigerian businesses trust Slatech Solutions.",
+    images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
+  },
+  alternates: {
+    canonical: "https://slatech.com.ng/about",
+  },
 };
 
 const team = [

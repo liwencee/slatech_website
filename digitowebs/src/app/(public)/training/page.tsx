@@ -4,9 +4,34 @@ import Link from "next/link";
 import { TrainingPricing } from "@/components/sections/training-pricing";
 
 export const metadata: Metadata = {
-  title: "Digital Training",
+  title: "Digital Training — Learn Web Design & SEO in Lagos",
   description:
-    "Learn web design, graphics, SEO and digital marketing with Slatech Solutions. Join our live training classes in Lagos, Nigeria — Basic, Advance, and Masterclass options available.",
+    "Join Slatech's live digital training classes in Lagos. Learn web design, graphics, SEO and digital marketing. Basic, Advance and Masterclass levels.",
+  openGraph: {
+    title: "Digital Training — Learn Web Design & SEO in Lagos",
+    description:
+      "Join Slatech's live digital training classes in Lagos. Learn web design, graphics, SEO and digital marketing. Basic, Advance and Masterclass levels.",
+    url: "https://slatech.com.ng/training",
+    type: "website",
+    images: [
+      {
+        url: "/SLATECH  SOLUTIONS LOGO.png",
+        width: 1200,
+        height: 630,
+        alt: "Slatech Solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Digital Training — Learn Web Design & SEO in Lagos",
+    description:
+      "Join Slatech's live digital training classes in Lagos. Learn web design, graphics, SEO and digital marketing. Basic, Advance and Masterclass levels.",
+    images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
+  },
+  alternates: {
+    canonical: "https://slatech.com.ng/training",
+  },
 };
 
 const stats = [
@@ -16,9 +41,52 @@ const stats = [
   { value: "100%", label: "Practical Classes" },
 ];
 
+const FAQ_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Where are classes held?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Classes are held at our office — 2b, Olaide Tomori, Ikeja, Lagos. Online attendance may also be available.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do I need any prior experience?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No experience is required for the Basic Class. It is designed for complete beginners. The Advance and Masterclass levels build on the foundational skills.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What do I need to bring?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Bring a laptop (Windows or Mac) and a notepad. Software will be installed during the first class.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is there a payment plan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Contact us on WhatsApp or via the Contact page to discuss instalment options before registering.",
+      },
+    },
+  ],
+};
+
 export default function TrainingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
+      />
       {/* Hero */}
       <section className="bg-secondary py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

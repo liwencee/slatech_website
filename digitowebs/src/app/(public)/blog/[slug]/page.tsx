@@ -438,6 +438,29 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: post.title,
     description: post.excerpt,
     keywords: categoryKeywords[post.category] ?? [],
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: `https://slatech.com.ng/blog/${slug}`,
+      type: "article",
+      images: [
+        {
+          url: "/SLATECH  SOLUTIONS LOGO.png",
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
+    },
+    alternates: {
+      canonical: `https://slatech.com.ng/blog/${slug}`,
+    },
   };
 }
 
@@ -499,9 +522,9 @@ export default async function BlogPostPage({ params }: PageProps) {
           {/* Share & CTA */}
           <div className="border-t border-border mt-12 pt-8">
             <div className="bg-accent rounded-2xl p-8 text-center">
-              <h3 className="text-xl font-bold text-foreground mb-3">
+              <h2 className="text-xl font-bold text-foreground mb-3">
                 Need Help With Your Project?
-              </h3>
+              </h2>
               <p className="text-muted-foreground mb-6 max-w-md mx-auto">
                 Our team of experts is ready to help you build a website that
                 drives results. Get a free consultation today.

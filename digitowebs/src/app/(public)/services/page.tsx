@@ -3,9 +3,34 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Our Services",
+  title: "Web Design, SEO & Digital Marketing Services in Lagos",
   description:
-    "Web design, e-commerce, SEO, hosting, and management services by Slatech Solutions. Everything you need to succeed online.",
+    "Professional web design, SEO, branding, social media & graphic design services for Nigerian businesses. Get a free quote from Slatech Solutions today.",
+  openGraph: {
+    title: "Web Design, SEO & Digital Marketing Services in Lagos",
+    description:
+      "Professional web design, SEO, branding, social media & graphic design services for Nigerian businesses. Get a free quote from Slatech Solutions today.",
+    url: "https://slatech.com.ng/services",
+    type: "website",
+    images: [
+      {
+        url: "/SLATECH  SOLUTIONS LOGO.png",
+        width: 1200,
+        height: 630,
+        alt: "Slatech Solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Web Design, SEO & Digital Marketing Services in Lagos",
+    description:
+      "Professional web design, SEO, branding, social media & graphic design services for Nigerian businesses. Get a free quote from Slatech Solutions today.",
+    images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
+  },
+  alternates: {
+    canonical: "https://slatech.com.ng/services",
+  },
 };
 
 const services = [

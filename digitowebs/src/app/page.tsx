@@ -14,7 +14,7 @@ import { BrandTrustBar } from "@/components/sections/brand-trust";
 export const metadata: Metadata = {
   title: "Slatech Solutions | #1 Web Design Company in Lagos, Nigeria",
   description:
-    "Slatech Solutions — the best web design company in Lagos, Nigeria. We build beautiful, fast, mobile-friendly websites that rank on Google and convert visitors into paying customers. Free consultation available.",
+    "Lagos' #1 web design company. We build fast, SEO-optimised websites for Nigerian businesses. 500+ clients, 5.0 Google rating. Free consultation.",
   keywords: [
     "web design company Lagos Nigeria",
     "web design company Ikeja Lagos",
@@ -34,9 +34,27 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Slatech Solutions | #1 Web Design Company in Lagos, Nigeria",
     description:
-      "Professional web design, e-commerce, SEO & digital services in Lagos, Ikeja and across Nigeria. 5+ years. 500+ clients. Free quote.",
+      "Lagos' #1 web design company. We build fast, SEO-optimised websites for Nigerian businesses. 500+ clients, 5.0 Google rating. Free consultation.",
     url: "https://slatech.com.ng",
     type: "website",
+    images: [
+      {
+        url: "/SLATECH  SOLUTIONS LOGO.png",
+        width: 1200,
+        height: 630,
+        alt: "Slatech Solutions - Web Design Lagos",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Slatech Solutions | #1 Web Design Company in Lagos, Nigeria",
+    description:
+      "Lagos' #1 web design company. We build fast, SEO-optimised websites for Nigerian businesses. 500+ clients, 5.0 Google rating. Free consultation.",
+    images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
+  },
+  alternates: {
+    canonical: "https://slatech.com.ng",
   },
 };
 

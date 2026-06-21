@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Web Design & SEO Blog for Nigerian Businesses",
   description:
-    "Expert tips on web design, SEO, e-commerce, digital marketing, and branding for Nigerian businesses. Updated weekly by Slatech Solutions — Lagos' #1 web design agency.",
+    "Expert tips on web design, SEO, e-commerce and digital marketing for Nigerian businesses. Updated weekly by Slatech Solutions, Lagos.",
   keywords: [
     "web design Nigeria",
     "SEO tips Nigeria",
@@ -46,6 +46,7 @@ export const metadata: Metadata = {
     title: "Web Design & SEO Blog | Slatech Solutions",
     description:
       "Expert tips on web design, SEO, e-commerce & digital marketing for Nigerian businesses.",
+    images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
 };
 
