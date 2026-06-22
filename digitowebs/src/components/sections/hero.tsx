@@ -32,13 +32,13 @@ export function HeroSection() {
           {/* ── Left Content ── */}
           <div className="text-white">
             {/* Badge */}
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 text-white text-sm font-medium rounded-full mb-5 sm:mb-6 border border-white/30 sm:animate-[fade-in-up_0.6s_ease-out]">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 text-white text-sm font-medium rounded-full mb-5 sm:mb-6 border border-white/30 animate-[fade-in-up_0.6s_ease-out]">
               <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
               #1 Web Design Company in Lagos, Nigeria
             </span>
 
             {/* Headline */}
-            <h1 className="text-[1.75rem] sm:text-5xl lg:text-6xl font-bold leading-tight mb-5 sm:mb-6 sm:animate-[fade-in-up_0.6s_ease-out_0.2s_both]">
+            <h1 className="text-[1.75rem] sm:text-5xl lg:text-6xl font-bold leading-tight mb-5 sm:mb-6 animate-[fade-in-up_0.6s_ease-out_0.2s_both]">
               Premium{" "}
               <span className="text-primary">{typedText}</span>
               <span className="animate-pulse text-primary">|</span>
@@ -47,14 +47,14 @@ export function HeroSection() {
               <span className="text-primary">Lagos</span>
             </h1>
 
-            <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-7 sm:mb-8 sm:animate-[fade-in-up_0.6s_ease-out_0.4s_both]">
+            <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-7 sm:mb-8 animate-[fade-in-up_0.6s_ease-out_0.4s_both]">
               Slatech Solutions is Lagos&apos; most trusted web design agency in Ikeja, Lagos, Nigeria.
               We build fast, beautiful, SEO-optimised websites that rank on Google
               and convert visitors into paying customers.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-3 sm:gap-4 sm:animate-[fade-in-up_0.6s_ease-out_0.6s_both]">
+            <div className="flex flex-wrap gap-3 sm:gap-4 animate-[fade-in-up_0.6s_ease-out_0.6s_both]">
               <Link
                 href="/contact"
                 className="group/cta relative overflow-hidden inline-flex items-center px-6 sm:px-7 py-3 sm:py-3.5 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:scale-105 active:scale-95 text-sm sm:text-base"
@@ -76,7 +76,7 @@ export function HeroSection() {
             </div>
 
             {/* Google Stars Rating */}
-            <div className="flex items-center gap-3 mt-6 sm:mt-8 sm:animate-[fade-in-up_0.6s_ease-out_0.7s_both]">
+            <div className="flex items-center gap-3 mt-6 sm:mt-8 animate-[fade-in-up_0.6s_ease-out_0.7s_both]">
               <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" viewBox="0 0 24 24">
@@ -91,7 +91,7 @@ export function HeroSection() {
             </div>
 
             {/* Stats — 2-col grid on mobile, flex row on sm+ */}
-            <div className="grid grid-cols-2 gap-x-4 gap-y-4 mt-6 pt-6 border-t border-white/10 sm:flex sm:items-center sm:gap-6 sm:mt-8 sm:pt-8 sm:animate-[fade-in-up_0.6s_ease-out_0.8s_both]">
+            <div className="grid grid-cols-2 gap-x-4 gap-y-4 mt-6 pt-6 border-t border-white/10 sm:flex sm:items-center sm:gap-6 sm:mt-8 sm:pt-8 animate-[fade-in-up_0.6s_ease-out_0.8s_both]">
               <div className="text-center sm:text-left">
                 <p className="text-2xl font-bold text-primary">10+</p>
                 <p className="text-xs text-gray-400">Years in Lagos</p>
