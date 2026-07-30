@@ -101,6 +101,12 @@ export default function AboutPage() {
                   and client satisfaction has remained unchanged.
                 </p>
                 <p>
+                  Today, we partner with businesses of every size — from
+                  ambitious startups and growing SMEs to large corporations
+                  and international firms — helping them build stronger digital
+                  brands and scale their operations with confidence.
+                </p>
+                <p>
                   Today, we&apos;ve delivered over 2,000 projects and continue
                   to push the boundaries of what&apos;s possible in web design
                   and development.

@@ -94,7 +94,9 @@ export function AboutSection() {
                 dedicated to transforming ideas into powerful digital experiences.
                 We combine creativity with cutting-edge technology to deliver websites
                 that not only look stunning but also rank on Google and convert
-                visitors into paying customers.
+                visitors into paying customers. From growing SMEs to large corporations
+                and international firms, we help businesses of every size build a
+                stronger digital presence and scale with confidence.
               </p>
 
               {/* Feature grid */}
