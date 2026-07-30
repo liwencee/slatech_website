@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { transporter } from "@/lib/mailer";
+import { escapeHtml } from "@/lib/security/sanitize";
 
 type ChatMessage = { role: "user" | "assistant"; content: string };
 
@@ -15,9 +16,9 @@ function buildTranscriptRows(messages: ChatMessage[], displayName: string): stri
   return messages
     .filter((m) => m.content && !SKIP_LABELS.has(m.content))
     .map((m) => {
-      const sender = m.role === "user" ? (displayName || "You") : "Slatech AI";
+      const sender = escapeHtml(m.role === "user" ? (displayName || "You") : "Slatech AI");
       const bg     = m.role === "user" ? "#e91761" : "#115279";
-      const body   = String(m.content).replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, "<br/>");
+      const body   = escapeHtml(m.content).replace(/\n/g, "<br/>");
       return `
         <tr style="border-top:1px solid #f3f4f6;">
           <td style="padding:10px 14px;vertical-align:top;white-space:nowrap;">
@@ -45,8 +46,13 @@ export async function POST(req: NextRequest) {
     if (!email || !Array.isArray(messages) || messages.length === 0) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return NextResponse.json({ error: "Invalid email address" }, { status: 400 });
+    }
 
-    const displayName    = name || "there";
+    const safeEmail      = escapeHtml(email);
+    const safeName       = escapeHtml(name);
+    const displayName    = safeName || "there";
     const transcriptRows = buildTranscriptRows(messages, name || "You");
     const timestamp      = new Date().toLocaleString("en-NG", { timeZone: "Africa/Lagos" });
 
@@ -113,12 +119,12 @@ export async function POST(req: NextRequest) {
           <table style="width:100%;border-collapse:collapse;">
             <tr>
               <td style="padding:8px 0;font-weight:600;width:90px;color:#555;font-size:14px;">Email</td>
-              <td style="padding:8px 0;font-size:14px;"><a href="mailto:${email}" style="color:#e91761;">${email}</a></td>
+              <td style="padding:8px 0;font-size:14px;"><a href="mailto:${safeEmail}" style="color:#e91761;">${safeEmail}</a></td>
             </tr>
             ${name ? `
             <tr style="border-top:1px solid #e5e7eb;">
               <td style="padding:8px 0;font-weight:600;color:#555;font-size:14px;">Name</td>
-              <td style="padding:8px 0;font-size:14px;">${name}</td>
+              <td style="padding:8px 0;font-size:14px;">${safeName}</td>
             </tr>` : ""}
             <tr style="border-top:1px solid #e5e7eb;">
               <td style="padding:8px 0;font-weight:600;color:#555;font-size:14px;">Messages</td>
@@ -131,7 +137,7 @@ export async function POST(req: NextRequest) {
             ${sessionId ? `
             <tr style="border-top:1px solid #e5e7eb;">
               <td style="padding:8px 0;font-weight:600;color:#555;font-size:12px;">Session</td>
-              <td style="padding:8px 0;font-size:11px;color:#999;">${sessionId}</td>
+              <td style="padding:8px 0;font-size:11px;color:#999;">${escapeHtml(sessionId)}</td>
             </tr>` : ""}
           </table>
 

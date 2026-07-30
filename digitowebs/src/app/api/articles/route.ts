@@ -39,7 +39,13 @@ export async function GET(request: NextRequest) {
   }
 
   if (search) {
-    query = query.or(`title.ilike.%${search}%,excerpt.ilike.%${search}%`);
+    // PostgREST treats `,` (clause separator) and `.` (operator separator) as
+    // filter-tree syntax. Per PostgREST's escaping rules, wrapping a filter
+    // value in double quotes makes those characters literal — but backslash
+    // and double-quote inside the value must themselves be backslash-escaped
+    // first so the quoted value can't be broken out of.
+    const escaped = search.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
+    query = query.or(`title.ilike."%${escaped}%",excerpt.ilike."%${escaped}%"`);
   }
 
   const { data, error, count } = await query

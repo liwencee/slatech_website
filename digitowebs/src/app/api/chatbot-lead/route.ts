@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { transporter } from "@/lib/mailer";
+import { escapeHtml } from "@/lib/security/sanitize";
 
 export async function GET() {
   return NextResponse.json({ status: "chatbot-lead route is live" });
@@ -10,9 +11,19 @@ export async function POST(req: NextRequest) {
   try {
     const { name, email, services, budget, details } = await req.json();
 
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(email))) {
+      return NextResponse.json({ error: "Invalid email address." }, { status: 400 });
+    }
+
     const serviceList = Array.isArray(services) && services.length
       ? services.join(", ")
       : "Not specified";
+
+    const safeName        = escapeHtml(name);
+    const safeEmail       = escapeHtml(email);
+    const safeServiceList = escapeHtml(serviceList);
+    const safeBudget      = escapeHtml(budget);
+    const safeDetails     = escapeHtml(details).replace(/\n/g, "<br/>");
 
     const html = `
       <div style="font-family:sans-serif;max-width:600px;margin:0 auto;color:#1a1a1a;">
@@ -24,26 +35,26 @@ export async function POST(req: NextRequest) {
           <table style="width:100%;border-collapse:collapse;">
             <tr>
               <td style="padding:10px 0;font-weight:600;width:140px;color:#555;font-size:14px;">Name</td>
-              <td style="padding:10px 0;font-size:14px;">${name || "Not provided"}</td>
+              <td style="padding:10px 0;font-size:14px;">${name ? safeName : "Not provided"}</td>
             </tr>
             <tr style="border-top:1px solid #e5e7eb;">
               <td style="padding:10px 0;font-weight:600;color:#555;font-size:14px;">Email</td>
               <td style="padding:10px 0;font-size:14px;">
-                ${email ? `<a href="mailto:${email}" style="color:#e91761;">${email}</a>` : "Not provided"}
+                ${email ? `<a href="mailto:${safeEmail}" style="color:#e91761;">${safeEmail}</a>` : "Not provided"}
               </td>
             </tr>
             <tr style="border-top:1px solid #e5e7eb;">
               <td style="padding:10px 0;font-weight:600;color:#555;font-size:14px;">Services</td>
-              <td style="padding:10px 0;font-size:14px;">${serviceList}</td>
+              <td style="padding:10px 0;font-size:14px;">${safeServiceList}</td>
             </tr>
             <tr style="border-top:1px solid #e5e7eb;">
               <td style="padding:10px 0;font-weight:600;color:#555;font-size:14px;">Budget</td>
-              <td style="padding:10px 0;font-size:14px;">${budget || "Not specified"}</td>
+              <td style="padding:10px 0;font-size:14px;">${budget ? safeBudget : "Not specified"}</td>
             </tr>
             ${details ? `
             <tr style="border-top:1px solid #e5e7eb;">
               <td style="padding:10px 0;font-weight:600;color:#555;font-size:14px;vertical-align:top;">Details</td>
-              <td style="padding:10px 0;font-size:14px;line-height:1.6;">${String(details).replace(/\n/g, "<br/>")}</td>
+              <td style="padding:10px 0;font-size:14px;line-height:1.6;">${safeDetails}</td>
             </tr>` : ""}
           </table>
           <div style="margin-top:24px;padding-top:20px;border-top:1px solid #e5e7eb;font-size:12px;color:#999;">

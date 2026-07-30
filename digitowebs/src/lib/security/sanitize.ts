@@ -50,3 +50,15 @@ export function sanitizeHtml(dirty: string): string {
 export function sanitizeText(input: string): string {
   return input.replace(/<[^>]*>/g, "").trim();
 }
+
+// Escape a plain-text value for safe interpolation into HTML (text nodes
+// and quoted attributes alike, e.g. `<a href="mailto:${escapeHtml(email)}">`).
+// Use this for any user-supplied value placed into HTML email templates.
+export function escapeHtml(input: unknown): string {
+  return String(input ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}

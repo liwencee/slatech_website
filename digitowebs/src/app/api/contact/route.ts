@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { transporter } from "@/lib/mailer";
+import { escapeHtml } from "@/lib/security/sanitize";
 
 export async function POST(req: NextRequest) {
   try {
@@ -13,6 +14,20 @@ export async function POST(req: NextRequest) {
         { status: 400 }
       );
     }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return NextResponse.json(
+        { error: "Invalid email address." },
+        { status: 400 }
+      );
+    }
+
+    /* ── Escape all user input before HTML interpolation ──────────── */
+    const safeFirstName = escapeHtml(firstName);
+    const safeLastName  = escapeHtml(lastName);
+    const safeEmail     = escapeHtml(email);
+    const safePhone     = escapeHtml(phone);
+    const safeService   = escapeHtml(service);
+    const safeMessage   = escapeHtml(message).replace(/\n/g, "<br/>");
 
     /* ── Build HTML ─────────────────────────────────────────────── */
     const html = `
@@ -25,28 +40,28 @@ export async function POST(req: NextRequest) {
           <table style="width:100%;border-collapse:collapse;">
             <tr>
               <td style="padding:10px 0;font-weight:600;width:140px;color:#555;font-size:14px;">Name</td>
-              <td style="padding:10px 0;font-size:14px;">${firstName} ${lastName}</td>
+              <td style="padding:10px 0;font-size:14px;">${safeFirstName} ${safeLastName}</td>
             </tr>
             <tr style="border-top:1px solid #e5e7eb;">
               <td style="padding:10px 0;font-weight:600;color:#555;font-size:14px;">Email</td>
-              <td style="padding:10px 0;font-size:14px;"><a href="mailto:${email}" style="color:#e91761;">${email}</a></td>
+              <td style="padding:10px 0;font-size:14px;"><a href="mailto:${safeEmail}" style="color:#e91761;">${safeEmail}</a></td>
             </tr>
             ${phone ? `
             <tr style="border-top:1px solid #e5e7eb;">
               <td style="padding:10px 0;font-weight:600;color:#555;font-size:14px;">Phone</td>
-              <td style="padding:10px 0;font-size:14px;">${phone}</td>
+              <td style="padding:10px 0;font-size:14px;">${safePhone}</td>
             </tr>` : ""}
             <tr style="border-top:1px solid #e5e7eb;">
               <td style="padding:10px 0;font-weight:600;color:#555;font-size:14px;">Service</td>
               <td style="padding:10px 0;font-size:14px;">
                 <span style="background:#e91761;color:#fff;padding:3px 10px;border-radius:20px;font-size:12px;font-weight:600;">
-                  ${service}
+                  ${safeService}
                 </span>
               </td>
             </tr>
             <tr style="border-top:1px solid #e5e7eb;">
               <td style="padding:10px 0;font-weight:600;color:#555;font-size:14px;vertical-align:top;">Message</td>
-              <td style="padding:10px 0;font-size:14px;line-height:1.6;">${message.replace(/\n/g, "<br/>")}</td>
+              <td style="padding:10px 0;font-size:14px;line-height:1.6;">${safeMessage}</td>
             </tr>
           </table>
           <div style="margin-top:24px;padding-top:20px;border-top:1px solid #e5e7eb;font-size:12px;color:#999;">
