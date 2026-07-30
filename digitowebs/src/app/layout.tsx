@@ -175,7 +175,44 @@ const LOCAL_BUSINESS_SCHEMA = {
     bestRating: "5",
     worstRating: "1",
   },
-  sameAs: ["https://wa.me/2348076172456"],
+  review: [
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "Adebayo Ogunlade" },
+      reviewBody:
+        "Slatech Solutions transformed our online presence completely. Their team delivered a stunning website that increased our bookings by 150%. The #1 web agency in Lagos!",
+    },
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "Chioma Nwankwo" },
+      reviewBody:
+        "Working with Slatech was a game-changer for our e-commerce business. The website is fast, secure, and our conversion rates have doubled since launch.",
+    },
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "Ibrahim Musa" },
+      reviewBody:
+        "Professional, responsive, and creative. They understood our vision from day one and delivered beyond expectations. Highly recommended in Lagos.",
+    },
+  ],
+  knowsAbout: [
+    "Web Design",
+    "E-Commerce Development",
+    "Search Engine Optimization",
+    "Logo & Branding",
+    "Social Media Management",
+    "Graphic Design",
+    "Website Hosting",
+  ],
+  slogan: "Turning Ideas into Powerful Digital Brands",
+  sameAs: [
+    "https://wa.me/2348076172456",
+    "https://www.facebook.com/share/1AtxLz2njU/?mibextid=wwXIfr",
+    "https://www.instagram.com/_slatech",
+  ],
 };
 
 export default function RootLayout({
