@@ -204,6 +204,36 @@ const posts = [
     readTime: "5 min read",
     color: "bg-yellow-500",
   },
+  {
+    slug: "web-design-trends-2026",
+    title: "Top Web Design Trends to Watch in 2026",
+    excerpt:
+      "From bold typography to AI-driven personalisation — the design trends shaping how modern websites look, feel, and convert in 2026.",
+    category: "Web Design",
+    date: "Mar 5, 2026",
+    readTime: "6 min read",
+    color: "bg-teal-600",
+  },
+  {
+    slug: "boost-seo-rankings",
+    title: "How to Boost Your Website's SEO Rankings",
+    excerpt:
+      "Practical, proven techniques to improve your search engine rankings and drive more organic traffic to your website.",
+    category: "SEO",
+    date: "Mar 1, 2026",
+    readTime: "6 min read",
+    color: "bg-lime-600",
+  },
+  {
+    slug: "mobile-friendly-website",
+    title: "Why Your Website Must Be Mobile-Friendly",
+    excerpt:
+      "Most Nigerians browse on their phones. Here's why a mobile-first website is non-negotiable — and how to make sure yours measures up.",
+    category: "Web Design",
+    date: "Feb 24, 2026",
+    readTime: "5 min read",
+    color: "bg-sky-600",
+  },
 ];
 
 export default function BlogPage() {
