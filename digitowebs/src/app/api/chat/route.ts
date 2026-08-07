@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { enforceRateLimit } from "@/lib/security/rate-limit";
 
 const SYSTEM_PROMPT = `You are Slatech AI, the helpful virtual assistant for Slatech Solutions — a Nigerian digital agency in Lagos that helps businesses grow online since 2014.
 
@@ -38,6 +39,11 @@ export async function GET() {
 }
 
 export async function POST(req: NextRequest) {
+  // Every call spends Anthropic credits, so an unthrottled endpoint is a
+  // direct route to draining the account balance.
+  const limited = await enforceRateLimit(req, "public");
+  if (limited) return limited;
+
   const apiKey = process.env.ANTHROPIC_API_KEY;
 
   if (!apiKey) {

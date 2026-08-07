@@ -1,8 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { transporter } from "@/lib/mailer";
 import { escapeHtml } from "@/lib/security/sanitize";
+import { enforceRateLimit } from "@/lib/security/rate-limit";
 
 export async function POST(req: NextRequest) {
+  const limited = await enforceRateLimit(req, "email");
+  if (limited) return limited;
+
   try {
     const { firstName, lastName, email, phone, service, message } =
       await req.json();

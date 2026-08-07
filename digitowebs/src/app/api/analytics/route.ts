@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { enforceRateLimit } from "@/lib/security/rate-limit";
 
 // Use the service-role key so we can bypass RLS and write analytics data.
 // This route is server-only — the service key is never exposed to the browser.
@@ -11,6 +12,11 @@ function getAdminClient() {
 }
 
 export async function POST(req: NextRequest) {
+  // Unauthenticated endpoint that writes with the service-role key (bypassing
+  // RLS) — throttle so the analytics tables can't be flooded with junk rows.
+  const limited = await enforceRateLimit(req, "public");
+  if (limited) return limited;
+
   try {
     const body = await req.json();
     const { type, visitor_id, session_id, page, referrer,

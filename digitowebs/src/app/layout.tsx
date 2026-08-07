@@ -226,6 +226,32 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        {/*
+          CSP fallback. The middleware sets a full Content-Security-Policy
+          header, but Hostinger's LiteSpeed proxy overwrites it in transit with
+          its own `upgrade-insecure-requests` value — verified against the live
+          site. A <meta> CSP is emitted in the document body and cannot be
+          rewritten by the proxy, so it restores script/style/frame controls.
+          Directives that are invalid in meta (frame-ancestors, report-uri) are
+          intentionally omitted; X-Frame-Options: DENY still covers framing.
+        */}
+        <meta
+          httpEquiv="Content-Security-Policy"
+          content={[
+            "default-src 'self'",
+            // 'unsafe-inline'/'unsafe-eval' are required by Next.js hydration.
+            "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://embed.tawk.to https://*.tawk.to",
+            "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.tawk.to",
+            "img-src 'self' data: blob: https:",
+            "font-src 'self' data: https://fonts.gstatic.com https://*.tawk.to",
+            "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://wa.me https://*.tawk.to wss://*.tawk.to",
+            "frame-src https://www.google.com https://maps.google.com https://*.tawk.to",
+            "base-uri 'self'",
+            "form-action 'self'",
+            "object-src 'none'",
+            "upgrade-insecure-requests",
+          ].join("; ")}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }}

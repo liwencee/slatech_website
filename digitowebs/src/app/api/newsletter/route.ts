@@ -1,17 +1,26 @@
 import { NextRequest, NextResponse } from "next/server";
 import { transporter } from "@/lib/mailer";
+import { escapeHtml } from "@/lib/security/sanitize";
+import { enforceRateLimit } from "@/lib/security/rate-limit";
 
 export async function GET() {
   return NextResponse.json({ status: "newsletter route is live" });
 }
 
 export async function POST(req: NextRequest) {
+  const limited = await enforceRateLimit(req, "email");
+  if (limited) return limited;
+
   try {
     const { email } = await req.json();
 
+    // NB: `[^\s@]+` still permits `<`, `>` and `"`, so the value must be
+    // HTML-escaped below as well as format-checked here.
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: "Valid email is required." }, { status: 400 });
     }
+
+    const safeEmail = escapeHtml(email);
 
     const html = `
       <div style="font-family:sans-serif;max-width:500px;margin:0 auto;color:#1a1a1a;">
@@ -21,7 +30,7 @@ export async function POST(req: NextRequest) {
         </div>
         <div style="background:#f9f9f9;padding:24px 28px;border-radius:0 0 12px 12px;border:1px solid #e5e7eb;">
           <p style="font-size:14px;margin:0 0 8px;">A new visitor just subscribed to your newsletter:</p>
-          <p style="font-size:16px;font-weight:700;color:#e91761;margin:0;">${email}</p>
+          <p style="font-size:16px;font-weight:700;color:#e91761;margin:0;">${safeEmail}</p>
           <div style="margin-top:20px;padding-top:16px;border-top:1px solid #e5e7eb;font-size:12px;color:#999;">
             Subscribed via slatech.com.ng &middot; ${new Date().toLocaleString("en-NG", { timeZone: "Africa/Lagos" })}
           </div>

@@ -2,12 +2,18 @@ import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { transporter } from "@/lib/mailer";
 import { escapeHtml } from "@/lib/security/sanitize";
+import { enforceRateLimit } from "@/lib/security/rate-limit";
 
 export async function GET() {
   return NextResponse.json({ status: "chatbot-lead route is live" });
 }
 
 export async function POST(req: NextRequest) {
+  // Sends mail AND writes to the DB with the service-role key (which bypasses
+  // RLS), so throttle to stop lead-table flooding and mail bombing.
+  const limited = await enforceRateLimit(req, "email");
+  if (limited) return limited;
+
   try {
     const { name, email, services, budget, details } = await req.json();
 

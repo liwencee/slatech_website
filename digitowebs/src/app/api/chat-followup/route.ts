@@ -1,6 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import { transporter } from "@/lib/mailer";
 import { escapeHtml } from "@/lib/security/sanitize";
+import { enforceRateLimit } from "@/lib/security/rate-limit";
+
+// Hard caps on attacker-controlled input. This endpoint mails a
+// caller-supplied address, so payload size is bounded to stop it being used
+// to deliver bulk content to third parties.
+const MAX_MESSAGES = 100;
+const MAX_CONTENT_CHARS = 4000;
+const MAX_NAME_CHARS = 100;
 
 type ChatMessage = { role: "user" | "assistant"; content: string };
 
@@ -35,6 +43,12 @@ export async function GET() {
 }
 
 export async function POST(req: NextRequest) {
+  // This route sends mail to a caller-supplied address. Throttle it hard so it
+  // cannot be abused as a spam relay against third parties (which would also
+  // burn the domain's SMTP reputation).
+  const limited = await enforceRateLimit(req, "email");
+  if (limited) return limited;
+
   try {
     const { email, name, messages, sessionId } = await req.json() as {
       email: string;
@@ -49,11 +63,22 @@ export async function POST(req: NextRequest) {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: "Invalid email address" }, { status: 400 });
     }
+    if (messages.length > MAX_MESSAGES) {
+      return NextResponse.json({ error: "Transcript too large" }, { status: 413 });
+    }
+
+    // Truncate rather than reject: a real transcript is never this long, but
+    // silently bounding it keeps the UX intact while capping abuse payloads.
+    const boundedMessages = messages.map((m) => ({
+      role: m.role,
+      content: String(m.content ?? "").slice(0, MAX_CONTENT_CHARS),
+    }));
+    const boundedName = String(name ?? "").slice(0, MAX_NAME_CHARS);
 
     const safeEmail      = escapeHtml(email);
-    const safeName       = escapeHtml(name);
+    const safeName       = escapeHtml(boundedName);
     const displayName    = safeName || "there";
-    const transcriptRows = buildTranscriptRows(messages, name || "You");
+    const transcriptRows = buildTranscriptRows(boundedMessages, boundedName || "You");
     const timestamp      = new Date().toLocaleString("en-NG", { timeZone: "Africa/Lagos" });
 
     /* ---------------------------------------------------------------- */
@@ -164,7 +189,7 @@ export async function POST(req: NextRequest) {
         from:    `"Slatech Chat Bot" <info@slatech.com.ng>`,
         to:      "info@slatech.com.ng",
         replyTo: email,
-        subject: `💬 AI Chat Lead: ${name || email}`,
+        subject: `💬 AI Chat Lead: ${boundedName || email}`,
         html:    adminHtml,
       }),
     ]);
