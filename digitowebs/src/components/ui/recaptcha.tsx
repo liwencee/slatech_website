@@ -19,9 +19,15 @@ interface RecaptchaProps {
   siteKey?: string;
   onVerify: (token: string) => void;
   onExpire?: () => void;
+  /**
+   * Increment to clear the checkbox — a reCAPTCHA token is single-use, so the
+   * widget must be reset after each submission or the next attempt replays a
+   * spent token and is rejected server-side.
+   */
+  resetTrigger?: number;
 }
 
-export function Recaptcha({ siteKey, onVerify, onExpire }: RecaptchaProps) {
+export function Recaptcha({ siteKey, onVerify, onExpire, resetTrigger = 0 }: RecaptchaProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const widgetId = useRef<number | null>(null);
   const key = siteKey || process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "";
@@ -65,6 +71,16 @@ export function Recaptcha({ siteKey, onVerify, onExpire }: RecaptchaProps) {
       delete window.onRecaptchaLoad;
     };
   }, [key, renderWidget]);
+
+  // Clear the checkbox when the parent signals a completed submission.
+  useEffect(() => {
+    if (resetTrigger === 0 || widgetId.current === null) return;
+    try {
+      window.grecaptcha?.reset(widgetId.current);
+    } catch {
+      // Widget may have been torn down — nothing to reset.
+    }
+  }, [resetTrigger]);
 
   if (!key) {
     return (

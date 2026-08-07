@@ -2,7 +2,12 @@
 
 import { useState, useCallback } from "react";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
+import { Recaptcha } from "@/components/ui/recaptcha";
 import { useAnalytics } from "@/hooks/use-analytics";
+
+// When no site key is configured the widget renders a placeholder and cannot
+// produce a token, so the form must not gate submission on it.
+const RECAPTCHA_ENABLED = Boolean(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY);
 
 const SERVICES = [
   "Website Design",
@@ -74,6 +79,8 @@ export function ContactSection() {
   };
 
   const [apiError, setApiError] = useState("");
+  const [captchaToken, setCaptchaToken] = useState("");
+  const [captchaReset, setCaptchaReset] = useState(0);
 
   const handleSubmit = useCallback(
     async (e: React.FormEvent) => {
@@ -87,6 +94,11 @@ export function ContactSection() {
       setErrors(errs);
       if (Object.keys(errs).length) return;
 
+      if (RECAPTCHA_ENABLED && !captchaToken) {
+        setApiError("Please complete the reCAPTCHA to confirm you are not a robot.");
+        return;
+      }
+
       setLoading(true);
       setApiError("");
 
@@ -94,9 +106,14 @@ export function ContactSection() {
         const res = await fetch("/api/contact", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(form),
+          body: JSON.stringify({ ...form, recaptchaToken: captchaToken }),
         });
         const data = await res.json();
+        // The token is spent on the first verification attempt, so clear it
+        // and reset the widget whatever the outcome — otherwise a retry would
+        // replay a used token and be rejected.
+        setCaptchaToken("");
+        setCaptchaReset((n) => n + 1);
         if (!res.ok) {
           setApiError(data.error || "Something went wrong. Please try again.");
           setLoading(false);
@@ -110,11 +127,13 @@ export function ContactSection() {
         trackEvent("contact_form_submit", { service: form.service });
         setTimeout(() => setSubmitted(false), 8000);
       } catch {
+        setCaptchaToken("");
+        setCaptchaReset((n) => n + 1);
         setApiError("Network error. Please check your connection and try again.");
         setLoading(false);
       }
     },
-    [form]
+    [form, captchaToken, trackEvent]
   );
 
   const fc = (name: keyof FormState) =>
@@ -417,6 +436,15 @@ export function ContactSection() {
                       <p className="text-red-500 text-xs mt-1">{errors.message}</p>
                     )}
                   </div>
+
+                  {/* Bot verification */}
+                  {RECAPTCHA_ENABLED && (
+                    <Recaptcha
+                      onVerify={setCaptchaToken}
+                      onExpire={() => setCaptchaToken("")}
+                      resetTrigger={captchaReset}
+                    />
+                  )}
 
                   {/* API error */}
                   {apiError && (
