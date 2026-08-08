@@ -3,6 +3,11 @@ import { transporter } from "@/lib/mailer";
 import { escapeHtml } from "@/lib/security/sanitize";
 import { enforceRateLimit, getClientIp } from "@/lib/security/rate-limit";
 
+// Force a fresh build so NEXT_PUBLIC_RECAPTCHA_SITE_KEY (build-time inlined,
+// not read at runtime) gets baked into the client bundle. Without this, the
+// widget never renders client-side while RECAPTCHA_SECRET_KEY still gates
+// verification server-side, rejecting every submission with a missing token.
+
 /**
  * Server-side reCAPTCHA verification.
  *
