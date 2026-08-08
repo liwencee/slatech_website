@@ -2,16 +2,8 @@
 
 import { useState, useCallback } from "react";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
-import { Recaptcha, RECAPTCHA_SITE_KEY_FALLBACK } from "@/components/ui/recaptcha";
+import { getRecaptchaToken } from "@/lib/recaptcha-v3";
 import { useAnalytics } from "@/hooks/use-analytics";
-
-// When no site key is configured the widget renders a placeholder and cannot
-// produce a token, so the form must not gate submission on it.
-// Always true: the widget now always has a key (env var or the public
-// fallback in recaptcha.tsx), so submission is always gated on a token.
-const RECAPTCHA_ENABLED = Boolean(
-  process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || RECAPTCHA_SITE_KEY_FALLBACK
-);
 
 const SERVICES = [
   "Website Design",
@@ -83,8 +75,6 @@ export function ContactSection() {
   };
 
   const [apiError, setApiError] = useState("");
-  const [captchaToken, setCaptchaToken] = useState("");
-  const [captchaReset, setCaptchaReset] = useState(0);
 
   const handleSubmit = useCallback(
     async (e: React.FormEvent) => {
@@ -98,26 +88,23 @@ export function ContactSection() {
       setErrors(errs);
       if (Object.keys(errs).length) return;
 
-      if (RECAPTCHA_ENABLED && !captchaToken) {
-        setApiError("Please complete the reCAPTCHA to confirm you are not a robot.");
-        return;
-      }
-
       setLoading(true);
       setApiError("");
 
       try {
+        // v3 has no checkbox — fetch a fresh, single-use token right before
+        // submitting. A null token (script blocked/offline) still lets the
+        // request through; the server treats missing tokens as unverified
+        // rather than hard-rejecting them, so real visitors are never locked
+        // out by a client-side reCAPTCHA failure.
+        const recaptchaToken = await getRecaptchaToken("contact_form");
+
         const res = await fetch("/api/contact", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ ...form, recaptchaToken: captchaToken }),
+          body: JSON.stringify({ ...form, recaptchaToken }),
         });
         const data = await res.json();
-        // The token is spent on the first verification attempt, so clear it
-        // and reset the widget whatever the outcome — otherwise a retry would
-        // replay a used token and be rejected.
-        setCaptchaToken("");
-        setCaptchaReset((n) => n + 1);
         if (!res.ok) {
           setApiError(data.error || "Something went wrong. Please try again.");
           setLoading(false);
@@ -131,13 +118,11 @@ export function ContactSection() {
         trackEvent("contact_form_submit", { service: form.service });
         setTimeout(() => setSubmitted(false), 8000);
       } catch {
-        setCaptchaToken("");
-        setCaptchaReset((n) => n + 1);
         setApiError("Network error. Please check your connection and try again.");
         setLoading(false);
       }
     },
-    [form, captchaToken, trackEvent]
+    [form, trackEvent]
   );
 
   const fc = (name: keyof FormState) =>
@@ -441,14 +426,8 @@ export function ContactSection() {
                     )}
                   </div>
 
-                  {/* Bot verification */}
-                  {RECAPTCHA_ENABLED && (
-                    <Recaptcha
-                      onVerify={setCaptchaToken}
-                      onExpire={() => setCaptchaToken("")}
-                      resetTrigger={captchaReset}
-                    />
-                  )}
+                  {/* reCAPTCHA v3 is invisible — no widget to render here; the
+                      token is fetched in handleSubmit right before posting. */}
 
                   {/* API error */}
                   {apiError && (

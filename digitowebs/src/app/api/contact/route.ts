@@ -3,21 +3,29 @@ import { transporter } from "@/lib/mailer";
 import { escapeHtml } from "@/lib/security/sanitize";
 import { enforceRateLimit, getClientIp } from "@/lib/security/rate-limit";
 
-// Force a fresh build so NEXT_PUBLIC_RECAPTCHA_SITE_KEY (build-time inlined,
-// not read at runtime) gets baked into the client bundle. Without this, the
-// widget never renders client-side while RECAPTCHA_SECRET_KEY still gates
-// verification server-side, rejecting every submission with a missing token.
+// reCAPTCHA v3 has no checkbox — Google scores every request 0.0 (bot) to
+// 1.0 (human) with no user interaction. Below this, treat as likely abuse.
+// Kept low: false positives here silently drop real enquiries, whereas the
+// per-IP rate limiter is the actual hard stop against abuse volume.
+const RECAPTCHA_SCORE_THRESHOLD = 0.3;
 
 /**
  * Server-side reCAPTCHA verification.
  *
  * The widget alone provides no protection — it is client-side and trivially
  * skipped by posting to this route directly. The token must be validated
- * against Google before the submission is trusted.
+ * against Google before it's trusted.
  *
- * If RECAPTCHA_SECRET_KEY is not configured the check is skipped so the form
- * keeps working in environments where reCAPTCHA was never provisioned; once
- * the key is set, a valid token becomes mandatory.
+ * A MISSING token is NOT treated as a hard rejection: v3 runs invisibly via
+ * a background script load, which ad-blockers (a meaningful share of real
+ * visitors) commonly block outright, and the site-key/integration mismatch
+ * that broke this form earlier is exactly the kind of failure mode that
+ * should never lock out a genuine customer. The rate limiter on this route
+ * is the actual defense against volume abuse; reCAPTCHA only adds a signal
+ * on top when it's actually available.
+ *
+ * If RECAPTCHA_SECRET_KEY is not configured, verification is skipped
+ * entirely.
  */
 async function verifyRecaptcha(
   token: unknown,
@@ -27,7 +35,8 @@ async function verifyRecaptcha(
   if (!secret) return { ok: true };
 
   if (!token || typeof token !== "string") {
-    return { ok: false, reason: "missing-token" };
+    console.warn("Contact form: no reCAPTCHA token (script blocked/offline) — allowing, rate limit still applies.");
+    return { ok: true };
   }
 
   const body = new URLSearchParams({ secret, response: token });
@@ -42,10 +51,19 @@ async function verifyRecaptcha(
     });
     const data = (await res.json()) as {
       success?: boolean;
+      score?: number;
       "error-codes"?: string[];
     };
-    if (data.success) return { ok: true };
-    return { ok: false, reason: data["error-codes"]?.join(",") || "rejected" };
+
+    if (!data.success) {
+      return { ok: false, reason: data["error-codes"]?.join(",") || "rejected" };
+    }
+    // v2 keys don't return a score; only enforce the threshold when v3
+    // actually supplied one.
+    if (typeof data.score === "number" && data.score < RECAPTCHA_SCORE_THRESHOLD) {
+      return { ok: false, reason: `low-score:${data.score}` };
+    }
+    return { ok: true };
   } catch {
     // Google unreachable/timed out. Fail open: rate limiting still applies, and
     // blocking real enquiries because of a third-party outage is worse than
