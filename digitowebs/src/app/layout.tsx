@@ -244,7 +244,10 @@ export default function RootLayout({
             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.tawk.to",
             "img-src 'self' data: blob: https:",
             "font-src 'self' data: https://fonts.gstatic.com https://*.tawk.to",
-            "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://wa.me https://*.tawk.to wss://*.tawk.to",
+            // https://www.google.com + gstatic are for reCAPTCHA v3's own
+            // background verification calls — without them execute()'s
+            // promise silently hangs forever instead of erroring.
+            "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://wa.me https://*.tawk.to wss://*.tawk.to https://www.google.com https://www.gstatic.com",
             "frame-src https://www.google.com https://maps.google.com https://*.tawk.to",
             "base-uri 'self'",
             "form-action 'self'",

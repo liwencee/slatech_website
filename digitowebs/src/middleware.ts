@@ -42,8 +42,10 @@ export async function middleware(request: NextRequest) {
     // Allow images from self, data URIs, Supabase storage, Google, and HTTPS (for profile photos)
     `img-src 'self' data: blob: https:`,
     `font-src 'self' data:`,
-    // Allow connections to Supabase and WhatsApp (used by chatbot)
-    `connect-src 'self' https://*.supabase.co wss://*.supabase.co https://wa.me`,
+    // Allow connections to Supabase, WhatsApp (chatbot), and Google (reCAPTCHA
+    // v3's own background verification calls — without this its execute()
+    // promise silently hangs forever instead of erroring, freezing the form)
+    `connect-src 'self' https://*.supabase.co wss://*.supabase.co https://wa.me https://www.google.com https://www.gstatic.com`,
     `frame-src https://www.google.com https://maps.google.com`,
     `frame-ancestors 'none'`,
     `base-uri 'self'`,
