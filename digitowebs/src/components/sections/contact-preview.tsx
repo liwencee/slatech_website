@@ -2,12 +2,16 @@
 
 import { useState, useCallback } from "react";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
-import { Recaptcha } from "@/components/ui/recaptcha";
+import { Recaptcha, RECAPTCHA_SITE_KEY_FALLBACK } from "@/components/ui/recaptcha";
 import { useAnalytics } from "@/hooks/use-analytics";
 
 // When no site key is configured the widget renders a placeholder and cannot
 // produce a token, so the form must not gate submission on it.
-const RECAPTCHA_ENABLED = Boolean(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY);
+// Always true: the widget now always has a key (env var or the public
+// fallback in recaptcha.tsx), so submission is always gated on a token.
+const RECAPTCHA_ENABLED = Boolean(
+  process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || RECAPTCHA_SITE_KEY_FALLBACK
+);
 
 const SERVICES = [
   "Website Design",

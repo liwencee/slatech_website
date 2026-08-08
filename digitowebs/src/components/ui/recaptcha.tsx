@@ -15,6 +15,21 @@ declare global {
   }
 }
 
+/**
+ * reCAPTCHA v2 site keys are not secret — Google designed them to be public;
+ * they're visible in the rendered HTML of every site that uses reCAPTCHA.
+ * Only the secret key (verified server-side in /api/contact) must stay
+ * protected, and it does — it's read live via process.env at request time.
+ *
+ * This fallback exists because NEXT_PUBLIC_* vars must be present at
+ * `next build` time to be inlined into the client bundle, and Hostinger's
+ * build step does not appear to have access to the same environment
+ * variables the running server does (unlike server-only vars, which are
+ * read live and always pick up hPanel's configured value). Hardcoding this
+ * public value sidesteps that platform quirk entirely.
+ */
+export const RECAPTCHA_SITE_KEY_FALLBACK = "6LeA6NcqAAAAAI6mYIJw22DTdpkOSSAABiWOa-6r";
+
 interface RecaptchaProps {
   siteKey?: string;
   onVerify: (token: string) => void;
@@ -30,7 +45,7 @@ interface RecaptchaProps {
 export function Recaptcha({ siteKey, onVerify, onExpire, resetTrigger = 0 }: RecaptchaProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const widgetId = useRef<number | null>(null);
-  const key = siteKey || process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "";
+  const key = siteKey || process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || RECAPTCHA_SITE_KEY_FALLBACK;
 
   const renderWidget = useCallback(() => {
     if (!containerRef.current || !window.grecaptcha || widgetId.current !== null) return;
