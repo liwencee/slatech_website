@@ -37,7 +37,7 @@ export async function middleware(request: NextRequest) {
   const csp = [
     `default-src 'self'`,
     // 'unsafe-inline' is required for Next.js hydration scripts
-    `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://www.google.com https://www.gstatic.com`,
+    `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://www.google.com https://www.gstatic.com https://analytics.ahrefs.com`,
     `style-src 'self' 'unsafe-inline'`,
     // Allow images from self, data URIs, Supabase storage, Google, and HTTPS (for profile photos)
     `img-src 'self' data: blob: https:`,
@@ -45,7 +45,7 @@ export async function middleware(request: NextRequest) {
     // Allow connections to Supabase, WhatsApp (chatbot), and Google (reCAPTCHA
     // v3's own background verification calls — without this its execute()
     // promise silently hangs forever instead of erroring, freezing the form)
-    `connect-src 'self' https://*.supabase.co wss://*.supabase.co https://wa.me https://www.google.com https://www.gstatic.com`,
+    `connect-src 'self' https://*.supabase.co wss://*.supabase.co https://wa.me https://www.google.com https://www.gstatic.com https://analytics.ahrefs.com`,
     `frame-src https://www.google.com https://maps.google.com`,
     `frame-ancestors 'none'`,
     `base-uri 'self'`,

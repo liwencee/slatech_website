@@ -240,14 +240,14 @@ export default function RootLayout({
           content={[
             "default-src 'self'",
             // 'unsafe-inline'/'unsafe-eval' are required by Next.js hydration.
-            "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://embed.tawk.to https://*.tawk.to",
+            "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://embed.tawk.to https://*.tawk.to https://analytics.ahrefs.com",
             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.tawk.to",
             "img-src 'self' data: blob: https:",
             "font-src 'self' data: https://fonts.gstatic.com https://*.tawk.to",
             // https://www.google.com + gstatic are for reCAPTCHA v3's own
             // background verification calls — without them execute()'s
             // promise silently hangs forever instead of erroring.
-            "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://wa.me https://*.tawk.to wss://*.tawk.to https://www.google.com https://www.gstatic.com",
+            "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://wa.me https://*.tawk.to wss://*.tawk.to https://www.google.com https://www.gstatic.com https://analytics.ahrefs.com",
             "frame-src https://www.google.com https://maps.google.com https://*.tawk.to",
             "base-uri 'self'",
             "form-action 'self'",
@@ -259,6 +259,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }}
         />
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="Z8Ys6rxtmiNLy+nzw4d9qA" async />
       </head>
       <body className="min-h-full flex flex-col">
         <Header />
