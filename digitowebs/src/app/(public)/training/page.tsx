@@ -47,6 +47,38 @@ const FAQ_SCHEMA = {
   mainEntity: [
     {
       "@type": "Question",
+      name: "How much does digital skills training cost in Lagos?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our training programmes range from ₦49,999 for the Basic Class to ₦199,999 for the Masterclass, making professional web design and graphics training accessible to beginners and serious career-changers alike in Lagos, Nigeria.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What's the difference between the Basic, Advance, and Masterclass training?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Basic Class (₦49,999) covers 8 weeks of live graphics design classes with lifetime Photoshop & Illustrator licences. Advance Class (₦99,999) adds a free domain, 3 months hosting, and Google Business Profile optimisation. Masterclass (₦199,999) includes everything in Advance plus 1 year of premium hosting, premium plugins, Cloudflare security setup, and lifetime mentorship.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long is the training programme?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Each course runs for 8 weeks of live, instructor-led classes, Tuesday and Thursday from 11:00 AM to 2:00 PM, with daily reviews and feedback on your work.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Will I get freelance opportunities after training?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Advance Class and Masterclass students get freelance opportunities and referrals from Slatech Solutions, plus ongoing mentorship to help you start earning from your new skills.",
+      },
+    },
+    {
+      "@type": "Question",
       name: "Where are classes held?",
       acceptedAnswer: {
         "@type": "Answer",
@@ -227,6 +259,22 @@ export default function TrainingPage() {
           </div>
           <div className="space-y-4">
             {[
+              {
+                q: "How much does digital skills training cost in Lagos?",
+                a: "Our training programmes range from ₦49,999 for the Basic Class to ₦199,999 for the Masterclass, making professional web design and graphics training accessible to beginners and serious career-changers alike in Lagos, Nigeria.",
+              },
+              {
+                q: "What's the difference between the Basic, Advance, and Masterclass training?",
+                a: "Basic Class (₦49,999) covers 8 weeks of live graphics design classes with lifetime Photoshop & Illustrator licences. Advance Class (₦99,999) adds a free domain, 3 months hosting, and Google Business Profile optimisation. Masterclass (₦199,999) includes everything in Advance plus 1 year of premium hosting, premium plugins, Cloudflare security setup, and lifetime mentorship.",
+              },
+              {
+                q: "How long is the training programme?",
+                a: "Each course runs for 8 weeks of live, instructor-led classes, Tuesday and Thursday from 11:00 AM to 2:00 PM, with daily reviews and feedback on your work.",
+              },
+              {
+                q: "Will I get freelance opportunities after training?",
+                a: "Yes. Advance Class and Masterclass students get freelance opportunities and referrals from Slatech Solutions, plus ongoing mentorship to help you start earning from your new skills.",
+              },
               {
                 q: "Where are classes held?",
                 a: "Classes are held at our office — 2b, Olaide Tomori, Ikeja, Lagos. Online attendance may also be available.",
