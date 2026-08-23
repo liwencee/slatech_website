@@ -10,6 +10,7 @@ import { CTASection } from "@/components/sections/cta";
 import { ContactSection } from "@/components/sections/contact-preview";
 import { TestimonialsSection } from "@/components/sections/testimonials";
 import { BrandTrustBar } from "@/components/sections/brand-trust";
+import { FAQSection } from "@/components/sections/faq";
 
 export const metadata: Metadata = {
   title: "Slatech Solutions | #1 Web Design Company in Lagos, Nigeria",
@@ -70,6 +71,7 @@ export default function HomePage() {
       <TestimonialsSection />
       <WhyChooseUsSection />
       <BlogSection />
+      <FAQSection />
       <CTASection />
       <ContactSection />
     </>
