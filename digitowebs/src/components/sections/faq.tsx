@@ -10,20 +10,32 @@ const faqs = [
     a: "Most business websites are completed within 1–3 weeks, while larger e-commerce or custom web applications can take 3–6 weeks. We agree on a clear timeline with you before starting, and keep you updated with progress reviews throughout the build.",
   },
   {
-    q: "Do you offer web design services outside Lagos?",
-    a: "Yes. While our office is based in Ikeja, Lagos, we work with clients across Nigeria and internationally. All communication, design reviews, and project management happen remotely via WhatsApp, email, and video calls, so location is never a barrier.",
-  },
-  {
-    q: "Will my website show up on Google?",
-    a: "Every website we build is SEO-optimised from the ground up — fast loading speeds, mobile-friendly design, proper meta tags, and clean code structure. For businesses that want to actively rank for competitive keywords, we also offer dedicated SEO packages including keyword research, content strategy, and backlink building.",
-  },
-  {
-    q: "Do you provide website hosting and maintenance?",
-    a: "Yes. We offer fully managed website hosting, domain registration, security updates, and ongoing maintenance so you never have to worry about technical upkeep. Ask about our managed website plans when you request a quote.",
+    q: "What does your website design service include?",
+    a: "Every website we design includes custom UI/UX design, responsive mobile-first layouts, brand-aligned aesthetics, fast loading speeds, SEO-optimised structure, and cross-browser compatibility — so your site looks great and performs well on every device.",
   },
   {
     q: "Can you build an online store (e-commerce website)?",
-    a: "Absolutely. We build e-commerce websites with secure payment integration (including Paystack for Nigerian businesses), inventory management, and conversion-optimised checkout flows to help you sell online effectively.",
+    a: "Yes. We build e-commerce websites with secure payment integration (including Paystack for Nigerian businesses), inventory management, order tracking, product search & filters, abandoned cart recovery, and an analytics dashboard to help you sell online effectively.",
+  },
+  {
+    q: "Do you offer SEO services in Lagos?",
+    a: "Yes. Our SEO service covers keyword research and strategy, on-page optimisation, technical SEO audits, link building, content strategy, and monthly analytics reports — designed to boost your organic Google rankings and drive targeted traffic.",
+  },
+  {
+    q: "Do you provide website hosting?",
+    a: "Yes. Our hosting plans include a 99.9% uptime guarantee, daily automated backups, a free SSL certificate, CDN integration, 24/7 technical support, and scalable resources — so your site stays fast, secure, and always online.",
+  },
+  {
+    q: "Do you offer website management and maintenance?",
+    a: "Yes. Our website management service covers regular software updates, security monitoring, performance optimisation, content updates, uptime monitoring, and monthly reports — so you never have to worry about the technical upkeep of your site.",
+  },
+  {
+    q: "Do you handle branding and logo design?",
+    a: "Yes. Our fully managed branding service covers brand identity and logo design, marketing and promotional materials, visual content creation, brand guidelines and strategy, social media graphics, and priority creative support — end-to-end branding so you can focus on running your business.",
+  },
+  {
+    q: "Do you offer web design services outside Lagos?",
+    a: "Yes. While our office is based in Ikeja, Lagos, we work with clients across Nigeria and internationally. All communication, design reviews, and project management happen remotely via WhatsApp, email, and video calls, so location is never a barrier.",
   },
   {
     q: "What industries do you work with?",
