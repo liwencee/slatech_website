@@ -37,16 +37,17 @@ export async function middleware(request: NextRequest) {
   const csp = [
     `default-src 'self'`,
     // 'unsafe-inline' is required for Next.js hydration scripts
-    `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://www.google.com https://www.gstatic.com https://analytics.ahrefs.com`,
-    `style-src 'self' 'unsafe-inline'`,
+    `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://www.google.com https://www.gstatic.com https://analytics.ahrefs.com https://*.trustindex.io`,
+    `style-src 'self' 'unsafe-inline' https://*.trustindex.io`,
     // Allow images from self, data URIs, Supabase storage, Google, and HTTPS (for profile photos)
     `img-src 'self' data: blob: https:`,
     `font-src 'self' data:`,
     // Allow connections to Supabase, WhatsApp (chatbot), and Google (reCAPTCHA
     // v3's own background verification calls — without this its execute()
-    // promise silently hangs forever instead of erroring, freezing the form)
-    `connect-src 'self' https://*.supabase.co wss://*.supabase.co https://wa.me https://www.google.com https://www.gstatic.com https://analytics.ahrefs.com`,
-    `frame-src https://www.google.com https://maps.google.com`,
+    // promise silently hangs forever instead of erroring, freezing the form).
+    // Same reasoning applied proactively to trustindex.io (reviews widget).
+    `connect-src 'self' https://*.supabase.co wss://*.supabase.co https://wa.me https://www.google.com https://www.gstatic.com https://analytics.ahrefs.com https://*.trustindex.io`,
+    `frame-src https://www.google.com https://maps.google.com https://*.trustindex.io`,
     `frame-ancestors 'none'`,
     `base-uri 'self'`,
     `form-action 'self'`,
