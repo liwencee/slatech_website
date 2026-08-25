@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 const posts: Record<string, {
   title: string;
@@ -474,6 +475,13 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: post.title, path: `/blog/${slug}` },
+        ]}
+      />
       {/* Hero */}
       <section className="bg-secondary py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

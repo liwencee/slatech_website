@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: "Our Portfolio — Web Design Projects by Slatech Solutions",
@@ -52,6 +53,7 @@ const categories = ["All", ...new Set(projects.map((p) => p.category))];
 export default function PortfolioPage() {
   return (
     <>
+      <BreadcrumbSchema items={[{ name: "Home", path: "/" }, { name: "Portfolio", path: "/portfolio" }]} />
       {/* Hero */}
       <section className="bg-secondary py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
