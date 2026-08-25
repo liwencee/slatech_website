@@ -55,6 +55,16 @@ export const metadata: Metadata = {
 const posts = [
   /* ---- NEW POSTS ---- */
   {
+    slug: "how-much-does-web-design-cost-in-nigeria",
+    title: "How Much Does Web Design Cost in Nigeria? 2026 Pricing Guide",
+    excerpt:
+      "Most Nigerian web design agencies won't tell you real numbers until after a sales call. Here's an honest, transparent breakdown of what a professional website actually costs in Nigeria.",
+    category: "Web Design",
+    date: "Aug 20, 2026",
+    readTime: "9 min read",
+    color: "bg-blue-700",
+  },
+  {
     slug: "how-to-set-up-whatsapp-business-nigeria",
     title: "How to Set Up WhatsApp Business for Your Nigerian Company (Step-by-Step)",
     excerpt:

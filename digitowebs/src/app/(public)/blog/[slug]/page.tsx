@@ -381,6 +381,36 @@ const posts: Record<string, {
       "The Bottom Line. If you currently have neither, start with a simple, professional website and basic social media profiles. If you have social media but no website, your next investment should be a website — it will make everything else you do online more effective. If you have both but they're not working together, that's a strategy problem. Slatech Solutions can audit your entire online presence and build a coherent digital strategy that turns your website and social media into a consistent source of customers. Contact us for a free consultation.",
     ],
   },
+  "how-much-does-web-design-cost-in-nigeria": {
+    title: "How Much Does Web Design Cost in Nigeria? 2026 Pricing Guide",
+    excerpt:
+      "Most Nigerian web design agencies won't tell you real numbers until after a sales call. Here's an honest, transparent breakdown of what a professional website actually costs in Nigeria — and why the cheapest quote is rarely the best deal.",
+    category: "Web Design",
+    date: "Aug 20, 2026",
+    readTime: "9 min read",
+    color: "bg-blue-700",
+    content: [
+      "Ask five different web design companies in Nigeria for a quote and you'll likely get five very different numbers, ranging anywhere from ₦30,000 to over ₦1,000,000 — for what sounds, on paper, like the same thing: a website. Almost none of them will explain why the price differs so dramatically, or what you're actually paying for at each price point. This guide breaks down real Nigerian web design pricing by project type, what drives the cost up or down, and the hidden costs that catch businesses out after they've already signed on.",
+
+      "Landing Pages and Simple Business Websites: ₦150,000 and up. A landing page or a simple 4-6 page business website — home, about, services, contact — typically starts around ₦150,000 with a professional agency. At this tier you should expect custom design (not a stock template), mobile-responsive layout, basic on-page SEO structure, and a working contact form. This is the right entry point for a new business or a service provider that primarily needs credibility and a way for customers to find and contact them online.",
+
+      "Full Business Websites with Multiple Pages: ₦300,000 to ₦600,000. Businesses that need more — a full services breakdown, a blog, a portfolio or gallery, staff pages, and deeper SEO content — typically fall in this range. The added cost reflects more design time, more content pages to structure and optimise for search, and often more custom functionality like booking forms, downloadable resources, or integrations with tools the business already uses.",
+
+      "E-Commerce Websites: ₦500,000 to ₦1,000,000+. Online stores cost significantly more than informational websites because of what has to work correctly behind the scenes: secure payment gateway integration (such as Paystack), inventory and stock management, order tracking, product search and filtering, and a checkout flow that doesn't lose customers halfway through a purchase. The final price depends heavily on the number of products, whether custom features are needed (subscriptions, variable pricing, delivery zone calculators), and how much ongoing support the store will need after launch.",
+
+      "Why Cheap Web Design Often Costs More in the Long Run. A ₦30,000–₦50,000 website almost always means one of a few things: an unlicensed template with no customisation, no attention to mobile responsiveness or SEO, and — critically — no ownership. Many ultra-cheap 'designers' build the site on an account they control, so if they disappear (which happens often in this price range), the business loses the website entirely and has to start over. What looks like savings upfront frequently becomes a second full payment eighteen months later, to a different provider, to fix or rebuild what should have been done properly the first time.",
+
+      "Hidden Costs to Ask About Before You Sign. Beyond the headline build price, ask specifically about these recurring or one-off costs: domain registration and renewal (usually billed yearly), website hosting (monthly or yearly), an SSL certificate for security (this should be included, not extra), and the cost of future content changes — do you get a set number of free edits, or is every change billed hourly? Getting these answers in writing before you pay a deposit avoids unpleasant surprises three months after launch.",
+
+      "What You Actually Get at Different Price Points. At the lower end (₦150,000–₦300,000), expect a clean, functional, mobile-friendly site built around a small number of pages — ideal for establishing credibility. In the mid-range (₦300,000–₦600,000), expect more custom design work, more pages, stronger SEO foundations, and often a blog or content section that helps the site rank over time. At the top end (₦600,000–₦1,000,000+), expect full e-commerce capability, custom functionality specific to the business, and typically a more involved design and strategy process before development even begins.",
+
+      "DIY Website Builders vs. Professional Web Design. Platforms like Wix or Squarespace can look tempting at ₦10,000–₦20,000 a year, and for a very early-stage side project, that may be enough. But for a business that depends on its website to generate enquiries or sales, the trade-offs are real: generic templates that look like thousands of other sites, limited SEO control, slower load times, and no one to call when something breaks. The cost difference between a DIY builder and a professional website often pays for itself the first time a customer chooses a competitor because your site loaded slowly or looked unfinished on their phone.",
+
+      "How Slatech Solutions Prices Website Projects. Slatech Solutions builds websites starting from ₦150,000, with full business and e-commerce websites ranging up to ₦1,000,000+ depending on the number of pages, custom features, and complexity involved. Every quote is broken down clearly before any deposit is paid, and every website we build — the domain, hosting, and code — belongs entirely to the client. SEO-optimised structure and mobile-first design are included as standard at every price point, not sold as an upgrade. We also offer flexible payment plans for businesses that prefer to spread the cost across the build timeline rather than paying the full amount upfront.",
+
+      "The right question isn't 'what's the cheapest website I can get' — it's 'what does my business actually need to convert visitors into customers, and what does that honestly cost.' A landing page is enough for some businesses; a full e-commerce platform is necessary for others. Get quotes broken down by exactly what's included, ask about hidden recurring costs upfront, and be skeptical of any price that seems too good to be true — in Nigerian web design, it usually is. If you want an honest, itemised quote for your specific project, Slatech Solutions offers a free consultation with no obligation to proceed.",
+    ],
+  },
 };
 
 type PageProps = {
@@ -527,8 +557,33 @@ export default async function BlogPostPage({ params }: PageProps) {
             ))}
           </div>
 
-          {/* Share & CTA */}
+          {/* Related Services — real internal links to the services page's anchor sections */}
           <div className="border-t border-border mt-12 pt-8">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-muted-foreground mb-4">
+              Related Services
+            </h2>
+            <div className="flex flex-wrap gap-2 mb-8">
+              {[
+                { label: "Website Design", href: "/services#website-design" },
+                { label: "E-Commerce Websites", href: "/services#ecommerce" },
+                { label: "SEO", href: "/services#seo" },
+                { label: "Website Hosting", href: "/services#hosting" },
+                { label: "Website Management", href: "/services#management" },
+                { label: "Branding", href: "/services#branding" },
+              ].map((service) => (
+                <Link
+                  key={service.href}
+                  href={service.href}
+                  className="px-4 py-2 bg-accent hover:bg-primary hover:text-white text-sm font-medium rounded-full transition-colors"
+                >
+                  {service.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Share & CTA */}
+          <div className="pt-2">
             <div className="bg-accent rounded-2xl p-8 text-center">
               <h2 className="text-xl font-bold text-foreground mb-3">
                 Need Help With Your Project?

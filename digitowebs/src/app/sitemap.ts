@@ -19,6 +19,7 @@ const blogSlugs = [
   "digital-marketing-strategies-nigerian-businesses",
   "how-to-choose-web-designer-lagos",
   "social-media-vs-website-nigerian-business",
+  "how-much-does-web-design-cost-in-nigeria",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
