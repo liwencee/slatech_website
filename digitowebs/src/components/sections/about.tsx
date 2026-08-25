@@ -53,7 +53,7 @@ export function AboutSection() {
               {/* Main image */}
               <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/team.png"
+                  src="/images/team.jpg"
                   alt="Slatech Solutions Team — Web Design Agency in Ikeja, Lagos Nigeria"
                   fill
                   className="object-cover object-center"

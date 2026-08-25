@@ -50,13 +50,13 @@ const team = [
   {
     name: "SEO Specialist",
     role: "Search Engine Optimization",
-    photo: "/images/SEO Specialist.png",
+    photo: "/images/seo-specialist.jpg",
     color: "bg-green-500",
   },
   {
     name: "Frontend Developer",
     role: "Development & Operations",
-    photo: "/Frontend developer.png",
+    photo: "/frontend-developer.jpg",
     color: "bg-purple-500",
   },
 ];
