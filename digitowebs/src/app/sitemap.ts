@@ -20,6 +20,7 @@ const blogSlugs = [
   "how-to-choose-web-designer-lagos",
   "social-media-vs-website-nigerian-business",
   "how-much-does-web-design-cost-in-nigeria",
+  "web-design-in-lagos-what-professional-design-actually-involves",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

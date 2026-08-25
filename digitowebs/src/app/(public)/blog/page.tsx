@@ -55,6 +55,16 @@ export const metadata: Metadata = {
 const posts = [
   /* ---- NEW POSTS ---- */
   {
+    slug: "web-design-in-lagos-what-professional-design-actually-involves",
+    title: "Web Design in Lagos: What Professional Website Design Actually Involves",
+    excerpt:
+      "Lagos businesses are told to 'get a website' constantly, but rarely told what that actually involves. Here's what happens between hiring a web design company and launching a site that performs.",
+    category: "Web Design",
+    date: "Aug 20, 2026",
+    readTime: "8 min read",
+    color: "bg-secondary",
+  },
+  {
     slug: "how-much-does-web-design-cost-in-nigeria",
     title: "How Much Does Web Design Cost in Nigeria? 2026 Pricing Guide",
     excerpt:

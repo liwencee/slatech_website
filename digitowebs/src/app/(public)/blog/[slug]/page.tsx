@@ -411,6 +411,34 @@ const posts: Record<string, {
       "The right question isn't 'what's the cheapest website I can get' — it's 'what does my business actually need to convert visitors into customers, and what does that honestly cost.' A landing page is enough for some businesses; a full e-commerce platform is necessary for others. Get quotes broken down by exactly what's included, ask about hidden recurring costs upfront, and be skeptical of any price that seems too good to be true — in Nigerian web design, it usually is. If you want an honest, itemised quote for your specific project, Slatech Solutions offers a free consultation with no obligation to proceed.",
     ],
   },
+  "web-design-in-lagos-what-professional-design-actually-involves": {
+    title: "Web Design in Lagos: What Professional Website Design Actually Involves",
+    excerpt:
+      "Lagos businesses are told to 'get a website' constantly, but rarely told what that actually involves. Here's what happens between hiring a web design company and launching a site that performs.",
+    category: "Web Design",
+    date: "Aug 20, 2026",
+    readTime: "8 min read",
+    color: "bg-secondary",
+    content: [
+      "Lagos has one of the most competitive small business landscapes in Nigeria, and increasingly, the businesses that win are the ones customers can find, trust, and buy from online before ever making a phone call. But 'web design' as a phrase gets used loosely — some businesses think it means a Facebook page, others think it means a single static page with a phone number. This guide breaks down what professional web design in Lagos actually involves, step by step, so you know what to expect and what to ask for.",
+
+      "It Starts With Purpose, Not Pages. Before any design work begins, a proper web design process starts by defining what the website needs to do for the business. A restaurant's website needs to show a menu and make it easy to order or book a table. A real estate agency's website needs to showcase listings and capture enquiries. A healthcare provider's website needs to build trust and make booking an appointment simple. Skipping this step is why so many Nigerian business websites feel generic — they were built around a template instead of around what the business actually needed customers to do.",
+
+      "Responsive, Mobile-First Design Is Not Optional. The majority of internet users in Lagos browse primarily on their phones, often on mobile data rather than WiFi. A website that was designed for desktop first and 'made to work' on mobile as an afterthought will load slowly, display awkwardly, and lose visitors within seconds. Mobile-first design means the mobile layout is designed first and treated as the primary experience, with the desktop version built to expand on it — not the other way around. This single decision affects everything from load speed to how easily a customer can tap a WhatsApp or call button.",
+
+      "The Design Process, Step by Step. A proper web design engagement typically follows a clear sequence: first, discovery — understanding the business, its customers, and its goals for the site. Second, wireframing — a simple structural layout of each page before any visual design happens, so the flow makes sense before it looks polished. Third, visual design — applying the business's brand colours, typography, and imagery to the wireframe. Fourth, development — actually building the site to be fast, responsive, and functional. Fifth, review and revisions — checking the site on real devices and making adjustments before launch. Sixth, launch and handover — going live, and making sure the business owner has access to and understands their own website.",
+
+      "What a Professional Website Includes by Default. Beyond how it looks, a properly built website should include clean, SEO-friendly URL structures; fast loading speeds (slow websites lose visitors and rank worse on Google); an SSL certificate so the site loads securely with the padlock icon in the browser; and cross-browser compatibility, meaning it works correctly whether a visitor uses Chrome, Safari, or any other browser. None of this should be an expensive add-on — it should be the baseline for any professional web design service.",
+
+      "Timelines: What to Realistically Expect. Most professional business websites in Lagos — a home page, about page, services, and contact — take one to three weeks from the discovery call to launch, depending on how quickly the business provides content, logo, and feedback during the review stage. Larger websites with e-commerce functionality, extensive content, or custom features typically take three to six weeks. Be cautious of anyone promising a fully custom, professional website in 48 hours — either it's a barely-modified template, or important steps like discovery and revisions are being skipped entirely.",
+
+      "Cost Depends on Scope, Not Guesswork. Pricing for professional web design in Lagos genuinely varies based on the number of pages, whether e-commerce functionality is needed, and how much custom design and development work is involved — not on arbitrary factors. We've broken down realistic Nigerian web design pricing by project type in a separate, detailed pricing guide, but as a starting point: simple business websites typically start from ₦150,000, with full e-commerce platforms ranging up to ₦1,000,000 or more depending on complexity.",
+
+      "How Slatech Solutions Approaches Web Design in Lagos. Based in Ikeja, Lagos, Slatech Solutions has delivered over 2,000 web design projects for more than 500 businesses across real estate, healthcare, education, e-commerce, legal services, and more — each one designed around what that specific business needed its website to achieve, not a recycled template. Every website is mobile-first and SEO-optimised by default, built on a platform the client fully owns, with a clear discovery-to-launch process and a realistic timeline agreed before work begins.",
+
+      "Professional web design in Lagos is not about having the flashiest animations or the most pages — it's about building a website that does its job: representing the business accurately, working properly on the phone in a customer's hand, and making it easy to take the next step, whether that's a call, a WhatsApp message, or a purchase. If your current website isn't doing that, or you're starting from scratch, Slatech Solutions offers a free consultation to walk through exactly what your business needs.",
+    ],
+  },
 };
 
 type PageProps = {
