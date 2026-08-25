@@ -7,11 +7,11 @@ import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 export const metadata: Metadata = {
   title: "About Slatech Solutions — Web Design Agency in Lagos",
   description:
-    "Meet the team behind Lagos' top-rated web design agency. 10+ years experience, 500+ clients served. Learn why Nigerian businesses trust Slatech Solutions.",
+    "Meet the team behind Lagos' top-rated web design agency. 6+ years experience, 500+ clients served. Learn why Nigerian businesses trust Slatech Solutions.",
   openGraph: {
     title: "About Slatech Solutions — Web Design Agency in Lagos",
     description:
-      "Meet the team behind Lagos' top-rated web design agency. 10+ years experience, 500+ clients served. Learn why Nigerian businesses trust Slatech Solutions.",
+      "Meet the team behind Lagos' top-rated web design agency. 6+ years experience, 500+ clients served. Learn why Nigerian businesses trust Slatech Solutions.",
     url: "https://slatech.com.ng/about",
     type: "website",
     images: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Slatech Solutions — Web Design Agency in Lagos",
     description:
-      "Meet the team behind Lagos' top-rated web design agency. 10+ years experience, 500+ clients served. Learn why Nigerian businesses trust Slatech Solutions.",
+      "Meet the team behind Lagos' top-rated web design agency. 6+ years experience, 500+ clients served. Learn why Nigerian businesses trust Slatech Solutions.",
     images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
   alternates: {

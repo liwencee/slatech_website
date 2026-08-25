@@ -117,7 +117,7 @@ const LOCAL_BUSINESS_SCHEMA = {
     "Slatech Solutions is a leading web design and digital agency in Ikeja, Lagos, Nigeria, specialising in website design, e-commerce development, SEO, website hosting, branding, and fully managed website services.",
   url: "https://slatech.com.ng",
   telephone: "+2348076172456",
-  foundingDate: "2014",
+  foundingDate: "2020",
   priceRange: "₦₦",
   image: "https://slatech.com.ng/logomark.png",
   logo: "https://slatech.com.ng/side_SLATECH_SOLUTIONS_LOGO.png",

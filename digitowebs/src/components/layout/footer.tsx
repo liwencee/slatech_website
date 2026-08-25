@@ -299,7 +299,7 @@ export function Footer() {
               <p className="text-gray-300 text-sm leading-relaxed mb-6">
                 Turning ideas into powerful digital brands. We help businesses
                 create stunning websites that are beautiful, fast, secure, and
-                mobile-friendly. Over 10 years of experience building digital
+                mobile-friendly. Over 6 years of experience building digital
                 excellence across Africa and beyond.
               </p>
 

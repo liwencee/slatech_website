@@ -8,7 +8,7 @@ const reasons = [
       </svg>
     ),
     title: "Proven Track Record",
-    description: "Over 2,000 successful projects delivered across 10+ years with a 99% client satisfaction rate.",
+    description: "Over 2,000 successful projects delivered across 6+ years with a 99% client satisfaction rate.",
   },
   {
     icon: (
