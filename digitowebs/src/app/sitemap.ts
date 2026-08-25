@@ -21,6 +21,7 @@ const blogSlugs = [
   "social-media-vs-website-nigerian-business",
   "how-much-does-web-design-cost-in-nigeria",
   "web-design-in-lagos-what-professional-design-actually-involves",
+  "paystack-integration-guide-ecommerce-nigeria",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -55,6 +55,16 @@ export const metadata: Metadata = {
 const posts = [
   /* ---- NEW POSTS ---- */
   {
+    slug: "paystack-integration-guide-ecommerce-nigeria",
+    title: "Paystack Integration for E-Commerce: A Guide for Nigerian Businesses",
+    excerpt:
+      "Accepting online payments is where most DIY Nigerian online stores fall apart. Here's what Paystack integration actually involves, what it costs, and why it's the backbone of a trustworthy online store.",
+    category: "E-Commerce",
+    date: "Aug 20, 2026",
+    readTime: "8 min read",
+    color: "bg-purple-600",
+  },
+  {
     slug: "web-design-in-lagos-what-professional-design-actually-involves",
     title: "Web Design in Lagos: What Professional Website Design Actually Involves",
     excerpt:
