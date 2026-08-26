@@ -467,6 +467,38 @@ const posts: Record<string, {
       "If you're launching an online store in Nigeria, don't treat payment integration as a checkbox to tick at the end of the build — it's the part of the site that directly determines whether a browsing customer actually becomes a paying one. Ask any web design company specifically how they handle Paystack integration, order tracking, and payment security before you commit. Slatech Solutions offers a free consultation to walk through exactly what a properly integrated online store looks like for your business.",
     ],
   },
+  "local-seo-nigeria-rank-google-maps-3-pack": {
+    title: "Local SEO in Nigeria: How to Rank in Google's Map Results (The 3-Pack)",
+    excerpt:
+      "Most Nigerian businesses are told to 'claim your Google Business Profile' and left there. Here's how Google actually decides which three businesses appear in map results — and what to do if you're not one of them.",
+    category: "SEO",
+    date: "Aug 20, 2026",
+    readTime: "9 min read",
+    color: "bg-green-600",
+    content: [
+      "When someone in Lagos searches 'web design company near me' or 'plumber in Ikeja', Google shows a map with three business listings above the normal results. That block is called the local 3-pack, and for location-based searches it captures the overwhelming majority of clicks and calls. Most advice for Nigerian businesses stops at 'claim your Google Business Profile' — but claiming a profile is the starting line, not the finish. This guide explains how Google actually decides who appears in those three slots, and what to do if your business isn't showing up.",
+
+      "Google Ranks Local Results on Three Factors. Google has been explicit about what determines local rankings: relevance, distance, and prominence. Relevance is how well your business profile matches what the person searched — this is driven largely by your primary business category and the information on your profile. Distance is how physically close your business is to the searcher, which you cannot control. Prominence is how well-known and well-regarded your business appears to be, which is driven heavily by review count, review quality, and mentions of your business elsewhere online. Understanding which of these three you can actually influence is the key to local SEO.",
+
+      "Your Primary Category Matters More Than Almost Anything. This is the most common and most costly mistake. If your primary category is set to something generic like 'Business Services' rather than the specific category matching what customers search for — 'Website designer', 'Plumber', 'Dental clinic' — Google may not consider your business for those searches at all, regardless of how good your profile otherwise is. Check your primary category first, and make it match exactly what your competitors who rank in the 3-pack are using. You can add secondary categories for your other services, but the primary one carries the most weight.",
+
+      "Reviews Are the Prominence Lever You Control. Distance is fixed and relevance is largely a one-time setup, which means review volume and quality is the main ongoing factor you can actually move. A competitor with 145 reviews will generally outrank a business with 8 reviews for the same search, even if both have excellent ratings, simply because review count is a strong prominence signal. The practical implication for Nigerian businesses: systematically ask every satisfied customer for a Google review. Send them the direct review link by WhatsApp immediately after you've delivered good work, while the experience is fresh. Reply to every review you receive — Google rewards active, engaged profiles.",
+
+      "NAP Consistency: Name, Address, Phone. Google cross-references your business details across the web to verify you're a real, legitimate business. If your address is written one way on your website, differently on your Google Business Profile, and a third way on a directory listing, that inconsistency weakens Google's confidence in your business. Pick one exact format for your business name, address, and phone number, and use it identically everywhere — on your website footer, contact page, Google Business Profile, and every directory you're listed on. This sounds trivial; it genuinely affects rankings.",
+
+      "Complete Every Field on Your Profile. Google favours complete profiles, and each field is a chance to signal relevance. Fill in your business hours (and keep them accurate), add your service areas, list your individual services with descriptions, upload real photos of your premises, team, and work — not just your logo, and write a business description that naturally includes what you do and where you do it. Businesses that leave half their profile blank are competing at a disadvantage against those that don't.",
+
+      "Use Google Posts Consistently. Google Business Profile lets you publish short updates, offers, and announcements that appear directly on your listing. Most Nigerian businesses never use this feature at all, which makes it an easy differentiator. Posting weekly — a project you completed, a service offer, a useful tip — signals to Google that the profile is actively managed, and gives potential customers something current to see when they find you.",
+
+      "Build Local Citations. A citation is any mention of your business name, address, and phone number on another website. Listings on reputable Nigerian directories and industry-specific sites strengthen the prominence signal Google uses. Focus on quality and consistency rather than volume: a handful of accurate listings on well-regarded directories does more than dozens of inconsistent entries scattered across low-quality sites.",
+
+      "Why You Might Rank for Your Own Name But Not Generic Searches. This confuses a lot of business owners: searching your exact business name brings up a perfect listing, but searching 'web design company Ikeja' shows only competitors. This is normal and it's not a bug. A branded search has essentially no competition — Google knows exactly which business you mean. A generic search puts you against every similar business in the area, ranked by relevance, distance, and prominence. If you rank for your name but not your category, the issue is almost always prominence (review volume) or relevance (wrong primary category), not a broken profile.",
+
+      "How Long Local SEO Takes. Fixing your primary category or completing your profile can affect rankings within days to a few weeks. Building review volume is slower and compounding — it typically takes a few months of consistent review collection to close a meaningful gap with an established competitor. Anyone promising first-position map rankings in a week is either misunderstanding how local ranking works or misrepresenting it.",
+
+      "Slatech Solutions offers Google Business Profile optimisation as part of our SEO service, alongside keyword research, on-page optimisation, technical SEO audits, and monthly reporting. Based in Ikeja, Lagos, we work with businesses across Nigeria to build local visibility that produces actual phone calls and enquiries, not just impressions. If your business isn't appearing in map results for the searches that matter, get in touch for a free audit and we'll tell you honestly what's holding it back.",
+    ],
+  },
 };
 
 type PageProps = {

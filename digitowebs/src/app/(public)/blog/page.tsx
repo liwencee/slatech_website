@@ -55,6 +55,16 @@ export const metadata: Metadata = {
 const posts = [
   /* ---- NEW POSTS ---- */
   {
+    slug: "local-seo-nigeria-rank-google-maps-3-pack",
+    title: "Local SEO in Nigeria: How to Rank in Google's Map Results (The 3-Pack)",
+    excerpt:
+      "Most Nigerian businesses are told to 'claim your Google Business Profile' and left there. Here's how Google actually decides which three businesses appear in map results — and what to do if you're not one of them.",
+    category: "SEO",
+    date: "Aug 20, 2026",
+    readTime: "9 min read",
+    color: "bg-green-600",
+  },
+  {
     slug: "paystack-integration-guide-ecommerce-nigeria",
     title: "Paystack Integration for E-Commerce: A Guide for Nigerian Businesses",
     excerpt:
