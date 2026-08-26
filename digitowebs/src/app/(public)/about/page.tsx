@@ -45,23 +45,19 @@ const team = [
   {
     name: "Human Resources Manager",
     role: "People & Culture",
-    photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=600&fit=crop&crop=faces&q=80",
+    photo: "https://images.unsplash.com/photo-1589156280159-27698a70f29e?w=600&h=600&fit=crop&crop=faces&q=80",
     color: "bg-secondary",
   },
-  // Served from Unsplash rather than public/ — Hostinger is not picking up
-  // newly-added files in public/ on deploy, so locally-added images 404 even
-  // when the code referencing them ships correctly. Unsplash is already
-  // whitelisted in next.config.mjs remotePatterns.
   {
     name: "SEO Specialist",
     role: "Search Engine Optimization",
-    photo: "https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=600&h=600&fit=crop&crop=faces&q=80",
+    photo: "/images/seo-specialist.jpg",
     color: "bg-green-500",
   },
   {
     name: "Frontend Developer",
     role: "Development & Operations",
-    photo: "https://images.unsplash.com/photo-1600486913747-55e5470d6f40?w=600&h=600&fit=crop&crop=faces&q=80",
+    photo: "/frontend-developer.jpg",
     color: "bg-purple-500",
   },
 ];
