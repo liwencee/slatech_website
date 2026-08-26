@@ -23,6 +23,7 @@ const blogSlugs = [
   "web-design-in-lagos-what-professional-design-actually-involves",
   "paystack-integration-guide-ecommerce-nigeria",
   "local-seo-nigeria-rank-google-maps-3-pack",
+  "branding-agency-lagos-what-professional-branding-includes",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

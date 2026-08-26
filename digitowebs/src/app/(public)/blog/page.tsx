@@ -55,6 +55,16 @@ export const metadata: Metadata = {
 const posts = [
   /* ---- NEW POSTS ---- */
   {
+    slug: "branding-agency-lagos-what-professional-branding-includes",
+    title: "Branding Agency in Lagos: What Professional Brand Identity Actually Includes",
+    excerpt:
+      "Hiring a branding agency should get you far more than a logo file. Here's exactly what a professional brand identity includes, what the process involves, and what it costs in Nigeria.",
+    category: "Branding",
+    date: "Aug 20, 2026",
+    readTime: "9 min read",
+    color: "bg-pink-600",
+  },
+  {
     slug: "local-seo-nigeria-rank-google-maps-3-pack",
     title: "Local SEO in Nigeria: How to Rank in Google's Map Results (The 3-Pack)",
     excerpt:

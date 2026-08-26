@@ -499,6 +499,40 @@ const posts: Record<string, {
       "Slatech Solutions offers Google Business Profile optimisation as part of our SEO service, alongside keyword research, on-page optimisation, technical SEO audits, and monthly reporting. Based in Ikeja, Lagos, we work with businesses across Nigeria to build local visibility that produces actual phone calls and enquiries, not just impressions. If your business isn't appearing in map results for the searches that matter, get in touch for a free audit and we'll tell you honestly what's holding it back.",
     ],
   },
+  "branding-agency-lagos-what-professional-branding-includes": {
+    title: "Branding Agency in Lagos: What Professional Brand Identity Actually Includes",
+    excerpt:
+      "Hiring a branding agency should get you far more than a logo file. Here's exactly what a professional brand identity includes, what the process involves, and what it costs in Nigeria.",
+    category: "Branding",
+    date: "Aug 20, 2026",
+    readTime: "9 min read",
+    color: "bg-pink-600",
+    content: [
+      "Most Nigerian businesses that pay for 'branding' receive a logo, maybe two or three colour options, and a folder of image files — then discover months later that they still can't produce a consistent-looking flyer, social media post, or website because nobody ever defined how the brand should actually be used. Professional branding is not a logo delivery; it's a system for keeping your business visually consistent everywhere it appears. This guide explains what that system contains, what the process involves, and how to tell whether you're being sold the real thing.",
+
+      "A Logo Is One Component, Not the Deliverable. A logo is the most visible part of a brand identity, but on its own it answers almost none of the practical questions a business faces day to day: which colours can we use on a dark background, what font should our flyers use, how much space goes around the logo, what does the logo look like when it has to fit in a small circular social media avatar? A brand identity exists to answer those questions in advance, so every piece of marketing your business produces looks like it came from the same company.",
+
+      "Brand Identity Elements You Should Receive. A complete brand identity typically includes: the primary logo plus variations (horizontal, stacked, icon-only, and single-colour versions for situations where full colour won't work); a defined colour palette with exact colour codes so the same red is the same red on your website, your flyers, and your signage; a typography system specifying which fonts to use for headings and body text; and usage rules covering minimum sizes, clear space, and what not to do with the logo. Without these, consistency is guesswork.",
+
+      "Brand Guidelines: The Document That Makes It All Usable. Brand guidelines are the reference document that ties the above together, and it is the single most commonly skipped deliverable in Nigerian branding projects. Its practical value is simple: when you hire a new designer, a printer, or a social media manager, you hand them one file and they can produce on-brand work immediately without guessing or asking you to approve every colour choice. If a branding quote doesn't mention guidelines, ask specifically whether they're included.",
+
+      "Colour Choices Carry Meaning. Colour is not decoration — it sets expectations before a customer reads a single word. Blues and deep navies tend to communicate trust and stability, which is why they dominate financial and professional services. Greens are associated with growth, health, and sustainability. Reds and warm tones convey energy and urgency, common in food and retail. Black and monochrome palettes suggest premium positioning and restraint. The right choice depends on your market and what you want customers to assume about you before they've interacted with your business.",
+
+      "Typography Is Half of How a Brand Feels. Two businesses can use identical colours and look completely different based on typeface alone. A geometric sans-serif reads as modern and technical; a serif reads as established and authoritative; a rounded typeface reads as friendly and approachable. A brand identity should specify a small, deliberate set — typically one typeface for headings and one for body text — rather than leaving each designer to pick their own, which is how businesses end up with five different fonts across their materials.",
+
+      "The Brand Discovery Process. Good branding starts before any design work with discovery: understanding what your business actually does, who your customers are, what your competitors look like, and how you want to be positioned relative to them. This matters because a brand identity designed without that context is just decoration — it might look attractive, but it won't be doing any strategic work. If a branding engagement jumps straight to showing you logo options in the first meeting, discovery was skipped.",
+
+      "What the Process Looks Like Step by Step. A typical professional branding engagement runs: discovery (understanding the business, audience, and competitive landscape); direction (agreeing on a visual and tonal direction before detailed design begins); design (developing the logo and identity system); refinement (revisions based on your feedback); and handover (final files in every format you'll need — for print, web, and social — plus the guidelines document). Being shown a single logo option with no explanation of the reasoning behind it is a sign the process was compressed.",
+
+      "Branding for New Businesses vs. Established Ones. A new business is building from a blank slate and can move quickly, needing a foundational identity to launch with. An established business faces a different problem — it has existing customers who recognise it, so a rebrand has to balance freshening the identity against losing the recognition already built. For established businesses, a phased rollout often makes more sense than changing everything overnight, so existing customers aren't left wondering whether they're dealing with the same company.",
+
+      "What Branding Costs in Nigeria. Logo and branding projects with Slatech Solutions typically range from ₦50,000 to ₦300,000, depending on scope — a foundational logo and basic colour palette sits at the lower end, while a full identity system with comprehensive brand guidelines, marketing materials, and social media templates sits at the upper end. As with web design, the useful question isn't which quote is cheapest, but what deliverables are actually included — specifically whether you're receiving a usable identity system or just a logo file.",
+
+      "How Slatech Solutions Approaches Branding. Our fully managed branding service covers brand identity and logo design, brand guidelines and strategy, marketing and promotional materials, visual content creation, social media graphics, and priority creative support — an end-to-end system rather than a one-off logo handoff. Based in Ikeja, Lagos, we work with businesses of every size, from startups establishing a first identity to established companies repositioning for growth.",
+
+      "If you're evaluating branding agencies in Lagos, ask one clarifying question before you commit: what exactly will I receive at the end of this project? A complete answer mentions logo variations, a defined colour palette, a typography system, and guidelines. An incomplete answer mentions a logo. Slatech Solutions offers a free consultation to walk through what your business actually needs — get in touch and we'll give you an honest assessment.",
+    ],
+  },
 };
 
 type PageProps = {
