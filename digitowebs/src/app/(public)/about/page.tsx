@@ -45,7 +45,7 @@ const team = [
   {
     name: "Human Resources Manager",
     role: "People & Culture",
-    photo: "https://images.unsplash.com/photo-1589156280159-27698a70f29e?w=600&h=600&fit=crop&crop=faces&q=80",
+    photo: "/images/hr-manager.jpg",
     color: "bg-secondary",
   },
   {
