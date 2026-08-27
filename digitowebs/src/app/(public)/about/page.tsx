@@ -39,7 +39,7 @@ const team = [
   {
     name: "DevOps Engineer",
     role: "Development & Operations",
-    photo: "/images/lekan.jpg",
+    photo: "/images/olalekan.jpg",
     color: "bg-primary",
   },
   {
@@ -117,7 +117,7 @@ export default function AboutPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/images/lekan.jpg"
+                src="/images/olalekan.jpg"
                 alt="Olalekan — Founder of Slatech Solutions, Lagos Nigeria"
                 fill
                 className="object-cover object-top"
