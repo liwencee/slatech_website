@@ -57,7 +57,7 @@ const team = [
   {
     name: "Frontend Developer",
     role: "Development & Operations",
-    photo: "/frontend-developer.jpg",
+    photo: "/images/frontend-developer.jpg",
     color: "bg-purple-500",
   },
 ];
