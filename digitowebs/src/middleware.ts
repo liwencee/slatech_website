@@ -37,18 +37,17 @@ export async function middleware(request: NextRequest) {
   const csp = [
     `default-src 'self'`,
     // 'unsafe-inline' is required for Next.js hydration scripts
-    `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://www.google.com https://www.gstatic.com https://analytics.ahrefs.com https://*.trustindex.io https://*.googlesyndication.com https://*.doubleclick.net https://*.googleadservices.com https://*.googletagservices.com`,
-    `style-src 'self' 'unsafe-inline' https://*.trustindex.io`,
+    `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://www.google.com https://www.gstatic.com https://analytics.ahrefs.com https://*.googlesyndication.com https://*.doubleclick.net https://*.googleadservices.com https://*.googletagservices.com`,
+    `style-src 'self' 'unsafe-inline'`,
     // Allow images from self, data URIs, Supabase storage, Google, and HTTPS (for profile photos)
     `img-src 'self' data: blob: https:`,
     `font-src 'self' data:`,
     // Allow connections to Supabase, WhatsApp (chatbot), and Google (reCAPTCHA
     // v3's own background verification calls — without this its execute()
     // promise silently hangs forever instead of erroring, freezing the form).
-    // Same reasoning applied proactively to trustindex.io (reviews widget)
     // and AdSense's ad-serving domains.
-    `connect-src 'self' https://*.supabase.co wss://*.supabase.co https://wa.me https://www.google.com https://www.gstatic.com https://analytics.ahrefs.com https://*.trustindex.io https://*.googlesyndication.com https://*.doubleclick.net`,
-    `frame-src https://www.google.com https://maps.google.com https://*.trustindex.io https://*.googlesyndication.com https://*.doubleclick.net`,
+    `connect-src 'self' https://*.supabase.co wss://*.supabase.co https://wa.me https://www.google.com https://www.gstatic.com https://analytics.ahrefs.com https://*.googlesyndication.com https://*.doubleclick.net`,
+    `frame-src https://www.google.com https://maps.google.com https://*.googlesyndication.com https://*.doubleclick.net`,
     `frame-ancestors 'none'`,
     `base-uri 'self'`,
     `form-action 'self'`,

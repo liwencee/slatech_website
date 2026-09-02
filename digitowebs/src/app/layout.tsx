@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { LeadChatbox } from "@/components/ui/lead-chatbox";
-import { TrustBadge } from "@/components/ui/trust-badge";
 import { AdSense } from "@/components/ui/adsense";
 import { CookieConsent } from "@/components/ui/cookie-consent";
 import { AnalyticsTracker } from "@/components/ui/analytics-tracker";
@@ -242,18 +241,16 @@ export default function RootLayout({
           content={[
             "default-src 'self'",
             // 'unsafe-inline'/'unsafe-eval' are required by Next.js hydration.
-            "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://embed.tawk.to https://*.tawk.to https://analytics.ahrefs.com https://*.trustindex.io https://*.googlesyndication.com https://*.doubleclick.net https://*.googleadservices.com https://*.googletagservices.com",
-            "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.tawk.to https://*.trustindex.io",
+            "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://embed.tawk.to https://*.tawk.to https://analytics.ahrefs.com https://*.googlesyndication.com https://*.doubleclick.net https://*.googleadservices.com https://*.googletagservices.com",
+            "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.tawk.to",
             "img-src 'self' data: blob: https:",
             "font-src 'self' data: https://fonts.gstatic.com https://*.tawk.to",
             // https://www.google.com + gstatic are for reCAPTCHA v3's own
             // background verification calls — without them execute()'s
             // promise silently hangs forever instead of erroring. Same
-            // reasoning applied proactively to trustindex.io (reviews
-            // widget) and AdSense's ad-serving domains so neither can
             // repeat that failure mode.
-            "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://wa.me https://*.tawk.to wss://*.tawk.to https://www.google.com https://www.gstatic.com https://analytics.ahrefs.com https://*.trustindex.io https://*.googlesyndication.com https://*.doubleclick.net https://*.google-analytics.com",
-            "frame-src https://www.google.com https://maps.google.com https://*.tawk.to https://*.trustindex.io https://*.googlesyndication.com https://*.doubleclick.net",
+            "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://wa.me https://*.tawk.to wss://*.tawk.to https://www.google.com https://www.gstatic.com https://analytics.ahrefs.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google-analytics.com",
+            "frame-src https://www.google.com https://maps.google.com https://*.tawk.to https://*.googlesyndication.com https://*.doubleclick.net",
             "base-uri 'self'",
             "form-action 'self'",
             "object-src 'none'",
@@ -272,7 +269,6 @@ export default function RootLayout({
         <Footer />
         <ScrollToTop />
         <LeadChatbox />
-        <TrustBadge />
         <AdSense />
         <CookieConsent />
         <AnalyticsTracker />

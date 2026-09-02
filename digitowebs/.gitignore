@@ -45,3 +45,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Stray log output (e.g. Chrome/devtools writing into the project)
+*.log
