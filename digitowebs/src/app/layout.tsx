@@ -105,6 +105,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://slatech.com.ng",
   },
+  // Search engine ownership verification. Next.js renders these as the
+  // corresponding <meta> tags in <head>. Site verification tokens are not
+  // secrets — they only prove control of the domain to the search engine.
+  verification: {
+    other: {
+      // Bing Webmaster Tools (also feeds Copilot / DuckDuckGo results)
+      "msvalidate.01": "E4BD134318239BFD3518E02E0BCEC628",
+    },
+  },
   category: "Web Design & Digital Agency",
 };
 
