@@ -13,7 +13,7 @@ import { BrandTrustBar } from "@/components/sections/brand-trust";
 import { FAQSection } from "@/components/sections/faq";
 
 export const metadata: Metadata = {
-  title: "Slatech Solutions | #1 Web Design Company in Lagos, Nigeria",
+  title: "Slatech Solutions | Client-Centered Web Design Company & Digital Agency in Lagos, Nigeria",
   description:
     "Lagos' #1 web design company. We build fast, SEO-optimised websites for Nigerian businesses. 500+ clients, 5.0 Google rating. Free consultation.",
   keywords: [
