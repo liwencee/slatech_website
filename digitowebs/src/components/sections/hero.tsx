@@ -38,7 +38,7 @@ export function HeroSection() {
             </span>
 
             {/* Headline */}
-            <h1 className="text-[1.75rem] sm:text-5xl lg:text-6xl font-bold leading-tight mb-5 sm:mb-6 animate-[fade-in-up_0.6s_ease-out_0.2s_both]">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-5 sm:mb-6 animate-[fade-in-up_0.6s_ease-out_0.2s_both]">
               Digital Products &{" "}
               <span className="text-primary">{typedText}</span>
               <span className="animate-pulse text-primary">|</span>
