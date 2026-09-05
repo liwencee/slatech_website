@@ -297,10 +297,10 @@ export function Footer() {
               </Link>
 
               <p className="text-gray-300 text-sm leading-relaxed mb-6">
-                Turning ideas into powerful digital brands. We help businesses
-                create stunning websites that are beautiful, fast, secure, and
-                mobile-friendly. Over 6 years of experience building digital
-                excellence across Africa and beyond.
+                Digital Product & Software Development Company. Based in Lagos,
+                Nigeria — serving clients across Nigeria and internationally.
+                We design, build and scale websites, e-commerce platforms,
+                custom software, mobile applications and cloud infrastructure.
               </p>
 
               {/* Social Icons */}

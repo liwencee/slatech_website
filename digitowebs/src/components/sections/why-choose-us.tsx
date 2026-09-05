@@ -7,44 +7,17 @@ const reasons = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
       </svg>
     ),
-    title: "Proven Track Record",
-    description: "Over 2,000 successful projects delivered across 6+ years with a 99% client satisfaction rate.",
+    title: "Business-Focused Technology",
+    description: "We don't build technology simply for the sake of technology. Every solution starts with your business objective.",
   },
   {
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
-    title: "On-Time Delivery",
-    description: "We respect deadlines and deliver projects on schedule without compromising on quality.",
-  },
-  {
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-      </svg>
-    ),
-    title: "24/7 Support",
-    description: "Round-the-clock technical support via WhatsApp, email, and phone to keep your site running smoothly.",
-  },
-  {
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-    title: "Affordable Pricing",
-    description: "Competitive pricing without hidden costs. We offer flexible packages for businesses of all sizes.",
-  },
-  {
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-      </svg>
-    ),
-    title: "Client-Centric Approach",
-    description: "Your success is our priority. We work closely with you at every stage to exceed expectations.",
+    title: "End-to-End Delivery",
+    description: "From discovery and UI/UX to development, deployment and support, we can manage the complete project lifecycle.",
   },
   {
     icon: (
@@ -52,8 +25,35 @@ const reasons = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
       </svg>
     ),
-    title: "SEO-Optimized",
-    description: "Every website we build is optimized for search engines from day one to drive organic traffic.",
+    title: "Scalable Solutions",
+    description: "We build with the future in mind, allowing your digital platform to evolve as your business grows.",
+  },
+  {
+    icon: (
+      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+      </svg>
+    ),
+    title: "Transparent Communication",
+    description: "You stay informed throughout the project with clear deliverables, milestones and progress updates.",
+  },
+  {
+    icon: (
+      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+      </svg>
+    ),
+    title: "Performance & Security",
+    description: "We prioritize performance, responsive design, security and maintainability from the beginning.",
+  },
+  {
+    icon: (
+      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+      </svg>
+    ),
+    title: "Long-Term Partnership",
+    description: "Our relationship doesn't end when your project goes live. We provide ongoing support and technology services to help you keep improving.",
   },
 ];
 
@@ -65,14 +65,14 @@ export function WhyChooseUsSection() {
         <AnimateOnScroll animation="fade-up">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <span className="inline-block text-primary text-sm font-semibold uppercase tracking-wider mb-3">
-              Why Choose Us
+              Why Businesses Choose Slatech
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
               Several Things Define Us As a{" "}
-              <span className="text-primary">Company</span>
+              <span className="text-primary">Technology Partner</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              We combine expertise, dedication, and innovation to deliver web
+              We combine expertise, dedication, and innovation to deliver digital
               solutions that truly make a difference for your business.
             </p>
           </div>

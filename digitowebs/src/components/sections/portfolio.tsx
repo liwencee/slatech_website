@@ -91,14 +91,14 @@ export function PortfolioSection() {
         <AnimateOnScroll animation="fade-up">
           <div className="text-center max-w-2xl mx-auto mb-10">
             <span className="inline-block text-primary text-sm font-semibold uppercase tracking-wider mb-3">
-              Our Portfolio
+              Selected Work
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Recent <span className="text-primary">Projects</span>
+              Digital Solutions Built for <span className="text-primary">Real Businesses</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Explore our latest work across industries — from travel to healthcare,
-              e-commerce to education.
+              Explore selected projects across industries including real estate,
+              healthcare, education, professional services, e-commerce, technology and more.
             </p>
           </div>
         </AnimateOnScroll>

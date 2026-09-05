@@ -90,13 +90,13 @@ export function AboutSection() {
                 <span className="text-primary">Inspire</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Slatech Solutions is a leading web design agency in Lagos, Nigeria,
-                dedicated to transforming ideas into powerful digital experiences.
-                We combine creativity with cutting-edge technology to deliver websites
-                that not only look stunning but also rank on Google and convert
-                visitors into paying customers. From growing SMEs to large corporations
-                and international firms, we help businesses of every size build a
-                stronger digital presence and scale with confidence.
+                Slatech Solutions is a Nigerian digital product and software development
+                company dedicated to transforming ideas into powerful digital experiences.
+                We combine strategy, design, development and technology to deliver
+                websites, e-commerce platforms and custom software that solve real
+                business problems. From growing SMEs to large corporations and
+                international firms, we help businesses of every size build a stronger
+                digital presence and scale with confidence.
               </p>
 
               {/* Feature grid */}
