@@ -180,8 +180,8 @@ const LOCAL_BUSINESS_SCHEMA = {
   },
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "5.0",
-    reviewCount: "168",
+    ratingValue: "4.9",
+    reviewCount: "85",
     bestRating: "5",
     worstRating: "1",
   },

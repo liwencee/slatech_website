@@ -148,9 +148,9 @@ export function TestimonialsSection() {
                   </svg>
                 ))}
               </div>
-              <span className="text-foreground font-semibold">5.0</span>
+              <span className="text-foreground font-semibold">4.9</span>
               <span className="text-muted-foreground text-sm">·</span>
-              <span className="text-muted-foreground text-sm">168 Google Reviews</span>
+              <span className="text-muted-foreground text-sm">85 Google Reviews</span>
             </div>
           </div>
         </AnimateOnScroll>
