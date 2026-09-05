@@ -5,7 +5,7 @@ import { useTyping } from "@/hooks/use-typing";
 
 export function HeroSection() {
   const typedText = useTyping(
-    ["Web Design", "E-Commerce", "SEO", "Digital Marketing", "Web Development"],
+    ["Websites", "Software", "Mobile Apps", "E-Commerce", "Automation"],
     80,
     50,
     2000
@@ -34,23 +34,24 @@ export function HeroSection() {
             {/* Badge */}
             <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 text-white text-sm font-medium rounded-full mb-5 sm:mb-6 border border-white/30 animate-[fade-in-up_0.6s_ease-out]">
               <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-              #1 Web Design Company in Lagos, Nigeria
+              Digital Product & Software Development Company
             </span>
 
             {/* Headline */}
             <h1 className="text-[1.75rem] sm:text-5xl lg:text-6xl font-bold leading-tight mb-5 sm:mb-6 animate-[fade-in-up_0.6s_ease-out_0.2s_both]">
-              Premium{" "}
+              Digital Products &{" "}
               <span className="text-primary">{typedText}</span>
               <span className="animate-pulse text-primary">|</span>
               <br />
-              <span className="text-white/90">Services in</span>{" "}
-              <span className="text-primary">Lagos</span>
+              <span className="text-white/90">That Move Businesses</span>{" "}
+              <span className="text-primary">Forward</span>
             </h1>
 
             <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-7 sm:mb-8 animate-[fade-in-up_0.6s_ease-out_0.4s_both]">
-              Slatech Solutions is Lagos&apos; most trusted web design agency in Ikeja, Lagos, Nigeria.
-              We build fast, beautiful, SEO-optimised websites that rank on Google
-              and convert visitors into paying customers.
+              Slatech Solutions is a Nigerian digital product and software development
+              company helping businesses turn ideas, challenges and opportunities into
+              powerful digital experiences — from websites and e-commerce to custom
+              software, mobile applications and automation.
             </p>
 
             {/* CTA Buttons */}
@@ -61,55 +62,45 @@ export function HeroSection() {
               >
                 <span className="absolute inset-0 -translate-x-full group-hover/cta:translate-x-full transition-transform duration-700 ease-out bg-gradient-to-r from-transparent via-white/25 to-transparent" aria-hidden="true" />
                 <span className="relative inline-flex items-center">
-                  Get a Free Quote
+                  Start Your Project
                   <svg className="ml-2 w-4 sm:w-5 h-4 sm:h-5 transition-transform group-hover/cta:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </span>
               </Link>
               <Link
-                href="/services"
+                href="/portfolio"
                 className="inline-flex items-center px-6 sm:px-7 py-3 sm:py-3.5 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all hover:scale-105 active:scale-95 text-sm sm:text-base"
               >
-                Our Services
+                Explore Our Work
               </Link>
             </div>
 
-            {/* Google Stars Rating */}
-            <div className="flex items-center gap-3 mt-6 sm:mt-8 animate-[fade-in-up_0.6s_ease-out_0.7s_both]">
-              <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                ))}
-              </div>
-              <span className="text-white/70 text-sm">
-                <span className="text-white font-semibold">5.0</span> Google Rating ·{" "}
-                <span className="text-white font-semibold">168</span> Reviews
-              </span>
-            </div>
+            {/* Location line */}
+            <p className="mt-6 sm:mt-8 text-sm text-white/70 animate-[fade-in-up_0.6s_ease-out_0.7s_both]">
+              Based in Lagos, Nigeria · Serving clients across Nigeria & beyond
+            </p>
 
-            {/* Stats — 2-col grid on mobile, flex row on sm+ */}
+            {/* Facts — verified, non-performance claims */}
             <div className="grid grid-cols-2 gap-x-4 gap-y-4 mt-6 pt-6 border-t border-white/10 sm:flex sm:items-center sm:gap-6 sm:mt-8 sm:pt-8 animate-[fade-in-up_0.6s_ease-out_0.8s_both]">
               <div className="text-center sm:text-left">
-                <p className="text-2xl font-bold text-primary">10+</p>
-                <p className="text-xs text-gray-400">Years in Lagos</p>
+                <p className="text-2xl font-bold text-primary">2020</p>
+                <p className="text-xs text-gray-400">Founded</p>
               </div>
               <div className="hidden sm:block w-px h-10 bg-white/20" />
               <div className="text-center sm:text-left">
-                <p className="text-2xl font-bold text-primary">2k+</p>
-                <p className="text-xs text-gray-400">Projects Done</p>
+                <p className="text-2xl font-bold text-primary">6+</p>
+                <p className="text-xs text-gray-400">Years of Operations</p>
               </div>
               <div className="hidden sm:block w-px h-10 bg-white/20" />
               <div className="text-center sm:text-left">
-                <p className="text-2xl font-bold text-primary">500+</p>
-                <p className="text-xs text-gray-400">Happy Clients</p>
+                <p className="text-2xl font-bold text-primary">Digital Products</p>
+                <p className="text-xs text-gray-400">& Solutions</p>
               </div>
               <div className="hidden sm:block w-px h-10 bg-white/20" />
               <div className="text-center sm:text-left">
-                <p className="text-2xl font-bold text-primary">100%</p>
-                <p className="text-xs text-gray-400">Satisfaction</p>
+                <p className="text-2xl font-bold text-primary">Nigeria</p>
+                <p className="text-xs text-gray-400">& International Clients</p>
               </div>
             </div>
           </div>
@@ -177,7 +168,7 @@ export function HeroSection() {
 
                     {/* Services strip */}
                     <div className="grid grid-cols-3 gap-2 p-3 bg-gray-50">
-                      {["Web Design", "SEO", "E-Commerce"].map((label) => (
+                      {["Websites", "Software", "Mobile Apps"].map((label) => (
                         <div key={label} className="bg-white rounded-lg p-2 shadow-sm border border-gray-100">
                           <div className="w-5 h-5 bg-primary/15 rounded mb-1.5 flex items-center justify-center">
                             <div className="w-2.5 h-2.5 bg-primary/50 rounded-sm" />
@@ -197,7 +188,7 @@ export function HeroSection() {
 
               {/* ── Floating Achievement Badges ── */}
 
-              {/* Google Rating Badge */}
+              {/* Google Rating Badge — verified 4.9★ / 84 reviews (checked live this session) */}
               <div className="absolute -top-5 -left-8 bg-white rounded-2xl shadow-xl p-3.5 flex items-center gap-3 hero-float-1 border border-gray-100">
                 <div className="w-9 h-9 rounded-xl bg-[#4285F4]/10 flex items-center justify-center shrink-0">
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
@@ -215,20 +206,20 @@ export function HeroSection() {
                       </svg>
                     ))}
                   </div>
-                  <p className="text-xs font-bold text-gray-800 mt-0.5">5.0 Google Rating</p>
-                  <p className="text-[10px] text-gray-500">168 reviews</p>
+                  <p className="text-xs font-bold text-gray-800 mt-0.5">4.9 Google Rating</p>
+                  <p className="text-[10px] text-gray-500">84 reviews</p>
                 </div>
               </div>
 
-              {/* Projects Done Badge */}
+              {/* Founded Badge */}
               <div className="absolute -right-8 top-12 bg-primary rounded-2xl shadow-xl p-3.5 text-white hero-float-2">
                 <div className="flex items-center gap-2">
                   <svg className="w-5 h-5 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                   <div>
-                    <p className="text-lg font-bold leading-none">500+</p>
-                    <p className="text-[10px] text-white/70 mt-0.5">Projects in Nigeria</p>
+                    <p className="text-lg font-bold leading-none">2020</p>
+                    <p className="text-[10px] text-white/70 mt-0.5">Founded in Lagos</p>
                   </div>
                 </div>
               </div>
@@ -241,8 +232,8 @@ export function HeroSection() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-gray-800">SSL Secured</p>
-                  <p className="text-[10px] text-gray-500">Free with every site</p>
+                  <p className="text-xs font-bold text-gray-800">Secure by Design</p>
+                  <p className="text-[10px] text-gray-500">Built into every project</p>
                 </div>
               </div>
 
