@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
+import { PortfolioGrid } from "@/components/sections/portfolio-grid";
 
 export const metadata: Metadata = {
   title: "Our Portfolio — Web Design Projects by Slatech Solutions",
@@ -33,93 +34,88 @@ export const metadata: Metadata = {
   },
 };
 
-const projects = [
-  { title: "Travel Agency",           category: "Travel",         image: "/igniting hopes.png" },
-  { title: "Oil and Gas",             category: "Oil & Gas",      image: "/images/Snipaste_2026-04-14_17-43-34.png" },
-  { title: "Elite Real Estate",       category: "Real Estate",    image: "/images/Snipaste_2026-04-14_17-45-47.png" },
-  { title: "MediCare Health",         category: "Healthcare",     image: "/images/Snipaste_2026-04-14_17-47-32.png" },
-  { title: "EduLearn Academy",        category: "Education",      image: "/images/Snipaste_2026-04-14_17-48-20.png" },
-  { title: "ShopNow Store",           category: "E-Commerce",     image: "/images/Snipaste_2026-04-14_17-48-34.png" },
-  { title: "BuildRight Construction", category: "Construction",   image: "/images/Snipaste_2026-04-14_17-58-49.png" },
-  { title: "GreenLife NGO",           category: "Non-Profit",     image: "/images/Snipaste_2026-04-14_18-00-14.png" },
-  { title: "InteriorPro Designs",     category: "Interior Design",image: "/igniting hopes.png" },
-  { title: "TechLaunch App",          category: "Technology",     image: "/images/Snipaste_2026-04-14_17-43-34.png" },
-  { title: "FoodExpress Delivery",    category: "Food & Beverage",image: "/images/Snipaste_2026-04-14_17-45-47.png" },
-  { title: "LegalEdge Law Firm",      category: "Legal",          image: "/images/Snipaste_2026-04-14_17-47-32.png" },
+const moreProjectTypes = [
+  { title: "Corporate Websites", description: "Professional websites designed to establish credibility and generate business opportunities.", href: "/services#website-design" },
+  { title: "E-Commerce", description: "Online stores and commerce platforms designed around products, customers and payment flows.", href: "/services#ecommerce" },
+  { title: "Custom Software", description: "Business systems developed to automate processes and improve operational efficiency.", href: "/services#software" },
+  { title: "Web Applications", description: "Secure online platforms connecting businesses, employees and customers.", href: "/services#web-applications" },
+  { title: "Mobile Applications", description: "Mobile experiences designed to extend digital products to customers and teams.", href: "/services#mobile" },
 ];
-
-const categories = ["All", ...new Set(projects.map((p) => p.category))];
 
 export default function PortfolioPage() {
   return (
     <>
       <BreadcrumbSchema items={[{ name: "Home", path: "/" }, { name: "Portfolio", path: "/portfolio" }]} />
+
       {/* Hero */}
       <section className="bg-secondary py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-block px-4 py-1.5 bg-primary/20 text-primary text-sm font-medium rounded-full mb-4">
-            Our Portfolio
+            Our Work
           </span>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Our <span className="text-primary">Works</span>
+            Digital Solutions Built to Solve <span className="text-primary">Real Business Problems</span>
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Explore our latest projects across various industries, each crafted
-            with attention to detail and modern design principles.
+            We don&apos;t measure our work by screenshots alone. Every project starts with
+            a business objective and ends with a digital solution designed to create
+            measurable value.
           </p>
         </div>
       </section>
 
-      {/* Filter + Grid */}
+      {/* Filter + Grid (client component — needs interactivity) */}
       <section className="py-20 bg-accent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Category filters */}
-          <div className="flex flex-wrap gap-2 justify-center mb-10">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                className="px-4 py-2 text-sm font-medium rounded-lg bg-white border border-border text-foreground hover:bg-primary hover:text-white hover:border-primary transition-colors"
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
+          <PortfolioGrid />
+        </div>
+      </section>
 
-          {/* Projects Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-            {projects.map((project) => (
-              <div
-                key={project.title}
-                className="group relative rounded-2xl overflow-hidden shadow-sm border border-border hover:shadow-lg transition-all duration-300"
+      {/* More Projects — by service type */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl font-bold text-foreground">
+              More <span className="text-primary">Projects</span>
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {moreProjectTypes.map((type) => (
+              <Link
+                key={type.title}
+                href={type.href}
+                className="group bg-accent rounded-2xl p-6 hover:bg-primary/5 border border-transparent hover:border-primary/30 transition-all duration-300 block"
               >
-                <div className="aspect-[4/3] relative overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={`${project.title} — ${project.category} website by Slatech Solutions`}
-                    fill
-                    className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <span className="inline-block px-2.5 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-medium rounded-full mb-2">
-                      {project.category}
-                    </span>
-                    <h2 className="text-white font-bold">{project.title}</h2>
-                  </div>
-                </div>
-                <div className="absolute inset-0 bg-primary/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="text-center text-white p-4">
-                    <h2 className="font-bold text-lg mb-2">{project.title}</h2>
-                    <p className="text-sm text-white/80 mb-3">{project.category}</p>
-                    <span className="inline-flex items-center px-4 py-2 border-2 border-white text-sm font-medium rounded-lg">
-                      View Project
-                    </span>
-                  </div>
-                </div>
-              </div>
+                <h3 className="font-bold text-foreground mb-2 group-hover:text-primary transition-colors">{type.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">{type.description}</p>
+                <span className="inline-flex items-center text-sm font-medium text-primary">
+                  View Projects
+                  <svg className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+              </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 bg-primary">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Want to See What We Can Build for Your Business?
+          </h2>
+          <p className="text-white/80 mb-8">
+            Every business has different requirements. Let&apos;s discuss your objectives
+            and determine the right solution.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3.5 bg-white text-primary font-bold rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            Start a Project
+          </Link>
         </div>
       </section>
     </>
