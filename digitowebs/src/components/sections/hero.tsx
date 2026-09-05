@@ -85,22 +85,22 @@ export function HeroSection() {
             <div className="grid grid-cols-2 gap-x-4 gap-y-4 mt-6 pt-6 border-t border-white/10 sm:flex sm:items-center sm:gap-6 sm:mt-8 sm:pt-8 animate-[fade-in-up_0.6s_ease-out_0.8s_both]">
               <div className="text-center sm:text-left">
                 <p className="text-2xl font-bold text-primary">2020</p>
-                <p className="text-xs text-gray-400">Founded</p>
+                <p className="text-xs text-white">Founded</p>
               </div>
               <div className="hidden sm:block w-px h-10 bg-white/20" />
               <div className="text-center sm:text-left">
                 <p className="text-2xl font-bold text-primary">6+</p>
-                <p className="text-xs text-gray-400">Years of Operations</p>
+                <p className="text-xs text-white">Years of Operations</p>
               </div>
               <div className="hidden sm:block w-px h-10 bg-white/20" />
               <div className="text-center sm:text-left">
                 <p className="text-2xl font-bold text-primary">Digital Products</p>
-                <p className="text-xs text-gray-400">& Solutions</p>
+                <p className="text-xs text-white">& Solutions</p>
               </div>
               <div className="hidden sm:block w-px h-10 bg-white/20" />
               <div className="text-center sm:text-left">
                 <p className="text-2xl font-bold text-primary">Nigeria</p>
-                <p className="text-xs text-gray-400">& International Clients</p>
+                <p className="text-xs text-white">& International Clients</p>
               </div>
             </div>
           </div>

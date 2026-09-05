@@ -23,7 +23,7 @@ function CounterFact({ value, suffix, label, start }: { value: number; suffix: s
       <p className="text-4xl sm:text-5xl font-bold text-primary mb-2 transition-transform duration-300 group-hover:scale-110">
         {count}{suffix}
       </p>
-      <p className="text-sm text-gray-300 font-medium">{label}</p>
+      <p className="text-sm text-white font-medium">{label}</p>
     </div>
   );
 }
@@ -34,7 +34,7 @@ function StaticFact({ value, label }: { value: string; label: string }) {
       <p className="text-2xl sm:text-3xl font-bold text-primary mb-2 leading-tight transition-transform duration-300 group-hover:scale-105">
         {value}
       </p>
-      <p className="text-sm text-gray-300 font-medium">{label}</p>
+      <p className="text-sm text-white font-medium">{label}</p>
     </div>
   );
 }
