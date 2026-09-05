@@ -109,6 +109,7 @@ export const metadata: Metadata = {
   // corresponding <meta> tags in <head>. Site verification tokens are not
   // secrets — they only prove control of the domain to the search engine.
   verification: {
+    google: "LR3BYoU0LXS-oMHO7mrsCYRlGXGJKiQFUjHiAlH8rzM",
     other: {
       // Bing Webmaster Tools (also feeds Copilot / DuckDuckGo results)
       "msvalidate.01": "E4BD134318239BFD3518E02E0BCEC628",
