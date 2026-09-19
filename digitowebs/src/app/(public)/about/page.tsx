@@ -85,15 +85,6 @@ export default function AboutPage() {
               company founded in 2020 with a mission to help businesses use technology to
               operate better, reach more customers and grow.
             </p>
-            <p>
-              We combine strategy, design, development and technology to create digital
-              experiences and software solutions that solve real business problems.
-            </p>
-            <p>
-              From websites and e-commerce platforms to custom software, web applications,
-              mobile applications and digital infrastructure, we work with organizations
-              that want more from technology than simply having an online presence.
-            </p>
           </div>
         </div>
       </section>
