@@ -31,12 +31,6 @@ export function HeroSection() {
 
           {/* ── Left Content ── */}
           <div className="text-white">
-            {/* Badge */}
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 text-white text-sm font-medium rounded-full mb-5 sm:mb-6 border border-white/30 animate-[fade-in-up_0.6s_ease-out]">
-              <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-              Digital Product & Software Development Company
-            </span>
-
             {/* Headline */}
             <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-5 sm:mb-6 animate-[fade-in-up_0.6s_ease-out_0.2s_both]">
               Digital Products &{" "}
