@@ -22,7 +22,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://slatech.com.ng"),
   title: {
-    default: "Slatech Solutions | Client-Centered Web Design Company & Digital Agency in Lagos, Nigeria",
+    default: "Slatech Solutions | Client-Centered Web Design Agency Lagos",
     template: "%s | Slatech Solutions",
   },
   icons: {
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
     locale: "en_NG",
     url: "https://slatech.com.ng",
     siteName: "Slatech Solutions",
-    title: "Slatech Solutions | Client-Centered Web Design Company & Digital Agency in Lagos, Nigeria",
+    title: "Slatech Solutions | Client-Centered Web Design Agency Lagos",
     description:
       "Web design, SEO, e-commerce, custom software and digital marketing for businesses in Lagos, Nigeria. Rated 4.9 on Google. Free consultation.",
     images: [
@@ -97,7 +97,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Slatech Solutions | Client-Centered Web Design Company & Digital Agency in Lagos, Nigeria",
+    title: "Slatech Solutions | Client-Centered Web Design Agency Lagos",
     description:
       "Web design, SEO, e-commerce, custom software and digital marketing for businesses in Lagos, Nigeria. Rated 4.9 on Google. Free consultation.",
     images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
