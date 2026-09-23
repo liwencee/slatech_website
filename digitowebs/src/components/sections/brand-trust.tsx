@@ -24,9 +24,7 @@ export function BrandTrustBar() {
     <section className="py-16 bg-secondary overflow-hidden">
       {/* Heading */}
       <p className="text-center text-white text-lg sm:text-xl font-semibold mb-10 tracking-wide px-4">
-        Trusted by{" "}
-        <span className="text-primary">500+</span>{" "}
-        Businesses Across Nigeria and Beyond
+        Trusted by <span className="text-primary">Businesses</span> Across Nigeria and Beyond
       </p>
 
       {/* Marquee — soft edge-fade mask */}

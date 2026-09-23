@@ -6,11 +6,11 @@ import { PortfolioGrid } from "@/components/sections/portfolio-grid";
 export const metadata: Metadata = {
   title: "Our Portfolio — Web Design Projects by Slatech Solutions",
   description:
-    "Browse real websites, brands and digital projects we have built for 500+ Nigerian businesses. See our Lagos web design portfolio and get inspired.",
+    "Browse real websites, brands and digital projects we have built for Nigerian businesses. See our Lagos web design and software portfolio and get inspired.",
   openGraph: {
     title: "Our Portfolio — Web Design Projects by Slatech Solutions",
     description:
-      "Browse real websites, brands and digital projects we have built for 500+ Nigerian businesses. See our Lagos web design portfolio and get inspired.",
+      "Browse real websites, brands and digital projects we have built for Nigerian businesses. See our Lagos web design and software portfolio and get inspired.",
     url: "https://slatech.com.ng/portfolio",
     type: "website",
     images: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Our Portfolio — Web Design Projects by Slatech Solutions",
     description:
-      "Browse real websites, brands and digital projects we have built for 500+ Nigerian businesses. See our Lagos web design portfolio and get inspired.",
+      "Browse real websites, brands and digital projects we have built for Nigerian businesses. See our Lagos web design and software portfolio and get inspired.",
     images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
   alternates: {

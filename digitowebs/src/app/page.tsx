@@ -18,7 +18,7 @@ import { FAQSection } from "@/components/sections/faq";
 export const metadata: Metadata = {
   title: "Slatech Solutions | Client-Centered Web Design Company & Digital Agency in Lagos, Nigeria",
   description:
-    "Lagos' #1 web design company. We build fast, SEO-optimised websites for Nigerian businesses. 500+ clients, 5.0 Google rating. Free consultation.",
+    "Web design, e-commerce, custom software and mobile apps for Nigerian businesses, built by a Lagos digital product company. Rated 4.9 on Google. Free consultation.",
   keywords: [
     "web design company Lagos Nigeria",
     "web design company Ikeja Lagos",
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     "web design company Lagos Nigeria, branding and web design agency Nigeria",
   ],
   openGraph: {
-    title: "Slatech Solutions | #1 Web Design Company in Lagos, Nigeria",
+    title: "Slatech Solutions | Client-Centered Web Design Company & Digital Agency in Lagos, Nigeria",
     description:
-      "Lagos' #1 web design company. We build fast, SEO-optimised websites for Nigerian businesses. 500+ clients, 5.0 Google rating. Free consultation.",
+      "Web design, e-commerce, custom software and mobile apps for Nigerian businesses, built by a Lagos digital product company. Rated 4.9 on Google. Free consultation.",
     url: "https://slatech.com.ng",
     type: "website",
     images: [
@@ -52,9 +52,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Slatech Solutions | #1 Web Design Company in Lagos, Nigeria",
+    title: "Slatech Solutions | Client-Centered Web Design Company & Digital Agency in Lagos, Nigeria",
     description:
-      "Lagos' #1 web design company. We build fast, SEO-optimised websites for Nigerian businesses. 500+ clients, 5.0 Google rating. Free consultation.",
+      "Web design, e-commerce, custom software and mobile apps for Nigerian businesses, built by a Lagos digital product company. Rated 4.9 on Google. Free consultation.",
     images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
   alternates: {

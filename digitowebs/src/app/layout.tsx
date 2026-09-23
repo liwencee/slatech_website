@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     apple: "/logomark.png",
   },
   description:
-    "Professional web design, SEO, e-commerce and digital marketing for businesses in Lagos, Nigeria. 500+ clients. 5.0 Google rating. Free consultation.",
+    "Web design, SEO, e-commerce, custom software and digital marketing for businesses in Lagos, Nigeria. Rated 4.9 on Google. Free consultation.",
   keywords: [
     "web design company in Lagos",
     "logo design company in Lagos",
@@ -83,9 +83,9 @@ export const metadata: Metadata = {
     locale: "en_NG",
     url: "https://slatech.com.ng",
     siteName: "Slatech Solutions",
-    title: "Slatech Solutions | #1 Web Design Company in Lagos, Nigeria",
+    title: "Slatech Solutions | Client-Centered Web Design Company & Digital Agency in Lagos, Nigeria",
     description:
-      "Professional web design, SEO, e-commerce and digital marketing for businesses in Lagos, Nigeria. 500+ clients. 5.0 Google rating. Free consultation.",
+      "Web design, SEO, e-commerce, custom software and digital marketing for businesses in Lagos, Nigeria. Rated 4.9 on Google. Free consultation.",
     images: [
       {
         url: "/SLATECH  SOLUTIONS LOGO.png",
@@ -97,9 +97,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Slatech Solutions | #1 Web Design Company in Lagos Nigeria",
+    title: "Slatech Solutions | Client-Centered Web Design Company & Digital Agency in Lagos, Nigeria",
     description:
-      "Professional web design, SEO, e-commerce and digital marketing for businesses in Lagos, Nigeria. 500+ clients. 5.0 Google rating. Free consultation.",
+      "Web design, SEO, e-commerce, custom software and digital marketing for businesses in Lagos, Nigeria. Rated 4.9 on Google. Free consultation.",
     images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
   alternates: {

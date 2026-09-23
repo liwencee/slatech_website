@@ -131,7 +131,7 @@ export function TestimonialsSection() {
               Client Testimonials
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Trusted by <span className="text-primary">500+ Businesses</span>{" "}
+              Trusted by <span className="text-primary">Businesses</span>{" "}
               Across Nigeria
             </h2>
             <p className="text-muted-foreground leading-relaxed">
@@ -201,7 +201,7 @@ export function TestimonialsSection() {
             <div className="bg-secondary rounded-2xl p-6 flex flex-col items-center justify-center text-center gap-5 border border-secondary h-full min-h-[240px]">
               <div>
                 <p className="text-white font-bold text-lg leading-snug mb-2">
-                  Join 500+ Happy Clients<br />
+                  Join Our Happy Clients<br />
                   <span className="text-primary">Across Nigeria</span>
                 </p>
                 <p className="text-gray-300 text-sm leading-relaxed">

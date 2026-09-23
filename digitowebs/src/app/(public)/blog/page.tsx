@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Web Design & SEO Blog | Slatech Solutions",
     description:
-      "Expert tips on web design, SEO, e-commerce, and digital marketing for Nigerian businesses. From Lagos' #1 web design agency.",
+      "Expert tips on web design, SEO, e-commerce, and digital marketing for Nigerian businesses. From the Slatech Solutions team in Lagos.",
     url: "https://slatech.com.ng/blog",
     type: "website",
     siteName: "Slatech Solutions",
