@@ -5,11 +5,11 @@ import { TrainingPricing } from "@/components/sections/training-pricing";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 export const metadata: Metadata = {
-  title: "Digital Training — Learn Web Design & SEO in Lagos",
+  title: "Learn Web Design & SEO in Lagos",
   description:
     "Join Slatech's live digital training classes in Lagos. Learn web design, graphics, SEO and digital marketing. Basic, Advance and Masterclass levels.",
   openGraph: {
-    title: "Digital Training — Learn Web Design & SEO in Lagos",
+    title: "Learn Web Design & SEO in Lagos",
     description:
       "Join Slatech's live digital training classes in Lagos. Learn web design, graphics, SEO and digital marketing. Basic, Advance and Masterclass levels.",
     url: "https://slatech.com.ng/training",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Digital Training — Learn Web Design & SEO in Lagos",
+    title: "Learn Web Design & SEO in Lagos",
     description:
       "Join Slatech's live digital training classes in Lagos. Learn web design, graphics, SEO and digital marketing. Basic, Advance and Masterclass levels.",
     images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],

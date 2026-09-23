@@ -4,7 +4,7 @@ import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 export const metadata: Metadata = {
-  title: "Web Design, SEO & Digital Marketing Services in Lagos",
+  title: "Web Design & Software Services Lagos",
   description:
     "Professional web design, SEO, branding, social media & graphic design services for Nigerian businesses. Get a free quote from Slatech Solutions today.",
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "wordpress website design lagos",
   ],
   openGraph: {
-    title: "Web Design, SEO & Digital Marketing Services in Lagos",
+    title: "Web Design & Software Services Lagos",
     description:
       "Professional web design, SEO, branding, social media & graphic design services for Nigerian businesses. Get a free quote from Slatech Solutions today.",
     url: "https://slatech.com.ng/services",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Design, SEO & Digital Marketing Services in Lagos",
+    title: "Web Design & Software Services Lagos",
     description:
       "Professional web design, SEO, branding, social media & graphic design services for Nigerian businesses. Get a free quote from Slatech Solutions today.",
     images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
