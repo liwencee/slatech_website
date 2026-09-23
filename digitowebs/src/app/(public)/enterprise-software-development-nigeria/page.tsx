@@ -42,9 +42,23 @@ const objections = [
   },
 ];
 
+const FAQ_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: objections.map((o) => ({
+    "@type": "Question",
+    name: o.question,
+    acceptedAnswer: { "@type": "Answer", text: o.answer },
+  })),
+};
+
 export default function EnterpriseSoftwareDevelopmentNigeriaPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
+      />
       <BreadcrumbSchema items={[{ name: "Home", path: "/" }, { name: "Enterprise Software Development Nigeria", path: "/enterprise-software-development-nigeria" }]} />
 
       <section className="bg-secondary py-20">
