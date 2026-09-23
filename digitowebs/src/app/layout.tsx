@@ -121,9 +121,16 @@ export const metadata: Metadata = {
 const LOCAL_BUSINESS_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
+  "@id": "https://slatech.com.ng/#organization",
   name: "Slatech Solutions",
+  alternateName: "Slatech",
   description:
-    "Slatech Solutions is a leading web design and digital agency in Ikeja, Lagos, Nigeria, specialising in website design, e-commerce development, SEO, website hosting, branding, and fully managed website services.",
+    "Slatech Solutions is a digital product and software development company in Ikeja, Lagos, Nigeria, founded in 2020. It builds websites, e-commerce platforms, custom software, web applications, mobile apps and cloud infrastructure, and also provides SEO, hosting and branding services.",
+  founder: {
+    "@type": "Person",
+    name: "Olalekan Akindiya",
+    jobTitle: "Founder & CEO",
+  },
   url: "https://slatech.com.ng",
   telephone: "+2348076172456",
   foundingDate: "2020",
@@ -168,6 +175,11 @@ const LOCAL_BUSINESS_SCHEMA = {
     "@type": "OfferCatalog",
     name: "Web Design & Digital Services in Lagos Nigeria",
     itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Custom Software Development Nigeria" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Web Application Development Nigeria" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Mobile App Development Lagos" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Enterprise Software (ERP & CRM) Development Nigeria" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Cloud & DevOps Infrastructure" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Website Design Lagos" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "E-Commerce Website Development Nigeria" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "SEO Services Lagos Nigeria" } },
@@ -210,6 +222,11 @@ const LOCAL_BUSINESS_SCHEMA = {
     },
   ],
   knowsAbout: [
+    "Custom Software Development",
+    "Web Application Development",
+    "Mobile App Development",
+    "ERP and CRM Systems",
+    "Cloud and DevOps",
     "Web Design",
     "E-Commerce Development",
     "Search Engine Optimization",

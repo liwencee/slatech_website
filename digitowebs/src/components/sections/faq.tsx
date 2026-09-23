@@ -2,6 +2,26 @@ import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 
 const faqs = [
   {
+    q: "What is Slatech Solutions?",
+    a: "Slatech Solutions is a digital product and software development company based in Ikeja, Lagos, Nigeria, founded in 2020. It designs and builds websites, e-commerce platforms, custom software, web applications, mobile apps and cloud infrastructure for businesses in Nigeria and internationally.",
+  },
+  {
+    q: "Does Slatech build custom software, not just websites?",
+    a: "Yes. Beyond websites and online stores, Slatech builds custom business software such as ERP and CRM systems, customer portals, booking platforms, internal tools and SaaS products, along with the integrations that connect them to the tools a business already uses.",
+  },
+  {
+    q: "Do you develop mobile apps?",
+    a: "Yes. Slatech develops Android, iOS and cross-platform mobile applications, and builds the backend, payment integration and admin dashboard that the app connects to. We help you choose the right platform approach before development starts.",
+  },
+  {
+    q: "What technologies does Slatech use?",
+    a: "Our stack includes React, Next.js and Vue.js on the frontend, PHP, Laravel and Node.js on the backend, MySQL, PostgreSQL and MongoDB for databases, Flutter, Android and iOS for mobile, and AWS, Docker, Linux and CI/CD pipelines for cloud and deployment. The full list is on our Technology page.",
+  },
+  {
+    q: "Can Slatech handle enterprise systems like ERP and CRM?",
+    a: "Yes. Slatech develops ERP and business management systems, CRM platforms, customer portals, employee systems and API integrations, following a structured process from discovery and architecture through development, testing, deployment and ongoing support.",
+  },
+  {
     q: "How much does a website cost in Lagos, Nigeria?",
     a: "Website design with Slatech Solutions starts from ₦150,000 for a landing page, with full business and e-commerce websites ranging up to ₦1M+ depending on complexity, features, and number of pages. We offer flexible packages for startups, SMEs, and large corporations — contact us for a free, no-obligation quote tailored to your project.",
   },
@@ -77,7 +97,7 @@ export function FAQSection() {
               Frequently Asked <span className="text-primary">Questions</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Everything you need to know about working with Lagos&apos; trusted web design agency.
+              Everything you need to know about working with Slatech Solutions.
               Can&apos;t find your answer?{" "}
               <a href="/contact" className="text-primary font-medium hover:underline">
                 Reach out to us

@@ -1,0 +1,33 @@
+# Slatech Solutions
+
+> Slatech Solutions is a digital product and software development company based in Ikeja, Lagos, Nigeria, founded in 2020. It designs and builds websites, e-commerce platforms, custom software, web applications, mobile apps and cloud infrastructure for businesses in Nigeria and internationally.
+
+## Key facts
+- Founded: 2020
+- Founder & CEO: Olalekan Akindiya
+- Headquarters: 2b, Olaide Tomori, Ikeja, Lagos, Nigeria
+- Phone / WhatsApp: 08076172456 (+2348076172456)
+- Website design pricing: from ₦150,000 for a landing page, up to ₦1M+ for larger sites
+- Serves: businesses across Nigeria and internationally
+
+## Core pages
+- [Home](https://slatech.com.ng/): Company overview, services, process and FAQ
+- [About](https://slatech.com.ng/about): Company story, approach and founder
+- [Services](https://slatech.com.ng/services): Website design, e-commerce, custom software, web applications, mobile apps, cloud/DevOps, SEO, hosting, branding
+- [Enterprise Digital Solutions](https://slatech.com.ng/enterprise): ERP, CRM, customer portals, SaaS and system integration
+- [Technology & Engineering](https://slatech.com.ng/technology): Tech stack, DevOps practices and security
+- [Portfolio](https://slatech.com.ng/portfolio): Selected projects across industries
+- [Why Slatech](https://slatech.com.ng/why-slatech): How Slatech differs from other agencies
+- [Contact](https://slatech.com.ng/contact): Get in touch
+
+## Topic pages
+- [Web design company in Lagos](https://slatech.com.ng/web-design-company-lagos)
+- [Software development company in Lagos](https://slatech.com.ng/software-development-company-lagos)
+- [Custom software development in Nigeria](https://slatech.com.ng/custom-software-development-nigeria)
+- [Web application development in Nigeria](https://slatech.com.ng/web-application-development-nigeria)
+- [E-commerce development in Lagos](https://slatech.com.ng/ecommerce-development-lagos)
+- [Mobile app development in Lagos](https://slatech.com.ng/mobile-app-development-lagos)
+- [Enterprise software development in Nigeria](https://slatech.com.ng/enterprise-software-development-nigeria)
+
+## Guides
+- [Blog](https://slatech.com.ng/blog): Guides on web design, SEO, e-commerce and digital growth for Nigerian businesses

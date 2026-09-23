@@ -54,7 +54,7 @@ export function AboutSection() {
               <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/team.jpg"
-                  alt="Slatech Solutions Team — Web Design Agency in Ikeja, Lagos Nigeria"
+                  alt="Slatech Solutions team — digital product and software development company in Ikeja, Lagos, Nigeria"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -73,7 +73,7 @@ export function AboutSection() {
                 className="absolute -bottom-4 -right-2 sm:-bottom-5 sm:-right-5 bg-primary text-white px-4 py-2.5 sm:px-5 sm:py-3 rounded-xl shadow-xl"
                 style={{ animation: "bounce 3s ease-in-out infinite" }}
               >
-                <p className="text-xl sm:text-2xl font-bold leading-none">5+</p>
+                <p className="text-xl sm:text-2xl font-bold leading-none">6+</p>
                 <p className="text-xs mt-0.5">Years Experience</p>
               </div>
             </div>
