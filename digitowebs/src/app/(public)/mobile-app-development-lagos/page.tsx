@@ -3,12 +3,12 @@ import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 export const metadata: Metadata = {
-  title: "Mobile App Development in Lagos, Nigeria — Slatech Solutions",
+  title: "Mobile App Development in Lagos, Nigeria",
   description:
-    "Slatech develops Android, iOS and cross-platform mobile apps for Lagos and Nigerian businesses. We help you decide the right platform before writing a line of code.",
+    "Slatech develops Android, iOS and cross-platform mobile apps for Lagos and Nigerian businesses, and helps you pick the right platform first.",
   keywords: ["mobile app development lagos", "android app development nigeria", "ios app development nigeria", "cross platform app development nigeria"],
   openGraph: {
-    title: "Mobile App Development in Lagos, Nigeria — Slatech Solutions",
+    title: "Mobile App Development in Lagos, Nigeria",
     description: "Android, iOS and cross-platform mobile apps built for Nigerian businesses and their customers.",
     url: "https://slatech.com.ng/mobile-app-development-lagos",
     type: "website",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mobile App Development in Lagos, Nigeria — Slatech Solutions",
+    title: "Mobile App Development in Lagos, Nigeria",
     description: "Android, iOS and cross-platform mobile apps built for Nigerian businesses and their customers.",
     images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },

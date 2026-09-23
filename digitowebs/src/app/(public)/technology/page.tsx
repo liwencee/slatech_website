@@ -3,9 +3,9 @@ import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 export const metadata: Metadata = {
-  title: "Technology & Engineering — The Stack Behind Slatech's Digital Products",
+  title: "Technology & Engineering Stack",
   description:
-    "The technologies, tools and engineering practices Slatech uses to build reliable, secure and scalable digital products — from frontend frameworks to cloud infrastructure.",
+    "The technologies and engineering practices Slatech uses to build reliable, secure and scalable digital products, from frontend to cloud.",
   keywords: [
     "nextjs development nigeria",
     "react development company lagos",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "software engineering lagos",
   ],
   openGraph: {
-    title: "Technology & Engineering — The Stack Behind Slatech's Digital Products",
+    title: "Technology & Engineering Stack",
     description:
       "The technologies, tools and engineering practices Slatech uses to build reliable, secure and scalable digital products.",
     url: "https://slatech.com.ng/technology",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Technology & Engineering — The Stack Behind Slatech's Digital Products",
+    title: "Technology & Engineering Stack",
     description:
       "The technologies, tools and engineering practices Slatech uses to build reliable, secure and scalable digital products.",
     images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],

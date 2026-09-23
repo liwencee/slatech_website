@@ -3,12 +3,12 @@ import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 export const metadata: Metadata = {
-  title: "Web Design Company in Lagos, Nigeria — Slatech Solutions",
+  title: "Web Design Company in Lagos, Nigeria",
   description:
     "Looking for a web design company in Lagos? Slatech builds professional, mobile-first, SEO-optimised websites for Nigerian businesses. Based in Ikeja, Lagos.",
   keywords: ["web design company lagos", "web design company nigeria", "professional web design lagos"],
   openGraph: {
-    title: "Web Design Company in Lagos, Nigeria — Slatech Solutions",
+    title: "Web Design Company in Lagos, Nigeria",
     description: "Professional, mobile-first, SEO-optimised websites for Nigerian businesses. Based in Ikeja, Lagos.",
     url: "https://slatech.com.ng/web-design-company-lagos",
     type: "website",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Design Company in Lagos, Nigeria — Slatech Solutions",
+    title: "Web Design Company in Lagos, Nigeria",
     description: "Professional, mobile-first, SEO-optimised websites for Nigerian businesses. Based in Ikeja, Lagos.",
     images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },

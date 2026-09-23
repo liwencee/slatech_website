@@ -3,12 +3,12 @@ import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 export const metadata: Metadata = {
-  title: "Software Development Company in Lagos, Nigeria — Slatech Solutions",
+  title: "Software Development Company in Lagos, Nigeria",
   description:
-    "Slatech Solutions is a software development company in Lagos building custom software, web applications and business systems for Nigerian and international organizations.",
+    "Slatech Solutions is a software development company in Lagos building custom software, web apps and business systems for Nigerian and global clients.",
   keywords: ["software development company lagos", "software development company nigeria", "custom software lagos"],
   openGraph: {
-    title: "Software Development Company in Lagos, Nigeria — Slatech Solutions",
+    title: "Software Development Company in Lagos, Nigeria",
     description: "Custom software, web applications and business systems for Nigerian and international organizations.",
     url: "https://slatech.com.ng/software-development-company-lagos",
     type: "website",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Software Development Company in Lagos, Nigeria — Slatech Solutions",
+    title: "Software Development Company in Lagos, Nigeria",
     description: "Custom software, web applications and business systems for Nigerian and international organizations.",
     images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },

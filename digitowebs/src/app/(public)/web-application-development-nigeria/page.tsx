@@ -3,12 +3,12 @@ import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 export const metadata: Metadata = {
-  title: "Web Application Development in Nigeria — Slatech Solutions",
+  title: "Web Application Development in Nigeria",
   description:
     "Slatech builds secure, accessible-anywhere web applications — customer portals, booking systems, dashboards and marketplaces — for Nigerian businesses.",
   keywords: ["web application development nigeria", "web app development lagos", "customer portal development nigeria"],
   openGraph: {
-    title: "Web Application Development in Nigeria — Slatech Solutions",
+    title: "Web Application Development in Nigeria",
     description: "Customer portals, booking systems, dashboards and marketplaces built for Nigerian businesses.",
     url: "https://slatech.com.ng/web-application-development-nigeria",
     type: "website",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Application Development in Nigeria — Slatech Solutions",
+    title: "Web Application Development in Nigeria",
     description: "Customer portals, booking systems, dashboards and marketplaces built for Nigerian businesses.",
     images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },

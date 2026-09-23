@@ -3,9 +3,9 @@ import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 export const metadata: Metadata = {
-  title: "Enterprise Digital Solutions — Custom Software for Growing Organizations",
+  title: "Enterprise Software & Digital Solutions",
   description:
-    "Slatech designs and develops enterprise digital systems — ERP, CRM, customer portals, SaaS platforms and system integrations — built around your organization's actual requirements.",
+    "Slatech builds enterprise digital systems — ERP, CRM, customer portals, SaaS platforms and integrations — around your organization's real requirements.",
   keywords: [
     "enterprise software development nigeria",
     "erp software development lagos",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "enterprise application development lagos",
   ],
   openGraph: {
-    title: "Enterprise Digital Solutions — Custom Software for Growing Organizations",
+    title: "Enterprise Software & Digital Solutions",
     description:
       "Slatech designs and develops enterprise digital systems built around your organization's actual requirements.",
     url: "https://slatech.com.ng/enterprise",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Enterprise Digital Solutions — Custom Software for Growing Organizations",
+    title: "Enterprise Software & Digital Solutions",
     description:
       "Slatech designs and develops enterprise digital systems built around your organization's actual requirements.",
     images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],

@@ -3,12 +3,12 @@ import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 export const metadata: Metadata = {
-  title: "Enterprise Software Development in Nigeria — Slatech Solutions",
+  title: "Enterprise Software Development in Nigeria",
   description:
-    "Slatech develops enterprise-grade software — ERP, CRM, internal systems and platform integrations — for larger Nigerian organizations with real security and scale requirements.",
+    "Slatech develops enterprise-grade software — ERP, CRM, internal systems and integrations — for larger Nigerian organizations with real security needs.",
   keywords: ["enterprise software development nigeria", "enterprise software company nigeria", "erp development nigeria", "enterprise application development"],
   openGraph: {
-    title: "Enterprise Software Development in Nigeria — Slatech Solutions",
+    title: "Enterprise Software Development in Nigeria",
     description: "ERP, CRM, internal systems and integrations built for larger Nigerian organizations.",
     url: "https://slatech.com.ng/enterprise-software-development-nigeria",
     type: "website",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Enterprise Software Development in Nigeria — Slatech Solutions",
+    title: "Enterprise Software Development in Nigeria",
     description: "ERP, CRM, internal systems and integrations built for larger Nigerian organizations.",
     images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },

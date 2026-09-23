@@ -4,11 +4,11 @@ import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { PortfolioGrid } from "@/components/sections/portfolio-grid";
 
 export const metadata: Metadata = {
-  title: "Our Portfolio — Web Design Projects by Slatech Solutions",
+  title: { absolute: "Our Portfolio — Web Design Projects by Slatech Solutions" },
   description:
     "Browse real websites, brands and digital projects we have built for Nigerian businesses. See our Lagos web design and software portfolio and get inspired.",
   openGraph: {
-    title: "Our Portfolio — Web Design Projects by Slatech Solutions",
+    title: { absolute: "Our Portfolio — Web Design Projects by Slatech Solutions" },
     description:
       "Browse real websites, brands and digital projects we have built for Nigerian businesses. See our Lagos web design and software portfolio and get inspired.",
     url: "https://slatech.com.ng/portfolio",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Our Portfolio — Web Design Projects by Slatech Solutions",
+    title: { absolute: "Our Portfolio — Web Design Projects by Slatech Solutions" },
     description:
       "Browse real websites, brands and digital projects we have built for Nigerian businesses. See our Lagos web design and software portfolio and get inspired.",
     images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],

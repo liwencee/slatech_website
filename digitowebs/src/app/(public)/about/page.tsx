@@ -5,9 +5,9 @@ import { StatsSection } from "@/components/sections/stats";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 export const metadata: Metadata = {
-  title: "About Slatech Solutions — Digital Product & Software Development Company",
+  title: { absolute: "About Slatech Solutions — Digital Product & Software Company" },
   description:
-    "Slatech Solutions is a Nigerian digital product and software development company founded in 2020. Meet the team and the mission behind our work in Lagos and beyond.",
+    "Slatech Solutions is a Nigerian digital product and software development company founded in 2020. Meet the team and mission behind our work in Lagos.",
   keywords: [
     "digital product company nigeria",
     "software development company lagos",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "technology partner nigeria",
   ],
   openGraph: {
-    title: "About Slatech Solutions — Digital Product & Software Development Company",
+    title: { absolute: "About Slatech Solutions — Digital Product & Software Company" },
     description:
       "Slatech Solutions is a Nigerian digital product and software development company founded in 2020, helping businesses use technology to operate better and grow.",
     url: "https://slatech.com.ng/about",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Slatech Solutions — Digital Product & Software Development Company",
+    title: { absolute: "About Slatech Solutions — Digital Product & Software Company" },
     description:
       "Slatech Solutions is a Nigerian digital product and software development company founded in 2020, helping businesses use technology to operate better and grow.",
     images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],

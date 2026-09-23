@@ -3,16 +3,16 @@ import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 export const metadata: Metadata = {
-  title: "Why Slatech — What Makes Us Different as a Technology Partner",
+  title: "Why Choose Slatech — A Technology Partner",
   description:
-    "Not another web design agency selling templates. Here's what actually sets Slatech Solutions apart as a digital product and software development company in Lagos, Nigeria.",
+    "Not another web agency selling templates. See what sets Slatech Solutions apart as a digital product and software development company in Lagos.",
   keywords: [
     "why choose slatech solutions",
     "best software development company lagos",
     "digital agency comparison nigeria",
   ],
   openGraph: {
-    title: "Why Slatech — What Makes Us Different as a Technology Partner",
+    title: "Why Choose Slatech — A Technology Partner",
     description: "What actually sets Slatech Solutions apart as a digital product and software development company in Lagos, Nigeria.",
     url: "https://slatech.com.ng/why-slatech",
     type: "website",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Why Slatech — What Makes Us Different as a Technology Partner",
+    title: "Why Choose Slatech — A Technology Partner",
     description: "What actually sets Slatech Solutions apart as a digital product and software development company in Lagos, Nigeria.",
     images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
