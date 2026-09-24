@@ -501,7 +501,7 @@ export function Footer() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-400">
-            &copy; 2020&ndash;2026 Slatech Solutions. All rights reserved.
+            &copy; 2020&ndash;2026 Slatech Solutions. All rights reserved. &middot; RC 9591826
           </p>
 
           <div className="flex items-center gap-1 sm:gap-2 flex-wrap justify-center">
