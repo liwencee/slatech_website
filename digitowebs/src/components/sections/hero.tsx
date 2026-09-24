@@ -42,9 +42,9 @@ export function HeroSection() {
             </h1>
 
             <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-7 sm:mb-8 animate-[fade-in-up_0.6s_ease-out_0.4s_both]">
-              Slatech Solutions is a Nigerian digital product and software development
+              Slatech Solutions is a Lagos-based digital product and software development
               company helping businesses turn ideas, challenges and opportunities into
-              powerful digital experiences — from websites and e-commerce to custom
+              powerful digital experiences — from website design and e-commerce to custom
               software, mobile applications and automation.
             </p>
 
@@ -72,7 +72,7 @@ export function HeroSection() {
 
             {/* Location line */}
             <p className="mt-6 sm:mt-8 text-sm text-white/70 animate-[fade-in-up_0.6s_ease-out_0.7s_both]">
-              Based in Lagos, Nigeria · Serving clients across Nigeria & beyond
+              Website design and software development in Lagos, Nigeria · Serving clients across Nigeria & beyond
             </p>
 
             {/* Facts — verified, non-performance claims */}
