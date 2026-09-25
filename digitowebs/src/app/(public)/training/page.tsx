@@ -37,9 +37,7 @@ export const metadata: Metadata = {
 
 const stats = [
   { value: "Mentorship", label: "For Advance & Masterclass" },
-  { value: "5+", label: "Years Training" },
   { value: "3", label: "Course Levels" },
-  { value: "100%", label: "Practical Classes" },
 ];
 
 const FAQ_SCHEMA = {
@@ -131,8 +129,7 @@ export default function TrainingPage() {
             Build Your <span className="text-primary">Digital Skills</span>
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Over the last 5+ years we have helped more than{" "}
-            <strong className="text-white">500 SME and MSME businesses</strong> build
+            We help <strong className="text-white">SME and MSME businesses</strong> build
             powerful digital brands. Now we&apos;re teaching you how to do the same.
           </p>
           <div className="flex flex-wrap gap-3 justify-center mt-8">
@@ -155,7 +152,7 @@ export default function TrainingPage() {
       {/* Stats Bar */}
       <section className="bg-white border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-border">
+          <div className="grid grid-cols-2 max-w-3xl mx-auto divide-x divide-border">
             {stats.map((s) => (
               <div key={s.label} className="py-8 px-6 text-center">
                 <p className="text-3xl font-extrabold text-primary">{s.value}</p>
