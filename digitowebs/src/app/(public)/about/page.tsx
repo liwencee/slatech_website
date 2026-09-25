@@ -258,38 +258,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Founder & CEO */}
-      <section className="py-20 bg-accent">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8 items-center">
-            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl md:col-span-1">
-              <Image
-                src="/images/olalekan.jpg"
-                alt="Olalekan Akindiya — Founder & CEO, Slatech Solutions"
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-            </div>
-            <div className="md:col-span-2">
-              <span className="inline-block text-primary text-sm font-semibold uppercase tracking-wider mb-2">
-                Founder & CEO
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">Olalekan Akindiya</h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Olalekan Akindiya leads Slatech Solutions with a focus on combining
-                business strategy, technology and digital innovation to help organizations
-                build stronger digital operations.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Under his leadership, Slatech has evolved from a web-focused digital agency
-                into a broader digital solutions and software development company.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-16 bg-primary">
         <div className="max-w-3xl mx-auto px-4 text-center">
