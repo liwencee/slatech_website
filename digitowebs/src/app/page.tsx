@@ -17,7 +17,7 @@ import { FAQSection } from "@/components/sections/faq";
 export const metadata: Metadata = {
   title: "Slatech Solutions | Client-Centered Web Design Agency Lagos",
   description:
-    "Web design, e-commerce, custom software and mobile apps for Nigerian businesses, built by a Lagos digital product company. Rated 4.9 on Google. Free consultation.",
+    "Web design, e-commerce, custom software and mobile apps for Nigerian businesses, from a Lagos digital product company. Rated 4.9 on Google. Free quote.",
   keywords: [
     "web design company Lagos Nigeria",
     "web design company Ikeja Lagos",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Slatech Solutions | Client-Centered Web Design Agency Lagos",
     description:
-      "Web design, e-commerce, custom software and mobile apps for Nigerian businesses, built by a Lagos digital product company. Rated 4.9 on Google. Free consultation.",
+      "Web design, e-commerce, custom software and mobile apps for Nigerian businesses, from a Lagos digital product company. Rated 4.9 on Google. Free quote.",
     url: "https://slatech.com.ng",
     type: "website",
     images: [
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Slatech Solutions | Client-Centered Web Design Agency Lagos",
     description:
-      "Web design, e-commerce, custom software and mobile apps for Nigerian businesses, built by a Lagos digital product company. Rated 4.9 on Google. Free consultation.",
+      "Web design, e-commerce, custom software and mobile apps for Nigerian businesses, from a Lagos digital product company. Rated 4.9 on Google. Free quote.",
     images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
   alternates: {

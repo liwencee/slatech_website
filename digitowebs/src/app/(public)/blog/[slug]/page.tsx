@@ -583,17 +583,23 @@ const categoryKeywords: Record<string, string[]> = {
   ],
 };
 
+function metaDescription(text: string, max = 155): string {
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max - 1);
+  return cut.slice(0, cut.lastIndexOf(" ")).replace(/[,;:\s]+$/, "") + "…";
+}
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = posts[slug];
   if (!post) return { title: "Post Not Found" };
   return {
     title: post.title,
-    description: post.excerpt,
+    description: metaDescription(post.excerpt),
     keywords: categoryKeywords[post.category] ?? [],
     openGraph: {
       title: post.title,
-      description: post.excerpt,
+      description: metaDescription(post.excerpt),
       url: `https://slatech.com.ng/blog/${slug}`,
       type: "article",
       images: [
@@ -608,7 +614,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     twitter: {
       card: "summary_large_image",
       title: post.title,
-      description: post.excerpt,
+      description: metaDescription(post.excerpt),
       images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
     },
     alternates: {

@@ -5,7 +5,7 @@ import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 export const metadata: Metadata = {
   title: "E-Commerce Development in Lagos, Nigeria",
   description:
-    "Slatech builds e-commerce stores for Lagos and Nigerian businesses with Paystack payments, mobile-first checkout and inventory tools built for the local market.",
+    "Slatech builds e-commerce stores for Lagos and Nigerian businesses with Paystack payments, mobile-first checkout and inventory tools for the local market.",
   keywords: ["ecommerce development lagos", "online store development nigeria", "paystack ecommerce website", "ecommerce website lagos"],
   openGraph: {
     title: "E-Commerce Development in Lagos, Nigeria",
