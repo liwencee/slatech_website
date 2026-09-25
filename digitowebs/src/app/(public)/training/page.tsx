@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: "500+", label: "Businesses Trained" },
+  { value: "Mentorship", label: "For Advance & Masterclass" },
   { value: "5+", label: "Years Training" },
   { value: "3", label: "Course Levels" },
   { value: "100%", label: "Practical Classes" },
