@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   keywords: [
     "digital product company nigeria",
     "software development company lagos",
-    "web design agency ikeja",
+    "about slatech solutions",
     "technology partner nigeria",
   ],
   openGraph: {
