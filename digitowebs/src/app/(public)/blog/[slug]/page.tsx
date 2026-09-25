@@ -18,13 +18,13 @@ const posts: Record<string, {
   "how-to-set-up-whatsapp-business-nigeria": {
     title: "How to Set Up WhatsApp Business for Your Nigerian Company (Step-by-Step)",
     excerpt:
-      "WhatsApp has over 90 million users in Nigeria. Learn how to set up a professional WhatsApp Business account, create a catalogue, and use it to generate more sales.",
+      "WhatsApp is one of the most widely used apps in Nigeria. Learn how to set up a professional WhatsApp Business account, create a catalogue, and use it to generate more sales.",
     category: "Digital Marketing",
     date: "May 10, 2026",
     readTime: "5 min read",
     color: "bg-green-600",
     content: [
-      "Nigeria has one of the highest WhatsApp adoption rates in the world — over 90 million active users. Your customers are already on it every single day. But there is a big difference between chatting on a personal account and running a professional WhatsApp Business profile that builds trust, showcases your products, and converts enquiries into sales. Here is a step-by-step guide to setting it up correctly.",
+      "WhatsApp is one of the most widely used apps in Nigeria. Your customers are already on it every single day. But there is a big difference between chatting on a personal account and running a professional WhatsApp Business profile that builds trust, showcases your products, and converts enquiries into sales. Here is a step-by-step guide to setting it up correctly.",
 
       "Step 1: Download WhatsApp Business. WhatsApp Business is a free app available on Android and iOS. Search for 'WhatsApp Business' in the Google Play Store or Apple App Store and install it. Use a dedicated phone number for your business — not the same number as your personal WhatsApp — so you keep your professional and personal conversations separate.",
 
@@ -589,16 +589,42 @@ function metaDescription(text: string, max = 155): string {
   return cut.slice(0, cut.lastIndexOf(" ")).replace(/[,;:\s]+$/, "") + "…";
 }
 
+// Search-result titles (the layout appends " | Slatech Solutions", so keep these to ~40 chars).
+const seoTitles: Record<string, string> = {
+  "how-to-set-up-whatsapp-business-nigeria": "Set Up WhatsApp Business in Nigeria",
+  "why-your-restaurant-needs-a-website-nigeria": "Why Nigerian Restaurants Need a Website",
+  "how-to-build-a-brand-for-your-small-business-nigeria": "5 Tips to Build a Brand in Nigeria",
+  "why-nigerian-businesses-need-professional-website": "Why Nigerian Businesses Need a Website",
+  "how-to-rank-on-google-nigeria-seo-guide": "How to Rank on Google in Nigeria",
+  "ecommerce-in-nigeria-how-to-start-selling-online": "How to Start Selling Online in Nigeria",
+  "ecommerce-conversion-tips": "5 E-Commerce Conversion Tips",
+  "website-security-guide": "Website Security Guide for 2026",
+  "choosing-web-hosting": "How to Choose a Web Hosting Provider",
+  "what-is-seo-and-why-your-business-needs-it": "What Is SEO? A Guide for Nigeria",
+  "complete-guide-growing-business-online-nigeria": "Grow Your Business Online in Nigeria",
+  "10-reasons-nigerian-business-needs-website-2026": "10 Reasons Your Business Needs a Website",
+  "digital-marketing-strategies-nigerian-businesses": "Digital Marketing Strategies in Nigeria",
+  "how-to-choose-web-designer-lagos": "How to Choose a Web Designer in Lagos",
+  "social-media-vs-website-nigerian-business": "Social Media vs Website in Nigeria",
+  "how-much-does-web-design-cost-in-nigeria": "Web Design Cost in Nigeria: 2026 Guide",
+  "web-design-in-lagos-what-professional-design-actually-involves": "Web Design in Lagos: What It Involves",
+  "paystack-integration-guide-ecommerce-nigeria": "Paystack Integration for E-Commerce",
+  "local-seo-nigeria-rank-google-maps-3-pack": "Local SEO in Nigeria: Google Map Pack",
+  "branding-agency-lagos-what-professional-branding-includes": "Branding Agency in Lagos: What to Expect",
+  "mobile-friendly-website": "Why You Need a Mobile-Friendly Website",
+};
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = posts[slug];
   if (!post) return { title: "Post Not Found" };
+  const seoTitle = seoTitles[slug] ?? post.title;
   return {
-    title: post.title,
+    title: seoTitle,
     description: metaDescription(post.excerpt),
     keywords: categoryKeywords[post.category] ?? [],
     openGraph: {
-      title: post.title,
+      title: seoTitle,
       description: metaDescription(post.excerpt),
       url: `https://slatech.com.ng/blog/${slug}`,
       type: "article",
@@ -613,7 +639,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
+      title: seoTitle,
       description: metaDescription(post.excerpt),
       images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
     },

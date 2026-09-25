@@ -108,7 +108,7 @@ const posts = [
     slug: "how-to-set-up-whatsapp-business-nigeria",
     title: "How to Set Up WhatsApp Business for Your Nigerian Company (Step-by-Step)",
     excerpt:
-      "WhatsApp has over 90 million users in Nigeria. Learn how to set up a professional WhatsApp Business account, create a catalogue, and use it to generate more sales.",
+      "WhatsApp is one of the most widely used apps in Nigeria. Learn how to set up a professional WhatsApp Business account, create a catalogue, and use it to generate more sales.",
     category: "Digital Marketing",
     date: "May 10, 2026",
     readTime: "5 min read",
