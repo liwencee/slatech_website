@@ -204,14 +204,14 @@ const LOCAL_BUSINESS_SCHEMA = {
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
       author: { "@type": "Person", name: "Adebayo Ogunlade" },
       reviewBody:
-        "Slatech Solutions transformed our online presence completely. Their team delivered a stunning website that increased our bookings by 150%. The #1 web agency in Lagos!",
+        "Slatech Solutions transformed our online presence completely. Their team delivered a stunning website. Highly recommended!",
     },
     {
       "@type": "Review",
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
       author: { "@type": "Person", name: "Chioma Nwankwo" },
       reviewBody:
-        "Working with Slatech was a game-changer for our e-commerce business. The website is fast, secure, and our conversion rates have doubled since launch.",
+        "Working with Slatech was a game-changer for our e-commerce business. The website is fast and secure.",
     },
     {
       "@type": "Review",

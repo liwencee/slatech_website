@@ -22,7 +22,7 @@ const testimonials = [
     photo: "/testimonials/adebayo.jpg",
     initials: "AO",
     avatarColor: "bg-primary",
-    text: "Slatech Solutions transformed our online presence completely. Their team delivered a stunning website that increased our bookings by 150%. The #1 web agency in Lagos — highly recommended!",
+    text: "Slatech Solutions transformed our online presence completely. Their team delivered a stunning website. Highly recommended!",
     rating: 5,
   },
   {
@@ -32,7 +32,7 @@ const testimonials = [
     photo: "/testimonials/chioma.jpg",
     initials: "CN",
     avatarColor: "bg-secondary",
-    text: "Working with Slatech was a game-changer for our e-commerce business. The website is fast, secure, and our conversion rates have doubled since launch. Worth every Naira!",
+    text: "Working with Slatech was a game-changer for our e-commerce business. The website is fast and secure. Worth every Naira!",
     rating: 5,
   },
   {
@@ -42,7 +42,7 @@ const testimonials = [
     photo: "/testimonials/ibrahim.jpg",
     initials: "IM",
     avatarColor: "bg-green-600",
-    text: "Professional, responsive, and creative. They understood our vision from day one and delivered beyond expectations. Our student enrolment went up 40% within 3 months of launching.",
+    text: "Professional, responsive, and creative. They understood our vision from day one and delivered beyond expectations.",
     rating: 5,
   },
   {
