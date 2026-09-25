@@ -446,7 +446,7 @@ export function ContactSection() {
                   </button>
 
                   <p className="text-xs text-center text-muted-foreground">
-                    We respond within 24 hours. Your information is kept private and never shared.
+                    We respond within 24 hours. Your information is kept private. See our Privacy Policy for details.
                   </p>
                 </form>
               )}
