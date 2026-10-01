@@ -7,13 +7,14 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-export default function TrainingSuccessPage({
+export default async function TrainingSuccessPage({
   searchParams,
 }: {
-  searchParams: { ref?: string; course?: string };
+  searchParams: Promise<{ ref?: string; course?: string }>;
 }) {
-  const course = searchParams.course ?? "your course";
-  const ref    = searchParams.ref    ?? "";
+  const params = await searchParams;
+  const course = params.course ?? "your course";
+  const ref    = params.ref    ?? "";
 
   return (
     <section className="min-h-[70vh] flex items-center justify-center bg-accent px-4">
@@ -28,7 +29,7 @@ export default function TrainingSuccessPage({
         <h1 className="text-2xl font-bold text-foreground mb-2">Payment Successful!</h1>
         <p className="text-muted-foreground text-sm mb-4">
           You have successfully registered for{" "}
-          <span className="font-semibold text-primary">{decodeURIComponent(course)}</span>.
+          <span className="font-semibold text-primary">{course}</span>.
         </p>
 
         {ref && (

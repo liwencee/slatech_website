@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Pin the project root: a stray package-lock.json in the Hostinger home
+  // directory otherwise makes Next.js treat /home/<user> as the workspace root.
+  outputFileTracingRoot: import.meta.dirname,
+  turbopack: { root: import.meta.dirname },
+
   // Disable X-Powered-By header
   poweredByHeader: false,
 
