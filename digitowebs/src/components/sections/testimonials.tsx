@@ -4,8 +4,8 @@ import Image from "next/image";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 
 /**
- * Profile photos → place 80×80px JPG/PNG images in /public/testimonials/
- *   adebayo.jpg  |  chioma.jpg  |  ibrahim.jpg  |  funke.jpg  |  emeka.jpg
+ * Profile photos are optional: add a 80×80px JPG/PNG to /public/testimonials/
+ * and set `photo` on the testimonial. Without one, the initials are shown.
  *
  * Recommended image spec:
  *   Size:    80 × 80 px  (minimum)
@@ -19,7 +19,6 @@ const testimonials = [
     name: "Adebayo Ogunlade",
     role: "CEO, TravelMax Agency",
     location: "Lagos",
-    photo: "/testimonials/adebayo.jpg",
     initials: "AO",
     avatarColor: "bg-primary",
     text: "Slatech Solutions transformed our online presence completely. Their team delivered a stunning website. Highly recommended!",
@@ -29,7 +28,6 @@ const testimonials = [
     name: "Chioma Nwankwo",
     role: "Founder, ShopNow Store",
     location: "Ikeja, Lagos",
-    photo: "/testimonials/chioma.jpg",
     initials: "CN",
     avatarColor: "bg-secondary",
     text: "Working with Slatech was a game-changer for our e-commerce business. The website is fast and secure. Worth every Naira!",
@@ -39,7 +37,6 @@ const testimonials = [
     name: "Ibrahim Musa",
     role: "Director, EduLearn Academy",
     location: "Abuja, Nigeria",
-    photo: "/testimonials/ibrahim.jpg",
     initials: "IM",
     avatarColor: "bg-green-600",
     text: "Professional, responsive, and creative. They understood our vision from day one and delivered beyond expectations.",
@@ -49,7 +46,6 @@ const testimonials = [
     name: "Funke Adeyemi",
     role: "Manager, MediCare Health",
     location: "Ikeja, Lagos",
-    photo: "/testimonials/funke.jpg",
     initials: "FA",
     avatarColor: "bg-purple-600",
     text: "From design to deployment the entire process was seamless. Our patients love the new website and it has significantly improved our online appointment bookings. Five stars!",
@@ -59,7 +55,6 @@ const testimonials = [
     name: "Emeka Obi",
     role: "Owner, Elite Real Estate",
     location: "Lagos Island",
-    photo: "/testimonials/emeka.jpg",
     initials: "EO",
     avatarColor: "bg-orange-500",
     text: "Exceptional quality and attention to detail. The team went above and beyond to ensure our property listings look amazing. We now rank on the first page of Google for key Lagos searches.",
@@ -89,7 +84,7 @@ function Avatar({
   name,
   avatarColor,
 }: {
-  photo: string;
+  photo?: string;
   initials: string;
   name: string;
   avatarColor: string;
@@ -104,6 +99,7 @@ function Avatar({
         {initials}
       </div>
       {/* Actual photo — hides the fallback when loaded */}
+      {photo && (
       <Image
         src={photo}
         alt={name}
@@ -115,6 +111,7 @@ function Avatar({
           (e.target as HTMLImageElement).style.display = "none";
         }}
       />
+      )}
     </div>
   );
 }
@@ -175,7 +172,6 @@ export function TestimonialsSection() {
                 {/* Author */}
                 <div className="flex items-center gap-3">
                   <Avatar
-                    photo={t.photo}
                     initials={t.initials}
                     name={t.name}
                     avatarColor={t.avatarColor}
