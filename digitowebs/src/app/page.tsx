@@ -15,7 +15,7 @@ import { BrandTrustBar } from "@/components/sections/brand-trust";
 import { FAQSection } from "@/components/sections/faq";
 
 export const metadata: Metadata = {
-  title: "Slatech Solutions | Client-Centered Web Design Agency Lagos",
+  title: "Web Design Company in Lagos | 168 Five-Star Reviews | Slatech",
   description:
     "Web design, e-commerce, custom software and mobile apps for Nigerian businesses, from a Lagos digital product company. Rated 4.9 on Google. Free quote.",
   keywords: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "web design company Lagos Nigeria, branding and web design agency Nigeria",
   ],
   openGraph: {
-    title: "Slatech Solutions | Client-Centered Web Design Agency Lagos",
+    title: "Web Design Company in Lagos | 168 Five-Star Reviews | Slatech",
     description:
       "Web design, e-commerce, custom software and mobile apps for Nigerian businesses, from a Lagos digital product company. Rated 4.9 on Google. Free quote.",
     url: "https://slatech.com.ng",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Slatech Solutions | Client-Centered Web Design Agency Lagos",
+    title: "Web Design Company in Lagos | 168 Five-Star Reviews | Slatech",
     description:
       "Web design, e-commerce, custom software and mobile apps for Nigerian businesses, from a Lagos digital product company. Rated 4.9 on Google. Free quote.",
     images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
