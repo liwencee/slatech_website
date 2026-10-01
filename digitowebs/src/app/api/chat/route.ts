@@ -10,7 +10,7 @@ ABOUT SLATECH SOLUTIONS:
 - Email: info@slatech.com.ng
 
 OUR SERVICES & TYPICAL BUDGETS:
-1. Website Design — Landing pages, e-commerce, corporate sites. Mobile-first, fast, and conversion-optimised. Budget: ₦150k – ₦1M+ depending on complexity.
+1. Website Design — Landing pages from ₦100k, business websites from ₦400k, e-commerce from ₦600k, custom web applications from ₦1.2M+. Mobile-first, fast, and conversion-optimised.
 2. Logo & Branding — Logo, brand colours, typography, brand guidelines, visual identity. Budget: ₦50k – ₦300k.
 3. SEO (Search Engine Optimization) — Keyword research, on-page SEO, backlink building, Google ranking. Monthly retainer or one-time audit packages.
 4. Social Media Management — Content calendar, post design, scheduling, community engagement, analytics. Monthly packages starting from ₦80k.

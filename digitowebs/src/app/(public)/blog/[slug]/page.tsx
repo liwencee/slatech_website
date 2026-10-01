@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
+type ContentParagraph = string | { pre: string; linkText: string; linkHref: string; post?: string };
+
 const posts: Record<string, {
   title: string;
   excerpt: string;
@@ -10,7 +12,8 @@ const posts: Record<string, {
   date: string;
   readTime: string;
   color: string;
-  content: string[];
+  content: ContentParagraph[];
+  faqs?: { q: string; a: string }[];
 }> = {
   /* ------------------------------------------------------------------ */
   /*  NEW POSTS                                                           */
@@ -320,6 +323,12 @@ const posts: Record<string, {
       "8. You Can Tell Your Full Story. Instagram captions have character limits. Your bio is tiny. A website gives you unlimited space to explain exactly what you do, who you've worked with, what results you've achieved, why you're different from competitors, and why customers should choose you. Your website can house your full portfolio, detailed service pages, client testimonials, case studies, FAQs, and more.",
       "9. You Own the Data. Instagram controls who sees your content. With your own website and an email list built from it, you own your relationship with your audience. You can email your list anytime, segment it by interest, and communicate directly with your most valuable customers — without paying for reach or depending on an algorithm.",
       "10. Your Competitors Who Have Websites Are Getting Your Customers. Every day that you operate without a website, potential customers are finding your competitors — who do have websites — and buying from them instead. The gap between businesses with strong websites and those without is widening every year. The best time to build your website was two years ago. The second-best time is today. Slatech Solutions builds fast, professional websites for Nigerian businesses starting from the first consultation. Contact us for a free quote.",
+      {
+        pre: "A website is also more affordable than most Nigerian business owners assume — landing pages start from ₦100,000. See the ",
+        linkText: "full 2026 price breakdown",
+        linkHref: "/blog/how-much-does-web-design-cost-in-nigeria",
+        post: " for what each type of website actually costs.",
+      },
     ],
   },
 
@@ -382,33 +391,63 @@ const posts: Record<string, {
     ],
   },
   "how-much-does-web-design-cost-in-nigeria": {
-    title: "How Much Does Web Design Cost in Nigeria? 2026 Pricing Guide",
+    title: "How Much Does a Website Cost in Nigeria? 2026 Price Guide",
     excerpt:
-      "Most Nigerian web design agencies won't tell you real numbers until after a sales call. Here's an honest, transparent breakdown of what a professional website actually costs in Nigeria — and why the cheapest quote is rarely the best deal.",
+      "Real 2026 pricing for Nigerian websites — landing pages, business sites, and online stores, with what's included at each tier and what quietly costs extra.",
     category: "Web Design",
     date: "Aug 20, 2026",
     readTime: "9 min read",
     color: "bg-blue-700",
     content: [
-      "Ask five different web design companies in Nigeria for a quote and you'll likely get five very different numbers, ranging anywhere from ₦30,000 to over ₦1,000,000 — for what sounds, on paper, like the same thing: a website. Almost none of them will explain why the price differs so dramatically, or what you're actually paying for at each price point. This guide breaks down real Nigerian web design pricing by project type, what drives the cost up or down, and the hidden costs that catch businesses out after they've already signed on.",
+      "A professional website in Nigeria costs between ₦100,000 and ₦1,200,000+ in 2026. A single-page landing site sits at the bottom of that range. A multi-page business website sits in the middle. A full e-commerce store with payments, inventory and order tracking sits near the top, and a fully custom web application sits above that. This guide breaks down what each tier actually costs, what you get for it, and which costs nobody mentions until the invoice arrives.",
 
-      "Landing Pages and Simple Business Websites: ₦150,000 and up. A landing page or a simple 4-6 page business website — home, about, services, contact — typically starts around ₦150,000 with a professional agency. At this tier you should expect custom design (not a stock template), mobile-responsive layout, basic on-page SEO structure, and a working contact form. This is the right entry point for a new business or a service provider that primarily needs credibility and a way for customers to find and contact them online.",
+      "That spread is wide because 'website' describes very different things. Ask five different web design companies for a quote and you'll likely get five very different numbers for what sounds, on paper, like the same project. Here's what's actually driving the price at each tier.",
 
-      "Full Business Websites with Multiple Pages: ₦300,000 to ₦600,000. Businesses that need more — a full services breakdown, a blog, a portfolio or gallery, staff pages, and deeper SEO content — typically fall in this range. The added cost reflects more design time, more content pages to structure and optimise for search, and often more custom functionality like booking forms, downloadable resources, or integrations with tools the business already uses.",
+      "Landing Pages: from ₦100,000. A single-page site built to do one job — launch a product, support an ad campaign, or give a service a dedicated page — typically takes around 2 days to build. At this tier you should still expect custom design (not a stock template), a mobile-responsive layout, basic on-page SEO structure, and a working contact form.",
 
-      "E-Commerce Websites: ₦500,000 to ₦1,000,000+. Online stores cost significantly more than informational websites because of what has to work correctly behind the scenes: secure payment gateway integration (such as Paystack), inventory and stock management, order tracking, product search and filtering, and a checkout flow that doesn't lose customers halfway through a purchase. The final price depends heavily on the number of products, whether custom features are needed (subscriptions, variable pricing, delivery zone calculators), and how much ongoing support the store will need after launch.",
+      "Business Websites: from ₦400,000. A multi-page site — home, about, services, a full breakdown of what you offer, and a contact page, often with a blog or gallery — typically takes about 3 weeks to build. The added cost reflects more design time, more pages to structure and optimise for search, and often custom functionality like booking forms or integrations with tools the business already uses.",
 
-      "Why Cheap Web Design Often Costs More in the Long Run. A ₦30,000–₦50,000 website almost always means one of a few things: an unlicensed template with no customisation, no attention to mobile responsiveness or SEO, and — critically — no ownership. Many ultra-cheap 'designers' build the site on an account they control, so if they disappear (which happens often in this price range), the business loses the website entirely and has to start over. What looks like savings upfront frequently becomes a second full payment eighteen months later, to a different provider, to fix or rebuild what should have been done properly the first time.",
+      "E-Commerce Stores: from ₦600,000. Online stores cost more than informational websites because of what has to work correctly behind the scenes: secure payment gateway integration (such as Paystack or Flutterwave), inventory and stock management, order tracking, product search and filtering, and a checkout flow that doesn't lose customers halfway through a purchase. A typical e-commerce build also takes about 3 weeks, though the final price depends on the number of products and whether custom features like subscriptions or delivery-zone pricing are needed.",
 
-      "Hidden Costs to Ask About Before You Sign. Beyond the headline build price, ask specifically about these recurring or one-off costs: domain registration and renewal (usually billed yearly), website hosting (monthly or yearly), an SSL certificate for security (this should be included, not extra), and the cost of future content changes — do you get a set number of free edits, or is every change billed hourly? Getting these answers in writing before you pay a deposit avoids unpleasant surprises three months after launch.",
+      "Custom Web Applications: from ₦1,200,000 upwards. Booking systems, customer portals, marketplaces and other platforms that go beyond a standard website require real software engineering — custom backend logic, user accounts, and often integrations with other systems. These builds take longer than a standard website and are scoped individually based on what the platform needs to do.",
 
-      "What You Actually Get at Different Price Points. At the lower end (₦150,000–₦300,000), expect a clean, functional, mobile-friendly site built around a small number of pages — ideal for establishing credibility. In the mid-range (₦300,000–₦600,000), expect more custom design work, more pages, stronger SEO foundations, and often a blog or content section that helps the site rank over time. At the top end (₦600,000–₦1,000,000+), expect full e-commerce capability, custom functionality specific to the business, and typically a more involved design and strategy process before development even begins.",
+      "Two quotes for 'a website' can differ by hundreds of thousands of naira and both be honest. Page count, whether the design is custom or templated, the functionality required, who supplies the content, and whether proper SEO foundations are built in from day one — all of these move the number, often more than the business type itself.",
 
-      "DIY Website Builders vs. Professional Web Design. Platforms like Wix or Squarespace can look tempting at ₦10,000–₦20,000 a year, and for a very early-stage side project, that may be enough. But for a business that depends on its website to generate enquiries or sales, the trade-offs are real: generic templates that look like thousands of other sites, limited SEO control, slower load times, and no one to call when something breaks. The cost difference between a DIY builder and a professional website often pays for itself the first time a customer chooses a competitor because your site loaded slowly or looked unfinished on their phone.",
+      "The Ongoing Costs Nobody Quotes You. The build is one-time. Running the site is not. Budget for these every year: a domain name, which runs around $5/year whether you choose a `.com` or a `.com.ng`; hosting, which typically runs around ₦54,000 or $34 a year depending on the vendor and type of hosting (watch for dollar-denominated hosting — when the naira moves, your renewal moves with it); and an SSL certificate, which should be included free, not billed separately. If you're selling online, Paystack and Flutterwave also charge a percentage per transaction — rates vary by provider, so confirm the current rate before launch.",
 
-      "How Slatech Solutions Prices Website Projects. Slatech Solutions builds websites starting from ₦150,000, with full business and e-commerce websites ranging up to ₦1,000,000+ depending on the number of pages, custom features, and complexity involved. Every quote is broken down clearly before any deposit is paid, and every website we build — the domain, hosting, and code — belongs entirely to the client. SEO-optimised structure and mobile-first design are included as standard at every price point, not sold as an upgrade. We also offer flexible payment plans for businesses that prefer to spread the cost across the build timeline rather than paying the full amount upfront.",
+      "Maintenance is a separate, ongoing cost worth budgeting for too — regular updates, security monitoring, backups and small content changes. Skipping it is one of the most common reasons business sites quietly break or get compromised.",
 
-      "The right question isn't 'what's the cheapest website I can get' — it's 'what does my business actually need to convert visitors into customers, and what does that honestly cost.' A landing page is enough for some businesses; a full e-commerce platform is necessary for others. Get quotes broken down by exactly what's included, ask about hidden recurring costs upfront, and be skeptical of any price that seems too good to be true — in Nigerian web design, it usually is. If you want an honest, itemised quote for your specific project, Slatech Solutions offers a free consultation with no obligation to proceed.",
+      "Why ₦30,000 Websites Exist — and What You're Actually Buying. You'll see ₦30,000–₦50,000 offers on Instagram and WhatsApp. They're real, and for some people they're the right choice. At that price the work is usually a free template with your logo dropped in, hosted on an account the designer controls — meaning you typically don't own the hosting or the domain. There's no SEO structure, no speed optimisation, and often no way to reach the person who built it six months later. For a business testing an idea this weekend, that might be fine. For a business that needs to be found on Google and trusted by paying customers, it usually means a rebuild within a year, and paying twice. Cheap and affordable aren't the same thing: affordable means the price matches what you get and the site earns its cost back; cheap means the price is low and the bill arrives later.",
+
+      "How Slatech Solutions Prices Website Projects. Slatech Solutions has built over 500 websites for Nigerian businesses, with landing pages from ₦100,000, business websites from ₦400,000, e-commerce stores from ₦600,000, and custom web applications from ₦1,200,000 upwards. Every quote is broken down clearly before any deposit is paid, and every website we build — the domain, hosting, and code — belongs entirely to the client. We also offer instalment plans: pay a 50% deposit upfront and the balance within 2 months of the project starting, rather than paying the full amount at once.",
+
+      "The right question isn't 'what's the cheapest website I can get' — it's 'what does my business actually need to convert visitors into customers, and what does that honestly cost.' Get quotes broken down by exactly what's included, ask about ongoing costs upfront, and confirm you'll own the domain and hosting outright. If you want an honest, itemised quote for your specific project, Slatech Solutions offers a free consultation and sends a fixed quote within 24 hours, with no obligation to proceed.",
+    ],
+    faqs: [
+      {
+        q: "How much does it cost to build a website in Nigeria in 2026?",
+        a: "Between ₦100,000 and ₦1,200,000+, depending on the type of site and what it needs to do. A landing page starts at ₦100,000, business websites from ₦400,000, e-commerce stores from ₦600,000, and custom web applications from ₦1,200,000 upwards.",
+      },
+      {
+        q: "How much is website design in Lagos specifically?",
+        a: "Lagos pricing matches national pricing. What differs is the range of providers, from low-cost freelancers to agencies quoting seven figures. The gap reflects scope and ownership, not location.",
+      },
+      {
+        q: "How much does website hosting cost in Nigeria per year?",
+        a: "Around ₦54,000 or $34 a year, depending on the hosting vendor and the type of hosting plan. A domain name costs roughly $5/year whether you choose a .com or a .com.ng.",
+      },
+      {
+        q: "How long does it take to build a website?",
+        a: "A landing page typically takes about 2 days. Business websites and e-commerce stores usually take around 3 weeks. Custom web applications take longer and are scoped individually.",
+      },
+      {
+        q: "Can I pay in instalments?",
+        a: "Yes. Slatech Solutions offers a 50% deposit upfront with the remaining balance due within 2 months of the project starting.",
+      },
+      {
+        q: "What's included in the price?",
+        a: "Custom design, a mobile-responsive layout, SEO-ready structure, a free SSL certificate, and cross-browser testing. Hosting, maintenance and ongoing SEO are quoted separately so you can see exactly what you're paying for.",
+      },
     ],
   },
   "web-design-in-lagos-what-professional-design-actually-involves": {
@@ -430,9 +469,9 @@ const posts: Record<string, {
 
       "What a Professional Website Includes by Default. Beyond how it looks, a properly built website should include clean, SEO-friendly URL structures; fast loading speeds (slow websites lose visitors and rank worse on Google); an SSL certificate so the site loads securely with the padlock icon in the browser; and cross-browser compatibility, meaning it works correctly whether a visitor uses Chrome, Safari, or any other browser. None of this should be an expensive add-on — it should be the baseline for any professional web design service.",
 
-      "Timelines: What to Realistically Expect. Most professional business websites in Lagos — a home page, about page, services, and contact — take one to three weeks from the discovery call to launch, depending on how quickly the business provides content, logo, and feedback during the review stage. Larger websites with e-commerce functionality, extensive content, or custom features typically take three to six weeks. Be cautious of anyone promising a fully custom, professional website in 48 hours — either it's a barely-modified template, or important steps like discovery and revisions are being skipped entirely.",
+      "Timelines: What to Realistically Expect. A single landing page can be built in as little as two days once the brief and content are confirmed. Most business websites in Lagos — a home page, about page, services, and contact — take around three weeks from the discovery call to launch, depending on how quickly the business provides content, logo, and feedback during the review stage. E-commerce stores typically fall in the same three-week range, while larger custom web applications take longer and are scoped individually.",
 
-      "Cost Depends on Scope, Not Guesswork. Pricing for professional web design in Lagos genuinely varies based on the number of pages, whether e-commerce functionality is needed, and how much custom design and development work is involved — not on arbitrary factors. We've broken down realistic Nigerian web design pricing by project type in a separate, detailed pricing guide, but as a starting point: simple business websites typically start from ₦150,000, with full e-commerce platforms ranging up to ₦1,000,000 or more depending on complexity.",
+      "Cost Depends on Scope, Not Guesswork. Pricing for professional web design in Lagos genuinely varies based on the number of pages, whether e-commerce functionality is needed, and how much custom design and development work is involved — not on arbitrary factors. We've broken down realistic Nigerian web design pricing by project type in a separate, detailed pricing guide, but as a starting point: landing pages start from ₦100,000, business websites from ₦400,000, e-commerce stores from ₦600,000, and custom web applications from ₦1,200,000 upwards.",
 
       "How Slatech Solutions Approaches Web Design in Lagos. Based in Ikeja, Lagos, Slatech Solutions has designed websites for businesses across real estate, healthcare, education, e-commerce, legal services, and more — each one designed around what that specific business needed its website to achieve, not a recycled template. Every website is mobile-first and SEO-optimised by default, built on a platform the client fully owns, with a clear discovery-to-launch process and a realistic timeline agreed before work begins.",
 
@@ -462,7 +501,7 @@ const posts: Record<string, {
 
       "Beyond Paystack: Other Considerations for Nigerian E-Commerce. While Paystack handles the payment layer, a complete online store also needs product pages that load quickly and clearly show price, availability, and delivery information; a checkout flow with as few steps as possible, since every extra step loses customers; and a clear return or refund policy displayed before purchase, which builds the trust needed to convert a first-time visitor into a paying customer. Payment integration solves the 'can they pay' problem — the rest of the store still needs to solve 'do they trust you enough to pay.'",
 
-      "How Slatech Solutions Handles E-Commerce Payment Integration. When Slatech Solutions builds an e-commerce website, Paystack integration is built directly into the checkout flow as standard — not sold as a separate technical add-on. Every online store we build includes secure payment processing, automatic order tracking, and inventory management, so business owners can focus on running their business rather than manually reconciling payments. Full e-commerce websites with integrated payments typically range from ₦500,000 to ₦1,000,000+ depending on the number of products and any custom functionality required.",
+      "How Slatech Solutions Handles E-Commerce Payment Integration. When Slatech Solutions builds an e-commerce website, Paystack integration is built directly into the checkout flow as standard — not sold as a separate technical add-on. Every online store we build includes secure payment processing, automatic order tracking, and inventory management, so business owners can focus on running their business rather than manually reconciling payments. Full e-commerce websites with integrated payments start from ₦600,000, depending on the number of products and any custom functionality required.",
 
       "If you're launching an online store in Nigeria, don't treat payment integration as a checkbox to tick at the end of the build — it's the part of the site that directly determines whether a browsing customer actually becomes a paying one. Ask any web design company specifically how they handle Paystack integration, order tracking, and payment security before you commit. Slatech Solutions offers a free consultation to walk through exactly what a properly integrated online store looks like for your business.",
     ],
@@ -706,10 +745,50 @@ export default async function BlogPostPage({ params }: PageProps) {
                 key={i}
                 className="text-muted-foreground leading-relaxed mb-6"
               >
-                {paragraph}
+                {typeof paragraph === "string" ? paragraph : (
+                  <>
+                    {paragraph.pre}
+                    <Link href={paragraph.linkHref} className="text-primary font-semibold hover:underline">
+                      {paragraph.linkText}
+                    </Link>
+                    {paragraph.post}
+                  </>
+                )}
               </p>
             ))}
           </div>
+
+          {/* FAQ — only rendered for posts with a faqs array; schema mirrors the visible Q&A */}
+          {post.faqs && (
+            <div className="border-t border-border mt-4 pt-8">
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    mainEntity: post.faqs.map((f) => ({
+                      "@type": "Question",
+                      name: f.q,
+                      acceptedAnswer: { "@type": "Answer", text: f.a },
+                    })),
+                  }),
+                }}
+              />
+              <h2 className="text-xl font-bold text-foreground mb-4">Frequently Asked Questions</h2>
+              <div className="space-y-3">
+                {post.faqs.map((f) => (
+                  <details key={f.q} className="group bg-accent rounded-xl p-5">
+                    <summary className="cursor-pointer font-semibold text-foreground list-none flex items-center justify-between gap-4">
+                      {f.q}
+                      <span className="text-primary shrink-0 transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+                    </summary>
+                    <p className="text-sm text-muted-foreground leading-relaxed mt-3">{f.a}</p>
+                  </details>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Related Services — real internal links to the services page's anchor sections */}
           <div className="border-t border-border mt-12 pt-8">

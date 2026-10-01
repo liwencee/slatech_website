@@ -5,7 +5,7 @@ import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 export const metadata: Metadata = {
   title: "Web Design & SEO Blog Nigeria",
   description:
-    "Web design for Lagos businesses from ₦150,000. Most sites live in 1–3 weeks. Rated 4.9 on Google. Get a free quote today.",
+    "Web design for Lagos businesses from ₦100,000. Landing pages in 2 days, most sites in 3 weeks. Rated 4.9 on Google. Get a free quote today.",
   keywords: [
     "web design Nigeria",
     "SEO tips Nigeria",

@@ -452,7 +452,10 @@ export default function ServicesPage() {
           </h2>
           <p className="text-gray-300 mb-8">
             Contact us for a free consultation and we&apos;ll recommend the best
-            solution for your business.
+            solution for your business. Curious what it costs?{" "}
+            <Link href="/blog/how-much-does-web-design-cost-in-nigeria" className="text-primary font-semibold hover:underline">
+              See detailed pricing
+            </Link>.
           </p>
           <Link
             href="/contact"

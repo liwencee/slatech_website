@@ -23,11 +23,13 @@ const faqs = [
   },
   {
     q: "How much does a website cost in Lagos, Nigeria?",
-    a: "Website design with Slatech Solutions starts from ₦150,000 for a landing page, with full business and e-commerce websites ranging up to ₦1M+ depending on complexity, features, and number of pages. We offer flexible packages for startups, SMEs, and large corporations — contact us for a free, no-obligation quote tailored to your project.",
+    a: "Website design with Slatech Solutions starts from ₦100,000 for a landing page. Business websites start from ₦400,000, e-commerce stores from ₦600,000, and custom web applications from ₦1,200,000 upwards. We offer flexible packages for startups, SMEs, and large corporations — contact us for a free, no-obligation quote tailored to your project.",
+    linkText: "See the full 2026 price breakdown",
+    linkHref: "/blog/how-much-does-web-design-cost-in-nigeria",
   },
   {
     q: "How long does it take to build a website?",
-    a: "Most business websites are completed within 1–3 weeks, while larger e-commerce or custom web applications can take 3–6 weeks. We agree on a clear timeline with you before starting, and keep you updated with progress reviews throughout the build.",
+    a: "Landing pages are typically ready within 2 days. Business websites and e-commerce stores usually take about 3 weeks, while larger custom web applications can take longer depending on complexity. We agree on a clear timeline with you before starting, and keep you updated with progress reviews throughout the build.",
   },
   {
     q: "What does your website design service include?",
@@ -122,7 +124,18 @@ export function FAQSection() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
                   </svg>
                 </summary>
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{item.a}</p>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                  {item.a}
+                  {item.linkText && item.linkHref && (
+                    <>
+                      {" "}
+                      <a href={item.linkHref} className="text-primary font-semibold hover:underline">
+                        {item.linkText}
+                      </a>
+                      .
+                    </>
+                  )}
+                </p>
               </details>
             </AnimateOnScroll>
           ))}
