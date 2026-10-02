@@ -30,7 +30,7 @@ const ROWS = [
 export function HeroWorkWall() {
   return (
     <div aria-hidden="true" className="lg:hidden absolute inset-0 overflow-hidden">
-      <div className="absolute -inset-[30%] flex flex-col justify-center gap-4 -rotate-12">
+      <div className="absolute -inset-[30%] flex flex-col justify-center gap-4 -rotate-12 opacity-50">
         {ROWS.map((row, r) => (
           <div
             key={r}
@@ -56,7 +56,7 @@ export function HeroWorkWall() {
         ))}
       </div>
       {/* Brand overlay keeps the text readable */}
-      <div className="absolute inset-0 bg-gradient-to-b from-secondary/85 via-secondary/80 to-secondary/95" />
+      <div className="absolute inset-0 bg-gradient-to-b from-secondary/85 via-secondary/85 to-secondary/95" />
     </div>
   );
 }
