@@ -166,13 +166,9 @@ html {
 .delay-500 { -webkit-animation-delay: 500ms; animation-delay: 500ms; }
 
 /* ------------------------------------------------------------------ */
-/*  Hero animated gradient background                                  */
+/*  Hero gradient background (static: animating background-position   */
+/*  repaints the whole hero every frame)                               */
 /* ------------------------------------------------------------------ */
-
-@keyframes hero-gradient {
-  0%, 100% { background-position: 0% 50%;   }
-  50%       { background-position: 100% 50%; }
-}
 
 .hero-gradient-bg {
   background: -webkit-linear-gradient(
@@ -192,8 +188,7 @@ html {
     var(--secondary-dark) 100%
   );
   background-size: 400% 400%;
-  -webkit-animation: hero-gradient 12s ease infinite;
-  animation: hero-gradient 12s ease infinite;
+  background-position: 0% 50%;
 }
 
 /* Hero dot pattern overlay */
@@ -212,20 +207,21 @@ html {
   66%       { -webkit-transform: translate(-15px, 15px) scale(0.95); transform: translate(-15px, 15px) scale(0.95); }
 }
 
-@keyframes hero-blob-drift-2 {
-  0%, 100% { -webkit-transform: translate(0, 0) scale(1);           transform: translate(0, 0) scale(1); }
-  33%       { -webkit-transform: translate(-25px, 20px) scale(0.95); transform: translate(-25px, 20px) scale(0.95); }
-  66%       { -webkit-transform: translate(20px, -10px) scale(1.05); transform: translate(20px, -10px) scale(1.05); }
+/* Slow drift on tablet/desktop only; a large blurred layer animating on a
+   budget phone GPU isn't worth the cost. */
+@media (min-width: 640px) {
+  .hero-blob-1 { -webkit-animation: hero-blob-drift-1 12s ease-in-out infinite; animation: hero-blob-drift-1 12s ease-in-out infinite; }
 }
 
-@keyframes hero-blob-drift-3 {
-  0%, 100% { -webkit-transform: translate(-50%, -50%) scale(1);    transform: translate(-50%, -50%) scale(1);    opacity: 0.5; }
-  50%       { -webkit-transform: translate(-50%, -50%) scale(1.15); transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
+/* Scroll hint: soft fade-and-drift instead of a bounce. Animates `transform`
+   so it composes with the Tailwind `translate` used for centering. */
+@keyframes hero-scroll-hint {
+  0%   { opacity: 0; transform: translateY(-4px); }
+  40%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(8px); }
 }
 
-.hero-blob-1 { -webkit-animation: hero-blob-drift-1 8s ease-in-out infinite;  animation: hero-blob-drift-1 8s ease-in-out infinite; }
-.hero-blob-2 { -webkit-animation: hero-blob-drift-2 10s ease-in-out infinite; animation: hero-blob-drift-2 10s ease-in-out infinite; }
-.hero-blob-3 { -webkit-animation: hero-blob-drift-3 6s ease-in-out infinite;  animation: hero-blob-drift-3 6s ease-in-out infinite; }
+.hero-scroll-hint { animation: hero-scroll-hint 2.4s ease-in-out infinite; }
 
 /* ------------------------------------------------------------------ */
 /*  Hero floating elements                                             */
