@@ -34,6 +34,8 @@ TONE & STYLE:
 
 type AnthropicMessage = { role: "user" | "assistant"; content: string };
 
+const MAX_MESSAGE_CHARS = 2_000;
+
 export async function GET() {
   return NextResponse.json({ status: "chat route is live" });
 }
@@ -60,10 +62,17 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Invalid messages" }, { status: 400 });
     }
 
-    // Keep last 10 messages for context (saves tokens)
+    // Keep last 10 messages for context (saves tokens). Each message is capped
+    // because input tokens are billed: an uncapped body lets one request cost
+    // as much as thousands of normal ones.
     const recentMessages: AnthropicMessage[] = (messages as AnthropicMessage[])
       .slice(-10)
-      .map((m) => ({ role: m.role, content: String(m.content) }));
+      .filter((m) => m && (m.role === "user" || m.role === "assistant"))
+      .map((m) => ({ role: m.role, content: String(m.content ?? "").slice(0, MAX_MESSAGE_CHARS) }));
+
+    if (recentMessages.length === 0) {
+      return NextResponse.json({ error: "Invalid messages" }, { status: 400 });
+    }
 
     const response = await fetch("https://api.anthropic.com/v1/messages", {
       method:  "POST",
