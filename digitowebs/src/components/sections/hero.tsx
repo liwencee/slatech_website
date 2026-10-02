@@ -1,11 +1,15 @@
 import Link from "next/link";
 import { RotatingWord } from "@/components/ui/rotating-word";
+import { HeroWorkWall } from "@/components/sections/hero-work-wall";
 
 export function HeroSection() {
   return (
     <section className="relative bg-secondary overflow-hidden min-h-screen sm:min-h-[92vh] flex items-center">
-      {/* Animated gradient background */}
+      {/* Gradient background */}
       <div className="absolute inset-0 hero-gradient-bg" />
+
+      {/* Phones/tablets: drifting wall of real project screenshots */}
+      <HeroWorkWall />
 
       {/* Dot pattern overlay */}
       <div className="absolute inset-0 hero-dot-pattern opacity-[0.07]" />

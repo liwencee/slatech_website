@@ -318,3 +318,9 @@ details[open] > :not(summary) {
   from { opacity: 0; translate: 0 -6px; }
   to   { opacity: 1; translate: 0 0; }
 }
+
+/* ------------------------------------------------------------------ */
+/*  Hero work wall (phones/tablets) — slow drift, reuses marquee       */
+/* ------------------------------------------------------------------ */
+.hero-wall-row         { animation: marquee 90s linear infinite; }
+.hero-wall-row-reverse { animation: marquee 90s linear infinite reverse; }
