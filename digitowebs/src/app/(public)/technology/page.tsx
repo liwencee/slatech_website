@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
+import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 
 export const metadata: Metadata = {
   title: "Technology & Engineering Stack",
@@ -220,11 +221,13 @@ export default function TechnologyPage() {
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {principles.map((p) => (
-              <div key={p.title} className="bg-accent rounded-2xl p-6 text-center">
-                <h3 className="font-bold text-foreground mb-2">{p.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{p.description}</p>
-              </div>
+            {principles.map((p, i) => (
+              <AnimateOnScroll key={p.title} delay={i * 80} className="h-full">
+                <div className="h-full bg-accent rounded-2xl p-6 text-center">
+                  <h3 className="font-bold text-foreground mb-2">{p.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{p.description}</p>
+                </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>

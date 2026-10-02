@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
+import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 
 export const metadata: Metadata = {
   title: "Enterprise Software & Digital Solutions",
@@ -129,11 +130,13 @@ export default function EnterprisePage() {
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {enterpriseSolutions.map((item) => (
-              <div key={item.title} className="bg-white rounded-2xl p-6 border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <h3 className="font-bold text-foreground mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
-              </div>
+            {enterpriseSolutions.map((item, i) => (
+              <AnimateOnScroll key={item.title} delay={i * 60} className="h-full">
+                <div className="h-full bg-white rounded-2xl p-6 border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                  <h3 className="font-bold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>
@@ -176,12 +179,14 @@ export default function EnterprisePage() {
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {process.map((step) => (
-              <div key={step.n} className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                <span className="text-primary font-bold text-sm">{step.n} —</span>
-                <h3 className="font-bold text-white mt-1 mb-2">{step.title}</h3>
-                <p className="text-sm text-gray-300 leading-relaxed">{step.description}</p>
-              </div>
+            {process.map((step, i) => (
+              <AnimateOnScroll key={step.n} delay={i * 60} className="h-full">
+                <div className="h-full bg-white/5 border border-white/10 rounded-2xl p-6">
+                  <span className="text-primary font-bold text-sm">{step.n} —</span>
+                  <h3 className="font-bold text-white mt-1 mb-2">{step.title}</h3>
+                  <p className="text-sm text-gray-300 leading-relaxed">{step.description}</p>
+                </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>

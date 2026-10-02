@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
+import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 
 export const metadata: Metadata = {
   title: "Software Development Company in Lagos, Nigeria",
@@ -56,11 +57,13 @@ export default function SoftwareDevelopmentCompanyLagosPage() {
             What We Build
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {capabilities.map((c) => (
-              <Link key={c.title} href={c.href} className="group bg-accent rounded-2xl p-6 hover:bg-primary/5 border border-transparent hover:border-primary/30 transition-all duration-300 block">
-                <h3 className="font-bold text-foreground mb-2 group-hover:text-primary transition-colors">{c.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{c.description}</p>
-              </Link>
+            {capabilities.map((c, i) => (
+              <AnimateOnScroll key={c.title} delay={i * 80} className="h-full">
+                <Link href={c.href} className="h-full group bg-accent rounded-2xl p-6 hover:bg-primary/5 border border-transparent hover:border-primary/30 transition-all duration-300 block">
+                  <h3 className="font-bold text-foreground mb-2 group-hover:text-primary transition-colors">{c.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{c.description}</p>
+                </Link>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>

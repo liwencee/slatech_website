@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
+import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 
 export const metadata: Metadata = {
   title: "Mobile App Development in Lagos, Nigeria",
@@ -68,12 +69,14 @@ export default function MobileAppDevelopmentLagosPage() {
             Which Platform Fits Your Business?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {decisionFactors.map((d) => (
-              <div key={d.platform} className="bg-accent rounded-2xl p-6">
-                <h3 className="font-bold text-foreground mb-1">{d.platform}</h3>
-                <p className="text-sm font-semibold text-primary mb-3">{d.bestFor}</p>
-                <p className="text-sm text-muted-foreground leading-relaxed">{d.detail}</p>
-              </div>
+            {decisionFactors.map((d, i) => (
+              <AnimateOnScroll key={d.platform} delay={i * 80} className="h-full">
+                <div className="h-full bg-accent rounded-2xl p-6">
+                  <h3 className="font-bold text-foreground mb-1">{d.platform}</h3>
+                  <p className="text-sm font-semibold text-primary mb-3">{d.bestFor}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{d.detail}</p>
+                </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>

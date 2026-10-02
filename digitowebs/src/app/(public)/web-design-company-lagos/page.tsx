@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
+import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 
 export const metadata: Metadata = {
   title: "Web Design Company in Lagos, Nigeria",
@@ -63,13 +64,15 @@ export default function WebDesignCompanyLagosPage() {
             built with Slatech includes as standard:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {checklist.map((item) => (
-              <div key={item} className="flex items-start gap-3 bg-accent rounded-xl px-4 py-3">
-                <svg className="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                <span className="text-sm text-foreground">{item}</span>
-              </div>
+            {checklist.map((item, i) => (
+              <AnimateOnScroll key={item} delay={i * 60} className="h-full">
+                <div className="h-full flex items-start gap-3 bg-accent rounded-xl px-4 py-3">
+                  <svg className="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-sm text-foreground">{item}</span>
+                </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>

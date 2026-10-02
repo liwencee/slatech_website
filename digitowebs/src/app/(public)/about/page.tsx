@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { StatsSection } from "@/components/sections/stats";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
+import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 
 export const metadata: Metadata = {
   title: { absolute: "About Slatech Solutions — Digital Product & Software Company" },
@@ -195,11 +196,13 @@ export default function AboutPage() {
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {approach.map((item) => (
-              <div key={item.title} className="bg-white rounded-2xl p-6 border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <h3 className="font-bold text-foreground mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
-              </div>
+            {approach.map((item, i) => (
+              <AnimateOnScroll key={item.title} delay={i * 80} className="h-full">
+                <div className="h-full bg-white rounded-2xl p-6 border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                  <h3 className="font-bold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>
@@ -223,11 +226,13 @@ export default function AboutPage() {
 
           {/* Department blurbs */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {departments.map((dept) => (
-              <div key={dept.title} className="bg-accent rounded-2xl p-6 text-center">
-                <h3 className="font-bold text-foreground mb-2">{dept.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{dept.description}</p>
-              </div>
+            {departments.map((dept, i) => (
+              <AnimateOnScroll key={dept.title} delay={i * 80} className="h-full">
+                <div className="h-full bg-accent rounded-2xl p-6 text-center">
+                  <h3 className="font-bold text-foreground mb-2">{dept.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{dept.description}</p>
+                </div>
+              </AnimateOnScroll>
             ))}
           </div>
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
+import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 
 export const metadata: Metadata = {
   title: "E-Commerce Development in Lagos, Nigeria",
@@ -57,11 +58,13 @@ export default function EcommerceDevelopmentLagosPage() {
             Built Around the Nigerian Market
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {localFactors.map((f) => (
-              <div key={f.title} className="bg-accent rounded-2xl p-6">
-                <h3 className="font-bold text-foreground mb-2">{f.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{f.description}</p>
-              </div>
+            {localFactors.map((f, i) => (
+              <AnimateOnScroll key={f.title} delay={i * 80} className="h-full">
+                <div className="h-full bg-accent rounded-2xl p-6">
+                  <h3 className="font-bold text-foreground mb-2">{f.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{f.description}</p>
+                </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>

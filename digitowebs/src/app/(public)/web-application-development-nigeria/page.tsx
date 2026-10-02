@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
+import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 
 export const metadata: Metadata = {
   title: "Web Application Development in Nigeria",
@@ -58,11 +59,13 @@ export default function WebApplicationDevelopmentNigeriaPage() {
             What We Build
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {useCases.map((u) => (
-              <div key={u.title} className="bg-accent rounded-2xl p-6">
-                <h3 className="font-bold text-foreground mb-2">{u.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{u.description}</p>
-              </div>
+            {useCases.map((u, i) => (
+              <AnimateOnScroll key={u.title} delay={i * 60} className="h-full">
+                <div className="h-full bg-accent rounded-2xl p-6">
+                  <h3 className="font-bold text-foreground mb-2">{u.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{u.description}</p>
+                </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>

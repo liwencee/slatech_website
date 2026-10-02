@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
+import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 
 export const metadata: Metadata = {
   title: "Custom Software Development in Nigeria",
@@ -57,11 +58,13 @@ export default function CustomSoftwareDevelopmentNigeriaPage() {
             Signs Your Business Needs Custom Software
           </h2>
           <div className="space-y-3">
-            {signs.map((sign) => (
-              <div key={sign} className="flex items-start gap-3 bg-accent rounded-xl px-4 py-3">
-                <span className="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 text-xs font-bold">!</span>
-                <span className="text-sm text-foreground">{sign}</span>
-              </div>
+            {signs.map((sign, i) => (
+              <AnimateOnScroll key={sign} delay={i * 60}>
+                <div className="flex items-start gap-3 bg-accent rounded-xl px-4 py-3">
+                  <span className="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 text-xs font-bold">!</span>
+                  <span className="text-sm text-foreground">{sign}</span>
+                </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>

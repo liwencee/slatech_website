@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
+import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 
 export const metadata: Metadata = {
   title: "Web Design & Software Services Lagos",
@@ -342,77 +343,79 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16">
             {services.map((service, index) => (
-              <div key={service.id} className="relative">
-                {/* Anchor-compatibility shim: existing blog posts and nav links
-                    point at #management for what is now merged into #hosting. */}
-                {service.aliasId && (
-                  <span id={service.aliasId} className="absolute -top-24" aria-hidden="true" />
-                )}
-                <div
-                  id={service.id}
-                  className={`grid lg:grid-cols-2 gap-12 items-center scroll-mt-24 ${
-                    index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                  }`}
-                >
-                  <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                    <span className="text-primary font-bold text-sm tracking-wider">
-                      {service.number} —
-                    </span>
-                    <h2 className="text-3xl font-bold text-foreground mt-1 mb-2">
-                      {service.title}
-                    </h2>
-                    <p className="text-lg font-semibold text-secondary mb-4">
-                      {service.tagline}
-                    </p>
-                    <p className="text-muted-foreground leading-relaxed mb-6">
-                      {service.description}
-                    </p>
-                    {service.groups.map((group) => (
-                      <div key={group.label} className="mb-6">
-                        <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-3">
-                          {group.label}
-                        </p>
-                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                          {group.items.map((item) => (
-                            <li
-                              key={item}
-                              className="flex items-center gap-2 text-sm text-foreground"
-                            >
-                              <svg className="w-5 h-5 text-primary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                              </svg>
-                              {item}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                    <Link
-                      href="/contact"
-                      className="inline-flex items-center px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-colors"
-                    >
-                      {service.cta}
-                    </Link>
-                  </div>
+              <AnimateOnScroll key={service.id}>
+                <div className="relative">
+                  {/* Anchor-compatibility shim: existing blog posts and nav links
+                      point at #management for what is now merged into #hosting. */}
+                  {service.aliasId && (
+                    <span id={service.aliasId} className="absolute -top-24" aria-hidden="true" />
+                  )}
                   <div
-                    className={`aspect-[4/3] rounded-2xl relative overflow-hidden shadow-xl ${
-                      index % 2 === 1 ? "lg:order-1" : ""
+                    id={service.id}
+                    className={`grid lg:grid-cols-2 gap-12 items-center scroll-mt-24 ${
+                      index % 2 === 1 ? "lg:flex-row-reverse" : ""
                     }`}
                   >
-                    <Image
-                      src={service.image}
-                      alt={service.imageAlt}
-                      fill
-                      className="object-cover object-center transition-transform duration-700 hover:scale-105"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                    <div className="absolute bottom-4 right-4 w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg">
-                      <span className="text-white font-bold text-sm">{service.number}</span>
+                    <div className={index % 2 === 1 ? "lg:order-2" : ""}>
+                      <span className="text-primary font-bold text-sm tracking-wider">
+                        {service.number} —
+                      </span>
+                      <h2 className="text-3xl font-bold text-foreground mt-1 mb-2">
+                        {service.title}
+                      </h2>
+                      <p className="text-lg font-semibold text-secondary mb-4">
+                        {service.tagline}
+                      </p>
+                      <p className="text-muted-foreground leading-relaxed mb-6">
+                        {service.description}
+                      </p>
+                      {service.groups.map((group) => (
+                        <div key={group.label} className="mb-6">
+                          <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-3">
+                            {group.label}
+                          </p>
+                          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            {group.items.map((item) => (
+                              <li
+                                key={item}
+                                className="flex items-center gap-2 text-sm text-foreground"
+                              >
+                                <svg className="w-5 h-5 text-primary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                </svg>
+                                {item}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                      <Link
+                        href="/contact"
+                        className="inline-flex items-center px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-colors"
+                      >
+                        {service.cta}
+                      </Link>
+                    </div>
+                    <div
+                      className={`aspect-[4/3] rounded-2xl relative overflow-hidden shadow-xl ${
+                        index % 2 === 1 ? "lg:order-1" : ""
+                      }`}
+                    >
+                      <Image
+                        src={service.image}
+                        alt={service.imageAlt}
+                        fill
+                        className="object-cover object-center transition-transform duration-700 hover:scale-105"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                      <div className="absolute bottom-4 right-4 w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg">
+                        <span className="text-white font-bold text-sm">{service.number}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>
