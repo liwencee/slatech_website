@@ -48,9 +48,7 @@ const LIMITS: Record<LimiterType, { max: number; windowMs: number }> = {
 
 /**
  * Derive a client identifier. Prefers the authenticated user id; otherwise
- * falls back to the client IP taken from the proxy headers Hostinger/LiteSpeed
- * sets. Only the FIRST entry of x-forwarded-for is used — the rest of the
- * chain is attacker-appendable and must never be trusted.
+ * falls back to the client IP from getClientIp().
  */
 export function getClientIdentifier(
   ip: string | null,
@@ -61,12 +59,16 @@ export function getClientIdentifier(
 }
 
 export function getClientIp(headers: Headers): string | null {
+  // Hostinger's CDN and proxies each APPEND the real client IP to
+  // x-forwarded-for and keep whatever the client sent in front of it, so the
+  // last entry is the trustworthy one and the first is attacker-controlled.
+  // x-real-ip is overwritten by the proxy, so it is a safe fallback.
   const forwarded = headers.get("x-forwarded-for");
   if (forwarded) {
-    const first = forwarded.split(",")[0]?.trim();
-    if (first) return first;
+    const last = forwarded.split(",").map((s) => s.trim()).filter(Boolean).pop();
+    if (last) return last;
   }
-  return headers.get("x-real-ip") || headers.get("cf-connecting-ip");
+  return headers.get("x-real-ip");
 }
 
 export async function checkRateLimit(
