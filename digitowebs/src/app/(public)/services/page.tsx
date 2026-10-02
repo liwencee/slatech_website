@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
+import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
 
 export const metadata: Metadata = {
   title: "Web Design & Software Services Lagos",
@@ -20,26 +21,19 @@ export const metadata: Metadata = {
     "wordpress website design lagos",
   ],
   openGraph: {
+    images: OG_IMAGES,
     title: "Web Design & Software Services Lagos",
     description:
       "Professional web design, SEO, branding, social media & graphic design services for Nigerian businesses. Get a free quote from Slatech Solutions today.",
     url: "https://slatech.com.ng/services",
     type: "website",
-    images: [
-      {
-        url: "/SLATECH  SOLUTIONS LOGO.png",
-        width: 1200,
-        height: 630,
-        alt: "Slatech Solutions",
-      },
-    ],
   },
   twitter: {
+    images: TWITTER_IMAGES,
     card: "summary_large_image",
     title: "Web Design & Software Services Lagos",
     description:
       "Professional web design, SEO, branding, social media & graphic design services for Nigerian businesses. Get a free quote from Slatech Solutions today.",
-    images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
   alternates: {
     canonical: "https://slatech.com.ng/services",

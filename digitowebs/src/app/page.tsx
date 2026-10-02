@@ -40,21 +40,12 @@ export const metadata: Metadata = {
       "Web design, e-commerce, custom software and mobile apps for Nigerian businesses, from a Lagos digital product company. Rated 4.9 on Google. Free quote.",
     url: "https://slatech.com.ng",
     type: "website",
-    images: [
-      {
-        url: "/SLATECH  SOLUTIONS LOGO.png",
-        width: 1200,
-        height: 630,
-        alt: "Slatech Solutions - Web Design Lagos",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Web Design Company in Lagos | 168 Five-Star Reviews | Slatech",
     description:
       "Web design, e-commerce, custom software and mobile apps for Nigerian businesses, from a Lagos digital product company. Rated 4.9 on Google. Free quote.",
-    images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
   alternates: {
     canonical: "https://slatech.com.ng",

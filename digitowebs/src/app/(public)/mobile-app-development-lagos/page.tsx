@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
+import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
 
 export const metadata: Metadata = {
   title: "Mobile App Development in Lagos, Nigeria",
@@ -9,17 +10,17 @@ export const metadata: Metadata = {
     "Slatech develops Android, iOS and cross-platform mobile apps for Lagos and Nigerian businesses, and helps you pick the right platform first.",
   keywords: ["mobile app development lagos", "android app development nigeria", "ios app development nigeria", "cross platform app development nigeria"],
   openGraph: {
+    images: OG_IMAGES,
     title: "Mobile App Development in Lagos, Nigeria",
     description: "Android, iOS and cross-platform mobile apps built for Nigerian businesses and their customers.",
     url: "https://slatech.com.ng/mobile-app-development-lagos",
     type: "website",
-    images: [{ url: "/SLATECH  SOLUTIONS LOGO.png", width: 1200, height: 630, alt: "Slatech Solutions" }],
   },
   twitter: {
+    images: TWITTER_IMAGES,
     card: "summary_large_image",
     title: "Mobile App Development in Lagos, Nigeria",
     description: "Android, iOS and cross-platform mobile apps built for Nigerian businesses and their customers.",
-    images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
   alternates: { canonical: "https://slatech.com.ng/mobile-app-development-lagos" },
 };

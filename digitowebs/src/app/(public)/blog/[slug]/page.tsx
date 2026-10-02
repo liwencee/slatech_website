@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
+import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
 
 type ContentParagraph = string | { pre: string; linkText: string; linkHref: string; post?: string };
 
@@ -663,24 +664,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: metaDescription(post.excerpt),
     keywords: categoryKeywords[post.category] ?? [],
     openGraph: {
+      images: OG_IMAGES,
       title: seoTitle,
       description: metaDescription(post.excerpt),
       url: `https://slatech.com.ng/blog/${slug}`,
       type: "article",
-      images: [
-        {
-          url: "/SLATECH  SOLUTIONS LOGO.png",
-          width: 1200,
-          height: 630,
-          alt: post.title,
-        },
-      ],
     },
     twitter: {
+      images: TWITTER_IMAGES,
       card: "summary_large_image",
       title: seoTitle,
       description: metaDescription(post.excerpt),
-      images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
     },
     alternates: {
       canonical: `https://slatech.com.ng/blog/${slug}`,

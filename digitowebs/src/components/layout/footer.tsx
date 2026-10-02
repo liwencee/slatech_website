@@ -20,7 +20,7 @@ const quickLinks = [
   { label: "Portfolio", href: "/portfolio" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
-  { label: "Pricing", href: "/services#pricing" },
+  { label: "Pricing", href: "/blog/how-much-does-web-design-cost-in-nigeria" },
 ];
 
 const legal = [

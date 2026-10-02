@@ -1,32 +1,26 @@
 import type { Metadata } from "next";
 import { ContactSection } from "@/components/sections/contact-preview";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
+import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
 
 export const metadata: Metadata = {
   title: { absolute: "Contact Slatech Solutions — Get a Free Web Design Quote" },
   description:
     "Reach Slatech Solutions in Ikeja, Lagos. Call 08076172456, chat on WhatsApp or fill our form for a free web design, SEO or branding consultation.",
   openGraph: {
+    images: OG_IMAGES,
     title: { absolute: "Contact Slatech Solutions — Get a Free Web Design Quote" },
     description:
       "Reach Slatech Solutions in Ikeja, Lagos. Call 08076172456, chat on WhatsApp or fill our form for a free web design, SEO or branding consultation.",
     url: "https://slatech.com.ng/contact",
     type: "website",
-    images: [
-      {
-        url: "/SLATECH  SOLUTIONS LOGO.png",
-        width: 1200,
-        height: 630,
-        alt: "Slatech Solutions",
-      },
-    ],
   },
   twitter: {
+    images: TWITTER_IMAGES,
     card: "summary_large_image",
     title: { absolute: "Contact Slatech Solutions — Get a Free Web Design Quote" },
     description:
       "Reach Slatech Solutions in Ikeja, Lagos. Call 08076172456, chat on WhatsApp or fill our form for a free web design, SEO or branding consultation.",
-    images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
   alternates: {
     canonical: "https://slatech.com.ng/contact",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
+import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
 
 export const metadata: Metadata = {
   title: "Why Choose Slatech — A Technology Partner",
@@ -12,17 +13,17 @@ export const metadata: Metadata = {
     "digital agency comparison nigeria",
   ],
   openGraph: {
+    images: OG_IMAGES,
     title: "Why Choose Slatech — A Technology Partner",
     description: "What actually sets Slatech Solutions apart as a digital product and software development company in Lagos, Nigeria.",
     url: "https://slatech.com.ng/why-slatech",
     type: "website",
-    images: [{ url: "/SLATECH  SOLUTIONS LOGO.png", width: 1200, height: 630, alt: "Slatech Solutions" }],
   },
   twitter: {
+    images: TWITTER_IMAGES,
     card: "summary_large_image",
     title: "Why Choose Slatech — A Technology Partner",
     description: "What actually sets Slatech Solutions apart as a digital product and software development company in Lagos, Nigeria.",
-    images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
   alternates: { canonical: "https://slatech.com.ng/why-slatech" },
 };

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { StatsSection } from "@/components/sections/stats";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
+import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
 
 export const metadata: Metadata = {
   title: { absolute: "About Slatech Solutions — Digital Product & Software Company" },
@@ -16,21 +17,19 @@ export const metadata: Metadata = {
     "technology partner nigeria",
   ],
   openGraph: {
+    images: OG_IMAGES,
     title: { absolute: "About Slatech Solutions — Digital Product & Software Company" },
     description:
       "Slatech Solutions is a Nigerian digital product and software development company founded in 2020, helping businesses use technology to operate better and grow.",
     url: "https://slatech.com.ng/about",
     type: "website",
-    images: [
-      { url: "/SLATECH  SOLUTIONS LOGO.png", width: 1200, height: 630, alt: "Slatech Solutions" },
-    ],
   },
   twitter: {
+    images: TWITTER_IMAGES,
     card: "summary_large_image",
     title: { absolute: "About Slatech Solutions — Digital Product & Software Company" },
     description:
       "Slatech Solutions is a Nigerian digital product and software development company founded in 2020, helping businesses use technology to operate better and grow.",
-    images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
   alternates: { canonical: "https://slatech.com.ng/about" },
 };

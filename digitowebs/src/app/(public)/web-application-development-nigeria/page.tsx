@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
+import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
 
 export const metadata: Metadata = {
   title: "Web Application Development in Nigeria",
@@ -9,17 +10,17 @@ export const metadata: Metadata = {
     "Slatech builds secure, accessible-anywhere web applications — customer portals, booking systems, dashboards and marketplaces — for Nigerian businesses.",
   keywords: ["web application development nigeria", "web app development lagos", "customer portal development nigeria"],
   openGraph: {
+    images: OG_IMAGES,
     title: "Web Application Development in Nigeria",
     description: "Customer portals, booking systems, dashboards and marketplaces built for Nigerian businesses.",
     url: "https://slatech.com.ng/web-application-development-nigeria",
     type: "website",
-    images: [{ url: "/SLATECH  SOLUTIONS LOGO.png", width: 1200, height: 630, alt: "Slatech Solutions" }],
   },
   twitter: {
+    images: TWITTER_IMAGES,
     card: "summary_large_image",
     title: "Web Application Development in Nigeria",
     description: "Customer portals, booking systems, dashboards and marketplaces built for Nigerian businesses.",
-    images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
   alternates: { canonical: "https://slatech.com.ng/web-application-development-nigeria" },
 };

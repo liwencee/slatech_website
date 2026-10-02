@@ -2,32 +2,26 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { PortfolioGrid } from "@/components/sections/portfolio-grid";
+import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
 
 export const metadata: Metadata = {
   title: { absolute: "Our Portfolio — Web Design Projects by Slatech Solutions" },
   description:
     "Browse real websites, brands and digital projects we have built for Nigerian businesses. See our Lagos web design and software portfolio and get inspired.",
   openGraph: {
+    images: OG_IMAGES,
     title: { absolute: "Our Portfolio — Web Design Projects by Slatech Solutions" },
     description:
       "Browse real websites, brands and digital projects we have built for Nigerian businesses. See our Lagos web design and software portfolio and get inspired.",
     url: "https://slatech.com.ng/portfolio",
     type: "website",
-    images: [
-      {
-        url: "/SLATECH  SOLUTIONS LOGO.png",
-        width: 1200,
-        height: 630,
-        alt: "Slatech Solutions",
-      },
-    ],
   },
   twitter: {
+    images: TWITTER_IMAGES,
     card: "summary_large_image",
     title: { absolute: "Our Portfolio — Web Design Projects by Slatech Solutions" },
     description:
       "Browse real websites, brands and digital projects we have built for Nigerian businesses. See our Lagos web design and software portfolio and get inspired.",
-    images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
   alternates: {
     canonical: "https://slatech.com.ng/portfolio",

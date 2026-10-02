@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
+import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
 
 export const metadata: Metadata = {
   title: "E-Commerce Development in Lagos, Nigeria",
@@ -9,17 +10,17 @@ export const metadata: Metadata = {
     "Slatech builds e-commerce stores for Lagos and Nigerian businesses with Paystack payments, mobile-first checkout and inventory tools for the local market.",
   keywords: ["ecommerce development lagos", "online store development nigeria", "paystack ecommerce website", "ecommerce website lagos"],
   openGraph: {
+    images: OG_IMAGES,
     title: "E-Commerce Development in Lagos, Nigeria",
     description: "Online stores built for the Nigerian market — local payments, mobile-first checkout and inventory tools.",
     url: "https://slatech.com.ng/ecommerce-development-lagos",
     type: "website",
-    images: [{ url: "/SLATECH  SOLUTIONS LOGO.png", width: 1200, height: 630, alt: "Slatech Solutions" }],
   },
   twitter: {
+    images: TWITTER_IMAGES,
     card: "summary_large_image",
     title: "E-Commerce Development in Lagos, Nigeria",
     description: "Online stores built for the Nigerian market — local payments, mobile-first checkout and inventory tools.",
-    images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
   alternates: { canonical: "https://slatech.com.ng/ecommerce-development-lagos" },
 };

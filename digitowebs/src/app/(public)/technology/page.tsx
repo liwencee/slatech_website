@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
+import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
 
 export const metadata: Metadata = {
   title: "Technology & Engineering Stack",
@@ -17,21 +18,19 @@ export const metadata: Metadata = {
     "software engineering lagos",
   ],
   openGraph: {
+    images: OG_IMAGES,
     title: "Technology & Engineering Stack",
     description:
       "The technologies, tools and engineering practices Slatech uses to build reliable, secure and scalable digital products.",
     url: "https://slatech.com.ng/technology",
     type: "website",
-    images: [
-      { url: "/SLATECH  SOLUTIONS LOGO.png", width: 1200, height: 630, alt: "Slatech Solutions" },
-    ],
   },
   twitter: {
+    images: TWITTER_IMAGES,
     card: "summary_large_image",
     title: "Technology & Engineering Stack",
     description:
       "The technologies, tools and engineering practices Slatech uses to build reliable, secure and scalable digital products.",
-    images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
   alternates: { canonical: "https://slatech.com.ng/technology" },
 };

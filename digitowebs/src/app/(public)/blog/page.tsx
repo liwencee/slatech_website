@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
+import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
 
 export const metadata: Metadata = {
   title: "Web Design & SEO Blog Nigeria",
@@ -27,27 +28,20 @@ export const metadata: Metadata = {
     canonical: "https://slatech.com.ng/blog",
   },
   openGraph: {
+    images: OG_IMAGES,
     title: "Web Design & SEO Blog | Slatech Solutions",
     description:
       "Expert tips on web design, SEO, e-commerce, and digital marketing for Nigerian businesses. From the Slatech Solutions team in Lagos.",
     url: "https://slatech.com.ng/blog",
     type: "website",
     siteName: "Slatech Solutions",
-    images: [
-      {
-        url: "/images/og-blog.png",
-        width: 1200,
-        height: 630,
-        alt: "Slatech Solutions Blog — Web Design & SEO Tips for Nigerian Businesses",
-      },
-    ],
   },
   twitter: {
+    images: TWITTER_IMAGES,
     card: "summary_large_image",
     title: "Web Design & SEO Blog | Slatech Solutions",
     description:
       "Expert tips on web design, SEO, e-commerce & digital marketing for Nigerian businesses.",
-    images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
 };
 

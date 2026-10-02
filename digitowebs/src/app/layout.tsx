@@ -86,21 +86,12 @@ export const metadata: Metadata = {
     title: "Slatech Solutions | Client-Centered Web Design Agency Lagos",
     description:
       "Web design, SEO, e-commerce, custom software and digital marketing for businesses in Lagos, Nigeria. Rated 4.9 on Google. Free consultation.",
-    images: [
-      {
-        url: "/SLATECH  SOLUTIONS LOGO.png",
-        width: 1200,
-        height: 630,
-        alt: "Slatech Solutions - Web Design Company in Lagos Nigeria",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Slatech Solutions | Client-Centered Web Design Agency Lagos",
     description:
       "Web design, SEO, e-commerce, custom software and digital marketing for businesses in Lagos, Nigeria. Rated 4.9 on Google. Free consultation.",
-    images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
   alternates: {
     canonical: "https://slatech.com.ng",

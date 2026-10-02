@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
+import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
 
 export const metadata: Metadata = {
   title: "Web Design Company in Lagos, Nigeria",
@@ -9,17 +10,17 @@ export const metadata: Metadata = {
     "Looking for a web design company in Lagos? Slatech builds professional, mobile-first, SEO-optimised websites for Nigerian businesses. Based in Ikeja, Lagos.",
   keywords: ["web design company lagos", "web design company nigeria", "professional web design lagos"],
   openGraph: {
+    images: OG_IMAGES,
     title: "Web Design Company in Lagos, Nigeria",
     description: "Professional, mobile-first, SEO-optimised websites for Nigerian businesses. Based in Ikeja, Lagos.",
     url: "https://slatech.com.ng/web-design-company-lagos",
     type: "website",
-    images: [{ url: "/SLATECH  SOLUTIONS LOGO.png", width: 1200, height: 630, alt: "Slatech Solutions" }],
   },
   twitter: {
+    images: TWITTER_IMAGES,
     card: "summary_large_image",
     title: "Web Design Company in Lagos, Nigeria",
     description: "Professional, mobile-first, SEO-optimised websites for Nigerian businesses. Based in Ikeja, Lagos.",
-    images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
   alternates: { canonical: "https://slatech.com.ng/web-design-company-lagos" },
 };

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
+import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
 
 export const metadata: Metadata = {
   title: "Custom Software Development in Nigeria",
@@ -9,17 +10,17 @@ export const metadata: Metadata = {
     "Running on spreadsheets and WhatsApp groups? Slatech builds custom ERP, CRM, booking and business management software for Nigerian organizations.",
   keywords: ["custom software development nigeria", "erp software nigeria", "crm development nigeria", "business management software nigeria"],
   openGraph: {
+    images: OG_IMAGES,
     title: "Custom Software Development in Nigeria",
     description: "ERP, CRM, booking systems and business management platforms built around your processes.",
     url: "https://slatech.com.ng/custom-software-development-nigeria",
     type: "website",
-    images: [{ url: "/SLATECH  SOLUTIONS LOGO.png", width: 1200, height: 630, alt: "Slatech Solutions" }],
   },
   twitter: {
+    images: TWITTER_IMAGES,
     card: "summary_large_image",
     title: "Custom Software Development in Nigeria",
     description: "ERP, CRM, booking systems and business management platforms built around your processes.",
-    images: ["/side_SLATECH_SOLUTIONS_LOGO.png"],
   },
   alternates: { canonical: "https://slatech.com.ng/custom-software-development-nigeria" },
 };
