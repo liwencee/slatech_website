@@ -2,8 +2,8 @@ import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 
 const faqs = [
   {
-    q: "What is Slatech Solutions?",
-    a: "Slatech Solutions is a digital product and software development company based in Ikeja, Lagos, Nigeria, founded in 2020. It designs and builds websites, e-commerce platforms, custom software, web applications, mobile apps and cloud infrastructure for businesses in Nigeria and internationally.",
+    q: "What is Slatech Solutions Limited?",
+    a: "Slatech Solutions Limited is a digital product and software development company based in Ikeja, Lagos, Nigeria, founded in 2020. It designs and builds websites, e-commerce platforms, custom software, web applications, mobile apps and cloud infrastructure for businesses in Nigeria and internationally.",
   },
   {
     q: "Does Slatech build custom software, not just websites?",
@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: "How much does a website cost in Lagos, Nigeria?",
-    a: "Website design with Slatech Solutions starts from ₦100,000 for a landing page. Business websites start from ₦400,000, e-commerce stores from ₦600,000, and custom web applications from ₦1,200,000 upwards. We offer flexible packages for startups, SMEs, and large corporations — contact us for a free, no-obligation quote tailored to your project.",
+    a: "Website design with Slatech Solutions Limited starts from ₦100,000 for a landing page. Business websites start from ₦400,000, e-commerce stores from ₦600,000, and custom web applications from ₦1,200,000 upwards. We offer flexible packages for startups, SMEs, and large corporations — contact us for a free, no-obligation quote tailored to your project.",
     linkText: "See the full 2026 price breakdown",
     linkHref: "/blog/how-much-does-web-design-cost-in-nigeria",
   },
@@ -64,7 +64,7 @@ const faqs = [
     a: "We've built websites for real estate, healthcare, education, restaurants, e-commerce, professional services, and more — for startups, SMEs, and large corporations and international firms across Nigeria and beyond.",
   },
   {
-    q: "How do I get started with Slatech Solutions?",
+    q: "How do I get started with Slatech Solutions Limited?",
     a: "Simply reach out via our contact form, WhatsApp (08076172456), or call us directly. We'll discuss your business goals, recommend the right services, and provide a free quote — usually within 24 hours.",
   },
 ];
@@ -99,7 +99,7 @@ export function FAQSection() {
               Frequently Asked <span className="text-primary">Questions</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Everything you need to know about working with Slatech Solutions.
+              Everything you need to know about working with Slatech Solutions Limited.
               Can&apos;t find your answer?{" "}
               <a href="/contact" className="text-primary font-medium hover:underline">
                 Reach out to us

@@ -114,6 +114,7 @@ const LOCAL_BUSINESS_SCHEMA = {
   "@type": "ProfessionalService",
   "@id": "https://slatech.com.ng/#organization",
   name: "Slatech Solutions",
+  legalName: "Slatech Solutions Limited",
   alternateName: "Slatech",
   description:
     "Slatech Solutions is a digital product and software development company in Ikeja, Lagos, Nigeria, founded in 2020. It builds websites, e-commerce platforms, custom software, web applications, mobile apps and cloud infrastructure, and also provides SEO, hosting and branding services.",

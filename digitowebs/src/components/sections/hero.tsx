@@ -37,7 +37,7 @@ export function HeroSection() {
             </h1>
 
             <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-7 sm:mb-8 animate-[fade-in-up_0.7s_cubic-bezier(0.22,1,0.36,1)_0.1s_both]">
-              Slatech Solutions is a Lagos-based digital product and software development
+              Slatech Solutions Limited is a Lagos-based digital product and software development
               company helping businesses turn ideas, challenges and opportunities into
               powerful digital experiences — from website design and e-commerce to custom
               software, mobile applications and automation.

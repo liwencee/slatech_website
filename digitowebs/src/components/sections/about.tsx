@@ -90,7 +90,7 @@ export function AboutSection() {
                 <span className="text-primary">Inspire</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Slatech Solutions is a Nigerian digital product and software development
+                Slatech Solutions Limited is a Nigerian digital product and software development
                 company dedicated to transforming ideas into powerful digital experiences.
                 We combine strategy, design, development and technology to deliver
                 websites, e-commerce platforms and custom software that solve real
