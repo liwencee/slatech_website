@@ -20,7 +20,8 @@ export async function GET(
     if (error.code === "PGRST116") {
       return NextResponse.json({ error: "Article not found" }, { status: 404 });
     }
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Articles API error:", error);
+    return NextResponse.json({ error: "Something went wrong. Please try again." }, { status: 500 });
   }
 
   return NextResponse.json(data);
@@ -70,7 +71,8 @@ export async function PUT(
     .single();
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Articles API error:", error);
+    return NextResponse.json({ error: "Something went wrong. Please try again." }, { status: 500 });
   }
 
   // Update tag associations if provided
@@ -106,7 +108,8 @@ export async function DELETE(
   const { error } = await supabase.from("articles").delete().eq("id", id);
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Articles API error:", error);
+    return NextResponse.json({ error: "Something went wrong. Please try again." }, { status: 500 });
   }
 
   return NextResponse.json({ success: true }, { status: 200 });

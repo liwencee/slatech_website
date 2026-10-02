@@ -95,7 +95,7 @@ export async function POST(req: NextRequest) {
       // Surface auth errors clearly in dev
       if (response.status === 401) {
         return NextResponse.json(
-          { reply: "⚠️ API key error (401). Please check your ANTHROPIC_API_KEY in .env.local." },
+          { reply: "Our AI assistant is currently unavailable. Please chat with us on WhatsApp at +2348076172456 for immediate help!" },
           { status: 200 }
         );
       }
@@ -121,9 +121,8 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ reply });
   } catch (err) {
     console.error("AI chat error:", err);
-    const detail = err instanceof Error ? err.message : String(err);
     return NextResponse.json(
-      { reply: `Something went wrong (${detail}). Our team is on WhatsApp (+2348076172456) and ready to help!` },
+      { reply: "Something went wrong on our side. Our team is on WhatsApp (+2348076172456) and ready to help!" },
       { status: 200 }
     );
   }
