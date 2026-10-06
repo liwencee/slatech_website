@@ -7,13 +7,13 @@ import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
 export const metadata: Metadata = {
   title: "Custom Software Development in Nigeria",
   description:
-    "Running on spreadsheets and WhatsApp groups? Slatech builds custom ERP, CRM, booking and business management software for Nigerian organizations.",
+    "Running on spreadsheets and WhatsApp groups? Slatech Solution Limited builds custom ERP, CRM, booking and business management software for Nigerian organizations.",
   keywords: ["custom software development nigeria", "erp software nigeria", "crm development nigeria", "business management software nigeria"],
   openGraph: {
     images: OG_IMAGES,
     title: "Custom Software Development in Nigeria",
     description: "ERP, CRM, booking systems and business management platforms built around your processes.",
-    url: "https://slatech.com.ng/custom-software-development-nigeria",
+    url: "https://Slatech Solution Limited.com.ng/custom-software-development-nigeria",
     type: "website",
   },
   twitter: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "Custom Software Development in Nigeria",
     description: "ERP, CRM, booking systems and business management platforms built around your processes.",
   },
-  alternates: { canonical: "https://slatech.com.ng/custom-software-development-nigeria" },
+  alternates: { canonical: "https://Slatech Solution Limited.com.ng/custom-software-development-nigeria" },
 };
 
 const signs = [
@@ -47,7 +47,7 @@ export default function CustomSoftwareDevelopmentNigeriaPage() {
             When Spreadsheets and WhatsApp <span className="text-primary">Aren&apos;t Enough Anymore</span>
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Slatech designs and develops custom software for Nigerian organizations whose
+            Slatech Solution Limited designs and develops custom software for Nigerian organizations whose
             processes have outgrown generic tools.
           </p>
         </div>

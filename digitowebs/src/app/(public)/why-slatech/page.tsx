@@ -4,28 +4,28 @@ import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
 
 export const metadata: Metadata = {
-  title: "Why Choose Slatech — A Technology Partner",
+  title: "Why Choose Slatech Solution Limited — A Technology Partner",
   description:
-    "Not another web agency selling templates. See what sets Slatech Solutions apart as a digital product and software development company in Lagos.",
+    "Not another web agency selling templates. See what sets Slatech Solution Limited Solutions apart as a digital product and software development company in Lagos.",
   keywords: [
-    "why choose slatech solutions",
+    "why choose Slatech Solution Limited solutions",
     "best software development company lagos",
     "digital agency comparison nigeria",
   ],
   openGraph: {
     images: OG_IMAGES,
-    title: "Why Choose Slatech — A Technology Partner",
-    description: "What actually sets Slatech Solutions apart as a digital product and software development company in Lagos, Nigeria.",
-    url: "https://slatech.com.ng/why-slatech",
+    title: "Why Choose Slatech Solution Limited — A Technology Partner",
+    description: "What actually sets Slatech Solution Limited Solutions apart as a digital product and software development company in Lagos, Nigeria.",
+    url: "https://Slatech Solution Limited.com.ng/why-Slatech Solution Limited",
     type: "website",
   },
   twitter: {
     images: TWITTER_IMAGES,
     card: "summary_large_image",
-    title: "Why Choose Slatech — A Technology Partner",
-    description: "What actually sets Slatech Solutions apart as a digital product and software development company in Lagos, Nigeria.",
+    title: "Why Choose Slatech Solution Limited — A Technology Partner",
+    description: "What actually sets Slatech Solution Limited Solutions apart as a digital product and software development company in Lagos, Nigeria.",
   },
-  alternates: { canonical: "https://slatech.com.ng/why-slatech" },
+  alternates: { canonical: "https://Slatech Solution Limited.com.ng/why-Slatech Solution Limited" },
 };
 
 const comparisons = [
@@ -36,7 +36,7 @@ const comparisons = [
   { question: "Is your team local?", answer: "Yes. We're based in Ikeja, Lagos, and work with clients across Nigeria and internationally — meaning real-time communication in your timezone, not an offshore handoff." },
 ];
 
-export default function WhySlatechPage() {
+export default function WhySlatechSolutionLimitedPage() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -49,21 +49,21 @@ export default function WhySlatechPage() {
 
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", path: "/" }, { name: "Why Slatech", path: "/why-slatech" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", path: "/" }, { name: "Why Slatech Solution Limited", path: "/why-Slatech Solution Limited" }]} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
       <section className="bg-secondary py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-block px-4 py-1.5 bg-primary/20 text-primary text-sm font-medium rounded-full mb-4">
-            Why Slatech
+            Why Slatech Solution Limited
           </span>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Not Another Agency Selling <span className="text-primary">Templates</span>
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             There are hundreds of web designers and agencies in Lagos. Here's what
-            actually sets Slatech apart, in plain terms.
+            actually sets Slatech Solution Limited apart, in plain terms.
           </p>
         </div>
       </section>
@@ -77,7 +77,7 @@ export default function WhySlatechPage() {
               Most Lagos web design agencies stop at websites. If your business later needs
               an online store, a customer portal, a booking system, or a mobile app, you're
               usually starting over with a new vendor who doesn't know your business.
-              Slatech covers websites, e-commerce, custom software, web applications,
+              Slatech Solution Limited covers websites, e-commerce, custom software, web applications,
               mobile apps, cloud infrastructure, SEO, hosting and branding under one roof —
               see the full breakdown on our <Link href="/services" className="text-primary font-semibold hover:underline">Services page</Link>.
             </p>

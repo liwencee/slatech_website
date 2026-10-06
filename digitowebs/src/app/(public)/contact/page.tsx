@@ -4,23 +4,23 @@ import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
 
 export const metadata: Metadata = {
-  title: { absolute: "Contact Slatech Solutions — Get a Free Web Design Quote" },
+  title: { absolute: "Contact Slatech Solution Limited — Get a Free Web Design Quote" },
   description:
-    "Reach Slatech Solutions in Ikeja, Lagos. Call 08076172456, chat on WhatsApp or fill our form for a free web design, SEO or branding consultation.",
+    "Reach Slatech Solution Limited in Ikeja, Lagos. Call 08076172456, chat on WhatsApp or fill our form for a free web design, SEO or branding consultation.",
   openGraph: {
     images: OG_IMAGES,
-    title: { absolute: "Contact Slatech Solutions — Get a Free Web Design Quote" },
+    title: { absolute: "Contact Slatech Solution Limited — Get a Free Web Design Quote" },
     description:
-      "Reach Slatech Solutions in Ikeja, Lagos. Call 08076172456, chat on WhatsApp or fill our form for a free web design, SEO or branding consultation.",
+      "Reach Slatech Solution Limited in Ikeja, Lagos. Call 08076172456, chat on WhatsApp or fill our form for a free web design, SEO or branding consultation.",
     url: "https://slatech.com.ng/contact",
     type: "website",
   },
   twitter: {
     images: TWITTER_IMAGES,
     card: "summary_large_image",
-    title: { absolute: "Contact Slatech Solutions — Get a Free Web Design Quote" },
+    title: { absolute: "Contact Slatech Solution Limited — Get a Free Web Design Quote" },
     description:
-      "Reach Slatech Solutions in Ikeja, Lagos. Call 08076172456, chat on WhatsApp or fill our form for a free web design, SEO or branding consultation.",
+      "Reach Slatech Solution Limited in Ikeja, Lagos. Call 08076172456, chat on WhatsApp or fill our form for a free web design, SEO or branding consultation.",
   },
   alternates: {
     canonical: "https://slatech.com.ng/contact",
@@ -60,7 +60,7 @@ export default function ContactPage() {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Slatech Solutions Office - 2b, Olaide Tomori, Ikeja, Lagos"
+          title="Slatech Solution Limited Office - 2b, Olaide Tomori, Ikeja, Lagos"
           className="absolute inset-0 w-full h-full"
         />
       </section>

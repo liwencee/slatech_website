@@ -50,6 +50,9 @@
     "tailwindcss": "^4",
     "typescript": "^5",
     "vite-tsconfig-paths": "^4.3.0",
-    "vitest": "^2.0.0"
+    "vitest": "3.2.6"
+  },
+  "overrides": {
+    "tinypool": "2.2.0"
   }
 }

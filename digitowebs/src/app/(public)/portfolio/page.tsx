@@ -5,12 +5,12 @@ import { PortfolioGrid } from "@/components/sections/portfolio-grid";
 import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
 
 export const metadata: Metadata = {
-  title: { absolute: "Our Portfolio — Web Design Projects by Slatech Solutions" },
+  title: { absolute: "Our Portfolio — Web Design Projects by Slatech Solution Limited" },
   description:
     "Browse real websites, brands and digital projects we have built for Nigerian businesses. See our Lagos web design and software portfolio and get inspired.",
   openGraph: {
     images: OG_IMAGES,
-    title: { absolute: "Our Portfolio — Web Design Projects by Slatech Solutions" },
+    title: { absolute: "Our Portfolio — Web Design Projects by Slatech Solution Limited" },
     description:
       "Browse real websites, brands and digital projects we have built for Nigerian businesses. See our Lagos web design and software portfolio and get inspired.",
     url: "https://slatech.com.ng/portfolio",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   twitter: {
     images: TWITTER_IMAGES,
     card: "summary_large_image",
-    title: { absolute: "Our Portfolio — Web Design Projects by Slatech Solutions" },
+    title: { absolute: "Our Portfolio — Web Design Projects by Slatech Solution Limited" },
     description:
       "Browse real websites, brands and digital projects we have built for Nigerian businesses. See our Lagos web design and software portfolio and get inspired.",
   },

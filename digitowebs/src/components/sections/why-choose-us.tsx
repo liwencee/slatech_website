@@ -65,7 +65,7 @@ export function WhyChooseUsSection() {
         <AnimateOnScroll animation="fade-up">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <span className="inline-block text-primary text-sm font-semibold uppercase tracking-wider mb-3">
-              Why Businesses Choose Slatech
+              Why Businesses Choose Slatech Solution Limited
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
               Several Things Define Us As a{" "}
