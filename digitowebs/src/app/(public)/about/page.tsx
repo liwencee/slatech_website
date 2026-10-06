@@ -7,29 +7,29 @@ import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
 
 export const metadata: Metadata = {
-  title: { absolute: "About Slatech Solutions — Digital Product & Software Company" },
+  title: { absolute: "About Slatech Solution Limited  — Digital Product & Software Company" },
   description:
-    "Slatech Solutions is a Nigerian digital product and software development company founded in 2020. Meet the team and mission behind our work in Lagos.",
+    "Slatech Solution Limited  is a Nigerian digital product and software development company founded in 2020. Meet the team and mission behind our work in Lagos.",
   keywords: [
     "digital product company nigeria",
     "software development company lagos",
-    "about slatech solutions",
+    "about Slatech Solution Limited ",
     "technology partner nigeria",
   ],
   openGraph: {
     images: OG_IMAGES,
-    title: { absolute: "About Slatech Solutions — Digital Product & Software Company" },
+    title: { absolute: "About Slatech Solution Limited  — Digital Product & Software Company" },
     description:
-      "Slatech Solutions is a Nigerian digital product and software development company founded in 2020, helping businesses use technology to operate better and grow.",
+      "Slatech Solution Limited  is a Nigerian digital product and software development company founded in 2020, helping businesses use technology to operate better and grow.",
     url: "https://slatech.com.ng/about",
     type: "website",
   },
   twitter: {
     images: TWITTER_IMAGES,
     card: "summary_large_image",
-    title: { absolute: "About Slatech Solutions — Digital Product & Software Company" },
+    title: { absolute: "About Slatech Solution Limited  — Digital Product & Software Company" },
     description:
-      "Slatech Solutions is a Nigerian digital product and software development company founded in 2020, helping businesses use technology to operate better and grow.",
+      "Slatech Solution Limited  is a Nigerian digital product and software development company founded in 2020, helping businesses use technology to operate better and grow.",
   },
   alternates: { canonical: "https://slatech.com.ng/about" },
 };
@@ -74,14 +74,14 @@ export default function AboutPage() {
       <section className="bg-secondary py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-block px-4 py-1.5 bg-primary/20 text-primary text-sm font-medium rounded-full mb-4">
-            About Slatech Solutions
+            About Slatech Solution Limited 
           </span>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Building Digital Solutions for Businesses <span className="text-primary">That Want to Grow</span>
           </h1>
           <div className="space-y-4 text-lg text-gray-300 max-w-2xl mx-auto text-left sm:text-center">
             <p>
-              Slatech Solutions is a Nigerian digital product and software development
+              Slatech Solution Limited  is a Nigerian digital product and software development
               company founded in 2020 with a mission to help businesses use technology to
               operate better, reach more customers and grow.
             </p>
@@ -119,7 +119,7 @@ export default function AboutPage() {
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/images/olalekan.jpg"
-                alt="Olalekan Akindiya — Founder & CEO of Slatech Solutions, Lagos Nigeria"
+                alt="Olalekan Akindiya — Founder & CEO of Slatech Solution Limited , Lagos Nigeria"
                 fill
                 className="object-cover object-top"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -127,7 +127,7 @@ export default function AboutPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 via-transparent to-transparent" />
               <div className="absolute bottom-5 left-5">
                 <p className="text-white font-bold text-lg leading-tight">Olalekan Akindiya</p>
-                <p className="text-primary text-sm font-medium">Founder & CEO, Slatech Solutions</p>
+                <p className="text-primary text-sm font-medium">Founder & CEO, Slatech Solution Limited </p>
               </div>
             </div>
           </div>
@@ -246,7 +246,7 @@ export default function AboutPage() {
                   <div className={`absolute inset-0 ${member.color} opacity-20`} />
                   <Image
                     src={member.photo}
-                    alt={`${member.name} — ${member.role} at Slatech Solutions`}
+                    alt={`${member.name} — ${member.role} at Slatech Solution Limited `}
                     fill
                     className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
