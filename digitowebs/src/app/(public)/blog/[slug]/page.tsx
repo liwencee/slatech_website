@@ -99,13 +99,13 @@ const posts: Record<string, {
   /* ------------------------------------------------------------------ */
   "why-nigerian-businesses-need-professional-website": {
     title: "7 Reasons Your Nigerian Business Needs a Professional Website in 2026",
-    excerpt: "Over 70% of Nigerian consumers research businesses online before buying. A professional website isn't optional — it's your most powerful sales tool in Lagos and beyond.",
+    excerpt: "Many Nigerian customers look a business up online before they buy. A professional website isn't optional — it's your most powerful sales tool in Lagos and beyond.",
     category: "Business",
     date: "Apr 10, 2026",
     readTime: "5 min read",
     color: "bg-blue-600",
     content: [
-      "In Nigeria today, more than 70% of consumers research a business online before making a purchase or visiting a physical location. If your business doesn't have a professional website, you're invisible to the majority of your potential customers in Lagos, Ikeja, Abuja, and across the country.",
+      "In Nigeria today, many customers look a business up online before they buy from it or visit. If your business doesn't have a professional website, you're missing those customers in Lagos, Ikeja, Abuja and across the country.",
       "1. Your Competitors Already Have One. In every industry — from real estate and healthcare to fashion and food — your competitors in Lagos are online. A professional website ensures you're not losing customers simply because you can't be found.",
       "2. Credibility and Trust. A well-designed website signals professionalism. Nigerian consumers are increasingly savvy and they judge businesses by their online presence. An outdated or non-existent website makes customers question your legitimacy.",
       "3. Available 24/7. Unlike a physical shop in Ikeja or Victoria Island, your website works around the clock. It answers enquiries, showcases your services, and even processes orders while you sleep.",
@@ -113,7 +113,7 @@ const posts: Record<string, {
       "5. Google My Business Integration. A website amplifies your Google My Business listing. When someone searches for 'web design company in Lagos' or 'best restaurant in Ikeja', businesses with websites rank significantly higher in search results.",
       "6. E-Commerce Opportunities. Nigeria's e-commerce market is growing rapidly. A website with an integrated shop lets you sell products and services online and accept payment via Paystack, Flutterwave, or bank transfer — reaching customers nationwide.",
       "7. Cost-Effective Marketing. Compared to traditional advertising (radio, TV, billboards), a website is the most cost-effective marketing tool available. With SEO, a single page can attract thousands of potential customers every month at virtually zero ongoing cost.",
-      "At Slatech Solutions, we've helped hundreds of Lagos and Nigerian businesses build websites that drive real results. Contact us today for a free consultation and let's grow your business online.",
+      "At Slatech Solutions, we help Lagos and Nigerian businesses build websites designed to bring in customers. Contact us today for a free consultation and let's grow your business online.",
     ],
   },
   "how-to-rank-on-google-nigeria-seo-guide": {
@@ -132,7 +132,7 @@ const posts: Record<string, {
       "Step 5: Optimise Your Website Speed. Nigerian internet speeds can vary. A website that loads in under 3 seconds on mobile networks is critical for SEO and user experience. Compress images, use a CDN, and choose a hosting provider with servers close to Nigeria.",
       "Step 6: Collect Google Reviews. Ask your happy customers to leave Google reviews. Reviews are a major local SEO ranking factor. A business in Lagos with 50+ positive reviews will almost always outrank a competitor with none.",
       "Step 7: Build Local Backlinks. Partner with Nigerian bloggers, news sites, and businesses for mentions and links. A feature on Pulse.ng, TechCabal, or a popular Lagos lifestyle blog carries significant SEO weight.",
-      "Slatech Solutions has helped businesses across Lagos and Nigeria achieve first-page rankings. Our SEO service includes keyword research, on-page optimisation, Google Business Profile management, and monthly reporting. Get in touch for a free SEO audit.",
+      "Slatech Solutions helps businesses across Lagos and Nigeria improve their visibility on Google. Our SEO service includes keyword research, on-page optimisation, Google Business Profile management, and monthly reporting. Get in touch for a free SEO audit.",
     ],
   },
   "ecommerce-in-nigeria-how-to-start-selling-online": {

@@ -193,7 +193,7 @@ const posts = [
     slug: "why-nigerian-businesses-need-professional-website",
     title: "7 Reasons Your Nigerian Business Needs a Professional Website in 2026",
     excerpt:
-      "Over 70% of Nigerian consumers research businesses online before buying. A professional website isn't optional — it's your most powerful sales tool in Lagos and beyond.",
+      "Many Nigerian customers look a business up online before they buy. A professional website isn't optional — it's your most powerful sales tool in Lagos and beyond.",
     category: "Business",
     date: "Apr 10, 2026",
     readTime: "5 min read",
