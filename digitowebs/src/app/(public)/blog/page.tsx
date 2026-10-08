@@ -231,12 +231,12 @@ const posts = [
   },
   {
     slug: "website-security-guide",
-    title: "The Ultimate Website Security Guide for 2026",
+    title: "Website Security for Nigerian Businesses: A Practical Checklist",
     excerpt:
-      "Protect your website from cyber threats with our comprehensive security guide covering SSL, firewalls, and best practices.",
+      "Most small-business websites in Nigeria are lost to expired domains, outdated plugins and missing passwords — not clever hackers. Here's how to protect yours.",
     category: "Security",
-    date: "Mar 15, 2026",
-    readTime: "8 min read",
+    date: "Oct 8, 2026",
+    readTime: "7 min read",
     color: "bg-red-500",
   },
   {

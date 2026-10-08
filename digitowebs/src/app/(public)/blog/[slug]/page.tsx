@@ -223,21 +223,37 @@ const posts: Record<string, {
     ],
   },
   "website-security-guide": {
-    title: "The Ultimate Website Security Guide for 2026",
-    excerpt: "Protect your website from cyber threats with our comprehensive security guide.",
+    title: "Website Security for Nigerian Businesses: A Practical Checklist",
+    excerpt:
+      "Most small-business websites in Nigeria aren't hacked by clever attackers — they're lost to expired domains, outdated plugins and a developer who kept the passwords. Here's how to protect yours.",
     category: "Security",
-    date: "Mar 15, 2026",
-    readTime: "8 min read",
+    date: "Oct 8, 2026",
+    readTime: "7 min read",
     color: "bg-red-500",
     content: [
-      "Website security is no longer optional — it's a necessity. With cyberattacks increasing by 38% year-over-year, every website owner must take proactive steps to protect their site and user data.",
-      "Start with SSL/TLS encryption. An SSL certificate encrypts data transmitted between your website and visitors, protecting sensitive information. Google also uses HTTPS as a ranking signal, making it essential for SEO.",
-      "Keep all software updated. Outdated CMS platforms, plugins, and themes are the primary attack vectors. Enable automatic updates where possible, and regularly audit your software stack for known vulnerabilities.",
-      "Implement strong authentication. Use multi-factor authentication (MFA) for admin accounts, enforce strong password policies, and limit login attempts to prevent brute-force attacks. Consider passwordless authentication for enhanced security.",
-      "Regular backups are your safety net. Automate daily backups stored in multiple locations (on-site and off-site). Test your backup restoration process regularly to ensure you can recover quickly from any incident.",
-      "Web Application Firewalls (WAF) provide an essential layer of protection. A WAF filters and monitors HTTP traffic, blocking common attacks like SQL injection, cross-site scripting (XSS), and DDoS attacks before they reach your server.",
-      "Security headers add another layer of protection. Implement Content Security Policy (CSP), X-Frame-Options, X-Content-Type-Options, and Strict-Transport-Security headers to prevent various attack vectors.",
-      "Regular security audits and penetration testing help identify vulnerabilities before attackers do. Schedule quarterly security reviews and consider bug bounty programs for continuous security monitoring.",
+      "When a Nigerian business loses its website, the cause is rarely a sophisticated cyberattack. It's usually something far more ordinary: a domain that wasn't renewed, a WordPress plugin that hadn't been updated in two years, a hosting account in a former developer's name, or an admin password shared on WhatsApp. This checklist covers the problems we actually see when businesses come to us with a broken or compromised site — and what to do about each one.",
+
+      "1. Make Sure You Own Your Domain and Hosting. Before anything technical, check who owns the accounts. Your domain (whether .com or .com.ng) and your hosting should be registered in your business's name, with login details you control. If a freelancer registered them in their own name and then becomes unreachable, you can lose the site entirely and have no way to recover it. Ask your developer for the registrar and hosting logins, and change the passwords once you have them.",
+
+      "2. Don't Let Your Domain Expire. An expired domain takes your website and your business email offline at the same time, and a lapsed domain can be bought by someone else. Turn on auto-renewal, keep the renewal contact email one you actually check, and note the expiry date somewhere your team will see it. Domains are cheap to keep — losing one is expensive.",
+
+      "3. Use HTTPS Everywhere. An SSL certificate encrypts information between your site and your visitors, and browsers now warn people away from pages without one. It should be included free with your hosting. Check that every page loads with the padlock, not just the homepage, and that the plain http:// version of your address redirects to https://.",
+
+      "4. Keep Everything Updated. Outdated software is the most common way small business websites get compromised. If your site runs on WordPress, that means the core software, the theme and every plugin. Delete plugins you no longer use rather than leaving them deactivated, and avoid 'nulled' (pirated) premium themes and plugins — they frequently come with hidden malware.",
+
+      "5. Lock Down Admin Access. Give each person their own login instead of sharing one admin account, and remove access when someone leaves. Use long, unique passwords and turn on two-factor authentication wherever it's available — for the website admin, the hosting panel, the domain registrar and your email. Never send passwords in WhatsApp groups or by SMS.",
+
+      "6. Keep Backups You Can Actually Restore. Backups only help if they're recent, stored somewhere other than the same server, and actually work. Make sure your site is backed up automatically, ask where the copies are kept, and test a restore at least once. If your site is hacked or an update breaks it, a clean backup turns a disaster into an inconvenience.",
+
+      "7. Don't Store Card Details Yourself. If you sell online, let a payment provider such as Paystack or Flutterwave handle card details on their secure checkout. Your website should never store customers' full card numbers. That keeps the most sensitive data off your server entirely and lets a provider built for payment security carry that responsibility.",
+
+      "8. Protect Customer Data and Follow the Law. If your website collects names, phone numbers or emails through forms, you're handling personal data. The Nigeria Data Protection Act 2023 sets rules for how that data must be collected, used and protected. At minimum, have a clear privacy policy, only collect what you need, keep form submissions out of public view, and limit who on your team can see them.",
+
+      "9. Watch for Signs Something Is Wrong. Warning signs include your site redirecting visitors to unrelated pages, strange links or pages appearing in Google results under your domain, a browser 'dangerous site' warning, or your hosting provider suspending the account. Add your site to Google Search Console — it alerts you to security issues Google detects — and act quickly if you see any of these.",
+
+      "10. Ask Your Developer the Right Questions. Before you pay a deposit, ask: Will the domain and hosting be in my name? Who handles updates after launch? Where are backups kept, and how often? What happens if the site is hacked? A professional developer will have clear answers. If they can't explain it, that's a warning sign in itself.",
+
+      "How Slatech Solutions Handles Website Security. Every website we build is handed over with the domain, hosting and code in the client's name, runs on HTTPS, and includes spam protection on its forms. For businesses that want ongoing peace of mind, our website maintenance service covers updates, security monitoring, backups and uptime checks. If you're worried about your current site, get in touch for a free review and we'll tell you honestly what needs fixing.",
     ],
   },
   "choosing-web-hosting": {
@@ -638,7 +654,7 @@ const seoTitles: Record<string, string> = {
   "how-to-rank-on-google-nigeria-seo-guide": "How to Rank on Google in Nigeria",
   "ecommerce-in-nigeria-how-to-start-selling-online": "How to Start Selling Online in Nigeria",
   "ecommerce-conversion-tips": "5 E-Commerce Conversion Tips",
-  "website-security-guide": "Website Security Guide for 2026",
+  "website-security-guide": "Website Security for Nigerian Businesses",
   "choosing-web-hosting": "How to Choose a Web Hosting Provider",
   "what-is-seo-and-why-your-business-needs-it": "What Is SEO? A Guide for Nigeria",
   "complete-guide-growing-business-online-nigeria": "Grow Your Business Online in Nigeria",
