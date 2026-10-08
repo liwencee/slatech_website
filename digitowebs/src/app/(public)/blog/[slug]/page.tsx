@@ -690,6 +690,16 @@ export default async function BlogPostPage({ params }: PageProps) {
     notFound();
   }
 
+  // Rotate the pool from this post onward so related links are spread across
+  // every article instead of all pointing at the newest few.
+  const slugs = Object.keys(posts);
+  const idx = slugs.indexOf(slug);
+  const rotated = [...slugs.slice(idx + 1), ...slugs.slice(0, idx)];
+  const related = [
+    ...rotated.filter((s) => posts[s].category === post.category),
+    ...rotated.filter((s) => posts[s].category !== post.category),
+  ].slice(0, 3);
+
   return (
     <>
       <BreadcrumbSchema
@@ -783,6 +793,25 @@ export default async function BlogPostPage({ params }: PageProps) {
               </div>
             </div>
           )}
+
+          <div className="border-t border-border mt-12 pt-8">
+            <h2 className="text-xl font-bold text-foreground mb-4">Related Articles</h2>
+            <ul className="space-y-3">
+              {related.map((s) => (
+                <li key={s}>
+                  <Link
+                    href={`/blog/${s}`}
+                    className="group block bg-accent rounded-xl p-4 hover:bg-primary/5 transition-colors"
+                  >
+                    <span className="block text-xs font-semibold text-primary mb-1">{posts[s].category}</span>
+                    <span className="block font-semibold text-foreground group-hover:text-primary transition-colors">
+                      {posts[s].title}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
           {/* Related Services — real internal links to the services page's anchor sections */}
           <div className="border-t border-border mt-12 pt-8">
