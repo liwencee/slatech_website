@@ -13,11 +13,12 @@ import { ContactSection } from "@/components/sections/contact-preview";
 import { TestimonialsSection } from "@/components/sections/testimonials";
 import { BrandTrustBar } from "@/components/sections/brand-trust";
 import { FAQSection } from "@/components/sections/faq";
+import { LocationsHubSection } from "@/components/sections/locations-hub";
 
 export const metadata: Metadata = {
   title: "Web Design Company in Lagos | 168 Five-Star Reviews | Slatech",
   description:
-    "Web design, e-commerce, custom software and mobile apps for Nigerian businesses, from a Lagos digital product company. Rated 4.9 on Google. Free quote.",
+    "Web design company in Ikeja, Lagos. Landing pages from ₦100,000, business websites from ₦400,000. Rated 4.9 on Google. Get a free quote today.",
   keywords: [
     "web design company Lagos Nigeria",
     "web design company Ikeja Lagos",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Web Design Company in Lagos | 168 Five-Star Reviews | Slatech",
     description:
-      "Web design, e-commerce, custom software and mobile apps for Nigerian businesses, from a Lagos digital product company. Rated 4.9 on Google. Free quote.",
+      "Web design company in Ikeja, Lagos. Landing pages from ₦100,000, business websites from ₦400,000. Rated 4.9 on Google. Get a free quote today.",
     url: "https://slatech.com.ng",
     type: "website",
   },
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Web Design Company in Lagos | 168 Five-Star Reviews | Slatech",
     description:
-      "Web design, e-commerce, custom software and mobile apps for Nigerian businesses, from a Lagos digital product company. Rated 4.9 on Google. Free quote.",
+      "Web design company in Ikeja, Lagos. Landing pages from ₦100,000, business websites from ₦400,000. Rated 4.9 on Google. Get a free quote today.",
   },
   alternates: {
     canonical: "https://slatech.com.ng",
@@ -60,6 +61,7 @@ export default function HomePage() {
       <TechIntroSection />
       <AboutSection />
       <ServicesSection />
+      <LocationsHubSection />
       <ProcessSection />
       <BrandTrustBar />
       <PortfolioSection />

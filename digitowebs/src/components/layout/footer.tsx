@@ -6,12 +6,13 @@ import Image from "next/image";
 import { useAnalytics } from "@/hooks/use-analytics";
 
 const services = [
-  { label: "Website Design", href: "/services" },
-  { label: "E-Commerce", href: "/services" },
-  { label: "SEO", href: "/services" },
-  { label: "Website Hosting", href: "/services" },
-  { label: "Website Management", href: "/services" },
-  { label: "Logo and Branding", href: "/services" },
+  { label: "Website Design", href: "/services#website-design" },
+  { label: "E-Commerce", href: "/ecommerce-development-lagos" },
+  { label: "Custom Software", href: "/custom-software-development-nigeria" },
+  { label: "Mobile Apps", href: "/mobile-app-development-lagos" },
+  { label: "SEO", href: "/services#seo" },
+  { label: "Hosting & Management", href: "/services#hosting" },
+  { label: "Logo and Branding", href: "/services#branding" },
 ];
 
 const quickLinks = [
@@ -21,6 +22,9 @@ const quickLinks = [
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
   { label: "Pricing", href: "/blog/how-much-does-web-design-cost-in-nigeria" },
+  { label: "Web Design Ikeja", href: "/web-design-company-ikeja" },
+  { label: "Web Design Lagos", href: "/web-design-company-lagos" },
+  { label: "Web Design Nigeria", href: "/web-design-company-nigeria" },
 ];
 
 const legal = [

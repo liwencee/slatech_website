@@ -87,6 +87,9 @@ export default function WebDesignCompanyLagosPage() {
             mobile app — the same team can build that too. See our full{" "}
             <Link href="/services" className="text-primary font-semibold hover:underline">range of services</Link>{" "}
             or read <Link href="/why-slatech" className="text-primary font-semibold hover:underline">why businesses choose Slatech</Link>.
+            Near the mainland? Visit our{" "}
+            <Link href="/web-design-company-ikeja" className="text-primary font-semibold hover:underline">Ikeja office</Link>, or see how we work with{" "}
+            <Link href="/web-design-company-nigeria" className="text-primary font-semibold hover:underline">businesses across Nigeria</Link>.
           </p>
         </div>
       </section>
