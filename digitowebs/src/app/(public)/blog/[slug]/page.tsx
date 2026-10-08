@@ -154,72 +154,139 @@ const posts: Record<string, {
     ],
   },
   "web-design-trends-2026": {
-    title: "10 Web Design Trends to Watch in 2026",
-    excerpt: "Discover the latest web design trends that are shaping the digital landscape this year.",
+    title: "Web Design Trends in 2026: Which Ones Matter for Nigerian Businesses",
+    excerpt:
+      "Not every web design trend is worth following. Here's which 2026 trends genuinely help Nigerian businesses win customers — and which ones look impressive but cost you speed and sales.",
     category: "Design",
-    date: "Apr 10, 2026",
-    readTime: "5 min read",
+    date: "Oct 8, 2026",
+    readTime: "3 min read",
     color: "bg-blue-500",
     content: [
-      "The web design landscape is constantly evolving, and 2026 is no exception. From AI-driven layouts to immersive 3D experiences, this year brings exciting innovations that are reshaping how we think about digital design.",
-      "AI-Powered Design is leading the charge. Tools that automatically generate layouts, color schemes, and even content based on user behavior are becoming mainstream. Designers are now focusing more on strategy and creativity while AI handles the heavy lifting of responsive layouts.",
-      "Immersive 3D Elements are becoming more accessible thanks to WebGL and Three.js improvements. Websites now feature interactive 3D product showcases, animated backgrounds, and spatial navigation that create memorable user experiences.",
-      "Micro-interactions continue to gain importance. Subtle animations on hover, scroll, and click provide visual feedback that makes websites feel alive and responsive. These small details significantly improve user engagement and satisfaction.",
-      "Dark mode is no longer optional. With most operating systems and browsers supporting dark themes, websites must offer seamless dark mode experiences. This includes careful color selection for readability and accessibility in both modes.",
-      "Minimalist navigation with mega menus and command palettes are replacing traditional navigation bars. Users expect quick access to content through search-first interfaces inspired by apps like Spotlight and VS Code.",
-      "Variable fonts are revolutionizing typography on the web. A single font file can now contain multiple weights and styles, reducing load times while providing designers with unprecedented typographic flexibility.",
-      "Sustainability in web design is gaining traction. Optimized images, efficient code, green hosting, and reduced data transfer are becoming standard practices as the industry acknowledges its environmental impact.",
-      "Accessibility-first design is no longer an afterthought. WCAG 2.2 compliance is becoming a baseline requirement, with designers building inclusive experiences from the ground up rather than retrofitting them later.",
-      "These trends collectively point toward a future where websites are faster, more accessible, more sustainable, and more engaging than ever before. Staying ahead of these trends will give your business a competitive edge in the digital landscape.",
+      "Every year brings a new list of web design trends. Some of them genuinely make websites better. Others look impressive in a design showcase but make a site slower, harder to use or more expensive to maintain — especially for customers browsing on a phone with mobile data. Here's our honest take on the 2026 trends, from the point of view of a Nigerian business that needs its website to bring in customers.",
+
+      "Worth It: Speed as a Design Feature. The most valuable trend isn't visual at all. Fast, lightweight pages are now treated as part of good design, not an afterthought. For Nigerian visitors on mobile data, a site that loads quickly simply wins more customers than a beautiful site that loads slowly.",
+
+      "Worth It: Mobile-First Everything. Designing for the phone first, then adapting for desktop, is now standard practice. If your designer shows you desktop mockups first, ask to see the mobile version — that's what most of your customers will use.",
+
+      "Worth It: Messaging Built In. Click-to-chat WhatsApp buttons and simple enquiry flows are replacing long contact forms. For Nigerian businesses, where so many conversations already happen on WhatsApp, this is one of the most practical improvements you can make.",
+
+      "Worth It: Accessibility. Readable text, strong colour contrast, clear headings, descriptive image text and buttons that work with a keyboard all make a site easier for everyone to use — and they line up with what Google rewards.",
+
+      "Worth It: Real Photos Over Stock. Authentic photos of your team, premises and real projects build more trust than generic stock images that visitors have seen on dozens of other sites. Showing real work is one of the strongest trust signals you can add.",
+
+      "Worth It, in Moderation: Subtle Motion. Small animations — content gently fading in as you scroll, buttons responding when tapped — make a site feel polished. Keep them subtle and short, and respect visitors who have asked their phone to reduce motion.",
+
+      "Use Carefully: AI Chat Assistants. AI chatbots can answer common questions out of hours, but they cost money to run, can give wrong answers and need monitoring. For many small businesses, a clear FAQ and a WhatsApp button do the job better.",
+
+      "Use Carefully: Dark Mode. Dark designs can look striking, but they can also hurt readability if contrast isn't handled properly. Choose it because it suits your brand, not because it's fashionable.",
+
+      "Usually Skip: Heavy 3D and Video Backgrounds. Large 3D scenes and full-screen video backgrounds look impressive on a fast desktop connection but are slow and data-hungry on phones. If you want visual impact, a well-optimised image or a subtle animation usually works better.",
+
+      "The best trend for any business is still the oldest one: make it easy for a visitor to understand what you offer, trust you, and get in touch. Slatech Solutions designs modern websites that use the trends that help — and skip the ones that don't. Get in touch for a free consultation.",
     ],
   },
   "boost-seo-rankings": {
-    title: "How to Boost Your Website's SEO Rankings",
-    excerpt: "Learn proven strategies to improve your search engine rankings and drive more organic traffic.",
+    title: "On-Page SEO Checklist: 12 Fixes for Your Business Website",
+    excerpt:
+      "Before you chase backlinks, fix your own website. These 12 on-page SEO checks — titles, headings, speed, indexing and more — are the ones we find broken most often on Nigerian business sites.",
     category: "SEO",
-    date: "Apr 5, 2026",
-    readTime: "7 min read",
+    date: "Oct 8, 2026",
+    readTime: "5 min read",
     color: "bg-green-500",
     content: [
-      "Search Engine Optimization remains one of the most effective ways to drive organic traffic to your website. In 2026, the SEO landscape has evolved significantly, but the fundamentals remain crucial.",
-      "Start with thorough keyword research. Use tools like Google Keyword Planner, Ahrefs, or SEMrush to identify keywords your target audience is searching for. Focus on long-tail keywords with lower competition but high intent.",
-      "On-page SEO is your foundation. Ensure every page has a unique title tag (under 60 characters), a compelling meta description (under 155 characters), and properly structured headings (H1, H2, H3) that include your target keywords naturally.",
-      "Content quality is king. Google's algorithms increasingly prioritize helpful, original content that demonstrates expertise and authority. Write comprehensive articles that thoroughly answer user queries and provide genuine value.",
-      "Technical SEO cannot be overlooked. Ensure your site loads in under 3 seconds, is mobile-friendly, has a proper XML sitemap, uses HTTPS, and has clean URL structures. Core Web Vitals are now a significant ranking factor.",
-      "Build high-quality backlinks through guest posting, creating shareable content, and building relationships with industry peers. One link from a high-authority domain is worth more than hundreds of low-quality links.",
-      "Local SEO is essential for businesses serving specific areas. Claim your Google Business Profile, ensure NAP (Name, Address, Phone) consistency across directories, and actively collect customer reviews.",
+      "Most advice about ranking on Google jumps straight to backlinks and content marketing. But when we audit Nigerian business websites, the biggest problems are usually on the site itself: pages Google can't find, titles it cuts off, images that slow every page down. These are fixes you control completely, and they're the foundation everything else builds on. Work through this checklist page by page.",
+
+      "1. Give Every Page a Unique, Specific Title. The title tag is the blue headline people click in Google. Put the main search phrase near the start — for example 'Web Design Company in Lagos' rather than 'Home' — and keep it under about 60 characters so Google doesn't cut it off. Every page needs its own title; duplicates confuse Google about which page to show.",
+
+      "2. Write a Meta Description That Earns the Click. The description under your title doesn't directly affect rankings, but it decides whether people click. Keep it under about 155 characters, say what the page offers, and include something concrete — your location, a starting price, or a clear next step. If you rank on page one but few people click, this is usually the first thing to fix.",
+
+      "3. Use Exactly One H1 Per Page. The H1 is the main heading on the page. It should describe the page's topic and normally include its main phrase. Then use H2s for the main sections and H3s inside them, without skipping levels. This helps both Google and visitors using screen readers understand how the page is organised.",
+
+      "4. Keep URLs Short and Readable. A URL like /web-design-company-ikeja tells Google and people exactly what the page is about. Avoid long strings of numbers, dates or random characters, use hyphens between words, and don't change a URL once a page is ranking — if you must, add a permanent (301) redirect from the old address.",
+
+      "5. Link Your Own Pages Together. Google discovers and values pages largely through links. A page that nothing links to — not your menu, not your footer, not another page — may never be indexed at all. Link your important service and location pages from the homepage and footer, and link related blog posts to each other using descriptive text, not 'click here'.",
+
+      "6. Compress Images and Add Alt Text. Large photos are the most common reason Nigerian business sites load slowly on mobile data. Resize images to the size they're displayed at and use modern formats like WebP. Give each meaningful image a short alt text describing it; it helps accessibility and image search.",
+
+      "7. Make the Site Fast on a Phone. Google measures how quickly your main content appears, how soon the page responds to taps and how much the layout jumps around while loading. Heavy sliders, autoplay videos, too many tracking scripts and large hero images are the usual culprits. Test on a real mid-range Android phone, not just your office laptop.",
+
+      "8. Add Structured Data. Schema markup is code that tells Google facts about your business in a format it reads directly — your name, address, phone, opening hours, reviews and FAQs. It can make your listing more informative in search results. Use LocalBusiness or Organization schema sitewide and FAQ schema on pages with genuine questions and answers.",
+
+      "9. Set the Canonical URL. If the same page can load at more than one address (with and without www, with and without a trailing slash), tell Google which version is the real one with a canonical tag, and redirect the others to it. This prevents your ranking signals being split across duplicates.",
+
+      "10. Verify Your Site in Google Search Console. Search Console is free and shows exactly what Google sees: which searches you appear for, your average position and click-through rate, and which pages are or aren't indexed. Submit your sitemap there so Google knows every page you want indexed.",
+
+      "11. Fix What Search Console Reports. Check the Pages report regularly. 'Not found (404)' pages with a real replacement should redirect to it. 'Discovered – currently not indexed' often means Google hasn't prioritised the page — usually because few pages link to it. 'Crawled – currently not indexed' often means Google read the page and didn't think it was useful enough; that's a signal to improve the content.",
+
+      "12. Make Each Page Genuinely Useful. Finally, the content itself. A page that answers the visitor's real questions — what you offer, how much it costs, how long it takes, why they should trust you — will outperform a thin page stuffed with keywords. Write for the customer first; the right keywords tend to follow naturally.",
+
+      "On-page SEO isn't a one-time job, but once these basics are in place, every other effort — content, Google Business Profile, reviews and links — works much harder. If you'd like a second pair of eyes, Slatech Solutions offers a free website review and will tell you which of these fixes matter most for your site.",
     ],
   },
   "mobile-friendly-website": {
-    title: "Why Every Business Needs a Mobile-Friendly Website",
-    excerpt: "Mobile traffic accounts for over 60% of web visits. Here's why responsive design is critical.",
+    title: "Mobile-Friendly Websites in Nigeria: A Checklist for Phone-First Customers",
+    excerpt:
+      "Most of your customers will see your website on a phone, often on mobile data. Here's a practical checklist to make sure it loads fast, reads easily and makes it simple to call, chat or buy.",
     category: "Business",
-    date: "Mar 28, 2026",
-    readTime: "4 min read",
+    date: "Oct 8, 2026",
+    readTime: "3 min read",
     color: "bg-purple-500",
     content: [
-      "In 2026, mobile devices account for over 65% of global web traffic. If your website isn't optimized for mobile, you're losing more than half your potential customers.",
-      "Google uses mobile-first indexing, meaning it primarily uses the mobile version of your website for ranking and indexing. A poor mobile experience directly impacts your search engine rankings.",
-      "Mobile users have high expectations. They expect pages to load in under 3 seconds, navigation to be thumb-friendly, and content to be easily readable without zooming. Failing to meet these expectations results in high bounce rates.",
-      "Responsive design is the solution. Rather than building separate mobile and desktop sites, responsive design adapts your website's layout to fit any screen size. This approach is more maintainable and provides a consistent brand experience.",
-      "Key responsive design principles include flexible grid layouts, scalable images, touch-friendly buttons (minimum 44x44 pixels), readable font sizes (minimum 16px), and simplified navigation for smaller screens.",
-      "The business impact is clear: companies with mobile-friendly websites see 74% higher mobile conversion rates, 67% more likely that visitors will make a purchase, and significantly lower bounce rates compared to non-optimized competitors.",
+      "For most Nigerian businesses, the first time a customer sees your website will be on a phone — often a mid-range Android, often on mobile data, often while they're on the move. A site that looks good on your office laptop can be slow, cramped and frustrating on that phone. Google also judges your site mainly by its mobile version. This checklist covers what matters most.",
+
+      "1. Design for the Phone First. Start with how each page works on a small screen, then expand it for desktop — not the other way round. On mobile, the most important information and action (what you do, and how to contact you) should be visible without scrolling far.",
+
+      "2. Keep Pages Light for Mobile Data. Every large image, video and script costs your visitor data and time. Compress images, avoid autoplay videos and full-screen sliders, and remove scripts you don't need. A page that loads quickly on a weak connection keeps visitors who would otherwise give up.",
+
+      "3. Make Text Readable Without Zooming. Use a body text size of at least 16 pixels, enough line spacing, and strong contrast between text and background. Light grey text on white, or small text over a busy photo, is hard to read outdoors in bright light.",
+
+      "4. Make Buttons Easy to Tap. Buttons and links should be large enough to tap with a thumb — roughly the size of a fingertip — with space between them so people don't hit the wrong one. Your main call to action should be a clear button, not a small text link.",
+
+      "5. Add One-Tap Call and WhatsApp. Many Nigerian customers would rather call or chat than fill in a form. Put a tap-to-call phone number and a WhatsApp button where they're easy to find, and make sure they open the right number with a helpful starting message.",
+
+      "6. Keep Forms Short. Ask only for what you need — usually name, phone or email, and a short message. Use the right keyboard for each field (number pad for phone numbers), show clear error messages, and never make people re-enter everything if one field is wrong.",
+
+      "7. Avoid Pop-Ups That Block the Page. Full-screen pop-ups that appear as soon as the page loads are frustrating on a small screen and can count against you in Google. If you use them at all, keep them small, delayed and easy to close.",
+
+      "8. Don't Hide Key Information. Your address, opening hours, prices or starting prices, and contact details should be easy to reach on mobile — not buried in a desktop-only sidebar or a menu three taps deep.",
+
+      "9. Test on Real Phones. Open your site on a few real devices, including a cheaper Android phone, and try the main tasks: find a service, check a price, call you, send a message, buy something. Then check Google Search Console, which reports mobile speed and usability issues across your site.",
+
+      "10. Remember That Mobile-Friendly Is About Customers, Not Just Google. Google uses your mobile site to rank you, but the real cost of a poor mobile experience is the customer who leaves for a competitor. Every second and every frustrating tap matters.",
+
+      "Every website Slatech Solutions builds is designed mobile-first. If your current site is hard to use on a phone, get in touch for a free review and we'll show you exactly what's slowing your customers down.",
     ],
   },
   "ecommerce-conversion-tips": {
-    title: "5 E-Commerce Conversion Optimization Tips",
-    excerpt: "Increase your online store's conversion rate with these proven strategies.",
+    title: "Why Visitors Don't Buy From Your Online Store (and How to Fix It)",
+    excerpt:
+      "Getting visitors to your online store is only half the job. Here are the most common reasons Nigerian shoppers leave without buying — from surprise delivery fees to missing trust signals — and how to fix each one.",
     category: "E-Commerce",
-    date: "Mar 20, 2026",
-    readTime: "6 min read",
+    date: "Oct 8, 2026",
+    readTime: "3 min read",
     color: "bg-pink-500",
     content: [
-      "E-commerce conversion optimization is the art and science of turning website visitors into paying customers. Even small improvements in conversion rate can significantly impact your revenue.",
-      "Tip 1: Simplify your checkout process. The average cart abandonment rate is 70%. Reduce the number of form fields, offer guest checkout, support multiple payment methods, and show a clear progress indicator during checkout.",
-      "Tip 2: Use high-quality product images and videos. Products with multiple images from different angles convert 58% better. Add zoom functionality, 360-degree views, and short product videos to help customers make confident purchase decisions.",
-      "Tip 3: Build trust with social proof. Display customer reviews, ratings, testimonials, and trust badges prominently. Products with reviews convert 270% better than those without. Showcase real customer photos and user-generated content.",
-      "Tip 4: Optimize page speed. Every second of delay in page load reduces conversions by 7%. Compress images, minimize code, use a CDN, and implement lazy loading to ensure your store loads lightning fast on all devices.",
-      "Tip 5: Implement smart product recommendations. Personalized product suggestions based on browsing history and purchase patterns can increase revenue by 10-30%. Use 'Customers also bought' and 'You may also like' sections strategically.",
+      "Many Nigerian online stores get visitors but very few orders. The problem is rarely the products themselves. It's usually something on the site that makes a shopper hesitate — a doubt about delivery, a price that changes at checkout, or a feeling that the store might not be trustworthy. Here are the most common reasons visitors leave without buying, and what to do about each.",
+
+      "1. Delivery Costs Appear Too Late. Nothing kills a sale faster than a delivery fee that only appears at the final step. Show delivery costs early — on the product page or in the cart — and if fees vary by location, let shoppers check theirs before checkout. Be clear about delivery times for Lagos and for other states.",
+
+      "2. Customers Don't Trust the Store. Shoppers want to know you're a real business before they pay. Show your business name, physical address, phone number and WhatsApp contact, clear photos of real products, genuine customer reviews, and a simple returns or refund policy. A store with no visible contact details is a store people hesitate to pay.",
+
+      "3. Their Preferred Payment Method Isn't Available. Nigerian customers pay in different ways: card, bank transfer, USSD and sometimes payment on delivery. Integrate a trusted gateway such as Paystack or Flutterwave so the common options are covered. If you offer payment on delivery, say so clearly — it reassures first-time buyers.",
+
+      "4. Checkout Is Too Long. Every extra field and step loses buyers. Allow guest checkout instead of forcing an account, ask only for what you need to deliver the order, and keep the whole process on as few screens as possible. Test it yourself on a phone.",
+
+      "5. The Store Is Slow on Mobile. Most shoppers browse on their phones, often on mobile data. Large product images, heavy themes and too many plugins make pages slow, and slow pages lose sales. Compress images and keep the store lean.",
+
+      "6. Product Pages Don't Answer Questions. Shoppers can't touch the product, so your page has to do the work. Include several clear photos, accurate sizes and specifications, stock availability, and the answers to the questions customers usually ask you on WhatsApp.",
+
+      "7. There's No Easy Way to Ask a Question. When a shopper is unsure, a quick answer can save the sale. A WhatsApp button on product pages lets them ask about sizing, colours or delivery without leaving the site.",
+
+      "8. Abandoned Carts Are Never Followed Up. Many shoppers add items and leave. If they've given an email or phone number, a polite reminder — or a quick message from your team — can bring a meaningful share back to complete their order.",
+
+      "9. Prices and Stock Aren't Kept Up to Date. Out-of-stock items that can still be ordered, or prices that differ from what you post on social media, damage trust quickly. Keep the store's prices and stock in sync with what you actually have.",
+
+      "Fixing even two or three of these usually makes a noticeable difference to sales, without spending any more on advertising. Slatech Solutions builds online stores designed around how Nigerians actually shop, with Paystack integration, mobile-first checkout and clear delivery information. Read our guide to Paystack integration, or get in touch for a free review of your store.",
     ],
   },
   "website-security-guide": {
@@ -228,7 +295,7 @@ const posts: Record<string, {
       "Most small-business websites in Nigeria aren't hacked by clever attackers — they're lost to expired domains, outdated plugins and a developer who kept the passwords. Here's how to protect yours.",
     category: "Security",
     date: "Oct 8, 2026",
-    readTime: "7 min read",
+    readTime: "4 min read",
     color: "bg-red-500",
     content: [
       "When a Nigerian business loses its website, the cause is rarely a sophisticated cyberattack. It's usually something far more ordinary: a domain that wasn't renewed, a WordPress plugin that hadn't been updated in two years, a hosting account in a former developer's name, or an admin password shared on WhatsApp. This checklist covers the problems we actually see when businesses come to us with a broken or compromised site — and what to do about each one.",
@@ -257,20 +324,35 @@ const posts: Record<string, {
     ],
   },
   "choosing-web-hosting": {
-    title: "How to Choose the Right Web Hosting Provider",
-    excerpt: "A complete guide to selecting the best hosting solution for your website.",
+    title: "How to Choose Web Hosting in Nigeria: What to Check Before You Pay",
+    excerpt:
+      "Cheap hosting can become expensive fast. Here's what Nigerian businesses should check before choosing a host — from dollar-priced renewals to who actually owns the account.",
     category: "Hosting",
-    date: "Mar 10, 2026",
-    readTime: "5 min read",
+    date: "Oct 8, 2026",
+    readTime: "3 min read",
     color: "bg-yellow-500",
     content: [
-      "Choosing the right web hosting provider is one of the most important decisions for your online presence. Your host affects your website's speed, security, uptime, and ultimately, your business success.",
-      "Shared hosting is the most affordable option, suitable for small websites and blogs with moderate traffic. However, you share server resources with other websites, which can impact performance during traffic spikes.",
-      "VPS (Virtual Private Server) hosting offers dedicated resources within a shared environment. It's ideal for growing businesses that need more control and performance than shared hosting but aren't ready for a dedicated server.",
-      "Dedicated hosting provides an entire server exclusively for your website. This is the best option for high-traffic sites, e-commerce stores, and applications requiring maximum performance, security, and customization.",
-      "Cloud hosting distributes your website across multiple servers, providing excellent scalability and reliability. If one server fails, others take over seamlessly. This is ideal for businesses with fluctuating traffic.",
-      "Key factors to evaluate: uptime guarantee (aim for 99.9%+), server speed and location, storage and bandwidth limits, SSL certificate inclusion, backup frequency, customer support availability, and scalability options.",
-      "At Slatech Solutions, we provide managed hosting with 99.9% uptime, free SSL, daily backups, and 24/7 support. Contact us to find the perfect hosting solution for your needs.",
+      "Web hosting is where your website lives, and the choice affects how fast your site loads, how often it goes down and how much you pay every year. Many Nigerian businesses choose a host based only on the first-year price, then get caught out at renewal time. Here's what to check before you pay.",
+
+      "1. Understand the Main Types of Hosting. Shared hosting puts many websites on one server; it's the cheapest option and is fine for most small business sites. VPS hosting gives your site its own slice of a server, for busier sites or online stores. Cloud hosting spreads your site across several servers and scales as traffic grows. Start with what you need now — you can upgrade later.",
+
+      "2. Check the Renewal Price, Not Just the First Year. Many hosts advertise a low introductory price that rises sharply when you renew. Look for the renewal price before you sign up and budget for it. Business-grade hosting typically costs around ₦54,000 or $34 a year, depending on the provider and the type of plan.",
+
+      "3. Watch Out for Dollar-Priced Plans. Much quality hosting is priced in US dollars. When the naira moves, your renewal moves with it, and a plan that seemed affordable can cost noticeably more the next year. If budgeting in naira matters to you, ask whether the provider offers naira pricing.",
+
+      "4. Make Sure You Own the Account. The hosting account should be in your business's name, with login details you control — even if a developer manages it for you. If a freelancer hosts your site on their own account and becomes unreachable, you can lose access to your website.",
+
+      "5. Check Speed for Nigerian Visitors. Server location affects how quickly pages load for your customers. A host with good connectivity to Nigeria, or a content delivery network (CDN) that serves your site from nearby locations, helps pages load faster on local connections.",
+
+      "6. Confirm Backups and SSL Are Included. Daily automatic backups and a free SSL certificate (for the padlock and https://) should come as standard. Ask how long backups are kept, where they're stored, and how quickly you can restore one if something goes wrong.",
+
+      "7. Think About Business Email. Many hosts include email accounts on your domain, such as info@yourbusiness.com.ng. Check how many accounts you get, how much storage, and whether emails reliably reach inboxes rather than spam.",
+
+      "8. Look at Support Hours and Channels. When your site goes down, you need help quickly. Check whether support is available around the clock, and whether you can reach a real person by chat, phone or ticket.",
+
+      "9. Plan for Growth. If you expect more traffic, an online store or new features, choose a host that lets you upgrade your plan without moving the whole site to a new provider.",
+
+      "Hosting is easy to overlook until something goes wrong. Slatech Solutions sets up hosting in your business's name, with SSL and backups, and can manage it for you as part of our website hosting and management service. For a full breakdown of what a website costs to build and run, read our 2026 price guide, or get in touch for advice on the right hosting for your site.",
     ],
   },
 
@@ -647,15 +729,17 @@ function metaDescription(text: string, max = 155): string {
 
 // Search-result titles (the layout appends " | Slatech Solutions", so keep these to ~40 chars).
 const seoTitles: Record<string, string> = {
+  "web-design-trends-2026": "Web Design Trends 2026 for Nigeria",
+  "boost-seo-rankings": "On-Page SEO Checklist for Your Website",
   "how-to-set-up-whatsapp-business-nigeria": "Set Up WhatsApp Business in Nigeria",
   "why-your-restaurant-needs-a-website-nigeria": "Why Nigerian Restaurants Need a Website",
   "how-to-build-a-brand-for-your-small-business-nigeria": "5 Tips to Build a Brand in Nigeria",
   "why-nigerian-businesses-need-professional-website": "Why Nigerian Businesses Need a Website",
   "how-to-rank-on-google-nigeria-seo-guide": "How to Rank on Google in Nigeria",
   "ecommerce-in-nigeria-how-to-start-selling-online": "How to Start Selling Online in Nigeria",
-  "ecommerce-conversion-tips": "5 E-Commerce Conversion Tips",
+  "ecommerce-conversion-tips": "Why Visitors Don't Buy From Your Store",
   "website-security-guide": "Website Security for Nigerian Businesses",
-  "choosing-web-hosting": "How to Choose a Web Hosting Provider",
+  "choosing-web-hosting": "How to Choose Web Hosting in Nigeria",
   "what-is-seo-and-why-your-business-needs-it": "What Is SEO? A Guide for Nigeria",
   "complete-guide-growing-business-online-nigeria": "Grow Your Business Online in Nigeria",
   "10-reasons-nigerian-business-needs-website-2026": "10 Reasons Your Business Needs a Website",
@@ -667,7 +751,7 @@ const seoTitles: Record<string, string> = {
   "paystack-integration-guide-ecommerce-nigeria": "Paystack Integration for E-Commerce",
   "local-seo-nigeria-rank-google-maps-3-pack": "Local SEO in Nigeria: Google Map Pack",
   "branding-agency-lagos-what-professional-branding-includes": "Branding Agency in Lagos: What to Expect",
-  "mobile-friendly-website": "Why You Need a Mobile-Friendly Website",
+  "mobile-friendly-website": "Mobile-Friendly Website Checklist Nigeria",
 };
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
