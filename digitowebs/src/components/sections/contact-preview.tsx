@@ -214,7 +214,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-1">Business Hours</p>
-                    <p className="text-sm">Mon – Fri: 8am – 6pm<br />Sat: 9am – 3pm</p>
+                    <p className="text-sm">Mon – Sat: Open 24 hours<br />Sun: Closed</p>
                   </div>
                 </div>
               </div>

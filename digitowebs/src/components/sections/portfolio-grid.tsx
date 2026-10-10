@@ -2,20 +2,21 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { altFor } from "@/lib/portfolio-shots";
 
 const projects = [
-  { title: "Travel Agency",           category: "Travel",         image: "/igniting hopes.png" },
-  { title: "Oil and Gas",             category: "Oil & Gas",      image: "/images/Snipaste_2026-04-14_17-43-34.png" },
-  { title: "Elite Real Estate",       category: "Real Estate",    image: "/images/Snipaste_2026-04-14_17-45-47.png" },
-  { title: "MediCare Health",         category: "Healthcare",     image: "/images/Snipaste_2026-04-14_17-47-32.png" },
-  { title: "EduLearn Academy",        category: "Education",      image: "/images/Snipaste_2026-04-14_17-48-20.png" },
-  { title: "ShopNow Store",           category: "E-Commerce",     image: "/images/Snipaste_2026-04-14_17-48-34.png" },
-  { title: "BuildRight Construction", category: "Construction",   image: "/images/Snipaste_2026-04-14_17-58-49.png" },
-  { title: "GreenLife NGO",           category: "Non-Profit",     image: "/images/Snipaste_2026-04-14_18-00-14.png" },
-  { title: "InteriorPro Designs",     category: "Interior Design",image: "/igniting hopes.png" },
-  { title: "TechLaunch App",          category: "Technology",     image: "/images/Snipaste_2026-04-14_17-43-34.png" },
-  { title: "FoodExpress Delivery",    category: "Food & Beverage",image: "/images/Snipaste_2026-04-14_17-45-47.png" },
-  { title: "LegalEdge Law Firm",      category: "Legal",          image: "/images/Snipaste_2026-04-14_17-47-32.png" },
+  { title: "Travel Agency",           category: "Travel",         image: "/images/portfolio/igniting-hope-charity-website.png" },
+  { title: "Oil and Gas",             category: "Oil & Gas",      image: "/images/portfolio/ai-office-automation-website.png" },
+  { title: "Elite Real Estate",       category: "Real Estate",    image: "/images/portfolio/pace-it-partner-website.png" },
+  { title: "MediCare Health",         category: "Healthcare",     image: "/images/portfolio/electronics-solar-ecommerce-store.png" },
+  { title: "EduLearn Academy",        category: "Education",      image: "/images/portfolio/hotel-website-rooms.png" },
+  { title: "ShopNow Store",           category: "E-Commerce",     image: "/images/portfolio/hotel-website-home.png" },
+  { title: "BuildRight Construction", category: "Construction",   image: "/images/portfolio/pluto-bv-healthcare-staffing-website.png" },
+  { title: "GreenLife NGO",           category: "Non-Profit",     image: "/images/portfolio/zero-harm-international-hse-website.png" },
+  { title: "InteriorPro Designs",     category: "Interior Design",image: "/images/portfolio/igniting-hope-charity-website.png" },
+  { title: "TechLaunch App",          category: "Technology",     image: "/images/portfolio/ai-office-automation-website.png" },
+  { title: "FoodExpress Delivery",    category: "Food & Beverage",image: "/images/portfolio/pace-it-partner-website.png" },
+  { title: "LegalEdge Law Firm",      category: "Legal",          image: "/images/portfolio/electronics-solar-ecommerce-store.png" },
 ];
 
 const categories = ["All", ...new Set(projects.map((p) => p.category))];
@@ -53,7 +54,7 @@ export function PortfolioGrid() {
             <div className="aspect-[4/3] relative overflow-hidden">
               <Image
                 src={project.image}
-                alt={`${project.title} — ${project.category} website by Slatech Solutions`}
+                alt={altFor(project.image, `${project.title} — ${project.category} website by Slatech Solutions`)}
                 fill
                 className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"

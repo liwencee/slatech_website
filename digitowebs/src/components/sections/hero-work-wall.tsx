@@ -2,13 +2,13 @@ import Image from "next/image";
 
 // Real client projects (same screenshots as the portfolio section).
 const SHOTS = [
-  "/images/Snipaste_2026-04-14_17-43-34.png",
-  "/images/Snipaste_2026-04-14_17-45-47.png",
-  "/images/Snipaste_2026-04-14_17-47-32.png",
-  "/images/Snipaste_2026-04-14_17-48-20.png",
-  "/images/Snipaste_2026-04-14_17-48-34.png",
-  "/images/Snipaste_2026-04-14_17-58-49.png",
-  "/images/Snipaste_2026-04-14_18-00-14.png",
+  "/images/portfolio/ai-office-automation-website.png",
+  "/images/portfolio/pace-it-partner-website.png",
+  "/images/portfolio/electronics-solar-ecommerce-store.png",
+  "/images/portfolio/hotel-website-rooms.png",
+  "/images/portfolio/hotel-website-home.png",
+  "/images/portfolio/pluto-bv-healthcare-staffing-website.png",
+  "/images/portfolio/zero-harm-international-hse-website.png",
 ];
 
 const rotate = (n: number) => [...SHOTS.slice(n), ...SHOTS.slice(0, n)];

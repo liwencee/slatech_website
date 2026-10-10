@@ -142,18 +142,13 @@ const LOCAL_BUSINESS_SCHEMA = {
     latitude: 6.5944,
     longitude: 3.3403,
   },
+  // Open 24 hours Monday–Saturday (Google's convention: 00:00–23:59); Sunday closed.
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "08:00",
-      closes: "18:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Saturday",
-      opens: "09:00",
-      closes: "15:00",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "00:00",
+      closes: "23:59",
     },
   ],
   areaServed: [
@@ -186,7 +181,7 @@ const LOCAL_BUSINESS_SCHEMA = {
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
-    reviewCount: "85",
+    reviewCount: "88",
     bestRating: "5",
     worstRating: "1",
   },

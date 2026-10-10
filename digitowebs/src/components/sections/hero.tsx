@@ -25,16 +25,18 @@ export function HeroSection() {
           {/* ── Left Content ── */}
           <div className="text-white">
             {/* Headline */}
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-5 sm:mb-6">
-              Digital Products &{" "}
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-3 sm:mb-4">
+              Web Design &amp; Software Company in{" "}
+              <span className="text-primary">Ikeja, Lagos</span>
+            </h1>
+            <p className="text-lg sm:text-2xl lg:text-3xl font-semibold leading-snug text-white/90 mb-5 sm:mb-6">
+              Digital Products &amp;{" "}
               <RotatingWord
                 words={["Websites", "Software", "Mobile Apps", "E-Commerce", "Automation"]}
                 className="text-primary"
-              />
-              <br />
-              <span className="text-white/90">That Move Businesses</span>{" "}
-              <span className="text-primary">Forward</span>
-            </h1>
+              />{" "}
+              That Move Businesses Forward
+            </p>
 
             <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-7 sm:mb-8 animate-[fade-in-up_0.7s_cubic-bezier(0.22,1,0.36,1)_0.1s_both]">
               Slatech Solutions Limited is a Lagos-based digital product and software development
@@ -211,7 +213,7 @@ export function HeroSection() {
 
               {/* ── Floating Achievement Badges ── */}
 
-              {/* Google Rating Badge — verified 4.9★ / 84 reviews (checked live this session) */}
+              {/* Google Rating Badge — verified 4.9★ / 88 reviews (checked live this session) */}
               <div className="absolute -top-5 -left-8 bg-white rounded-2xl shadow-xl p-3.5 flex items-center gap-3 hero-float-1 border border-gray-100">
                 <div className="w-9 h-9 rounded-xl bg-[#4285F4]/10 flex items-center justify-center shrink-0">
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
@@ -230,7 +232,7 @@ export function HeroSection() {
                     ))}
                   </div>
                   <p className="text-xs font-bold text-gray-800 mt-0.5">4.9 Google Rating</p>
-                  <p className="text-[10px] text-gray-500">84 reviews</p>
+                  <p className="text-[10px] text-gray-500">88 reviews</p>
                 </div>
               </div>
 

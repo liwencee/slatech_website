@@ -147,7 +147,7 @@ export function TestimonialsSection() {
               </div>
               <span className="text-foreground font-semibold">4.9</span>
               <span className="text-muted-foreground text-sm">·</span>
-              <span className="text-muted-foreground text-sm">85 Google Reviews</span>
+              <span className="text-muted-foreground text-sm">88 Google Reviews</span>
             </div>
           </div>
         </AnimateOnScroll>

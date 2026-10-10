@@ -2,19 +2,20 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
+import { altFor } from "@/lib/portfolio-shots";
 import Link from "next/link";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 
 const projects = [
-  { title: "TravelMax Agency",    category: "Travel",      image: "/igniting hopes.png" },
-  { title: "AutoBook Car Rentals",category: "Automotive",  image: "/images/Snipaste_2026-04-14_17-43-34.png" },
-  { title: "Elite Real Estate",   category: "Real Estate", image: "/images/Snipaste_2026-04-14_17-45-47.png" },
-  { title: "MediCare Health",     category: "Healthcare",  image: "/images/Snipaste_2026-04-14_17-47-32.png" },
-  { title: "EduLearn Academy",    category: "Education",   image: "/images/Snipaste_2026-04-14_17-48-20.png" },
-  { title: "ShopNow Store",       category: "E-Commerce",  image: "/images/Snipaste_2026-04-14_17-48-34.png" },
-  { title: "FoodieHub Delivery",  category: "Food",        image: "/images/Snipaste_2026-04-14_17-58-49.png" },
-  { title: "FitPro Gym",          category: "Fitness",     image: "/images/Snipaste_2026-04-14_18-00-14.png" },
-  { title: "LegalEase Firm",      category: "Legal",       image: "/igniting hopes.png" },
+  { title: "TravelMax Agency",    category: "Travel",      image: "/images/portfolio/igniting-hope-charity-website.png" },
+  { title: "AutoBook Car Rentals",category: "Automotive",  image: "/images/portfolio/ai-office-automation-website.png" },
+  { title: "Elite Real Estate",   category: "Real Estate", image: "/images/portfolio/pace-it-partner-website.png" },
+  { title: "MediCare Health",     category: "Healthcare",  image: "/images/portfolio/electronics-solar-ecommerce-store.png" },
+  { title: "EduLearn Academy",    category: "Education",   image: "/images/portfolio/hotel-website-rooms.png" },
+  { title: "ShopNow Store",       category: "E-Commerce",  image: "/images/portfolio/hotel-website-home.png" },
+  { title: "FoodieHub Delivery",  category: "Food",        image: "/images/portfolio/pluto-bv-healthcare-staffing-website.png" },
+  { title: "FitPro Gym",          category: "Fitness",     image: "/images/portfolio/zero-harm-international-hse-website.png" },
+  { title: "LegalEase Firm",      category: "Legal",       image: "/images/portfolio/igniting-hope-charity-website.png" },
 ];
 
 const categories = ["All", ...Array.from(new Set(projects.map((p) => p.category)))];
@@ -170,7 +171,7 @@ export function PortfolioSection() {
                       <div className="aspect-[16/10] relative overflow-hidden">
                         <Image
                           src={project.image}
-                          alt={`${project.title} — ${project.category} website by Slatech Solutions`}
+                          alt={altFor(project.image, `${project.title} — ${project.category} website by Slatech Solutions`)}
                           fill
                           className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

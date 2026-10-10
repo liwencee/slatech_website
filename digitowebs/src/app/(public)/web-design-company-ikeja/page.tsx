@@ -57,7 +57,7 @@ const areas = [
 const faqs = [
   {
     q: "Where is Slatech Solutions located in Ikeja?",
-    a: "Our office is at 2b, Olaide Tomori, Ikeja, Lagos. We're open Monday to Friday, 8am to 6pm, and Saturday, 9am to 3pm.",
+    a: "Our office is at 2b, Olaide Tomori, Ikeja, Lagos. We're open 24 hours, Monday to Saturday, and closed on Sunday.",
   },
   {
     q: "Can I meet the team in person before starting a project?",
@@ -126,7 +126,7 @@ export default function WebDesignCompanyIkejaPage() {
               <dt className="font-semibold text-foreground">Address</dt>
               <dd className="text-muted-foreground">2b, Olaide Tomori, Ikeja, Lagos</dd>
               <dt className="font-semibold text-foreground">Hours</dt>
-              <dd className="text-muted-foreground">Mon–Fri 8am–6pm · Sat 9am–3pm</dd>
+              <dd className="text-muted-foreground">Mon–Sat: open 24 hours · Sun: closed</dd>
               <dt className="font-semibold text-foreground">Phone</dt>
               <dd className="text-muted-foreground">08076172456 (calls & WhatsApp)</dd>
             </dl>
