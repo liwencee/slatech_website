@@ -17,7 +17,7 @@ import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 const testimonials = [
   {
     name: "Adebayo Ogunlade",
-    role: "CEO, TravelMax Agency",
+    role: "CEO, Travel Business",
     location: "Lagos",
     initials: "AO",
     avatarColor: "bg-primary",
@@ -26,7 +26,7 @@ const testimonials = [
   },
   {
     name: "Chioma Nwankwo",
-    role: "Founder, ShopNow Store",
+    role: "Founder, Online Store",
     location: "Ikeja, Lagos",
     initials: "CN",
     avatarColor: "bg-secondary",
@@ -35,7 +35,7 @@ const testimonials = [
   },
   {
     name: "Ibrahim Musa",
-    role: "Director, EduLearn Academy",
+    role: "Director, Education Provider",
     location: "Abuja, Nigeria",
     initials: "IM",
     avatarColor: "bg-green-600",
@@ -44,7 +44,7 @@ const testimonials = [
   },
   {
     name: "Funke Adeyemi",
-    role: "Manager, MediCare Health",
+    role: "Manager, Healthcare Clinic",
     location: "Ikeja, Lagos",
     initials: "FA",
     avatarColor: "bg-purple-600",
@@ -53,7 +53,7 @@ const testimonials = [
   },
   {
     name: "Emeka Obi",
-    role: "Owner, Elite Real Estate",
+    role: "Owner, Real Estate Business",
     location: "Lagos Island",
     initials: "EO",
     avatarColor: "bg-orange-500",
