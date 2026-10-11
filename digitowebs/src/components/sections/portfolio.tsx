@@ -2,21 +2,9 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
-import { altFor } from "@/lib/portfolio-shots";
+import { altFor, PORTFOLIO_PROJECTS as projects } from "@/lib/portfolio-shots";
 import Link from "next/link";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
-
-const projects = [
-  { title: "TravelMax Agency",    category: "Travel",      image: "/images/portfolio/igniting-hope-charity-website.png" },
-  { title: "AutoBook Car Rentals",category: "Automotive",  image: "/images/portfolio/ai-office-automation-website.png" },
-  { title: "Elite Real Estate",   category: "Real Estate", image: "/images/portfolio/pace-it-partner-website.png" },
-  { title: "MediCare Health",     category: "Healthcare",  image: "/images/portfolio/electronics-solar-ecommerce-store.png" },
-  { title: "EduLearn Academy",    category: "Education",   image: "/images/portfolio/hotel-website-rooms.png" },
-  { title: "ShopNow Store",       category: "E-Commerce",  image: "/images/portfolio/hotel-website-home.png" },
-  { title: "FoodieHub Delivery",  category: "Food",        image: "/images/portfolio/pluto-bv-healthcare-staffing-website.png" },
-  { title: "FitPro Gym",          category: "Fitness",     image: "/images/portfolio/zero-harm-international-hse-website.png" },
-  { title: "LegalEase Firm",      category: "Legal",       image: "/images/portfolio/igniting-hope-charity-website.png" },
-];
 
 const categories = ["All", ...Array.from(new Set(projects.map((p) => p.category)))];
 
@@ -98,8 +86,8 @@ export function PortfolioSection() {
               Digital Solutions Built for <span className="text-primary">Real Businesses</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Explore selected projects across industries including real estate,
-              healthcare, education, professional services, e-commerce, technology and more.
+              Explore selected projects across industries including healthcare,
+              professional services, non-profit, hospitality, e-commerce and technology.
             </p>
           </div>
         </AnimateOnScroll>

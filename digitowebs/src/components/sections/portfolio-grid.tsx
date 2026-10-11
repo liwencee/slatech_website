@@ -2,22 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { altFor } from "@/lib/portfolio-shots";
-
-const projects = [
-  { title: "Travel Agency",           category: "Travel",         image: "/images/portfolio/igniting-hope-charity-website.png" },
-  { title: "Oil and Gas",             category: "Oil & Gas",      image: "/images/portfolio/ai-office-automation-website.png" },
-  { title: "Elite Real Estate",       category: "Real Estate",    image: "/images/portfolio/pace-it-partner-website.png" },
-  { title: "MediCare Health",         category: "Healthcare",     image: "/images/portfolio/electronics-solar-ecommerce-store.png" },
-  { title: "EduLearn Academy",        category: "Education",      image: "/images/portfolio/hotel-website-rooms.png" },
-  { title: "ShopNow Store",           category: "E-Commerce",     image: "/images/portfolio/hotel-website-home.png" },
-  { title: "BuildRight Construction", category: "Construction",   image: "/images/portfolio/pluto-bv-healthcare-staffing-website.png" },
-  { title: "GreenLife NGO",           category: "Non-Profit",     image: "/images/portfolio/zero-harm-international-hse-website.png" },
-  { title: "InteriorPro Designs",     category: "Interior Design",image: "/images/portfolio/igniting-hope-charity-website.png" },
-  { title: "TechLaunch App",          category: "Technology",     image: "/images/portfolio/ai-office-automation-website.png" },
-  { title: "FoodExpress Delivery",    category: "Food & Beverage",image: "/images/portfolio/pace-it-partner-website.png" },
-  { title: "LegalEdge Law Firm",      category: "Legal",          image: "/images/portfolio/electronics-solar-ecommerce-store.png" },
-];
+import { altFor, PORTFOLIO_PROJECTS as projects } from "@/lib/portfolio-shots";
 
 const categories = ["All", ...new Set(projects.map((p) => p.category))];
 

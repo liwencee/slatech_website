@@ -11,3 +11,16 @@ export const SHOT_ALT: Record<string, string> = {
 };
 
 export const altFor = (src: string, fallback: string) => SHOT_ALT[src] ?? fallback;
+
+// Portfolio cards — titles and categories match what each screenshot shows.
+// Shared by the homepage carousel and the /portfolio grid.
+export const PORTFOLIO_PROJECTS = [
+  { title: "Zero-Harm International",      category: "Professional Services", image: "/images/portfolio/zero-harm-international-hse-website.png" },
+  { title: "Pluto BV Services",            category: "Healthcare",            image: "/images/portfolio/pluto-bv-healthcare-staffing-website.png" },
+  { title: "Igniting Hope",                category: "Non-Profit",            image: "/images/portfolio/igniting-hope-charity-website.png" },
+  { title: "PACE IT Partner",              category: "Technology",            image: "/images/portfolio/pace-it-partner-website.png" },
+  { title: "AI Office Automation",         category: "Technology",            image: "/images/portfolio/ai-office-automation-website.png" },
+  { title: "Electronics & Solar Store",    category: "E-Commerce",            image: "/images/portfolio/electronics-solar-ecommerce-store.png" },
+  { title: "Hotel Website",                category: "Hospitality",           image: "/images/portfolio/hotel-website-home.png" },
+  { title: "Hotel Rooms & Booking",        category: "Hospitality",           image: "/images/portfolio/hotel-website-rooms.png" },
+];
