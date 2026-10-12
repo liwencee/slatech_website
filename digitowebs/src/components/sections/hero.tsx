@@ -26,8 +26,8 @@ export function HeroSection() {
           <div className="text-white">
             {/* Headline */}
             <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-3 sm:mb-4">
-              Web Design &amp; Software Company in{" "}
-              <span className="text-primary">Ikeja, Lagos</span>
+              Web Design in{" "}
+              <span className="text-primary">Ikeja, Lagos and Nigeria</span>
             </h1>
             <p className="text-lg sm:text-2xl lg:text-3xl font-semibold leading-snug text-white/90 mb-5 sm:mb-6">
               Digital Products &amp;{" "}

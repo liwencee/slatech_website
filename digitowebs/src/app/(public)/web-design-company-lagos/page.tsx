@@ -5,13 +5,13 @@ import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
 
 export const metadata: Metadata = {
-  title: "Web Design Company in Lagos, Nigeria",
+  title: { absolute: "Web Design in Lagos, Nigeria - Slatech | Free Quote" },
   description:
-    "Looking for a web design company in Lagos? Slatech builds professional, mobile-first, SEO-optimised websites for Nigerian businesses. Based in Ikeja, Lagos.",
+    "Looking for web design in Lagos? Slatech builds professional, mobile-first, SEO-optimised websites for Nigerian businesses. Based in Ikeja, Lagos.",
   keywords: ["web design company lagos", "web design company nigeria", "professional web design lagos"],
   openGraph: {
     images: OG_IMAGES,
-    title: "Web Design Company in Lagos, Nigeria",
+    title: { absolute: "Web Design in Lagos, Nigeria - Slatech | Free Quote" },
     description: "Professional, mobile-first, SEO-optimised websites for Nigerian businesses. Based in Ikeja, Lagos.",
     url: "https://slatech.com.ng/web-design-company-lagos",
     type: "website",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   twitter: {
     images: TWITTER_IMAGES,
     card: "summary_large_image",
-    title: "Web Design Company in Lagos, Nigeria",
+    title: { absolute: "Web Design in Lagos, Nigeria - Slatech | Free Quote" },
     description: "Professional, mobile-first, SEO-optimised websites for Nigerian businesses. Based in Ikeja, Lagos.",
   },
   alternates: { canonical: "https://slatech.com.ng/web-design-company-lagos" },
@@ -37,15 +37,15 @@ const checklist = [
 export default function WebDesignCompanyLagosPage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Home", path: "/" }, { name: "Web Design Company Lagos", path: "/web-design-company-lagos" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", path: "/" }, { name: "Web Design in Lagos", path: "/web-design-company-lagos" }]} />
 
       <section className="bg-secondary py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-block px-4 py-1.5 bg-primary/20 text-primary text-sm font-medium rounded-full mb-4">
-            Web Design Company in Lagos
+            Web Design in Lagos
           </span>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            A Web Design Company in Lagos That <span className="text-primary">Builds for Results</span>
+            Web Design in Lagos That <span className="text-primary">Builds for Results</span>
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             Slatech Solutions is based in Ikeja, Lagos, and designs professional,
@@ -57,7 +57,7 @@ export default function WebDesignCompanyLagosPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6 text-center">
-            What to Look For in a Lagos Web Design Company
+            What to Look For When Choosing Web Design in Lagos
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-8 text-center max-w-2xl mx-auto">
             Lagos has hundreds of web designers, ranging from serious agencies to

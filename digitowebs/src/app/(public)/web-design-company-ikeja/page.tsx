@@ -5,9 +5,9 @@ import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
 
 export const metadata: Metadata = {
-  title: "Web Design Company in Ikeja, Lagos",
+  title: { absolute: "Web Design in Ikeja, Lagos - Slatech | Visit Our Office" },
   description:
-    "Slatech Solutions Limited is a web design company at 2b Olaide Tomori, Ikeja. Meet us in person, get a free quote, and launch a mobile-first website.",
+    "Slatech Solutions Limited offers web design at 2b Olaide Tomori, Ikeja. Meet us in person, get a free quote, and launch a mobile-first website.",
   keywords: [
     "web design company in ikeja",
     "web designer ikeja",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     images: OG_IMAGES,
-    title: "Web Design Company in Ikeja, Lagos",
+    title: { absolute: "Web Design in Ikeja, Lagos - Slatech | Visit Our Office" },
     description: "A web design and software company in Ikeja you can visit in person. Free quote.",
     url: "https://slatech.com.ng/web-design-company-ikeja",
     type: "website",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   twitter: {
     images: TWITTER_IMAGES,
     card: "summary_large_image",
-    title: "Web Design Company in Ikeja, Lagos",
+    title: { absolute: "Web Design in Ikeja, Lagos - Slatech | Visit Our Office" },
     description: "A web design and software company in Ikeja you can visit in person. Free quote.",
   },
   alternates: { canonical: "https://slatech.com.ng/web-design-company-ikeja" },
@@ -87,7 +87,7 @@ export default function WebDesignCompanyIkejaPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <BreadcrumbSchema items={[{ name: "Home", path: "/" }, { name: "Web Design Company Ikeja", path: "/web-design-company-ikeja" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", path: "/" }, { name: "Web Design in Ikeja", path: "/web-design-company-ikeja" }]} />
 
       <section className="bg-secondary py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -95,7 +95,7 @@ export default function WebDesignCompanyIkejaPage() {
             2b, Olaide Tomori, Ikeja
           </span>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Web Design Company in <span className="text-primary">Ikeja, Lagos</span>
+            Web Design in <span className="text-primary">Ikeja, Lagos</span>
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
             Slatech Solutions Limited designs and builds websites, online stores and

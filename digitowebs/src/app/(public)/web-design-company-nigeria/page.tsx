@@ -5,7 +5,7 @@ import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
 
 export const metadata: Metadata = {
-  title: { absolute: "Web Design Company in Nigeria | Slatech Solutions Limited" },
+  title: { absolute: "Web Design in Nigeria - Slatech | Websites from ₦100,000" },
   description:
     "Websites built for Nigerian customers: mobile-first, Paystack-ready and fast on mobile data. Landing pages from ₦100,000. Serving businesses nationwide.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     images: OG_IMAGES,
-    title: "Web Design Company in Nigeria | Slatech Solutions Limited",
+    title: "Web Design in Nigeria - Slatech | Websites from ₦100,000",
     description: "Mobile-first, Paystack-ready websites for Nigerian businesses, built from Lagos and delivered nationwide.",
     url: "https://slatech.com.ng/web-design-company-nigeria",
     type: "website",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   twitter: {
     images: TWITTER_IMAGES,
     card: "summary_large_image",
-    title: "Web Design Company in Nigeria | Slatech Solutions Limited",
+    title: "Web Design in Nigeria - Slatech | Websites from ₦100,000",
     description: "Mobile-first, Paystack-ready websites for Nigerian businesses, built from Lagos and delivered nationwide.",
   },
   alternates: { canonical: "https://slatech.com.ng/web-design-company-nigeria" },
@@ -98,7 +98,7 @@ export default function WebDesignCompanyNigeriaPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <BreadcrumbSchema items={[{ name: "Home", path: "/" }, { name: "Web Design Company Nigeria", path: "/web-design-company-nigeria" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", path: "/" }, { name: "Web Design in Nigeria", path: "/web-design-company-nigeria" }]} />
 
       <section className="bg-secondary py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -106,7 +106,7 @@ export default function WebDesignCompanyNigeriaPage() {
             Serving businesses nationwide
           </span>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Web Design Company in <span className="text-primary">Nigeria</span>
+            Web Design in <span className="text-primary">Nigeria</span>
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             A website built abroad often ignores how Nigerians actually browse, pay and

@@ -16,9 +16,9 @@ import { FAQSection } from "@/components/sections/faq";
 import { LocationsHubSection } from "@/components/sections/locations-hub";
 
 export const metadata: Metadata = {
-  title: "Web Design Company in Lagos | 4.9★ · 88 Reviews | Slatech",
+  title: "Web Design in Ikeja, Lagos and Nigeria - Slatech | 4.9★",
   description:
-    "Web design company in Ikeja, Lagos. Landing pages from ₦100,000, business websites from ₦400,000. Rated 4.9 on Google. Get a free quote today.",
+    "Web design in Ikeja, Lagos and Nigeria. Landing pages from ₦100,000, business websites from ₦400,000. Rated 4.9 on Google. Get a free quote today.",
   keywords: [
     "web design company Lagos Nigeria",
     "web design company Ikeja Lagos",
@@ -36,17 +36,17 @@ export const metadata: Metadata = {
     "web design company Lagos Nigeria, branding and web design agency Nigeria",
   ],
   openGraph: {
-    title: "Web Design Company in Lagos | 4.9★ · 88 Reviews | Slatech",
+    title: "Web Design in Ikeja, Lagos and Nigeria - Slatech | 4.9★",
     description:
-      "Web design company in Ikeja, Lagos. Landing pages from ₦100,000, business websites from ₦400,000. Rated 4.9 on Google. Get a free quote today.",
+      "Web design in Ikeja, Lagos and Nigeria. Landing pages from ₦100,000, business websites from ₦400,000. Rated 4.9 on Google. Get a free quote today.",
     url: "https://slatech.com.ng",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Design Company in Lagos | 4.9★ · 88 Reviews | Slatech",
+    title: "Web Design in Ikeja, Lagos and Nigeria - Slatech | 4.9★",
     description:
-      "Web design company in Ikeja, Lagos. Landing pages from ₦100,000, business websites from ₦400,000. Rated 4.9 on Google. Get a free quote today.",
+      "Web design in Ikeja, Lagos and Nigeria. Landing pages from ₦100,000, business websites from ₦400,000. Rated 4.9 on Google. Get a free quote today.",
   },
   alternates: {
     canonical: "https://slatech.com.ng",

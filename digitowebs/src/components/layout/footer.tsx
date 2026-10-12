@@ -22,9 +22,9 @@ const quickLinks = [
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
   { label: "Pricing", href: "/blog/how-much-does-web-design-cost-in-nigeria" },
-  { label: "Web Design Ikeja", href: "/web-design-company-ikeja" },
-  { label: "Web Design Lagos", href: "/web-design-company-lagos" },
-  { label: "Web Design Nigeria", href: "/web-design-company-nigeria" },
+  { label: "Web Design in Ikeja", href: "/web-design-company-ikeja" },
+  { label: "Web Design in Lagos", href: "/web-design-company-lagos" },
+  { label: "Web Design in Nigeria", href: "/web-design-company-nigeria" },
 ];
 
 const legal = [
