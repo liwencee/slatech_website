@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
-import { OCT_2026_POSTS, type ContentParagraph } from "@/lib/blog/posts-oct-2026";
+import { EXTRA_POSTS, type ContentParagraph } from "@/lib/blog";
 
 type Post = {
   title: string;
@@ -676,7 +676,7 @@ const basePosts: Record<string, Post> = {
   },
 };
 
-const posts: Record<string, Post> = { ...OCT_2026_POSTS, ...basePosts };
+const posts: Record<string, Post> = { ...EXTRA_POSTS, ...basePosts };
 
 type PageProps = {
   params: Promise<{ slug: string }>;

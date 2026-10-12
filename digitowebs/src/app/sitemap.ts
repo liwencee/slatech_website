@@ -1,8 +1,8 @@
 import { MetadataRoute } from "next";
-import { OCT_2026_POSTS } from "@/lib/blog/posts-oct-2026";
+import { EXTRA_POSTS } from "@/lib/blog";
 
 const blogSlugs = [
-  ...Object.keys(OCT_2026_POSTS),
+  ...Object.keys(EXTRA_POSTS),
   "how-to-set-up-whatsapp-business-nigeria",
   "why-your-restaurant-needs-a-website-nigeria",
   "how-to-build-a-brand-for-your-small-business-nigeria",
