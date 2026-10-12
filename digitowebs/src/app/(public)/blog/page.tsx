@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
+import { OCT_2026_POSTS } from "@/lib/blog/posts-oct-2026";
 
 export const metadata: Metadata = {
   title: "Web Design & SEO Blog Nigeria",
@@ -47,6 +48,15 @@ export const metadata: Metadata = {
 
 // Static blog posts — newest first
 const posts = [
+  ...Object.entries(OCT_2026_POSTS).map(([slug, p]) => ({
+    slug,
+    title: p.title,
+    excerpt: p.excerpt,
+    category: p.category,
+    date: p.date,
+    readTime: p.readTime,
+    color: p.color,
+  })),
   /* ---- NEW POSTS ---- */
   {
     slug: "branding-agency-lagos-what-professional-branding-includes",

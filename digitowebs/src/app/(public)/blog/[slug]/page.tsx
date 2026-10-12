@@ -3,19 +3,22 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
+import { OCT_2026_POSTS, type ContentParagraph } from "@/lib/blog/posts-oct-2026";
 
-type ContentParagraph = string | { pre: string; linkText: string; linkHref: string; post?: string };
-
-const posts: Record<string, {
+type Post = {
   title: string;
+  seoTitle?: string;
   excerpt: string;
   category: string;
   date: string;
   readTime: string;
   color: string;
+  keywords?: string[];
   content: ContentParagraph[];
   faqs?: { q: string; a: string }[];
-}> = {
+};
+
+const basePosts: Record<string, Post> = {
   /* ------------------------------------------------------------------ */
   /*  NEW POSTS                                                           */
   /* ------------------------------------------------------------------ */
@@ -673,6 +676,8 @@ const posts: Record<string, {
   },
 };
 
+const posts: Record<string, Post> = { ...OCT_2026_POSTS, ...basePosts };
+
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
@@ -758,11 +763,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const post = posts[slug];
   if (!post) return { title: "Post Not Found" };
-  const seoTitle = seoTitles[slug] ?? post.title;
+  const seoTitle = seoTitles[slug] ?? post.seoTitle ?? post.title;
   return {
     title: seoTitle,
     description: metaDescription(post.excerpt),
-    keywords: categoryKeywords[post.category] ?? [],
+    keywords: post.keywords ?? categoryKeywords[post.category] ?? [],
     openGraph: {
       images: OG_IMAGES,
       title: seoTitle,

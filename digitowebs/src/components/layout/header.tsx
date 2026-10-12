@@ -26,7 +26,6 @@ const navItems = [
   { label: "Technology", href: "/technology" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Training", href: "/training" },
-  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
 
