@@ -446,7 +446,7 @@ export const OCT_2026_POSTS: Record<string, BlogPost> = {
       "You don't need a big brand's budget to win customers online. Here's how Nigerian small businesses can compete with larger companies using digital marketing.",
     category: "Digital Marketing",
     date: "Oct 13, 2026",
-    readTime: "2 min read",
+    readTime: "4 min read",
     color: "bg-amber-500",
     keywords: [
       "small business digital marketing Nigeria",
@@ -471,6 +471,12 @@ export const OCT_2026_POSTS: Record<string, BlogPost> = {
 
       "Create Helpful Content. Answer the questions your customers ask in blog posts, short videos and social media posts. Helpful content builds trust and brings in search traffic over time. Big brands often produce polished but generic content; you can produce specific, practical answers for your market.",
 
+      "Turn Customers Into Your Marketing Team. In Nigeria, recommendations from friends, family and colleagues carry a lot of weight. Make referring you easy: ask satisfied customers to share your WhatsApp number or website, reward referrals with a discount or small gift, and thank people publicly when they recommend you. A steady flow of referrals is something money can't easily buy for a big brand.",
+
+      "Partner With Other Local Businesses. Team up with businesses that serve the same customers without competing with you. A caterer and an event decorator, a gym and a nutritionist, or a printer and a web designer can share audiences, run joint promotions and recommend each other. Partnerships give small businesses reach without big advertising budgets.",
+
+      "Use WhatsApp for Personal Service. Big companies often route customers through call centres and ticket systems. A small business can answer on WhatsApp within minutes, send a voice note to explain something, share photos of an order before it's dispatched and check in after delivery. That personal touch builds loyalty quickly.",
+
       "Look Professional Where It Counts. Customers judge credibility quickly. A professional website, a consistent brand and a business email address make a small business look established. You don't need a big brand's budget for this: a well-designed landing page starts from ₦100,000, and a full business website from ₦400,000.",
 
       {
@@ -480,7 +486,19 @@ export const OCT_2026_POSTS: Record<string, BlogPost> = {
         post: " covers the channels worth testing first.",
       },
 
+      "Where to Start This Month. If this feels like a lot, start with three actions: complete your Google Business Profile and ask five recent customers for reviews; make sure your website clearly says what you do, where you are and how to contact you on WhatsApp; and choose one social media platform to post on consistently for the next 90 days. Small, consistent actions beat big plans you never finish.",
+
       "Slatech Solutions works with small businesses across Nigeria, providing websites, SEO and branding at prices that fit growing businesses. Contact our team in Ikeja, Lagos for a free consultation on how to compete, and win, online.",
+    ],
+    faqs: [
+      {
+        q: "Can a small business really compete with big brands online?",
+        a: "Yes. Small businesses can win through local SEO, a clear niche, personal service, quick responses, genuine reviews and helpful content, areas where large companies are often slower or less personal.",
+      },
+      {
+        q: "What is the cheapest way for a small business to market online?",
+        a: "A complete Google Business Profile, steady customer reviews, consistent posting on one social platform, WhatsApp Business and referrals from happy customers cost little but can bring a steady flow of customers.",
+      },
     ],
   },
 
@@ -491,7 +509,7 @@ export const OCT_2026_POSTS: Record<string, BlogPost> = {
       "Corporate buyers research suppliers online before they call. Here are seven features a B2B website in Nigeria needs to win bigger contracts.",
     category: "Web Design",
     date: "Oct 13, 2026",
-    readTime: "2 min read",
+    readTime: "4 min read",
     color: "bg-slate-700",
     keywords: [
       "B2B website design Nigeria",
@@ -503,6 +521,8 @@ export const OCT_2026_POSTS: Record<string, BlogPost> = {
     ],
     content: [
       "Selling to businesses is different from selling to consumers. Corporate buyers take longer to decide, involve several people, and need to justify their choice internally. Before anyone from a company calls you, someone has usually reviewed your website and shared it with colleagues. Your website has to answer their questions and make you look like a safe choice. These seven features help.",
+
+      "Who Actually Visits a B2B Website. A corporate purchase rarely rests on one person. A procurement officer may find you first, a technical manager checks whether you can do the work, a finance lead looks at cost and risk, and a director signs off. Each of them visits your website looking for different answers. A good B2B website is planned around these people, not just around what you want to say about yourself.",
 
       "1. A Clear Statement of What You Do and for Whom. Your homepage should say plainly what you provide, which industries you serve and what results you deliver. Corporate buyers are busy and scanning several suppliers at once. Vague slogans make them move on.",
 
@@ -525,7 +545,23 @@ export const OCT_2026_POSTS: Record<string, BlogPost> = {
         post: ".",
       },
 
+      "Plan Content for Everyone in the Buying Team. Give each decision-maker something useful. Technical staff want detail on your process, tools and standards. Finance teams want clear pricing structures, payment terms and evidence of value. Senior leaders want proof that you are stable, experienced and low-risk. Procurement teams want registration documents, references and a simple way to request a formal quote. When every person finds their answers quickly, your proposal moves through the company faster.",
+
+      "Common B2B Website Mistakes. The most frequent problems we see on Nigerian corporate websites are: a homepage full of slogans but no clear description of services; case studies that name clients but say nothing about results; outdated team pages showing staff who left years ago; no physical address or registration details; and contact forms that send enquiries to an inbox nobody checks. Each one quietly costs you contracts.",
+
+      "Keep It Current. Corporate buyers notice when a website hasn't been touched in years: old copyright dates, dead links, last decade's projects. Add new case studies as you complete projects, update your team and certifications, and publish occasional insights about your industry. An active website signals an active, growing business.",
+
       "A corporate or B2B website from Slatech Solutions starts from ₦400,000 and usually takes about three weeks. Websites with client portals or custom systems start from ₦1,200,000. Contact our team in Ikeja, Lagos to discuss a website that helps you win bigger clients.",
+    ],
+    faqs: [
+      {
+        q: "What should a B2B website include?",
+        a: "A clear statement of what you do and for whom, detailed service pages, case studies, credentials and compliance information, team profiles, several ways to request a quote, and a fast, secure site on your own domain.",
+      },
+      {
+        q: "How much does a corporate website cost in Nigeria?",
+        a: "At Slatech Solutions, a corporate or B2B website starts from ₦400,000 and usually takes about three weeks. Websites with client portals or custom systems start from ₦1,200,000.",
+      },
     ],
   },
 
@@ -581,7 +617,7 @@ export const OCT_2026_POSTS: Record<string, BlogPost> = {
       "November and December bring some of the year's busiest shopping in Nigeria. Here's how to get your website ready so you don't miss sales during the festive rush.",
     category: "E-Commerce",
     date: "Oct 13, 2026",
-    readTime: "2 min read",
+    readTime: "4 min read",
     color: "bg-red-600",
     keywords: [
       "Detty December sales",
@@ -596,6 +632,8 @@ export const OCT_2026_POSTS: Record<string, BlogPost> = {
 
       "Start Now, Not in December. Changes to a website take time to build, test and get indexed by Google. Pages you publish in October and early November have a chance to appear in search results by the time shoppers start looking. Leave it until mid-December and you'll miss most of the season.",
 
+      "Plan Your Offers and Budget First. Decide what you'll promote before you touch the website: which products or services, what discounts or bundles, how much stock you can realistically sell and how much you'll spend on advertising. Festive promotions that aren't planned often end with discounts that wipe out profit or offers you can't fulfil.",
+
       "Make Sure Your Site Can Handle More Visitors. A website that's fine on a normal day can slow down or crash when traffic rises. Check your hosting plan, compress large images and test your site's speed on mobile. A crash during a promotion is lost sales and damaged trust.",
 
       "Test Your Checkout From Start to Finish. Place a real test order on your phone: add to cart, enter delivery details, pay and check the confirmation. Fix anything confusing or broken. Make sure payment confirmations and order notifications reach both you and the customer.",
@@ -606,6 +644,10 @@ export const OCT_2026_POSTS: Record<string, BlogPost> = {
 
       "Prepare Your Customer Service. Expect more WhatsApp messages and calls. Set up quick replies for common questions about prices, delivery, payment and returns. Decide who will answer messages and when, especially over public holidays.",
 
+      "Make Gifting Easy. Many festive shoppers are buying for someone else. Gift guides by budget (for example under ₦20,000, under ₦50,000), gift wrapping options, gift messages and delivery to a different address can all increase orders. Corporate gifting is also big in December, so consider a page for bulk orders from companies.",
+
+      "Promote Through Channels You Own. Advertising costs often rise during the festive season as more businesses compete for attention. Your email list, WhatsApp broadcast list and existing customers are cheaper to reach. Tell them about your offers first, give them early access, and ask happy customers to share with friends.",
+
       "Stock and Prices Must Be Accurate. Nothing frustrates customers more than paying for an item that's out of stock. Update stock levels and prices on your website before you start promoting. If you run discounts, make sure they work at checkout.",
 
       {
@@ -615,7 +657,19 @@ export const OCT_2026_POSTS: Record<string, BlogPost> = {
         post: ".",
       },
 
+      "Plan for January Too. The season doesn't end on 1 January. Customers who bought gifts may return to buy for themselves, and new year resolutions bring demand for fitness, learning, business and organisation products. Collect customer contacts during December so you can follow up in January with a thank-you, a review request or a new-year offer.",
+
       "Slatech Solutions helps Nigerian businesses prepare websites and online stores for the festive season. Contact our team in Ikeja, Lagos to get your site ready before the rush.",
+    ],
+    faqs: [
+      {
+        q: "When should I prepare my website for December sales?",
+        a: "Start in October or early November. Changes need time to build and test, and new pages need time to appear in Google before festive shoppers start searching.",
+      },
+      {
+        q: "What is the most important thing to check before a festive sale?",
+        a: "Test your full checkout on a mobile phone, from adding an item to the cart through payment and confirmation, and make sure stock levels and delivery information are accurate.",
+      },
     ],
   },
 

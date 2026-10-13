@@ -313,7 +313,7 @@ export const BATCH_2_POSTS: Record<string, BlogPost> = {
       "Your Instagram page is often a customer's first impression. Here's how to set up and grow an Instagram business page in Nigeria that attracts followers and turns them into buyers.",
     category: "Digital Marketing",
     date: "Oct 13, 2026",
-    readTime: "2 min read",
+    readTime: "4 min read",
     color: "bg-rose-500",
     keywords: [
       "Instagram business page Nigeria",
@@ -340,7 +340,15 @@ export const BATCH_2_POSTS: Record<string, BlogPost> = {
 
       "Grow Followers Without Buying Them. Bought followers don't buy your products and can damage your account's reach. Grow genuinely by posting consistently, using relevant local hashtags, collaborating with complementary businesses, engaging with comments and accounts in your niche, running giveaways with sensible entry rules, and sharing your Instagram on your website, WhatsApp and packaging.",
 
+      "Plan a Simple Posting Schedule. Consistency matters more than volume. Choose a schedule you can keep, such as three feed posts and daily stories each week, and plan content a week ahead. Batch your photography: take photos of several products in one session so you always have content ready. Stories are ideal for everyday updates, polls, questions and behind-the-scenes moments.",
+
+      "Use Your Insights. Professional accounts show which posts reach the most people, which get saved and shared, and when your followers are most active. Check them monthly. Do more of what brings messages and sales, post at the times your audience is online, and stop spending time on content types that don't perform.",
+
       "Make Ordering Effortless. Show prices, reply to messages quickly and keep ordering simple. A link to your website or a product catalogue lets customers browse everything in one place, especially if you have many products.",
+
+      "Run Ads Carefully. Instagram ads, managed through Meta's advertising tools, can reach people who don't follow you yet. Start with a small budget, target a specific location and audience, and promote a post or product that has already performed well organically. Send people to WhatsApp or a product page rather than just your profile, and track the enquiries and sales each campaign produces.",
+
+      "Protect Your Account. Business accounts are frequent targets for hackers. Turn on two-factor authentication, use a strong unique password, and be very wary of direct messages claiming your account has broken copyright rules or is about to be deleted. These are usually phishing attempts designed to steal your login. Losing access to a page you've built for years can be devastating.",
 
       {
         pre: "Don't Build Your Whole Business on Instagram. Accounts can be restricted or hacked, and reach can drop without warning. Use Instagram to bring customers to channels you own, such as your website and email list. Our article on ",
@@ -351,6 +359,16 @@ export const BATCH_2_POSTS: Record<string, BlogPost> = {
 
       "Slatech Solutions builds websites and online stores that work with your Instagram, giving followers a professional place to browse and order. Contact our team in Ikeja, Lagos for a free consultation.",
     ],
+    faqs: [
+      {
+        q: "How do I grow my Instagram business page in Nigeria?",
+        a: "Post consistently, use clear photos and Reels, add relevant local hashtags, collaborate with complementary businesses, reply to comments and messages quickly, and share your Instagram on your website, WhatsApp and packaging. Avoid buying followers.",
+      },
+      {
+        q: "What should I put in my Instagram business bio?",
+        a: "Say what you sell, who it's for and how to order, add your location if you serve a specific area, and include a WhatsApp contact button and a link to your website or product page.",
+      },
+    ],
   },
 
   "digital-marketing-mistakes-nigerian-businesses": {
@@ -360,7 +378,7 @@ export const BATCH_2_POSTS: Record<string, BlogPost> = {
       "From buying followers to ignoring Google, these are the digital marketing mistakes that cost Nigerian businesses customers, and what to do instead.",
     category: "Digital Marketing",
     date: "Oct 13, 2026",
-    readTime: "2 min read",
+    readTime: "4 min read",
     color: "bg-red-500",
     keywords: [
       "digital marketing mistakes",
@@ -393,6 +411,12 @@ export const BATCH_2_POSTS: Record<string, BlogPost> = {
 
       "10. Not Asking for Reviews. Reviews are powerful proof, yet many businesses never ask for them. Make it a habit to send satisfied customers your Google review link after every successful job or delivery.",
 
+      "How to Audit Your Digital Marketing in One Afternoon. You don't need an agency to spot most of these mistakes. Set aside a few hours and work through five checks. Search for your business and your main service on Google: do you appear, and does your Google Business Profile have accurate details and recent reviews? Open your website on your phone: does it load quickly, say clearly what you do and make contacting you easy?",
+
+      "Next, send your own business a WhatsApp message and an enquiry through your website from a different number. How long does it take to get a reply, and is the reply helpful? Then look at your social media pages side by side: are your logo, colours, bio and contact details consistent, and when did you last post? Finally, look at your analytics or ad reports: can you tell which channel brought in your last ten customers?",
+
+      "What to Fix First. Fix anything that loses customers who are already trying to buy: slow replies, broken contact forms, missing prices and a website that doesn't work on mobile. Then fix visibility: your Google Business Profile, reviews and basic SEO. Leave nice-to-haves, such as new platforms or bigger ad budgets, until the basics are working.",
+
       {
         pre: "Build on a Strong Foundation. Most of these mistakes are easier to fix when you have a professional website at the centre of your marketing. See our guide to ",
         linkText: "digital marketing strategies for Nigerian businesses",
@@ -401,6 +425,16 @@ export const BATCH_2_POSTS: Record<string, BlogPost> = {
       },
 
       "Slatech Solutions provides websites, SEO and branding for businesses across Nigeria. Contact our team in Ikeja, Lagos for a free review of your online presence and an honest list of what to fix first.",
+    ],
+    faqs: [
+      {
+        q: "What is the biggest digital marketing mistake small businesses make?",
+        a: "Spending on visibility before fixing the basics. Slow replies, hidden prices and a website that doesn't work on mobile lose customers who are already interested, so more traffic or followers won't help until those are fixed.",
+      },
+      {
+        q: "Should I boost Instagram or Facebook posts?",
+        a: "Boosting can work if you choose a specific audience, send people somewhere they can enquire or buy, and track results. Boosting posts without targeting or tracking is a common way to waste money.",
+      },
     ],
   },
 
@@ -411,7 +445,7 @@ export const BATCH_2_POSTS: Record<string, BlogPost> = {
       "If customers can't tell why they should choose you, they'll choose on price. Here's how Nigerian businesses can find and communicate a strong unique selling proposition.",
     category: "Branding",
     date: "Oct 13, 2026",
-    readTime: "2 min read",
+    readTime: "4 min read",
     color: "bg-orange-600",
     keywords: [
       "unique selling proposition",
@@ -438,6 +472,12 @@ export const BATCH_2_POSTS: Record<string, BlogPost> = {
 
       "Step 6: Use It Everywhere. Put your USP in your website headline, social media bios, adverts, proposals, packaging and sales conversations. Repeat it consistently. A USP only works if customers notice it.",
 
+      "USP Examples by Industry. A USP looks different in every industry, but the principle is the same: something specific that customers value. A laundry service might offer free pickup and delivery within 48 hours in Ikeja. A catering company might specialise in small corporate lunches with no minimum order. A tutor might guarantee a progress report every two weeks. A web design company might promise landing pages in about two days, or instalment payments with a 50% deposit.",
+
+      "Notice what these have in common: each one names a concrete benefit, a customer can check whether it's true, and it answers a real frustration in that market, such as slow turnaround, high minimums, poor communication or large upfront costs.",
+
+      "Common USP Mistakes. Avoid USPs that every competitor could also claim, such as 'quality', 'professional' or 'customer-focused'. Don't build a USP on something you can't deliver consistently, because one broken promise can undo the trust it was meant to build. And don't compete on price alone unless your costs are genuinely lower than competitors'. There will almost always be someone willing to go cheaper.",
+
       "Back It Up With Proof. Customers are sceptical of claims. Support your USP with reviews, case studies, guarantees, statistics you can verify, photos and examples of your work. Proof turns a claim into a reason to buy.",
 
       {
@@ -449,6 +489,16 @@ export const BATCH_2_POSTS: Record<string, BlogPost> = {
 
       "Slatech Solutions helps Nigerian businesses define their positioning and present it clearly on their website and brand materials. Contact our team in Ikeja, Lagos for a free consultation.",
     ],
+    faqs: [
+      {
+        q: "What is a unique selling proposition?",
+        a: "A unique selling proposition (USP) is the clear, specific reason a customer should choose your business over competitors, based on something customers value that you deliver better or differently.",
+      },
+      {
+        q: "Can a small business have more than one USP?",
+        a: "It's best to lead with one main USP so customers remember it. Supporting strengths can appear elsewhere on your website and marketing, but one clear message is easier to recall and repeat.",
+      },
+    ],
   },
 
   "personal-branding-nigeria": {
@@ -458,7 +508,7 @@ export const BATCH_2_POSTS: Record<string, BlogPost> = {
       "A strong personal brand brings opportunities, clients and credibility. Here's how Nigerian founders and professionals can build a personal brand online, step by step.",
     category: "Branding",
     date: "Oct 13, 2026",
-    readTime: "2 min read",
+    readTime: "4 min read",
     color: "bg-indigo-500",
     keywords: [
       "personal branding Nigeria",
@@ -487,6 +537,12 @@ export const BATCH_2_POSTS: Record<string, BlogPost> = {
 
       "Be Consistent and Authentic. Use a consistent name, photo, bio and message everywhere. Share your real opinions and experiences. People connect with people, and authenticity is what makes your brand memorable.",
 
+      "Personal Brand vs Business Brand. For founders, the two work together. Your business brand represents the company and should be able to grow beyond you. Your personal brand represents your expertise, values and story. Many customers, investors and partners in Nigeria want to know the person behind a business before they trust it, so a founder's visible personal brand can open doors for the company. Keep them consistent, but don't let the business depend entirely on your personal accounts.",
+
+      "Mistakes to Avoid. Common personal branding mistakes include posting only self-promotion, copying someone else's style, being inconsistent about what you do, arguing publicly in ways that could put off clients, and disappearing for months at a time. Remember that clients and employers may read old posts, so think before you post.",
+
+      "Measure Your Progress. Track signs that your personal brand is working: profile views, connection requests from your target audience, enquiries, invitations to speak or contribute, and how often people mention they found you online. Review every few months and adjust what you post based on what brings real opportunities.",
+
       {
         pre: "Look the Part. A consistent visual style, such as colours, fonts and photos, makes your brand look professional. Learn more in our article on ",
         linkText: "what professional branding includes",
@@ -495,6 +551,16 @@ export const BATCH_2_POSTS: Record<string, BlogPost> = {
       },
 
       "Slatech Solutions designs personal websites and brand identities for founders and professionals across Nigeria. Contact our team in Ikeja, Lagos to build a presence that works for your career or business.",
+    ],
+    faqs: [
+      {
+        q: "Do I need a personal website for my personal brand?",
+        a: "It isn't essential, but it helps. A personal website on your own domain appears when people search your name, gives you a professional home you control and can show your services, work and testimonials in one place.",
+      },
+      {
+        q: "Which platform is best for personal branding in Nigeria?",
+        a: "LinkedIn is usually best for professionals, consultants and B2B founders. Creatives and consumer-facing personal brands often do better on Instagram, TikTok or YouTube.",
+      },
     ],
   },
 
@@ -505,7 +571,7 @@ export const BATCH_2_POSTS: Record<string, BlogPost> = {
       "Getting enquiries is only half the job. Here's how Nigerian businesses can follow up leads properly and close more sales without being pushy.",
     category: "Business",
     date: "Oct 13, 2026",
-    readTime: "2 min read",
+    readTime: "4 min read",
     color: "bg-lime-600",
     keywords: [
       "convert leads to customers",
@@ -526,11 +592,17 @@ export const BATCH_2_POSTS: Record<string, BlogPost> = {
 
       "Follow Up, Then Follow Up Again. Many sales are won on the second or third follow-up, not the first conversation. Customers get busy, forget or need time to get approval. Follow up politely after a few days, then again a week later. Add value each time by answering a likely question, sharing a relevant example or reminding them of a deadline.",
 
+      "A Simple Follow-Up Schedule. If you don't have a system, try this: reply to the enquiry immediately; send your quote within a day; follow up two or three days after sending the quote; follow up again about a week later with something useful; and make a final, polite check-in two weeks after that. Adjust the timing for larger contracts, which often take longer to approve.",
+
+      "What to Say in a Follow-Up. Avoid messages that only say 'Just following up'. Add something useful each time. For example: 'Good morning Mrs Adeyemi, I wanted to check whether you had a chance to review the quote for your website. Many clients ask how long the project takes, so I've attached a short timeline. Happy to answer any questions by call or WhatsApp.' Polite, specific and helpful follow-ups feel like service, not pressure.",
+
       "Use the Right Channel. Many Nigerian customers prefer WhatsApp for quick conversations, but larger companies may expect email for formal quotes and approvals. Use the channel the customer chose, and keep important details in writing.",
 
       "Handle Objections Honestly. When customers hesitate, find out why. Price, timing, trust and uncertainty are the most common reasons. Address each one honestly: explain the value, offer a smaller starting option, share reviews or case studies, or suggest a call to answer questions.",
 
       "Keep Track of Every Lead. A simple spreadsheet or customer relationship management (CRM) tool helps you record every lead, their status and when to follow up next. Without a system, leads slip through the cracks. As your business grows, a custom system can automate reminders and reports.",
+
+      "Know When to Stop. If a lead hasn't responded after several helpful follow-ups, send a final message saying you'll close the file for now and they're welcome to get in touch whenever they're ready. This respects their time, protects your reputation and sometimes prompts a reply. Keep their details, with permission, for future offers.",
 
       "Learn From Lost Leads. When someone chooses a competitor, politely ask why. The answers reveal problems with your pricing, process or communication that you can fix.",
 
@@ -542,6 +614,16 @@ export const BATCH_2_POSTS: Record<string, BlogPost> = {
       },
 
       "Slatech Solutions builds websites with enquiry forms and WhatsApp integration, and develops custom systems for lead tracking and automation. Contact our team in Ikeja, Lagos to talk about getting more from your enquiries.",
+    ],
+    faqs: [
+      {
+        q: "How many times should I follow up with a lead?",
+        a: "Many sales close after several follow-ups. A reasonable approach is four or five polite, helpful follow-ups over two to three weeks, then a final message saying you'll close the file for now.",
+      },
+      {
+        q: "How fast should I reply to a sales enquiry?",
+        a: "As fast as possible, ideally within minutes during business hours. Customers often contact several businesses at once, and the first helpful reply has a strong advantage.",
+      },
     ],
   },
 
