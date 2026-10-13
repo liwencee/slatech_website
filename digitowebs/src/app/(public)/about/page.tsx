@@ -119,7 +119,7 @@ export default function AboutPage() {
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/images/olalekan.jpg"
-                alt="Olalekan Akindiya — Founder & CEO of Slatech Solution Limited , Lagos Nigeria"
+                alt="Olalekan Akindiya — Founder & CEO of Slatech Solutions Limited, Lagos, Nigeria"
                 fill
                 className="object-cover object-top"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -246,7 +246,7 @@ export default function AboutPage() {
                   <div className={`absolute inset-0 ${member.color} opacity-20`} />
                   <Image
                     src={member.photo}
-                    alt={`${member.name} — ${member.role} at Slatech Solution Limited `}
+                    alt={`${member.name} — ${member.role} at Slatech Solutions Limited`}
                     fill
                     className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"

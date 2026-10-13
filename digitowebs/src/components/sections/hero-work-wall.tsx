@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { altFor } from "@/lib/portfolio-shots";
 
 // Real client projects (same screenshots as the portfolio section).
 const SHOTS = [
@@ -44,7 +45,7 @@ export function HeroWorkWall() {
               >
                 <Image
                   src={src}
-                  alt=""
+                  alt={altFor(src, "Website designed by Slatech Solutions")}
                   fill
                   sizes="(min-width: 640px) 240px, 192px"
                   quality={60}

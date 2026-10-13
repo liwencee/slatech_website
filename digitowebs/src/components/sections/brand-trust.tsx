@@ -49,7 +49,7 @@ export function BrandTrustBar() {
             >
               <Image
                 src={partner.logo}
-                alt={partner.name}
+                alt={`${partner.name} logo`}
                 width={140}
                 height={56}
                 className="object-contain max-h-14 w-auto"
