@@ -246,7 +246,7 @@ export function ContactSection() {
                     </svg>
                   </a>
                   <a
-                    href="https://www.instagram.com/_slatech?igsh=MTJta3IwZDVvanY4cg%3D%3D&utm_source=qr"
+                    href="https://www.instagram.com/slatech_solution_limited?xtok=MTJta3IwZDVvanY4cg%3D%3D&utm_source=qr"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"

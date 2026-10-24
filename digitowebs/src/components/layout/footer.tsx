@@ -322,7 +322,7 @@ export function Footer() {
                   <FacebookIcon className="w-[18px] h-[18px]" />
                 </SocialButton>
                 <SocialButton
-                  href="https://www.instagram.com/_slatech?igsh=MTJta3IwZDVvanY4cg%3D%3D&utm_source=qr"
+                  href="https://www.instagram.com/slatech_solution_limited?xtok=MTJta3IwZDVvanY4cg%3D%3D&utm_source=qr"
                   label="Instagram"
                 >
                   <InstagramIcon className="w-[18px] h-[18px]" />

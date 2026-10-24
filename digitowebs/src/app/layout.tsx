@@ -226,7 +226,7 @@ const LOCAL_BUSINESS_SCHEMA = {
   sameAs: [
     "https://wa.me/2348076172456",
     "https://www.facebook.com/share/1AtxLz2njU/?mibextid=wwXIfr",
-    "https://www.instagram.com/_slatech",
+    "https://www.instagram.com/slatech_solution_limited",
   ],
 };
 
