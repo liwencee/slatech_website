@@ -72,7 +72,7 @@ const faqs = [
   },
   {
     q: "How much does a website cost in Nigeria?",
-    a: "With Slatech Solutions Limited, landing pages start from ₦100,000, business websites from ₦400,000, e-commerce stores from ₦600,000, and custom web applications from ₦1,200,000 upwards.",
+    a: "With Slatech Solution Limited, landing pages start from ₦100,000, business websites from ₦400,000, e-commerce stores from ₦600,000, and custom web applications from ₦1,200,000 upwards.",
   },
   {
     q: "Can I accept online payments in Nigeria?",
@@ -110,7 +110,7 @@ export default function WebDesignCompanyNigeriaPage() {
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             A website built abroad often ignores how Nigerians actually browse, pay and
-            get in touch. Slatech Solutions Limited builds sites around those realities,
+            get in touch. Slatech Solution Limited builds sites around those realities,
             for businesses in every state.
           </p>
         </div>

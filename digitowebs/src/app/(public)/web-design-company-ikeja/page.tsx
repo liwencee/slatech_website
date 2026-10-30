@@ -7,7 +7,7 @@ import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
 export const metadata: Metadata = {
   title: { absolute: "Web Design in Ikeja, Lagos - Slatech | Visit Our Office" },
   description:
-    "Slatech Solutions Limited offers web design at 2b Olaide Tomori, Ikeja. Meet us in person, get a free quote, and launch a mobile-first website.",
+    "Slatech Solution Limited offers web design at 2b Olaide Tomori, Ikeja. Meet us in person, get a free quote, and launch a mobile-first website.",
   keywords: [
     "web design company in ikeja",
     "web designer ikeja",
@@ -98,7 +98,7 @@ export default function WebDesignCompanyIkejaPage() {
             Web Design in <span className="text-primary">Ikeja, Lagos</span>
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
-            Slatech Solutions Limited designs and builds websites, online stores and
+            Slatech Solution Limited designs and builds websites, online stores and
             business software from our office in Ikeja. If you&apos;re nearby, you can sit
             down with the team, see past work and plan your project face to face.
           </p>
