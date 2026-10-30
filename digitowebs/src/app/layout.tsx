@@ -111,7 +111,7 @@ export const metadata: Metadata = {
 
 const LOCAL_BUSINESS_SCHEMA = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": ["Organization", "ProfessionalService"],
   "@id": "https://slatech.com.ng/#organization",
   name: "Slatech Solutions",
   legalName: "Slatech Solutions Limited",
@@ -128,7 +128,23 @@ const LOCAL_BUSINESS_SCHEMA = {
   foundingDate: "2020",
   priceRange: "₦₦",
   image: "https://slatech.com.ng/logomark.png",
-  logo: "https://slatech.com.ng/side_SLATECH_SOLUTIONS_LOGO.png",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://slatech.com.ng/side_SLATECH_SOLUTIONS_LOGO.png",
+    caption: "Slatech Solutions Limited logo",
+  },
+  email: "info@slatech.com.ng",
+  identifier: "RC 9591826",
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: "+2348076172456",
+      email: "info@slatech.com.ng",
+      contactType: "customer service",
+      areaServed: "NG",
+      availableLanguage: ["English"],
+    },
+  ],
   address: {
     "@type": "PostalAddress",
     streetAddress: "2b, Olaide Tomori",

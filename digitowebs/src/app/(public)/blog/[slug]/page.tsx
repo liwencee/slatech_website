@@ -756,7 +756,7 @@ const seoTitles: Record<string, string> = {
   "paystack-integration-guide-ecommerce-nigeria": "Paystack Integration for E-Commerce",
   "local-seo-nigeria-rank-google-maps-3-pack": "Local SEO in Nigeria: Google Map Pack",
   "branding-agency-lagos-what-professional-branding-includes": "Branding Agency in Lagos: What to Expect",
-  "mobile-friendly-website": "Mobile-Friendly Website Checklist Nigeria",
+  "mobile-friendly-website": "Mobile-Friendly Website Checklist",
 };
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

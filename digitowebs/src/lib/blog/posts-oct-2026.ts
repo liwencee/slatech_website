@@ -178,7 +178,7 @@ export const OCT_2026_POSTS: Record<string, BlogPost> = {
 
   "build-trust-nigerian-ecommerce-website": {
     title: "How to Build Trust on Your Nigerian E-Commerce Website",
-    seoTitle: "Build Trust on Your Nigerian Online Store",
+    seoTitle: "Build Trust on a Nigerian Online Store",
     excerpt:
       "Nigerian shoppers are cautious about buying online. Here's how to make your e-commerce website look and feel trustworthy enough for first-time buyers to pay.",
     category: "E-Commerce",
@@ -612,7 +612,7 @@ export const OCT_2026_POSTS: Record<string, BlogPost> = {
 
   "prepare-website-december-sales-nigeria": {
     title: "Detty December Sales: How to Get Your Website Ready Before the Rush",
-    seoTitle: "Get Your Website Ready for December Sales",
+    seoTitle: "Prepare Your Website for December Sales",
     excerpt:
       "November and December bring some of the year's busiest shopping in Nigeria. Here's how to get your website ready so you don't miss sales during the festive rush.",
     category: "E-Commerce",

@@ -5,13 +5,13 @@ import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 import { OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo/og-images";
 
 export const metadata: Metadata = {
-  title: "Software Development Company in Lagos, Nigeria",
+  title: "Software Development Company in Lagos",
   description:
     "Slatech Solutions is a software development company in Lagos building custom software, web apps and business systems for Nigerian and global clients.",
   keywords: ["software development company lagos", "software development company nigeria", "custom software lagos"],
   openGraph: {
     images: OG_IMAGES,
-    title: "Software Development Company in Lagos, Nigeria",
+    title: "Software Development Company in Lagos",
     description: "Custom software, web applications and business systems for Nigerian and international organizations.",
     url: "https://slatech.com.ng/software-development-company-lagos",
     type: "website",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   twitter: {
     images: TWITTER_IMAGES,
     card: "summary_large_image",
-    title: "Software Development Company in Lagos, Nigeria",
+    title: "Software Development Company in Lagos",
     description: "Custom software, web applications and business systems for Nigerian and international organizations.",
   },
   alternates: { canonical: "https://slatech.com.ng/software-development-company-lagos" },
